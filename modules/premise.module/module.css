@@ -1,0 +1,106 @@
+  /* ═══ PREMISE ═══ */
+  .mdcompass-premise {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mdcompass-premise__glow {
+    position: absolute;
+    top: -100px;
+    left: 35%;
+    width: 500px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(114, 9, 183, 0.3) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .mdcompass-premise__container {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  /* ─── Columna izquierda ─── */
+  .mdcompass-premise__eyebrow {
+    color: #7EDB00;
+    margin-bottom: 1rem;
+    display: block;
+    font-family: var(--font-primary, 'Lato', sans-serif);
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 17.6px;
+    letter-spacing: 1.76px;
+    text-transform: uppercase;
+  }
+
+  .mdcompass-premise__title h2 {
+    color: #fff;
+    margin: 0;
+  }
+  /* ─── Columna derecha ─── */
+.mdcompass-premise__text *{
+color: #FFFFFFB2;
+font-weight: 300;
+}
+  .mdcompass-premise__text {
+    margin: 0 0 1.25rem;
+    line-height: 1.85;
+    font-weight: 300;
+  }
+
+  .mdcompass-premise__text strong {
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .mdcompass-premise__text--muted {
+    margin: 0 0 2rem;
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  /* ─── Card de testimonio ─── */
+  .mdcompass-premise__card {
+    background: #FFFFFF12;
+    border: 1px solid #FFFFFF24;
+    border-radius: 8px;
+    padding: 22px;
+    margin:0px;
+  }
+.mdcompass-premise__quote *{
+    color: #ffffff;
+    font-style: italic;
+    font-weight: 700;
+  font-size:18px;
+      line-height: 1.6;
+}
+  .mdcompass-premise__quote {
+    margin: 0 0 0.75rem;
+    color: #ffffff;
+    font-style: italic;
+    border:0px;
+    padding:0px;
+  }
+
+  .mdcompass-premise__attribution {
+    font-size:14px;
+    font-weight: 700;
+    letter-spacing:1px;
+    text-transform: uppercase;
+    color: #7EDB00;
+    font-style: normal;
+  }
+
+  /* ═══ RESPONSIVE ═══ */
+  @media (max-width: 900px) {
+    .mdcompass-premise__quote *{
+    font-size:16px;
+      line-height:22px;
+    }
+    .mdcompass-premise__container {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }

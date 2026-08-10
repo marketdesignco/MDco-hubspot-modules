@@ -1,0 +1,113 @@
+.eb-eyebrow{
+font-family: var(--font-primary, 'Lato', sans-serif);
+font-weight: 700;
+font-size: 11px;
+line-height: 17.6px;
+letter-spacing: 1.76px;
+text-transform: uppercase;
+color:#F72585;
+  margin-bottom:20px;
+}
+.eb-title h2{
+color:#1E1B4B;
+
+}
+.eb-title h2 strong{
+color:#3A0CA3;
+}
+.eb-why .eb-lede {
+  max-width:700px;
+  color: #4A4A63; }
+.eb-why-top-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-bottom: 36px;
+  margin-top: 32px;
+}
+.eb-why-card {
+  background: #fff;
+border: 1px solid #E4DCEF;
+  box-shadow: 0px 6px 20px 0px #3A0CA30D;
+  padding: 28px;
+  border-radius: 12px;
+}
+.eb-why-card-title {
+  font-size: var(--font-size-h6, 21px);
+  line-height: var(--line-height-h6, 140%);
+  letter-spacing: var(--letter-spacing-h6, -0.21px);
+  color: #1A1A2E;
+  font-weight:900;
+  margin-bottom: 15px;
+}
+.eb-why-card-body { color: #1A1A2E; }
+.eb-why-card-body p {
+  margin: 0;
+color: #4A4A63;
+
+}
+.eb-why-quote {
+  background: #3A0CA3;
+  padding: 26px 30px;
+  margin-bottom: 36px;
+  border-radius: 12px;
+  font-size: var(--font-size-body, 17px);
+  color: #EDE9F7;
+  line-height: var(--line-height-body, 150%);
+  letter-spacing: var(--letter-spacing-body, 0);
+}
+.eb-why-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+.eb-why-bottom-card {
+  background: #fff;
+  border: 1px solid #E4DCEF !important;
+  box-shadow: 0px 6px 20px 0px #3A0CA30D;
+  padding: 28px;
+  border-radius: 12px;
+}
+.eb-why-bottom-title {
+
+  font-size: var(--font-size-h6, 21px);
+  line-height: var(--line-height-h6, 140%);
+  letter-spacing: var(--letter-spacing-h6, -0.21px);
+  color: #1A1A2E;
+  font-weight:900;
+  margin-bottom: 10px;
+}
+.eb-why-bottom-body {  color: #1A1A2E; }
+.eb-why-bottom-body p { margin: 0; }
+
+@media (max-width:768px){
+  .eb-why-bottom-grid
+ {
+    grid-template-columns: 1fr;
+
+}
+  .eb-why-quote{
+  font-size: var(--font-size-body-mobile, 14px);
+    line-height: var(--line-height-body, 150%);
+  }
+  .eb-why-card-title{
+  font-size: var(--font-size-h6-mobile, 14px);
+    line-height: var(--line-height-h6, 140%);
+    letter-spacing: var(--letter-spacing-h6-mobile, -0.14px);
+  }
+  .eb-why-bottom-title{
+  font-size: var(--font-size-h6-mobile, 14px);
+    line-height: var(--line-height-h6, 140%);
+    letter-spacing: var(--letter-spacing-h6-mobile, -0.14px);
+  }
+  .eb-why-card,
+  .eb-why-bottom-card{
+  padding:24px 20px;
+  }
+  .eb-title h2{
+
+  font-size: var(--font-size-h2-mobile, 24px);
+    line-height: var(--line-height-h2, 120%);
+    letter-spacing: var(--letter-spacing-h2-mobile, -0.48px);
+  }
+}

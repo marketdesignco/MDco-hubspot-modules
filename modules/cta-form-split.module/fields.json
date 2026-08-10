@@ -1,0 +1,190 @@
+[
+  {
+    "id": "35a9b98a-16c2-47d5-838e-19bf1305b6c1",
+    "name": "section_id",
+    "label": "Id Section (menu anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "start",
+    "display_width": null
+  },
+  {
+    "id": "1c075b83-fd8f-4f18-b0e8-b0e227693009",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<h2>Start Growing<br>On Purpose.</h2>",
+    "display_width": null
+  },
+  {
+    "id": "72160b37-dff2-4123-a1ef-6485c4489876",
+    "name": "lede",
+    "label": "Lede",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<p>Thirty minutes, six Ps, and the two costing you growth. Whether you hire us or not.</p>",
+    "display_width": null
+  },
+  {
+    "id": "efdb32f7-3694-4ec5-8067-8d9b1f23ae40",
+    "name": "bullets",
+    "label": "Bullets",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "b0bdc077-e552-42d7-bfbd-ee66147402ba",
+        "name": "text",
+        "label": "Text",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "Bullet text",
+        "display_width": null
+      }
+    ],
+    "default": [
+      {
+        "text": "A live walk through the 6 Ps with a consultant, not a rep."
+      },
+      {
+        "text": "The two Ps costing you growth, named out loud."
+      },
+      {
+        "text": "No deck, no pitch, no obligation."
+      }
+    ],
+    "type": "group",
+    "display_width": null
+  },
+  {
+    "id": "d0d90808-edba-4d52-bc68-6a17296a8d0d",
+    "name": "form_eyebrow",
+    "label": "Form — Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "Get a Little Free Consulting",
+    "display_width": null
+  },
+  {
+    "id": "bb0dedcf-a83b-4b19-bd3b-07ec441497b2",
+    "name": "form_heading",
+    "label": "Form — Heading",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<h6>Book Your 30-Minute 6 Ps Walk-Through.</h6>",
+    "display_width": null
+  },
+  {
+    "id": "5d7eab8f-e715-4eae-b51c-07ed93e58db3",
+    "name": "form_field",
+    "label": "Form",
+    "required": false,
+    "locked": false,
+    "embed_versions": [
+      "v2",
+      "v4"
+    ],
+    "type": "form",
+    "default": {
+      "form_id": "afe54a37-473a-4deb-bed7-85ee2a6765ba",
+      "response_type": "inline",
+      "message": "Thanks — we'll be in touch.",
+      "form_type": "HUBSPOT"
+    },
+    "display_width": null
+  },
+  {
+    "id": "c769fb5e-38ec-45fc-b879-b52cf28f9150",
+    "name": "form_disclaimer",
+    "label": "Form — Disclaimer",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<p>We'll reply within one business day. No sequences, no drip.</p>",
+    "display_width": null
+  },
+  {
+    "id": "95e92a76-5f6c-430c-9ff1-2bfbeb1c7dbe",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "tab": "STYLE",
+    "children": [
+      {
+        "id": "b50f003f-197d-44fb-a584-85b3dde5978d",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 96,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 96,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      },
+      {
+        "id": "6e00c687-f6ab-4880-8ced-d77d7114961a",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 48,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 48,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      }
+    ],
+    "display_width": null
+  }
+]

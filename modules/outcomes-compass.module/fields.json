@@ -1,0 +1,253 @@
+[ {
+  "id" : "f77aa767-a09e-3364-9998-0c72a3cd6746",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "3b0a672b-00f2-4ed1-d3e9-26c1b8dcb2ec",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      },
+      "margin" : {
+        "top" : {
+          "value" : null,
+          "units" : "NaNaN"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "c85b1912-cf6c-bbf9-539f-e4dd8affb240",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "cd1b23c0-fbb8-60c3-833d-e2f72ceeb278",
+    "name" : "background_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#fff",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      },
+      "margin" : {
+        "top" : {
+          "value" : null,
+          "units" : "NaNaN"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "background_color" : {
+      "color" : "#fff",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "6d8265b1-033e-3dbe-e3bd-f3947c090c3a",
+  "name" : "caption",
+  "label" : "Caption",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Outcomes"
+}, {
+  "id" : "547abd29-f0ce-9825-297c-6231ec9f084c",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>What changes after <strong>MDCompass</strong></h2>"
+}, {
+  "id" : "e38d2486-e54f-d546-119e-2366bf9f3981",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>MDCompass does not prescribe. It diagnoses. The outcomes depend on what the organization does with what it learns. These are the capacities MDCompass is designed to build.</p>"
+}, {
+  "id" : "aceff064-d085-9b54-3132-5c0a7c8e7134",
+  "name" : "outcomes",
+  "label" : "Outcomes",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "5fe743f8-2fb5-725f-d38c-35e1654b0477",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "cLARIFIED PRIORITIES"
+  }, {
+    "id" : "41240092-377f-bb8b-e9e4-facb48f60233",
+    "name" : "text",
+    "label" : "text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Leadership leaves with a shared, honest picture of what the organization needs to address first, grounded in evidence rather than opinion.</p>"
+  }, {
+    "id" : "64e92f27-11f1-c681-2af0-a8e625578c3c",
+    "name" : "color",
+    "label" : "Color",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "outcomes-card--1", "Purple" ], [ "outcomes-card--2", "Pink" ], [ "outcomes-card--3", "Blue" ], [ "outcomes-card--4", "Green" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "outcomes-card--2"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "cLARIFIED PRIORITIES",
+    "text" : "<p>Leadership leaves with a shared, honest picture of what the organization needs to address first, grounded in evidence rather than opinion.</p>",
+    "color" : "outcomes-card--2"
+  }, {
+    "title" : "cLARIFIED PRIORITIES",
+    "text" : "<p>Leadership leaves with a shared, honest picture of what the organization needs to address first, grounded in evidence rather than opinion.</p>",
+    "color" : "outcomes-card--2"
+  }, {
+    "title" : "cLARIFIED PRIORITIES",
+    "text" : "<p>Leadership leaves with a shared, honest picture of what the organization needs to address first, grounded in evidence rather than opinion.</p>",
+    "color" : "outcomes-card--2"
+  }, {
+    "title" : "cLARIFIED PRIORITIES",
+    "text" : "<p>Leadership leaves with a shared, honest picture of what the organization needs to address first, grounded in evidence rather than opinion.</p>",
+    "color" : "outcomes-card--2"
+  } ]
+}, {
+  "id" : "406f888f-97ef-b332-9a95-59b650a615ee",
+  "name" : "section_id",
+  "label" : "Section Id",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "outcomes"
+} ]

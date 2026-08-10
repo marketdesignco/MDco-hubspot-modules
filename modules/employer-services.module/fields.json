@@ -1,0 +1,421 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "services"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Services"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>Employer Brand <strong>Services</strong></h2>"
+}, {
+  "id" : "lede",
+  "name" : "lede",
+  "label" : "Lede",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Whether you need a full diagnostic + activation program or a single deliverable to fill a gap, MarketDesign offers the full spectrum of employer brand services — standalone or as an integrated engagement.</p>"
+}, {
+  "id" : "services",
+  "name" : "services",
+  "label" : "Service Cards",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 6
+  },
+  "children" : [ {
+    "id" : "services.title",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "EB Diagnostic"
+  }, {
+    "id" : "services.subtitle",
+    "name" : "subtitle",
+    "label" : "Subtitle",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Full outside-in audit"
+  }, {
+    "id" : "services.header_bg",
+    "name" : "header_bg",
+    "label" : "Header Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "services.items",
+    "name" : "items",
+    "label" : "Bullet Items",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 6
+    },
+    "children" : [ {
+      "id" : "services.items.html",
+      "name" : "html",
+      "label" : "Item (rich text)",
+      "required" : false,
+      "locked" : false,
+      "type" : "richtext",
+      "display_width" : null,
+      "default" : "Bullet text"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : [ {
+      "html" : "Item one"
+    }, {
+      "html" : "Bullet text"
+    }, {
+      "html" : "Bullet text"
+    }, {
+      "html" : "Bullet text"
+    }, {
+      "html" : "Bullet text"
+    }, {
+      "html" : "Bullet text"
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "EB Diagnostic",
+    "subtitle" : "Full outside-in audit · 6 touchpoints · SWOT · Road map",
+    "header_bg" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    },
+    "items" : [ {
+      "html" : "Employer Brand Explained — education + framing for your team"
+    }, {
+      "html" : "Candidate Journey Map across all 8 stages"
+    }, {
+      "html" : "Six-touchpoint external audit (no internal access)"
+    }, {
+      "html" : "SWOT by touchpoint + cross-touchpoint synthesis"
+    }, {
+      "html" : "Prioritized 3-phase road map"
+    }, {
+      "html" : "Findings deck (PPTX) + interactive HTML report"
+    }, {
+      "html" : "Live walkthrough presentation with your leadership team"
+    }, {
+      "html" : "DEI lens available as expanded scope"
+    } ]
+  }, {
+    "title" : "EVP Development",
+    "subtitle" : "Define + deploy what makes you worth working for",
+    "header_bg" : {
+      "color" : "#F72585",
+      "opacity" : 100
+    },
+    "items" : [ {
+      "html" : "EVP Development — articulate your unique employer promise"
+    }, {
+      "html" : "EVP Messaging + Deployment across all candidate touchpoints"
+    }, {
+      "html" : "EVP Refresh for organizations with an existing but stale position"
+    }, {
+      "html" : "Workshop facilitation (survey design, 1:1 interviews, scribing, synthesis)"
+    }, {
+      "html" : "Messaging pillars + messaging components"
+    }, {
+      "html" : "Strategy deck + road map for internal adoption"
+    } ]
+  }, {
+    "title" : "Careers Site Content",
+    "subtitle" : "Turn your careers page from a client pitch into a candidate invitation",
+    "header_bg" : {
+      "color" : "#7209B7",
+      "opacity" : 100
+    },
+    "items" : [ {
+      "html" : "Careers page content audit + rewrite"
+    }, {
+      "html" : "Candidate-centric copywriting throughout"
+    }, {
+      "html" : "EVP integration across all page sections"
+    }, {
+      "html" : "Culture content strategy + production support"
+    }, {
+      "html" : "Careers blog content planning + writing"
+    }, {
+      "html" : "UGC (user-generated content) strategy"
+    } ]
+  }, {
+    "title" : "Job Description Support",
+    "subtitle" : "Candidate-centered JDs that attract the right people",
+    "header_bg" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    },
+    "items" : [ {
+      "html" : "Job description review + audit"
+    }, {
+      "html" : "Batch rewrites using Candidate-Centered JD Framework"
+    }, {
+      "html" : "\"Anatomy of a Job Description\" training workshops"
+    }, {
+      "html" : "Candidate persona development by role type"
+    }, {
+      "html" : "Salary transparency recommendations"
+    }, {
+      "html" : "DEI language review + inclusive language consultation"
+    } ]
+  }, {
+    "title" : "Social + Content Strategy",
+    "subtitle" : "Build the employer brand social presence you should already have",
+    "header_bg" : {
+      "color" : "#F72585",
+      "opacity" : 100
+    },
+    "items" : [ {
+      "html" : "Social media content strategy — employer brand channel"
+    }, {
+      "html" : "LinkedIn employer brand content + training"
+    }, {
+      "html" : "Executive ghostwriting for talent-facing thought leadership"
+    }, {
+      "html" : "LinkedIn strategy, content, and training"
+    }, {
+      "html" : "Employer brand content calendar"
+    }, {
+      "html" : "Employee ambassador program design"
+    } ]
+  }, {
+    "title" : "Reputation + Pipeline",
+    "subtitle" : "Own the narrative + build the bench",
+    "header_bg" : {
+      "color" : "#7209B7",
+      "opacity" : 100
+    },
+    "items" : [ {
+      "html" : "Glassdoor + Fishbowl response program"
+    }, {
+      "html" : "Reputation monitoring + management"
+    }, {
+      "html" : "Talent community design + launch"
+    }, {
+      "html" : "Boilerplate library for repeatable recruiting communication"
+    }, {
+      "html" : "Contingent workforce branding + EVP for contractors"
+    }, {
+      "html" : "Employee engagement surveys, focus groups + facilitation"
+    } ]
+  } ]
+}, {
+  "id" : "retainer_note",
+  "name" : "retainer_note",
+  "label" : "Retainer Bottom Note",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<strong>Ongoing Retainer Available.</strong> MarketDesign offers \"Phone a Friend\" employer brand consulting support — strategic advisory and execution support on a retained basis for organizations that need a consistent EB partner without a full-time hire."
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.background_color",
+    "name" : "background_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FAF7FB",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.text_color",
+    "name" : "text_color",
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#1a0a2e",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.retainer_accent_color",
+    "name" : "retainer_accent_color",
+    "label" : "Retainer Left-border Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#7ec900",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "background_color" : {
+      "color" : "#f8f6fc",
+      "opacity" : 100
+    },
+    "text_color" : {
+      "color" : "#1a0a2e",
+      "opacity" : 100
+    },
+    "retainer_accent_color" : {
+      "color" : "#7ec900",
+      "opacity" : 100
+    },
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }
+} ]

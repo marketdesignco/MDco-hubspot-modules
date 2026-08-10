@@ -1,0 +1,282 @@
+[ {
+  "id" : "f77aa767-a09e-3364-9998-0c72a3cd6746",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "3b0a672b-00f2-4ed1-d3e9-26c1b8dcb2ec",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "c85b1912-cf6c-bbf9-539f-e4dd8affb240",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }
+}, {
+  "id" : "79ec297e-4f2c-cbfd-e6f6-40c17e730aae",
+  "name" : "subhead",
+  "label" : "Subhead",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "THE PATH FRAMEWORK"
+}, {
+  "id" : "f0cf3554-fd42-6dbf-8a90-22a69c9122a9",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>The lens we use <strong>on every engagement.</strong></h2>"
+}, {
+  "id" : "94976b9d-6404-7482-b0aa-868e91d7281c",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Proprietary. Tested. The four pillars that anchor MarketDesign's 2026 State of the Industry Report and every client conversation we have.</p>"
+}, {
+  "id" : "5ee0f9a5-80bd-d04a-7ece-fe1ae23ceabd",
+  "name" : "cards",
+  "label" : "Cards",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "626612b3-edf7-c8da-142e-d742dc75ae91",
+    "name" : "letter",
+    "label" : "Letter",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "P"
+  }, {
+    "id" : "664359b8-9305-f01d-20c2-5798603ffbfc",
+    "name" : "point",
+    "label" : "Point",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "."
+  }, {
+    "id" : "65f5523b-34ce-27ae-cdd7-2796b8d72b0d",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<h6>PURPOSE</h6>\n<p>Why you exist, who you serve best, what change you create. The filter that defines which clients to take and which to decline.</p>"
+  }, {
+    "id" : "6581c885-a949-fd87-8c49-aa8707646500",
+    "name" : "link_field",
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "9f7579cc-6772-5a86-77be-1aba4bfbbe26",
+    "name" : "link_text",
+    "label" : "Link Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "READ MORE"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "letter" : "P",
+    "point" : ".",
+    "text" : "<h6>PURPOSE</h6>\n<p>Why you exist, who you serve best, what change you create. The filter that defines which clients to take and which to decline.</p>",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "link_text" : "READ MORE"
+  }, {
+    "letter" : "P",
+    "point" : ".",
+    "text" : "<h6>PURPOSE</h6>\n<p>Why you exist, who you serve best, what change you create. The filter that defines which clients to take and which to decline.</p>",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "link_text" : "READ MORE"
+  }, {
+    "letter" : "P",
+    "point" : ".",
+    "text" : "<h6>PURPOSE</h6>\n<p>Why you exist, who you serve best, what change you create. The filter that defines which clients to take and which to decline.</p>",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "link_text" : "READ MORE"
+  }, {
+    "letter" : "P",
+    "point" : ".",
+    "text" : "<h6>PURPOSE</h6>\n<p>Why you exist, who you serve best, what change you create. The filter that defines which clients to take and which to decline.</p>",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "link_text" : "READ MORE"
+  } ]
+}, {
+  "id" : "e397c6d7-4d22-a73e-630a-1462e37be6f4",
+  "name" : "id_section",
+  "label" : "ID Section",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "firms"
+} ]

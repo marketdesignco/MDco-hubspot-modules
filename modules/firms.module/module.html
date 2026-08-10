@@ -1,0 +1,80 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .firms{
+    {{ module.style.spacing_desktop.css }};
+  }
+
+  @media (max-width:768px){
+    .firms{
+
+      {{ module.style.spacing_mobile.css }};
+    }
+  }
+
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="firms" id="{{ module.id_section }}">
+  <div class="content-wrapper">
+    <div class="columns is-mobile is-multiline is-gapless">
+
+      <div class="column is-12-mobile is-10-tablet is-10-desktop is-10-widescreen is-10-fullhd">
+        <div>
+          <div class="section-label">{{ module.subhead }}</div>
+          <div class="section-title">{{ module.heading }} </div>
+          <div class="section-sub">{{ module.description }}</div>
+        </div>
+      </div>
+    </div>
+    <div  class="columns is-mobile is-multiline is-gapless">
+      <div class="column is-12-mobile is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd">
+        <div class="firm-grid">
+          {% for item in module.cards %}
+          <article class="firm-card">
+            <div>
+              <span class="firm-tag">{{ item.label_text}}</span>
+              <div>
+                {{ item.text}}
+              </div>
+            </div>
+            {% if item.show_link %}
+            <div class="link-text">
+              {% set href = item.link_field.url.href %}
+              {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% elif item.link_field.url.type is equalto "PHONE_NUMBER" %}
+              {% set href = "tel:" + href %}
+              {% endif %}
+              <a
+                 {% if item.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+                 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+                 {% else %}
+                 href="{{ href|escape_url }}"
+                 {% endif %}
+                 {% if item.link_field.open_in_new_tab %}
+                 target="_blank"
+                 {% endif %}
+                 {% if item.link_field.rel %}
+                 rel="{{ item.link_field.rel|escape_attr }}"
+                 {% endif %}
+                 >
+                {{ item.link_text }} <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                <path d="M9.40332 7.62598L9.40332 4.8125L-1.22981e-07 4.8125L-2.10404e-07 2.8125L9.40332 2.8125L9.40332 -4.11032e-07L14 3.91797L9.40332 7.62598Z" fill="#F72585"/>
+                </svg>
+              </a>
+            </div>
+            {% endif %}
+
+
+          </article>
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+

@@ -1,0 +1,61 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .eb-hero { position: relative; overflow: hidden;
+    background: linear-gradient(155deg,
+      {{ module.style.background_gradient_start.color }} 0%,
+      {{ module.style.background_gradient_mid.color }} 55%,
+      {{ module.style.background_gradient_end.color }} 100%);
+    {{ module.style.spacing_desktop.css }}
+  }
+    .eb-hero::before {
+    background: radial-gradient(circle, rgba(114,9,183,0.14) 0%, transparent 65%);
+  }
+  .eb-hero::after {
+    background: radial-gradient(circle, rgba(126,201,0,0.08) 0%, transparent 65%);
+  }
+  .eb-hero-eyebrow {
+    color: {{ module.style.eyebrow_color.color }};
+  }
+  .eb-hero-headline h1 strong { 
+    color: {{ module.style.accent_color.color }};
+    font-weight:900;
+  }
+  .eb-hero-bar {
+    background: {{ module.style.accent_color.color }};
+  }
+  .eb-hero-cta {
+    background: {{ module.style.cta_bg_color.color }};
+    color: {{ module.style.cta_text_color.color }} !important;
+
+  }
+
+ @media (max-width: 768px) {
+    .eb-hero { {{ module.style.spacing_mobile.css }} }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="eb-hero"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+     {% if module.eyebrow %}<div class="eb-hero-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+  <div class="eb-hero-headline">{{ module.headline }}</div>
+  <div class="eb-hero-bar"></div>
+  <div class="eb-hero-lede">{{ module.lede }}</div>
+    
+    {% if module.show_cta %}
+	{% set cta_href = module.cta_link.url.href %}
+  {% if module.cta_link.url.type is equalto "EMAIL_ADDRESS" %}{% set cta_href = "mailto:" + cta_href %}
+  {% elif module.cta_link.url.type is equalto "PHONE_NUMBER" %}{% set cta_href = "tel:" + cta_href %}{% endif %}
+  <a class="eb-hero-cta" href="{{ cta_href|escape_url }}"
+     {% if module.cta_link.open_in_new_tab %}target="_blank"{% endif %}
+     {% if module.cta_link.rel %}rel="{{ module.cta_link.rel|escape_attr }}"{% endif %}>
+    {{ module.cta_text }}
+  </a>
+{% endif %}
+  
+    
+  </div>
+ 
+</section>

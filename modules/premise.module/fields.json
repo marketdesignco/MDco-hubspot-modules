@@ -1,0 +1,188 @@
+[ {
+  "id" : "f77aa767-a09e-3364-9998-0c72a3cd6746",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "3b0a672b-00f2-4ed1-d3e9-26c1b8dcb2ec",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      },
+      "margin" : {
+        "top" : {
+          "value" : 0,
+          "units" : "NaN"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "c85b1912-cf6c-bbf9-539f-e4dd8affb240",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      },
+      "margin" : {
+        "top" : {
+          "value" : 0,
+          "units" : "NaN"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }
+}, {
+  "id" : "6d8265b1-033e-3dbe-e3bd-f3947c090c3a",
+  "name" : "badge_text",
+  "label" : "Caption",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "The Premise"
+}, {
+  "id" : "547abd29-f0ce-9825-297c-6231ec9f084c",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>Strategy is the brick.<br>Belief is the mortar.</h2>"
+}, {
+  "id" : "e38d2486-e54f-d546-119e-2366bf9f3981",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>You can have a perfect strategy and the wrong belief underneath it. You can have imperfect strategy and deep shared belief, and the organization will find a way. The bricks are visible. The mortar is not. Most diagnostics audit the bricks. <strong>MDCompass audits the mortar.</strong></p>\n<p>The connective tissue of any organization is not its goals or its values or its message. It is what happens in the space between: how the message travels, how decisions land, how accountability moves from one person to the next. That space is where belief either holds the structure together or quietly lets it come apart.</p>"
+}, {
+  "id" : "15331e2a-c719-19b7-894b-63da8ddf43b8",
+  "name" : "quote",
+  "label" : "Quote",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>\"A client wanted to partner with me instead of the big firms. He told me why. He said: you are like mortar among bricks.\"</p>"
+}, {
+  "id" : "33b084e5-ff22-72dc-afba-880ed99fb193",
+  "name" : "quote_attr",
+  "label" : "Quote Attr",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Shared in conversation. The moment belief became undeniable."
+}, {
+  "id" : "406f888f-97ef-b332-9a95-59b650a615ee",
+  "name" : "id_section",
+  "label" : "Id Section",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "premise"
+} ]

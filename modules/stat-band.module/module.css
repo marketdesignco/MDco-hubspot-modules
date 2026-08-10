@@ -1,0 +1,64 @@
+/* ============ STAT BAND ============ */
+.stat-band{
+  position:relative
+}
+.stat-band::before{
+  content:"";
+  position:absolute;
+  left:0;right:0;top:0;height:4px;
+  background:linear-gradient(90deg, #F72585 0%, #3A0CA3 25%, #7209B7 55%, #7EDB00 100%);
+}
+.stat-band .content-wrapper{position:relative;z-index:1}
+.stat{text-align:left;padding:0px 10px;position:relative}
+.stat::before{
+  content:"";position:absolute;left:0;top:8px;bottom:8px;width:3px;
+  background: var(--stat-border-color, #7209B7);
+  border-radius:2px;
+}
+.stat .num{
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size:64px;
+  line-height:1;
+  margin-bottom:8px;
+  font-weight:900;
+  color:#fff;
+}
+.stat--highlight .num{
+  color: var(--color-accent, #7EDB00);
+}
+.stat .label{
+  font-size:14px!important;
+  color:#cccccc;
+  line-height:1.4}
+
+/* Number Typography = H3 (Design System) — opt-in via theme.style.num_typography, default behavior above is unchanged */
+.stat-band--num-h3 .stat .num{
+  font-size: var(--font-size-h3, 48px);
+  line-height: var(--line-height-h3, 130%);
+  letter-spacing: var(--letter-spacing-h3, -0.96px);
+}
+
+@media (max-width:768px){
+  .stat .num{font-size:48px}
+  .stat-band--num-h3 .stat .num{
+    font-size: var(--font-size-h3-mobile, 22px);
+    line-height: var(--line-height-h3, 130%);
+    letter-spacing: var(--letter-spacing-h3-mobile, -0.44px);
+  }
+    .stat::before {
+    top: auto;              
+    left: 8px;
+    right: 8px;
+    bottom: 0px;              
+    width: auto;            
+    height: 2px;        
+  
+  }
+  .stat .label p{
+  margin-bottom:10px;
+  }
+  .stat{
+  padding:20px 0px;
+    padding-bottom:10px;
+  }
+}

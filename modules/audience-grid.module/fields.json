@@ -1,0 +1,214 @@
+[
+  {
+    "id": "06e0f81f-1e14-4baa-bff3-98c4dd3d8196",
+    "name": "section_id",
+    "label": "Id Section (menu anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "who-we-serve",
+    "display_width": null
+  },
+  {
+    "id": "2d37f25b-98cc-4e93-b1bd-5d4887f949f6",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "Who We Serve",
+    "display_width": null
+  },
+  {
+    "id": "9be0270a-7b10-4a2c-a2cc-630e6e20dcb1",
+    "name": "heading",
+    "label": "Heading (rich text — use strong for the accent words)",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<h2>Different Profiles. <strong>Different Paths Forward.</strong></h2>",
+    "display_width": null
+  },
+  {
+    "id": "079e575f-86da-4b7d-bc91-b88354604b05",
+    "name": "lede",
+    "label": "Lede",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<p>Tech is a big industry. Here's where we shine — the shapes we've been in the room with through every cycle for 20+ years. See if one of these looks like the firm you're running.</p>",
+    "display_width": null
+  },
+  {
+    "id": "42a94d6e-bca9-4d12-9fe1-ab3cad396788",
+    "name": "cards",
+    "label": "Cards",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "default": 5
+    },
+    "children": [
+      {
+        "id": "6a13787f-c38e-476a-ace2-7e93a281008e",
+        "name": "tag",
+        "label": "Tag",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "default": "Tag",
+        "display_width": null
+      },
+      {
+        "id": "960affd0-88f2-4866-8a93-43f229ba28d1",
+        "name": "title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "<h6>Card title</h6>",
+        "display_width": null
+      },
+      {
+        "id": "7ac1c066-393e-45a1-a23a-4832dddc5d05",
+        "name": "description",
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "<p>Description</p>",
+        "display_width": null
+      },
+      {
+        "id": "61775d0a-ba6b-496b-a052-8749107e37d2",
+        "name": "layout_width",
+        "label": "Card Width",
+        "required": false,
+        "locked": false,
+        "type": "choice",
+        "choices": [
+          [
+            "third",
+            "One third"
+          ],
+          [
+            "half",
+            "One half"
+          ]
+        ],
+        "display": "select",
+        "default": "third",
+        "display_width": null
+      }
+    ],
+    "default": [
+      {
+        "tag": "MSPs",
+        "title": "<h6>Still Explaining What an MSP Does to Half the People Who Need One.</h6>",
+        "description": "<p>The category got crowded and the message got blurry. Own a category instead of chasing one.</p>",
+        "layout_width": "third"
+      },
+      {
+        "tag": "VARs",
+        "title": "<h6>Riding the Product Wave on Commodity Margins.</h6>",
+        "description": "<p>MDF rules tighten every year. You need pipeline that doesn't depend on a vendor's promo calendar.</p>",
+        "layout_width": "third"
+      },
+      {
+        "tag": "Solution providers",
+        "title": "<h6>Adding Services to Protect Margin and Protect the People.</h6>",
+        "description": "<p>Your team can build the services. The market has to know you sell them.</p>",
+        "layout_width": "third"
+      },
+      {
+        "tag": "IT start-ups",
+        "title": "<h6>Find Product-Market Fit Before the Runway Burns.</h6>",
+        "description": "<p>Every dollar is a bet and every month is a milestone. The buyer you need doesn't know you exist yet.</p>",
+        "layout_width": "half"
+      },
+      {
+        "tag": "PE-backed firms",
+        "title": "<h6>Chasing an Earn-Out on a Clock That Doesn't Pause.</h6>",
+        "description": "<p>The thesis assumed organic growth. You need pipeline that compounds and a narrative the next acquirer will pay for.</p>",
+        "layout_width": "half"
+      }
+    ],
+    "type": "group",
+    "display_width": null
+  },
+  {
+    "id": "1e8241bf-e9b7-4fb5-b838-21753ba90a0c",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "tab": "STYLE",
+    "children": [
+      {
+        "id": "ee7a5718-5f4d-4af3-9cd5-0cdc1723d9fc",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 96,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 96,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      },
+      {
+        "id": "1282217b-6ee9-4ab7-ae5d-b31be08cebba",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 48,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 48,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      }
+    ],
+    "display_width": null
+  }
+]

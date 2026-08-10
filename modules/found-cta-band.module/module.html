@@ -1,0 +1,34 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .ff-cta {
+    background: {{ module.background_gradient }};
+    color: {{ module.style.text_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  .ff-cta h2 { color: {{ module.style.text_color.color }}; }
+  .ff-btn-white {
+    background: {{ module.style.button_bg_color.color }};
+    color: {{ module.style.button_text_color.color }};
+  }
+  @media (max-width: 768px) { .ff-cta { {{ module.style.spacing_mobile.css }} } }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="ff-cta"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="ff-wrap">
+    {{ module.heading }}
+    {{ module.description }}
+    {% if module.show_cta %}
+      {% set href = module.button_link.url.href %}
+      {% if module.button_link.url.type is equalto "EMAIL_ADDRESS" %}{% set href = "mailto:" + href %}
+      {% elif module.button_link.url.type is equalto "PHONE_NUMBER" %}{% set href = "tel:" + href %}{% endif %}
+      <a class="ff-btn-white" href="{{ href|escape_url }}"
+         {% if module.button_link.open_in_new_tab %}target="_blank"{% endif %}
+         {% if module.button_link.rel %}rel="{{ module.button_link.rel|escape_attr }}"{% endif %}>
+        {{ module.button_text }}
+      </a>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,65 @@
+.empathy .heading strong{
+  background: linear-gradient(90deg, #3A0CA3 0%, #7209B7 35%, #7F2585 70%, #7ED000 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-style: italic;
+}
+.empathy-stats h4{
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 13.65px;
+  letter-spacing: 2.34px;
+  text-transform:uppercase;
+  color:#7209B7;
+}
+.empathy-stats{
+  background:white;
+  padding:40px;
+  border-radius:12px;
+  position:relative;
+  box-shadow: 0px 12px 40px 0px #3A0CA314;
+
+  border:1px solid #E5E5E5;
+}
+.empathy-stats::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:5px;
+  background:linear-gradient(90deg, #F72585 0%, #3A0CA3 25%, #7209B7 55%, #7EDB00 100%);
+  border-radius:12px 12px 0 0;
+}
+.empathy-stats ul{
+  list-style:none;
+  margin:0px;
+  padding-inline-start:0px;
+}
+.empathy-stats li{padding:12px 0;
+  border-bottom:1px solid #E5E5E5;
+  font-size:16px;display:flex;justify-content:space-between;
+  align-items:center;gap:16px}
+.empathy-stats li:last-child{border:none}
+.empathy-stats li *{
+  margin:0px;
+}
+.empathy-stats .big{
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size:22px;
+  font-weight:900;
+  color:#3A0CA3;
+
+}
+
+@media (max-width:768px){
+  .empathy-stats{
+  padding:30px 20px;
+  }
+  .empathy-stats li p{
+    font-size:14px;
+  }
+  .empathy-stats .big {
+    
+    font-size: 20px;
+}
+}

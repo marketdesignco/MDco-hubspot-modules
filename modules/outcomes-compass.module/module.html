@@ -1,0 +1,51 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .outcomes-section{
+
+    background:{{ module.style.background_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:768px){
+    .outcomes-section{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="outcomes-section" {% if module.section_id %}id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+
+    <div class="outcomes-caption">
+      {{ module.caption }}
+    </div>
+
+    <div class="outcomes-heading">
+      {{ module.heading }}
+    </div>
+
+    <div class="outcomes-intro">
+      {{ module.description }}
+    </div>
+
+    <div class="outcomes-grid js-outcomes-slider">
+      {% for outcome in module.outcomes %}
+        <div class="outcomes-card {{ outcome.color }}">
+          <div class="outcomes-num" aria-hidden="true">
+            {% if loop.index < 10 %}0{% endif %}{{ loop.index }}
+          </div>
+
+          <h6 class="outcomes-card-heading">
+            {{ outcome.title}}
+          </h6>
+
+          <div class="outcomes-card-text">
+            {{ outcome.text }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

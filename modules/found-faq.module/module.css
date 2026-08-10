@@ -1,0 +1,43 @@
+/* found-faq — static styles */
+.ff-faq-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 36px 32px;
+  margin-bottom: 10px;
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(122, 104, 136, 0.12);
+}
+
+.ff-faq-item:last-child {
+  margin-bottom: 0;
+}
+
+.ff-faq-q {
+  font-family: var(--ff-font-h);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--ff-deep);
+  margin: 0;
+}
+
+.ff-faq-a {
+  color: var(--ff-muted);
+  font-size: 15px;
+  margin: 0;
+}
+
+.ff-faq-a p {
+  margin: 0;
+}
+
+.ff-faq .ff-section-title {
+  margin-bottom: 60px !important;
+}
+
+@media (max-width: 640px) {
+  .ff-faq-item {
+    padding: 28px 20px;
+  }
+}

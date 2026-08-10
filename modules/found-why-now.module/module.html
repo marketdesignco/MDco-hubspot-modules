@@ -1,0 +1,46 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .ff-why {
+    background: {{ module.background_gradient }};
+    color: {{ module.style.text_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 768px) { .ff-why { {{ module.style.spacing_mobile.css }} } }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="ff-why"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="ff-wrap">
+    {% if module.eyebrow %}<div class="ff-eyebrow"><span>{{ module.eyebrow }}</span></div>{% endif %}
+    {{ module.heading }}
+
+    <div class="ff-gartner-stat">
+      <div class="ff-gartner-num">{{ module.stat_number }}</div>
+      <div class="ff-gartner-body">{{ module.stat_body }}</div>
+      <div class="ff-gartner-source">{{ module.stat_source }}</div>
+    </div>
+
+    <div class="ff-why-grid">
+      <div>
+        {% for r in module.reasons %}
+          <div class="ff-why-item">
+            <div class="ff-why-num">{{ loop.index }}</div>
+            <div class="ff-why-copy">
+              <h4>{{ r.title }}</h4>
+              {{ r.description }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="ff-icp-card">
+        <h3>{{ module.icp_title }}</h3>
+        <ul class="ff-icp-list">
+          {% for i in module.icp_items %}<li>{{ i.text }}</li>{% endfor %}
+        </ul>
+        <div class="ff-icp-note">{{ module.icp_note }}</div>
+      </div>
+    </div>
+  </div>
+</section>

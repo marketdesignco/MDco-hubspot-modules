@@ -1,0 +1,126 @@
+[
+  {
+    "id": "6b49976f-d726-4e16-b2b4-54d0121362a0",
+    "name": "section_id",
+    "label": "Id Section (menu anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "",
+    "display_width": null
+  },
+  {
+    "id": "f40f9321-3f57-4ab8-97a0-0b13795a2326",
+    "name": "show_module",
+    "label": "Show This Section",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "default": true,
+    "display_width": null
+  },
+  {
+    "id": "2d29c279-1078-4cf8-961e-66273d0a0e24",
+    "name": "quote_text",
+    "label": "Quote (rich text)",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<h5>\"The channel doesn't need more analysis. It needs more leaders willing to act on what the analysis already shows.\"</h5>",
+    "display_width": null
+  },
+  {
+    "id": "14657b51-c29f-46c6-8b12-f6662c057ea0",
+    "name": "attribution_name",
+    "label": "Attribution — Name",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "Kara Rudy",
+    "display_width": null
+  },
+  {
+    "id": "6431961e-8071-428e-8347-129fca65e855",
+    "name": "attribution_role",
+    "label": "Attribution — Role",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "Founder + CEO, MarketDesign Co.",
+    "display_width": null
+  },
+  {
+    "id": "a558b15c-295e-4391-a6d2-4a180fedad14",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "tab": "STYLE",
+    "children": [
+      {
+        "id": "d39e1e53-0d6b-45d4-bb4b-63b6e0675ab4",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 80,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 80,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      },
+      {
+        "id": "3c2748c5-5538-4f24-93d9-b074fea4611b",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 48,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 48,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      }
+    ],
+    "display_width": null
+  }
+]

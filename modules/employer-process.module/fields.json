@@ -1,0 +1,345 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "process"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "How We Work"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2 class=\"eb-title\">The MDCo<br><strong><span class=\"accent\">Process</span></strong></h2>"
+}, {
+  "id" : "lede",
+  "name" : "lede",
+  "label" : "Lede",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Every engagement begins with understanding — what candidates see, what the market believes, and what your team knows that isn't visible externally yet. We never build before we audit. We never recommend before we listen.</p>"
+}, {
+  "id" : "steps",
+  "name" : "steps",
+  "label" : "Process Steps",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "steps.number",
+    "name" : "number",
+    "label" : "Number (01, 02...)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "01"
+  }, {
+    "id" : "steps.title",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Client Intake"
+  }, {
+    "id" : "steps.description",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Text</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "number" : "01",
+    "title" : "Client Intake",
+    "description" : "<p>Company basics, talent profile, pain points, brand context, competitive landscape.</p>"
+  }, {
+    "number" : "02",
+    "title" : "External Audit",
+    "description" : "<p>Six touchpoints evaluated from the outside — no internal access, no bias.</p>"
+  }, {
+    "number" : "03",
+    "title" : "SWOT Synthesis",
+    "description" : "<p>Cross-touchpoint analysis, candidate drop-off risks, quick wins identified.</p>"
+  }, {
+    "number" : "04",
+    "title" : "Road Map",
+    "description" : "<p>Three phases, sequenced by impact. Specific, actionable, measurable.</p>"
+  }, {
+    "number" : "05",
+    "title" : "Delivery + Activation",
+    "description" : "<p>Both deliverables built. Live walkthrough. Implementation support available.</p>"
+  } ]
+}, {
+  "id" : "voice_title",
+  "name" : "voice_title",
+  "label" : "Left Bottom Card Title",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Our Voice in the Work"
+}, {
+  "id" : "voice_items",
+  "name" : "voice_items",
+  "label" : "Left Bottom Card Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "voice_items.html",
+    "name" : "html",
+    "label" : "Item (rich text)",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<strong>Text.</strong> description"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "html" : "<strong>Candid, not harsh.</strong> We name what's broken clearly — without softening it into vagueness."
+  }, {
+    "html" : "<strong>Candidate-centric.</strong> Every finding is framed from the candidate's point of view, not the employer's."
+  }, {
+    "html" : "<strong>Actionable.</strong> Every weakness has a matching opportunity. Always."
+  }, {
+    "html" : "<strong>Specific.</strong> Never \"improve social.\" Always: here's exactly what to change and why."
+  } ]
+}, {
+  "id" : "deliver_title",
+  "name" : "deliver_title",
+  "label" : "Right Bottom Card Title",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "What We Deliver"
+}, {
+  "id" : "deliver_items",
+  "name" : "deliver_items",
+  "label" : "Right Bottom Card Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 6
+  },
+  "children" : [ {
+    "id" : "deliver_items.html",
+    "name" : "html",
+    "label" : "Item (rich text)",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "Text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "html" : "Webinars + virtual or in-person workshops"
+  }, {
+    "html" : "Recommendation lists + prioritized road maps"
+  }, {
+    "html" : "Workshop facilitation — survey design, 1:1 interview scripts, scribing, synthesis"
+  }, {
+    "html" : "Strategy decks + messaging pillars"
+  }, {
+    "html" : "Content — social posts, blogs, ghostwriting, LinkedIn content"
+  }, {
+    "html" : "Branded PPTX + interactive HTML deliverables"
+  } ]
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.background_color",
+    "name" : "background_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.text_color",
+    "name" : "text_color",
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#1a0a2e",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "background_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "text_color" : {
+      "color" : "#1a0a2e",
+      "opacity" : 100
+    },
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }
+} ]

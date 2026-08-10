@@ -1,0 +1,243 @@
+[ {
+  "id" : "f77aa767-a09e-3364-9998-0c72a3cd6746",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "3b0a672b-00f2-4ed1-d3e9-26c1b8dcb2ec",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "c85b1912-cf6c-bbf9-539f-e4dd8affb240",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "f12f420a-5d2f-70ea-ee4f-29ee711998ff",
+    "name" : "background_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FAF7FB",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "background_color" : {
+      "color" : "#FAF7FB",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "79ec297e-4f2c-cbfd-e6f6-40c17e730aae",
+  "name" : "subhead",
+  "label" : "Subhead",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "TAKE SOMETHING WITH YOU"
+}, {
+  "id" : "f0cf3554-fd42-6dbf-8a90-22a69c9122a9",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>Two assets <strong>to keep you sharp.</strong></h2>"
+}, {
+  "id" : "5ee0f9a5-80bd-d04a-7ece-fe1ae23ceabd",
+  "name" : "cards",
+  "label" : "Cards",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "626612b3-edf7-c8da-142e-d742dc75ae91",
+    "name" : "caption",
+    "label" : "Caption",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "FEATURED · 2026 INDUSTRY REPORT"
+  }, {
+    "id" : "65f5523b-34ce-27ae-cdd7-2796b8d72b0d",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<h3>State of the Industry · 2026</h3>\n<p>Five forces redefining the U.S. IT channel. Organized around the PATH framework. Written for the leaders building what comes next.</p>"
+  }, {
+    "id" : "a240c286-8499-fa69-498a-26f588f5856d",
+    "name" : "form_field",
+    "label" : "Form",
+    "required" : false,
+    "locked" : false,
+    "embed_versions" : [ "v2", "v4" ],
+    "type" : "form",
+    "display_width" : null,
+    "default" : {
+      "form_id" : "afe54a37-473a-4deb-bed7-85ee2a6765ba",
+      "response_type" : "inline",
+      "message" : "Thanks for submitting the form.",
+      "form_type" : "HUBSPOT"
+    }
+  }, {
+    "id" : "62d139a5-0ecd-dfd1-6e31-0672b63f0273",
+    "name" : "style_card",
+    "label" : "Style Card",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "dark", "Dark" ], [ "light", "Light" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "light"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "caption" : "FEATURED · 2026 INDUSTRY REPORT",
+    "text" : "<h3>State of the Industry · 2026</h3>\n<p>Five forces redefining the U.S. IT channel. Organized around the PATH framework. Written for the leaders building what comes next.</p>",
+    "form_field" : {
+      "form_id" : "afe54a37-473a-4deb-bed7-85ee2a6765ba",
+      "response_type" : "inline",
+      "message" : "Thanks for submitting the form.",
+      "form_type" : "HUBSPOT"
+    },
+    "style_card" : "light"
+  }, {
+    "caption" : "FEATURED · 2026 INDUSTRY REPORT",
+    "text" : "<h3>State of the Industry · 2026</h3>\n<p>Five forces redefining the U.S. IT channel. Organized around the PATH framework. Written for the leaders building what comes next.</p>",
+    "form_field" : {
+      "form_id" : "afe54a37-473a-4deb-bed7-85ee2a6765ba",
+      "response_type" : "inline",
+      "message" : "Thanks for submitting the form.",
+      "form_type" : "HUBSPOT"
+    },
+    "style_card" : "light"
+  } ]
+}, {
+  "id" : "e397c6d7-4d22-a73e-630a-1462e37be6f4",
+  "name" : "id_section",
+  "label" : "ID Section",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "magnets"
+} ]

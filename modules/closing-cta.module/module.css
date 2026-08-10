@@ -1,0 +1,144 @@
+.cta-section {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section *,
+.cta-section *::before,
+.cta-section *::after {
+  box-sizing: border-box;
+}
+
+.cta-glow-top {
+  position: absolute;
+  top: -140px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 760px;
+  height: 420px;
+  background: radial-gradient(ellipse, rgba(247, 37, 133, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-glow-bottom {
+  position: absolute;
+  bottom: -160px;
+  right: -100px;
+  width: 460px;
+  height: 460px;
+  background: radial-gradient(circle, rgba(126, 219, 0, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-section .content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ═══ CAPTION ═══ */
+.cta-caption,
+.cta-caption p {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 24px;
+}
+
+/* ═══ HEADING ═══ */
+.cta-heading,
+.cta-heading h2,
+.cta-heading div {
+  font-size: var(--font-size-h2, 52px);
+  line-height: var(--line-height-h2, 120%);
+  letter-spacing: var(--letter-spacing-h2, -1px);
+  color: #ffffff;
+  margin: 0 0 24px;
+  overflow-wrap: break-word;
+}
+
+/* ═══ INTRO ═══ */
+.cta-text,
+.cta-text p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  margin: 0 0 40px;
+}
+
+/* ═══ BUTTONS ═══ */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+/* ═══ FOOTNOTE ═══ */
+.cta-footnote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 12.8px;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 28.48px;
+}
+
+.cta-footnote-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Separator dot sits before every item except the first */
+.cta-footnote-item + .cta-footnote-item::before {
+  content: '';
+  width: 3px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 767px) {
+  .cta-heading,
+  .cta-heading h2,
+  .cta-heading div {
+    font-size: var(--font-size-h2-mobile, 24px);
+    margin-bottom: 20px;
+    line-height: var(--line-height-h2, 120%);
+    letter-spacing: var(--letter-spacing-h2-mobile, -0.48px);
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+
+  .cta-footnote {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Stacked layout drops the inline separators */
+  .cta-footnote-item + .cta-footnote-item::before {
+    display: none;
+  }
+}

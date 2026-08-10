@@ -1,0 +1,68 @@
+{% require_css %}
+<style>
+	{% scope_css %}
+  .eb-hero{
+  {{ module.style.spacing_desktop.css }};
+  }
+  @media (max-width:768px){
+     .eb-hero{
+  {{ module.style.spacing_mobile.css }};
+  }
+  }
+	{% end_scope_css %}
+</style>
+{% end_require_css %}
+
+ <section class="eb-hero" id="{{ module.id_section }}" aria-labelledby="hero-title">
+
+  {# Decorative only, hidden from assistive technology #}
+  <span class="eb-hero__glow eb-hero__glow--magenta" aria-hidden="true"></span>
+  <span class="eb-hero__glow eb-hero__glow--lime" aria-hidden="true"></span>
+
+  <div class="eb-hero__content">
+
+    {# Eyebrow #}
+    <span class="eb-hero__eyebrow">
+      {{ module.brand_name }}
+    </span>
+
+    {# Headline. Wrap one word in <em> to paint it magenta. #}
+    <div class="eb-hero__title" id="hero-title">
+     {{ module.heading }}
+    </div>
+
+    {# Magenta rule #}
+    <hr class="eb-hero__rule">
+
+    {# Supporting paragraph #}
+    <div class="eb-hero__paragraph">
+      {{ module.description }}
+    </div>
+
+    {# Call to action #}
+    {% set href = module.link_field.url.href %}
+{% if module.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+  {% set href = "mailto:" + href %}
+{% elif module.link_field.url.type is equalto "PHONE_NUMBER" %}
+  {% set href = "tel:" + href %}
+{% endif %}
+<a
+  {% if module.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+    href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+  {% else %}
+    href="{{ href|escape_url }}"
+  {% endif %}
+  {% if module.link_field.open_in_new_tab %}
+    target="_blank"
+  {% endif %}
+  {% if module.link_field.rel %}
+    rel="{{ module.link_field.rel|escape_attr }}"
+  {% endif %}
+  class="eb-hero__cta">
+
+     {{ module.text_field }} <span class="eb-hero__cta-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+
+  </div>
+
+</section>

@@ -1,0 +1,35 @@
+{% require_css %}
+<style>
+	{% scope_css %}
+  .stat-band{
+  background-color:{{ module.style.background_color.color }};
+    {{ module.style.spacing_desktop.css }};
+  }
+  
+  @media (max-width:768px){
+   .stat-band{
+  
+    {{ module.style.spacing_mobile.css }};
+  }
+  }
+	
+	{% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="stat-band stat-band--num-{{ module.style.num_typography }}">
+  <div class="content-wrapper">
+    <div class="columns is-mobile is-multiline is-gapless">
+      {% for item in module.stats %}
+      <div class="column is-12-mobile is-6-tablet is-3-desktop is-3-widescreen is-3-fullhd">
+         <div class="stat{% if item.highlight %} stat--highlight{% endif %}" style="--stat-border-color: {{ item.border_color.color }};">
+      <div class="num">{{ item.num }}{{ item.suffix }}</div>
+      <div class="label">{{ item.text }}</div>
+    </div>
+      </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>

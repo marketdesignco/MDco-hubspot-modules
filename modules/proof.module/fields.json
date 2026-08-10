@@ -1,0 +1,325 @@
+[ {
+  "id" : "f77aa767-a09e-3364-9998-0c72a3cd6746",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "3b0a672b-00f2-4ed1-d3e9-26c1b8dcb2ec",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "c85b1912-cf6c-bbf9-539f-e4dd8affb240",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "30eaf9a7-b19b-508d-cb09-3ce18d56b579",
+    "name" : "background_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#fff",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "background_color" : {
+      "color" : "#fff",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "79ec297e-4f2c-cbfd-e6f6-40c17e730aae",
+  "name" : "subhead",
+  "label" : "Subhead",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "PROOF"
+}, {
+  "id" : "f0cf3554-fd42-6dbf-8a90-22a69c9122a9",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>We didn't write the channel's playbook. <strong>We're writing the one</strong><br><strong>for the AI era.</strong></h2>"
+}, {
+  "id" : "94976b9d-6404-7482-b0aa-868e91d7281c",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h6>Credentials, frameworks, awards, and receipts from 20+ years in the tech channel.</h6>"
+}, {
+  "id" : "5ee0f9a5-80bd-d04a-7ece-fe1ae23ceabd",
+  "name" : "cards",
+  "label" : "Cards",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "280b961e-e1f9-ba60-4bc4-5717ebcc62f4",
+    "name" : "show_icon",
+    "label" : "Show Icon",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
+  }, {
+    "id" : "03f3ca84-6edb-1006-b0de-b61c3117b4a8",
+    "name" : "icon_text",
+    "label" : "Icon/Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "★"
+  }, {
+    "id" : "0bae0d8c-95c6-35e3-8b7b-90a18fce0334",
+    "name" : "background_icon",
+    "label" : "Background Icon",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "65f5523b-34ce-27ae-cdd7-2796b8d72b0d",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p><strong>Company of the Year · 2023</strong></p>\nAwarded by MarTech Outlook in their Top 10 Marketing Consulting Companies list — the annual benchmark for firms transforming businesses through marketing strategy."
+  }, {
+    "id" : "6581c885-a949-fd87-8c49-aa8707646500",
+    "name" : "link_field",
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://www.marketdesignco.com/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "9f7579cc-6772-5a86-77be-1aba4bfbbe26",
+    "name" : "link_text",
+    "label" : "Link Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Read More"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "show_icon" : true,
+    "icon_text" : "★",
+    "background_icon" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    },
+    "text" : "<p><strong>Company of the Year · 2023</strong></p>\nAwarded by MarTech Outlook in their Top 10 Marketing Consulting Companies list — the annual benchmark for firms transforming businesses through marketing strategy.",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://www.marketdesignco.com/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "link_text" : "Read More"
+  }, {
+    "show_icon" : true,
+    "icon_text" : "★",
+    "background_icon" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    },
+    "text" : "<p><strong>Company of the Year · 2023</strong></p>\nAwarded by MarTech Outlook in their Top 10 Marketing Consulting Companies list — the annual benchmark for firms transforming businesses through marketing strategy.",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://www.marketdesignco.com/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "link_text" : "Read More"
+  }, {
+    "show_icon" : true,
+    "icon_text" : "★",
+    "background_icon" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    },
+    "text" : "<p><strong>Company of the Year · 2023</strong></p>\nAwarded by MarTech Outlook in their Top 10 Marketing Consulting Companies list — the annual benchmark for firms transforming businesses through marketing strategy.",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://www.marketdesignco.com/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "link_text" : "Read More"
+  }, {
+    "show_icon" : true,
+    "icon_text" : "★",
+    "background_icon" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    },
+    "text" : "<p><strong>Company of the Year · 2023</strong></p>\nAwarded by MarTech Outlook in their Top 10 Marketing Consulting Companies list — the annual benchmark for firms transforming businesses through marketing strategy.",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://www.marketdesignco.com/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "link_text" : "Read More"
+  } ]
+}, {
+  "id" : "e397c6d7-4d22-a73e-630a-1462e37be6f4",
+  "name" : "id_section",
+  "label" : "ID Section",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "person"
+} ]

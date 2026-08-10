@@ -1,0 +1,30 @@
+.centered-statement__inner {
+  max-width: 900px;
+  text-align: center;
+}
+.centered-statement__eyebrow {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #F72585;
+}
+.centered-statement__heading {
+  margin-top: 18px;
+}
+.centered-statement__heading strong {
+  color: #3A0CA3;
+}
+.centered-statement__description {
+  margin-top: 16px;
+  color: #4A4A63;
+}
+.centered-statement__bar {
+  margin: 28px auto 0;
+  width: 120px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #3A0CA3, #7209B7 55%, #7EDB00);
+}

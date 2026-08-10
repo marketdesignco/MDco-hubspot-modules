@@ -1,0 +1,270 @@
+[ {
+  "id" : "f77aa767-a09e-3364-9998-0c72a3cd6746",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "3b0a672b-00f2-4ed1-d3e9-26c1b8dcb2ec",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      },
+      "margin" : {
+        "top" : {
+          "value" : null,
+          "units" : "NaNaN"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "c85b1912-cf6c-bbf9-539f-e4dd8affb240",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      },
+      "margin" : {
+        "top" : {
+          "value" : null,
+          "units" : "NaNaN"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }
+}, {
+  "id" : "6d8265b1-033e-3dbe-e3bd-f3947c090c3a",
+  "name" : "caption",
+  "label" : "Caption",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "The 6 Ps of Progress"
+}, {
+  "id" : "547abd29-f0ce-9825-297c-6231ec9f084c",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>Where <strong>MDCompass</strong> <em>looks</em></h2>"
+}, {
+  "id" : "e38d2486-e54f-d546-119e-2366bf9f3981",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>MDCompass examines six organizational dimensions. Together, they form a complete diagnostic picture of how your organization runs, decides, and grows.</p>"
+}, {
+  "id" : "aceff064-d085-9b54-3132-5c0a7c8e7134",
+  "name" : "pillars",
+  "label" : "Pillars",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "5fe743f8-2fb5-725f-d38c-35e1654b0477",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Purpose"
+  }, {
+    "id" : "41240092-377f-bb8b-e9e4-facb48f60233",
+    "name" : "text",
+    "label" : "text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>The strategic \"why\" behind the marketing effort: market differentiation and go-to-market credibility. Positioning, messaging, and a unique point of view determine whether marketing lands or disappears.</p>\n<ul>\n<li>\n<p>\"Can every leader articulate what makes us different in the same way?\"</p>\n</li>\n<li>\"Does our messaging reflect our positioning, or our assumptions about it?\"</li>\n</ul>"
+  }, {
+    "id" : "64e92f27-11f1-c681-2af0-a8e625578c3c",
+    "name" : "color",
+    "label" : "Color",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "pillars-card--1", "Purple" ], [ "pillars-card--2", "Pink" ], [ "pillars-card--3", "Blue" ], [ "pillars-card--4", "Green" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "pillars-card--2"
+  }, {
+    "id" : "d7e22cc7-9e8b-167b-6eb8-445466d6d335",
+    "name" : "reveals",
+    "label" : "Reveals",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Reveals: messaging inconsistency, positioning drift"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "Purpose",
+    "text" : "<p>The strategic \"why\" behind the marketing effort: market differentiation and go-to-market credibility. Positioning, messaging, and a unique point of view determine whether marketing lands or disappears.</p>\n<ul>\n<li>\n<p>\"Can every leader articulate what makes us different in the same way?\"</p>\n</li>\n<li>\"Does our messaging reflect our positioning, or our assumptions about it?\"</li>\n</ul>",
+    "color" : "pillars-card--2",
+    "reveals" : "Reveals: messaging inconsistency, positioning drift"
+  }, {
+    "title" : "Purpose",
+    "text" : "<p>The strategic \"why\" behind the marketing effort: market differentiation and go-to-market credibility. Positioning, messaging, and a unique point of view determine whether marketing lands or disappears.</p>\n<ul>\n<li>\n<p>\"Can every leader articulate what makes us different in the same way?\"</p>\n</li>\n<li>\"Does our messaging reflect our positioning, or our assumptions about it?\"</li>\n</ul>",
+    "color" : "pillars-card--2",
+    "reveals" : "Reveals: messaging inconsistency, positioning drift"
+  }, {
+    "title" : "Purpose",
+    "text" : "<p>The strategic \"why\" behind the marketing effort: market differentiation and go-to-market credibility. Positioning, messaging, and a unique point of view determine whether marketing lands or disappears.</p>\n<ul>\n<li>\n<p>\"Can every leader articulate what makes us different in the same way?\"</p>\n</li>\n<li>\"Does our messaging reflect our positioning, or our assumptions about it?\"</li>\n</ul>",
+    "color" : "pillars-card--2",
+    "reveals" : "Reveals: messaging inconsistency, positioning drift"
+  }, {
+    "title" : "Purpose",
+    "text" : "<p>The strategic \"why\" behind the marketing effort: market differentiation and go-to-market credibility. Positioning, messaging, and a unique point of view determine whether marketing lands or disappears.</p>\n<ul>\n<li>\n<p>\"Can every leader articulate what makes us different in the same way?\"</p>\n</li>\n<li>\"Does our messaging reflect our positioning, or our assumptions about it?\"</li>\n</ul>",
+    "color" : "pillars-card--2",
+    "reveals" : "Reveals: messaging inconsistency, positioning drift"
+  } ]
+}, {
+  "id" : "8c1242e4-60c6-c687-521a-81648a07652d",
+  "name" : "note",
+  "label" : "Note",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>What AI does not do: interpret, conclude, or decide what findings mean. The rubric actively reduces bias by anchoring scores to observable behaviors and removing the influence of title, tenure, or confidence. If a score cannot be defended with evidence, it is not assigned. People interrogate the data. That work happens in facilitated sessions, not in the scoring model.</p>"
+}, {
+  "id" : "c6b0eea6-2b06-8754-e2e1-256fc63677c5",
+  "name" : "callout",
+  "label" : "Callout",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "AI makes the evidence defensible. The facilitation makes it actionable. Neither works without the other."
+}, {
+  "id" : "406f888f-97ef-b332-9a95-59b650a615ee",
+  "name" : "section_id",
+  "label" : "Section Id",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "pillars"
+} ]

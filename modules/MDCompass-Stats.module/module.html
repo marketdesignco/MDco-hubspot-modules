@@ -1,0 +1,28 @@
+{% require_css %}
+<style>
+	{% scope_css %}
+  .mdcompass-stats{
+  background: #1A1A2E;
+  {{ module.style.spacing_desktop.css }};
+  }
+  @media (max-width:768px){
+     .mdcompass-stats{
+  {{ module.style.spacing_mobile.css }};
+  }
+  }
+	{% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="mdcompass-stats" aria-label="Key metrics">
+  <div class="mdcompass-stats__container content-wrapper">
+    <div class="mdcompass-stats__grid">
+      {% for stat in module.stats %}
+      <div class="mdcompass-stats__stat" style="--stat-border-color: {{ stat.border_color.color }};">
+        <h3 class="mdcompass-stats__number">{{ stat.number }}</h3>
+        <div class="mdcompass-stats__label">{{ stat.description }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

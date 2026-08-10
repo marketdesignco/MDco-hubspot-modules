@@ -1,0 +1,76 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .ff-subnav-inner { {{ module.style.spacing_desktop.css }} }
+  @media (max-width: 700px) {
+    .ff-subnav-inner { {{ module.style.spacing_mobile.css }} }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<div class="ff-subnav-wrap" data-ff-subnav-wrap
+     style="--ff-subnav-bg: {{ module.style.background_color.color }};
+            --ff-subnav-text: {{ module.style.text_color.color }};
+            --ff-subnav-active-bg: {{ module.style.active_bg_color.color }};
+            --ff-subnav-active-text: {{ module.style.active_text_color.color }};">
+  <nav class="ff-subnav"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+    <div class="ff-wrap">
+      <div class="ff-subnav-inner">
+        {% if module.label_text %}<span class="ff-subnav-label">{{ module.label_text }}</span>{% endif %}
+        <div class="ff-subnav-links">
+          {% for l in module.links %}
+            <a href="#{{ l.anchor }}"{% if loop.first %} class="active"{% endif %}>{{ l.text }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<script>
+  (function(){
+    var wrap = document.querySelector('[data-ff-subnav-wrap]');
+    if (!wrap) return;
+    var nav = wrap.querySelector('.ff-subnav');
+    var links = wrap.querySelectorAll('.ff-subnav-links a');
+    var sections = Array.prototype.map.call(links, function(a){
+      return document.querySelector(a.getAttribute('href'));
+    });
+
+    function updateStickyOffset(){
+      wrap.style.setProperty('--ff-subnav-h', nav.offsetHeight + 'px');
+    }
+
+    function onScroll(){
+      var rect = wrap.getBoundingClientRect();
+      var wasFixed = wrap.classList.contains('is-fixed');
+      var shouldFix = rect.top <= 0 && !wasFixed;
+      if (shouldFix) {
+        updateStickyOffset();
+        wrap.classList.add('is-fixed');
+      } else if (wasFixed) {
+        var top = wrap.getBoundingClientRect().top + window.scrollY;
+        if (window.scrollY < top - parseFloat(getComputedStyle(wrap).paddingTop || 0)) {
+          wrap.classList.remove('is-fixed');
+        }
+      }
+
+      var currentHref = null;
+      for (var i=0; i<sections.length; i++){
+        if (sections[i] && sections[i].getBoundingClientRect().top <= 140) {
+          currentHref = '#' + sections[i].id;
+        }
+      }
+      if (!currentHref) currentHref = links[0].getAttribute('href');
+      for (var j=0; j<links.length; j++){
+        links[j].classList.toggle('active', links[j].getAttribute('href') === currentHref);
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', updateStickyOffset, { passive: true });
+    updateStickyOffset();
+    onScroll();
+  })();
+</script>

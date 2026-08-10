@@ -1,0 +1,125 @@
+[
+  {
+    "id": "cb6a8fe8-3569-4e4d-ad69-e3d0d6f9bd19",
+    "name": "section_id",
+    "label": "Id Section (menu anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "",
+    "display_width": null
+  },
+  {
+    "id": "f6dafc13-60be-4875-a9ec-a6fa52d1f6c0",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "Giving Back",
+    "display_width": null
+  },
+  {
+    "id": "e8d6f081-4eef-4da3-815e-4c40f2a0cee2",
+    "name": "heading",
+    "label": "Heading (rich text — use strong for the accent words)",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<h5>Our Long-Term Aspiration Is Simple — To Invest in the Fight to <strong>Cure Cancer</strong>.</h5>",
+    "display_width": null
+  },
+  {
+    "id": "317608b0-593c-4719-a7e1-94bfd778c43c",
+    "name": "description",
+    "label": "Description",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<p>We won't find the cure, but the growth we build funds the people who will. When we do what we love, we help protect who we love.</p>",
+    "display_width": null
+  },
+  {
+    "id": "323a0227-66d9-4ceb-a5e6-a04992b8f81c",
+    "name": "show_accent_bar",
+    "label": "Show Gradient Accent Bar",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "default": true,
+    "display_width": null
+  },
+  {
+    "id": "7523c108-5a8b-494f-b6a8-879dd7eef2f7",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "tab": "STYLE",
+    "children": [
+      {
+        "id": "01504a2a-c142-4357-a2ca-9fe6972d1443",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 72,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 72,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      },
+      {
+        "id": "b161882c-190a-4a16-bbeb-0979dcc225db",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 48,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 48,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      }
+    ],
+    "display_width": null
+  }
+]

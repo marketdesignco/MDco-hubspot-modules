@@ -1,0 +1,206 @@
+{% require_css %}
+<style>
+{% scope_css %}
+.eb-jrn {
+  background: #3A0CA3;
+  {{ module.style.spacing_desktop.css }}
+}
+.eb-jrn-footer {
+  border-left: 4px solid {{ module.style.footer_accent_color.color }};
+}
+@media (max-width: 768px) {
+  .eb-jrn { {{ module.style.spacing_mobile.css }} }
+}
+{% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="eb-jrn"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+      {% if module.eyebrow %}<div class="eb-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+    <div class="eb-title">
+        {{ module.heading }}
+    </div>
+
+  <div class="eb-jrn-lede">{{ module.lede }}</div>
+  {% if module.hint_text %}<div class="eb-jrn-hint">{{ module.hint_text }}</div>{% endif %}
+
+  <div class="eb-jrn-wheel-wrap" data-eb-wheel>
+    <div class="eb-jrn-wheel-inner">
+      <canvas class="eb-jrn-canvas" data-eb-canvas></canvas>
+    </div>
+    <div class="eb-jrn-info" data-eb-info>
+      <div class="eb-jrn-info-label" data-eb-info-label>{{ module.default_info_label }}</div>
+      <div class="eb-jrn-info-title" data-eb-info-title>{{ module.default_info_title }}</div>
+      <div class="eb-jrn-info-desc" data-eb-info-desc>{{ module.default_info_desc }}</div>
+    </div>
+  </div>
+
+  {% if module.footer_note %}
+    <div class="eb-jrn-footer">{{ module.footer_note }}</div>
+  {% endif %}
+
+  <script type="application/json" data-eb-stages>
+    {
+      "stages": [
+        {% for s in module.stages %}
+          {
+            "label": {{ s.label_text|tojson }},
+            "title": {{ s.title|tojson }},
+            "color": {{ s.color.color|tojson }},
+            "desc":  {{ s.description|striptags|tojson }}
+          }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ],
+      "defaults": {
+        "label": {{ module.default_info_label|tojson }},
+        "title": {{ module.default_info_title|tojson }},
+        "desc":  {{ module.default_info_desc|tojson }}
+      },
+      "center": {
+        "top":         {{ module.center_top_text|tojson }},
+        "bottom":      {{ module.center_bottom_text|tojson }},
+        "topColor":    {{ module.style.center_top_color.color|tojson }},
+        "bottomColor": {{ module.style.center_bottom_color.color|tojson }},
+        "bg":          {{ module.style.center_bg_color.color|tojson }},
+        "ring":        {{ module.style.center_top_color.color|tojson }}
+      }
+    }
+  </script>
+    
+  </div>
+
+</section>
+
+<script>
+  (function(){
+    var roots = document.querySelectorAll('[data-eb-wheel]');
+    roots.forEach(function(root){
+      var dataEl = root.parentElement.querySelector('[data-eb-stages]');
+      if (!dataEl) return;
+      var cfg;
+      try { cfg = JSON.parse(dataEl.textContent); } catch(e) { return; }
+      var stages = cfg.stages || [];
+      if (!stages.length) return;
+
+      var canvas = root.querySelector('[data-eb-canvas]');
+      var info   = root.querySelector('[data-eb-info]');
+      var lbl    = root.querySelector('[data-eb-info-label]');
+      var ttl    = root.querySelector('[data-eb-info-title]');
+      var desc   = root.querySelector('[data-eb-info-desc]');
+      var ctx = canvas.getContext('2d');
+      var size = 0, active = -1;
+
+      function lighten(hex){
+        hex = hex.replace('#','');
+        var r = parseInt(hex.substr(0,2),16),
+            g = parseInt(hex.substr(2,2),16),
+            b = parseInt(hex.substr(4,2),16);
+        return 'rgb(' + Math.min(r+60,255) + ',' + Math.min(g+40,255) + ',' + Math.min(b+60,255) + ')';
+      }
+
+      function draw(){
+        var S = size, N = stages.length;
+        if (!S) return;
+        var slice = (2*Math.PI)/N, offset = -Math.PI/2;
+        var cx = S/2, cy = S/2;
+        var outerR = S*0.48, innerR = S*0.18;
+        ctx.clearRect(0,0,S,S);
+
+        for (var i=0; i<N; i++){
+          var s = stages[i];
+          var startA = offset + i*slice, endA = startA + slice;
+          var isActive = i === active;
+          ctx.beginPath();
+          ctx.moveTo(cx, cy);
+          ctx.arc(cx, cy, isActive ? outerR+6 : outerR, startA, endA);
+          ctx.closePath();
+          ctx.fillStyle = isActive ? lighten(s.color) : s.color;
+          ctx.fill();
+          ctx.strokeStyle = '#1A1A2E';
+          ctx.lineWidth = 2.5;
+          ctx.stroke();
+          var midA = startA + slice/2, labelR = (outerR+innerR)/2;
+          var lx = cx + labelR*Math.cos(midA), ly = cy + labelR*Math.sin(midA);
+          ctx.save();
+          ctx.translate(lx, ly);
+          ctx.rotate(midA + Math.PI/2);
+          ctx.fillStyle = isActive ? '#fff' : 'rgba(255,255,255,0.75)';
+          ctx.font = '700 ' + (S*0.022) + "px 'Lato',sans-serif";
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(String(s.title).toUpperCase(), 0, 0);
+          ctx.restore();
+        }
+
+        ctx.beginPath(); ctx.arc(cx, cy, innerR, 0, 2*Math.PI);
+        ctx.fillStyle = cfg.center.bg; ctx.fill();
+        ctx.strokeStyle = cfg.center.ring; ctx.lineWidth = 1; ctx.stroke();
+
+        ctx.fillStyle = cfg.center.topColor;
+        ctx.font = 'italic 700 ' + (S*0.026) + "px 'Lato',sans-serif";
+        ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText(cfg.center.top, cx, cy - S*0.03);
+        ctx.fillStyle = cfg.center.bottomColor;
+        ctx.font = '700 ' + (S*0.03) + "px 'Lato',sans-serif";
+        ctx.fillText(cfg.center.bottom, cx, cy + S*0.02);
+
+        ctx.beginPath(); ctx.arc(cx, cy, outerR+10, 0, 2*Math.PI);
+        ctx.strokeStyle = 'rgba(126,219,0,0.2)'; ctx.lineWidth = 1; ctx.stroke();
+      }
+
+      function resize(){
+        var rect = canvas.parentElement.getBoundingClientRect();
+        size = rect.width;
+        var dpr = window.devicePixelRatio || 1;
+        canvas.width = size * dpr;
+        canvas.height = size * dpr;
+        canvas.style.width = size + 'px';
+        canvas.style.height = size + 'px';
+        ctx.setTransform(1,0,0,1,0,0);
+        ctx.scale(dpr, dpr);
+        draw();
+      }
+
+      function getSeg(x, y){
+        var rect = canvas.getBoundingClientRect();
+        var rx = x - rect.left, ry = y - rect.top;
+        var S = size, cx = S/2, cy = S/2, outerR = S*0.48, innerR = S*0.18;
+        var dx = rx-cx, dy = ry-cy, dist = Math.sqrt(dx*dx+dy*dy);
+        if (dist < innerR || dist > outerR+8) return -1;
+        var angle = Math.atan2(dy, dx) + Math.PI/2;
+        if (angle < 0) angle += 2*Math.PI;
+        return Math.floor(angle / ((2*Math.PI)/stages.length));
+      }
+
+      function handle(x, y){
+        var seg = getSeg(x, y);
+        if (seg === active) return;
+        active = seg;
+        draw();
+        if (seg >= 0 && seg < stages.length) {
+          var s = stages[seg];
+          lbl.textContent = s.label;
+          ttl.textContent = s.title;
+          desc.textContent = s.desc;
+          info.style.borderColor = s.color;
+          info.style.background = s.color + '22';
+        } else {
+          lbl.textContent = cfg.defaults.label;
+          ttl.textContent = cfg.defaults.title;
+          desc.textContent = cfg.defaults.desc;
+          info.style.borderColor = 'rgba(126,219,0,0.35)';
+          info.style.background = 'rgba(58,12,163,0.25)';
+        }
+      }
+
+      canvas.addEventListener('mousemove', function(e){ handle(e.clientX, e.clientY); });
+      canvas.addEventListener('click',     function(e){ handle(e.clientX, e.clientY); });
+      canvas.addEventListener('mouseleave',function(){ active = -1; draw(); });
+      canvas.addEventListener('touchmove', function(e){ e.preventDefault(); handle(e.touches[0].clientX, e.touches[0].clientY); }, { passive:false });
+      canvas.addEventListener('touchstart',function(e){ e.preventDefault(); handle(e.touches[0].clientX, e.touches[0].clientY); }, { passive:false });
+      window.addEventListener('resize', resize);
+      resize();
+    });
+  })();
+</script>

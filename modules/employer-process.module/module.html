@@ -1,0 +1,49 @@
+{% require_css %}
+<style>
+{% scope_css %}
+.eb-proc {
+  background: {{ module.style.background_color.color }};
+  color: {{ module.style.text_color.color }};
+  {{ module.style.spacing_desktop.css }}
+}
+@media (max-width: 768px) {
+  .eb-proc { {{ module.style.spacing_mobile.css }} }
+}
+{% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="eb-proc"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    {% if module.eyebrow %}<div class="eb-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+    <div class="eb-title">{{ module.heading }}</div>
+    <div class="eb-lede">{{ module.lede }}</div>
+
+    <div class="eb-proc-timeline">
+      {% for s in module.steps %}
+      <div class="eb-proc-step">
+        <div class="eb-proc-circle">{{ s.number }}</div>
+        <div class="eb-proc-step-content">
+          <div class="eb-proc-title">{{ s.title }}</div>
+          <div class="eb-proc-body">{{ s.description }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="eb-proc-bottom">
+      <div class="eb-proc-bcard left">
+        <div class="eb-proc-bcard-title">{{ module.voice_title }}</div>
+        <ul>
+          {% for i in module.voice_items %}<li>{{ i.html }}</li>{% endfor %}
+        </ul>
+      </div>
+      <div class="eb-proc-bcard right">
+        <div class="eb-proc-bcard-title">{{ module.deliver_title }}</div>
+        <ul>
+          {% for i in module.deliver_items %}<li>{{ i.html }}</li>{% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

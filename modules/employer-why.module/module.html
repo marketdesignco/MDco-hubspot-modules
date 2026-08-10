@@ -1,0 +1,52 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .eb-why {
+    background: {{ module.style.background_color.color }};
+    color: {{ module.style.text_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+
+@media (max-width: 768px) {
+  .eb-why { {{ module.style.spacing_mobile.css }} }
+}
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="eb-why"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    {% if module.eyebrow %}<div class="eb-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+    <div class="eb-title">
+      {{ module.heading }}
+    </div>
+  
+  {% for p in module.intro_paragraphs %}
+    <div class="eb-lede">{{ p.html }}</div>
+  {% endfor %}
+
+  <div class="eb-why-top-grid">
+    {% for c in module.top_cards %}
+      <div class="eb-why-card">
+        <div class="eb-why-card-title">{{ c.title }}</div>
+        <div class="eb-why-card-body">{{ c.description }}</div>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if module.quote_html %}
+    <div class="eb-why-quote">{{ module.quote_html }}</div>
+  {% endif %}
+
+  <div class="eb-why-bottom-grid">
+    {% for c in module.bottom_cards %}
+      <div class="eb-why-bottom-card">
+        <div class="eb-why-bottom-title">{{ c.title }}</div>
+        <div class="eb-why-bottom-body">{{ c.description }}</div>
+      </div>
+    {% endfor %}
+  </div>
+    
+  </div>
+  
+</section>

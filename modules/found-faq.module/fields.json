@@ -1,0 +1,168 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "faq"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Common Questions"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2 class=\"ff-section-title\">Straight answers, no acronym soup.</h2>"
+}, {
+  "id" : "items",
+  "name" : "items",
+  "label" : "FAQ Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 8
+  },
+  "children" : [ {
+    "id" : "items.question",
+    "name" : "question",
+    "label" : "Question",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "What is Found First?"
+  }, {
+    "id" : "items.answer",
+    "name" : "answer",
+    "label" : "Answer",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>MDCo's AI + Search Visibility service.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "question" : "What is Found First?",
+    "answer" : "MDCo's AI + Search Visibility service. It aligns your website, SEO, AEO, and GEO so IT buyers can find and trust you, on Google and inside AI answer engines."
+  }, {
+    "question" : "How is this different from the SEO we already do?",
+    "answer" : "Traditional SEO optimizes for search rankings alone. Found First adds AEO (structuring content so AI can extract and cite it) and GEO (the entity and authority signals that build AI trust). SEO didn't disappear. It became one of three disciplines instead of the whole job."
+  }, {
+    "question" : "Does optimizing for AI mean the content ignores the human buyer?",
+    "answer" : "No, the opposite. AI can get you shortlisted, but a person still reads the page and decides to trust you enough to take the next step. Every Found First asset is written to pass two audiences: legible to the machine that surfaces it, and persuasive to the decision-maker it's handed to."
+  }, {
+    "question" : "Who is this built for?",
+    "answer" : "IT service companies: MSPs, VARs, channel and OEM partners, solution providers, and PE-backed IT firms whose growth has depended on referrals and who need a repeatable, scalable way to be found by buyers researching on their own."
+  }, {
+    "question" : "Why does the program start with an audit? Can we skip it?",
+    "answer" : "Not really, and it's the reason the program works. Every IT company starts from a different baseline in site architecture, content depth, and entity footprint. Without an audit, execution is guesswork. The audit maps your actual gaps and sets the plan and the measurement baseline everything else is scoped against."
+  }, {
+    "question" : "What do we own at the end of the engagement?",
+    "answer" : "Everything the work produces (content, schema markup, site changes, entity data, and reporting setup) all become your permanent assets. MDCo retains the Found First methodology itself, but the deliverables are yours, documented in a Playbook your team can carry forward independently."
+  }, {
+    "question" : "How is this different from a general SEO agency?",
+    "answer" : "Two things: it's built specifically for IT service providers: the content formats and buyer-query research are calibrated to the IT channel, not generic, and it runs SEO, AEO, and GEO together instead of stopping at rankings. Most agencies still haven't built the GEO-specific work that shapes what AI models already know about a company."
+  }, {
+    "question" : "Why does this matter right now?",
+    "answer" : "IT buyers increasingly start vendor research inside AI chat tools before they ever ask for a referral. A company that isn't structured to be cited there is invisible at the exact moment a shortlist gets built."
+  } ]
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.background_color",
+    "name" : "background_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FAF8FC",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.text_color",
+    "name" : "text_color",
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#2A1F3F",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 72,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 72,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 48,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 48,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

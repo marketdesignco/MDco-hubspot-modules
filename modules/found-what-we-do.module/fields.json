@@ -1,0 +1,268 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "what-we-do"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "What We Do"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2 class=\"ff-section-title\">One audit. A scoped plan.<br>No generic tier menu.</h2>"
+}, {
+  "id" : "intro",
+  "name" : "intro",
+  "label" : "Intro",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p class=\"ff-section-intro\">Found First doesn't start with a generic plan. It starts with an audit of your actual site, content, and AI visibility, then scopes the work to what's really needed.</p>"
+}, {
+  "id" : "journey",
+  "name" : "journey",
+  "label" : "Journey Steps",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "journey.title",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Audit"
+  }, {
+    "id" : "journey.description",
+    "name" : "description",
+    "label" : "Body",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Assessment of foundation.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "Audit",
+    "description" : "<p>A full assessment of web foundation, content, and SEO/AEO/GEO readiness, typically anchored by a HubSpot CMS assessment.</p>"
+  }, {
+    "title" : "Results",
+    "description" : "<p>A scored visibility baseline and a plain-language read on where you're invisible today, and why.</p>"
+  }, {
+    "title" : "Recommendations + Quick Wins",
+    "description" : "<p>A prioritized plan built from the audit findings, plus the fastest, highest-impact fixes tackled first so momentum starts immediately.</p>"
+  }, {
+    "title" : "Scale",
+    "description" : "<p>Ongoing content, authority, and credibility building month over month, with Visibility Index movement reported as it happens.</p>"
+  } ]
+}, {
+  "id" : "in_label",
+  "name" : "in_label",
+  "label" : "In-scope Label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Found First Covers"
+}, {
+  "id" : "in_items",
+  "name" : "in_items",
+  "label" : "In-scope Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 6
+  },
+  "children" : [ {
+    "id" : "in_items.html",
+    "name" : "html",
+    "label" : "Item (rich text)",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "Website + technical foundation"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "html" : "Website + technical foundation"
+  }, {
+    "html" : "Web + landing page optimization"
+  }, {
+    "html" : "Organic SEO, AEO + GEO"
+  }, {
+    "html" : "Owned content creation"
+  }, {
+    "html" : "AI citation monitoring + reporting"
+  }, {
+    "html" : "Found First Playbook, yours to keep"
+  } ]
+}, {
+  "id" : "out_label",
+  "name" : "out_label",
+  "label" : "Out-of-scope Label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Handled by Other MDCo Services"
+}, {
+  "id" : "out_items",
+  "name" : "out_items",
+  "label" : "Out-of-scope Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "out_items.html",
+    "name" : "html",
+    "label" : "Item (rich text)",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "Paid media + social: <strong>Voice℠</strong>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "html" : "Paid media + social: <strong>Voice℠</strong>"
+  }, {
+    "html" : "Executive thought leadership: <strong>Voice℠</strong>"
+  }, {
+    "html" : "Full site rebuilds: <strong>Brand℠</strong>"
+  } ]
+}, {
+  "id" : "note",
+  "name" : "note",
+  "label" : "Bottom Note",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Everything Found First builds (content, schema, entity data, the reporting setup) becomes a permanent asset you own. Nothing here locks you into MDCo to keep working; the Playbook documents the methodology so your team can carry it forward on its own."
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.background_color",
+    "name" : "background_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FAF8FC",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.text_color",
+    "name" : "text_color",
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#2A1F3F",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 96,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 96,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 56,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 56,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

@@ -1,0 +1,26 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .ff-faq {
+    background: {{ module.style.background_color.color }};
+    color: {{ module.style.text_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 768px) { .ff-faq { {{ module.style.spacing_mobile.css }} } }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="ff-faq"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="ff-wrap">
+    {% if module.eyebrow %}<div class="ff-eyebrow"><span>{{ module.eyebrow }}</span></div>{% endif %}
+    {{ module.heading }}
+
+    {% for i in module.items %}
+      <div class="ff-faq-item">
+        <div class="ff-faq-q">{{ i.question }}</div>
+        <div class="ff-faq-a">{{ i.answer }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

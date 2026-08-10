@@ -1,0 +1,205 @@
+
+.what-eyebrow,
+.what-eyebrow p {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #f72585;
+  margin: 0 0 1rem;
+}
+
+.what-eyebrow span,
+.what-eyebrow em {
+  text-transform: none;
+  font-style: normal;
+}
+
+.what-title,
+.what-title h2,
+.what-title div {
+  font-size: var(--font-size-h2, 52px);
+  line-height: var(--line-height-h2, 120%);
+  letter-spacing: var(--letter-spacing-h2, -1px);
+  color: #171f6f;
+  margin: 0 0 1rem;
+}
+.what-title strong {
+  background: linear-gradient(90deg, #3A0CA3 0%, #7209B7 55%, #7EDB00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #3A0CA3;
+}
+
+.what-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 2.5rem;
+  align-items: start;
+}
+
+.what-text,
+.what-text p {
+  color:#6B5880;
+}
+
+.what-text p:last-child {
+  margin-bottom: 2rem;
+}
+
+.what-text strong,
+.what-text b {
+  color: #1a0a2e;
+  font-weight: 700;
+}
+.what-card {
+  background: #ffffff;
+  border: 1px solid #7209B71F;
+  border-radius: 8px;
+  padding: 1.75rem 2rem;
+}
+
+.what-card-label,
+.what-card-label p {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 900;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #7209b7;
+
+}
+
+.what-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top:20px;
+}
+
+.what-step {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  font-size: 0.88rem;
+  color: #1A0A2E;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22.53px;
+}
+
+.what-step p {
+  margin: 0;
+}
+
+.what-arrow {
+  color: #7edb00;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.what-panel {
+  background: #171f6f;
+  border-radius: 10px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.what-glow {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(247, 37, 133, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.what-panel-title,
+.what-panel-title h3,
+.what-panel-title div {
+  font-size: var(--font-size-h5, 28px);
+  line-height: var(--line-height-h5, 140%);
+  letter-spacing: var(--letter-spacing-h5, -0.28px);
+  color: #ffffff;
+  margin: 0 0 1.5rem;
+  position: relative;
+}
+
+.what-rules {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  position: relative;
+}
+
+.what-rule {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.65;
+}
+
+.what-rule p {
+  margin: 0;
+  font-family: Lato;
+  font-size: 14px;
+  line-height: 23.5px;
+
+}
+
+.what-rule strong,
+.what-rule b {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+
+.what-section ul svg{
+  width:16px;
+  fill: #7edb00;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 900px) {
+
+  .what-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top:20px;
+  }
+  .what-title, .what-title h2, .what-title div{
+  font-size: var(--font-size-h2-mobile, 24px);
+    line-height: var(--line-height-h2, 120%);
+    letter-spacing: var(--letter-spacing-h2-mobile, -0.48px);
+  }
+  .what-panel {
+    padding: 32px 18px;
+  }
+  .what-panel-title, .what-panel-title h3, .what-panel-title div{
+  font-size: var(--font-size-h5-mobile, 16px);
+    line-height: var(--line-height-h5, 140%);
+    letter-spacing: var(--letter-spacing-h5-mobile, -0.16px);
+  }
+  .what-step{
+  font-size:15px;
+    line-height:100%;
+  }
+  .what-card{
+    padding:30px 15px;
+  }
+}

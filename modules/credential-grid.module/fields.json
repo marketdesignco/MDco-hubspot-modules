@@ -1,0 +1,269 @@
+[
+  {
+    "id": "85658e3b-b462-4741-9213-1bf07cd1a28c",
+    "name": "section_id",
+    "label": "Id Section (menu anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "proof",
+    "display_width": null
+  },
+  {
+    "id": "38e3bab0-2676-4920-ae0e-40be3e336e34",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "Proof",
+    "display_width": null
+  },
+  {
+    "id": "1490fa88-cab6-4647-939b-519b58eca77c",
+    "name": "heading",
+    "label": "Heading (rich text — use strong for the accent words)",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<h2>Fresh Perspective, <strong>Proven Process.</strong></h2>",
+    "display_width": null
+  },
+  {
+    "id": "147b01f9-c96b-4fe4-b2a1-c3e18f377ce5",
+    "name": "lede",
+    "label": "Lede",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<p>Credentials, frameworks, and receipts from 20+ years in the tech channel.</p>",
+    "display_width": null
+  },
+  {
+    "id": "241a5352-2daf-4244-92d5-e8eaece78e8b",
+    "name": "cards",
+    "label": "Cards",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "8c2cd02a-78e2-4375-a1d0-43b6c65494e8",
+        "name": "badge_text",
+        "label": "Badge Text",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "default": "HP",
+        "display_width": null
+      },
+      {
+        "id": "0f84bf9d-1e50-4989-bf15-7c97a95c96ef",
+        "name": "badge_bg",
+        "label": "Badge Background Color",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "default": {
+          "color": "#3A0CA3",
+          "opacity": 100
+        },
+        "display_width": null
+      },
+      {
+        "id": "49893d25-43e2-44dd-bb1c-bf71754abfab",
+        "name": "badge_text_color",
+        "label": "Badge Text Color",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "default": {
+          "color": "#FFFFFF",
+          "opacity": 100
+        },
+        "display_width": null
+      },
+      {
+        "id": "534c6491-897f-450e-a62f-a52ea9369bdd",
+        "name": "badge_gradient",
+        "label": "Use Gradient Badge (overrides background color)",
+        "required": false,
+        "locked": false,
+        "display": "toggle",
+        "type": "boolean",
+        "default": false,
+        "display_width": null
+      },
+      {
+        "id": "0688cae7-448c-4753-88ef-21abb9dd2386",
+        "name": "title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "<p>Credential title</p>",
+        "display_width": null
+      },
+      {
+        "id": "24031501-2f1a-4c2f-9c3b-991a500afe83",
+        "name": "description",
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "<p>Description</p>",
+        "display_width": null
+      }
+    ],
+    "default": [
+      {
+        "badge_text": "HP",
+        "badge_bg": {
+          "color": "#3A0CA3",
+          "opacity": 100
+        },
+        "badge_text_color": {
+          "color": "#FFFFFF",
+          "opacity": 100
+        },
+        "badge_gradient": false,
+        "title": "<p>HubSpot Platinum Partner</p>",
+        "description": "<p>Multi-certified across Sales, Marketing, Service, Ops, and CMS — plus Salesforce, ConnectWise, and Autotask experience.</p>"
+      },
+      {
+        "badge_text": "★",
+        "badge_bg": {
+          "color": "#FFB800",
+          "opacity": 100
+        },
+        "badge_text_color": {
+          "color": "#1A1A2E",
+          "opacity": 100
+        },
+        "badge_gradient": false,
+        "title": "<p>Company of the Year · 2023</p>",
+        "description": "<p>Named by MarTech Outlook in its Top 10 Marketing Consulting Companies list.</p>"
+      },
+      {
+        "badge_text": "P",
+        "badge_bg": {
+          "color": "#7209B7",
+          "opacity": 100
+        },
+        "badge_text_color": {
+          "color": "#FFFFFF",
+          "opacity": 100
+        },
+        "badge_gradient": false,
+        "title": "<p>The P.A.T.H. Framework</p>",
+        "description": "<p>Purpose · Accountability · Technology · Human. The lens on every engagement.</p>"
+      },
+      {
+        "badge_text": "$8M",
+        "badge_bg": {
+          "color": "#7209B7",
+          "opacity": 100
+        },
+        "badge_text_color": {
+          "color": "#FFFFFF",
+          "opacity": 100
+        },
+        "badge_gradient": true,
+        "title": "<p>Client Pipeline · 2025</p>",
+        "description": "<p>Created across positioning sprints, HubSpot builds, demand gen, and AEO engagements.</p>"
+      }
+    ],
+    "type": "group",
+    "display_width": null
+  },
+  {
+    "id": "5db3b760-4d95-472b-ac5e-230b6f846312",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "tab": "STYLE",
+    "children": [
+      {
+        "id": "a2b780ae-2ded-491e-b9f9-470a762f4dca",
+        "name": "background_color",
+        "label": "Background Color",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "default": {
+          "color": "#FAF7FB",
+          "opacity": 100
+        },
+        "display_width": null
+      },
+      {
+        "id": "d4192b11-3a6d-40c6-bc06-30be6f131d9a",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 96,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 96,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      },
+      {
+        "id": "79d707d5-b1d6-47b9-8c8f-5b2a1e4838d0",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 48,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 48,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      }
+    ],
+    "display_width": null
+  }
+]

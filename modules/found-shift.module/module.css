@@ -1,0 +1,116 @@
+/* found-shift — static styles */
+.ff-shift-track {
+  position: relative;
+  margin-top: 56px;
+}
+
+.ff-shift-line {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--ff-border);
+}
+
+.ff-era-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  position: relative;
+}
+
+.ff-era-card {
+  position: relative;
+}
+
+.ff-era-dot {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--ff-card);
+  border: 2px solid var(--ff-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ff-font-h);
+  font-weight: 900;
+  font-size: 13px;
+  color: var(--ff-muted);
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.ff-era-card.now .ff-era-dot {
+  background: var(--ff-gradient);
+  border-color: transparent;
+  color: #fff;
+}
+
+.ff-era-period {
+  font-family: var(--ff-font-h);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ff-pink);
+  margin-bottom: 8px;
+}
+
+.ff-era-title {
+  font-size: 21px;
+  font-family: var(--ff-font-h);
+  font-weight: 900;
+  color: var(--ff-deep);
+  margin-bottom: 10px;
+}
+
+.ff-era-body {
+  color: var(--ff-muted);
+  font-size: 15px;
+}
+
+.ff-era-body p {
+  margin: 0;
+}
+
+.ff-era-card.now {
+  background: var(--ff-card);
+  border: 1px solid var(--ff-border);
+  border-radius: 16px;
+  padding: 28px;
+  margin-top: -4px;
+  box-shadow: 0 12px 32px rgba(58, 12, 163, 0.08);
+}
+
+.ff-era-card.now .ff-era-title {
+  color: var(--ff-deep);
+}
+
+.ff-shift-callout {
+  margin-top: 56px;
+  background: linear-gradient(135deg, rgba(114, 9, 183, 0.06), rgba(126, 219, 0, 0.06));
+  border: 1px solid var(--ff-border);
+  border-radius: 16px;
+  padding: 32px 36px;
+  font-family: var(--ff-font-h);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--ff-deep);
+  line-height: 1.5;
+}
+
+.ff-shift-callout span {
+  color: var(--ff-pink);
+}
+
+@media (max-width: 900px) {
+  .ff-era-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ff-shift-line {
+    display: none;
+  }
+}

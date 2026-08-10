@@ -1,0 +1,88 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .ff-wwd {
+    background: {{ module.style.background_color.color }};
+    color: {{ module.style.text_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 768px) { .ff-wwd { {{ module.style.spacing_mobile.css }} } }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="ff-wwd"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="ff-wrap">
+    {% if module.eyebrow %}<div class="ff-eyebrow"><span>{{ module.eyebrow }}</span></div>{% endif %}
+    {{ module.heading }}
+    {{ module.intro }}
+
+    <div class="ff-journey-grid" data-ff-journey-slider>
+      {% for s in module.journey %}
+        <div class="ff-journey-step">
+          <div class="ff-journey-num">{{ loop.index }}</div>
+          <h4 class="ff-journey-title">{{ s.title }}</h4>
+          <div class="ff-journey-body">{{ s.description }}</div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="ff-boundary-box">
+      <div class="ff-boundary-col in">
+        <div class="ff-boundary-label">{{ module.in_label }}</div>
+        <ul>
+          {% for i in module.in_items %}<li>{{ i.html }}</li>{% endfor %}
+        </ul>
+      </div>
+      <div class="ff-boundary-col out">
+        <div class="ff-boundary-label">{{ module.out_label }}</div>
+        <ul>
+          {% for i in module.out_items %}<li>{{ i.html }}</li>{% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    {% if module.note %}<div class="ff-wwd-note">{{ module.note }}</div>{% endif %}
+  </div>
+</section>
+
+<script>
+  (function initJourneySlider(){
+    function ready(fn){
+      if (document.readyState !== 'loading') fn();
+      else document.addEventListener('DOMContentLoaded', fn);
+    }
+    function boot(){
+      if (typeof window.jQuery === 'undefined' || typeof window.jQuery.fn.slick === 'undefined') {
+        return setTimeout(boot, 150);
+      }
+      var $ = window.jQuery;
+      var $grid = $('[data-ff-journey-slider]');
+      if (!$grid.length) return;
+      var mq = window.matchMedia('(max-width: 768px)');
+      function toggle(){
+        $grid.each(function(){
+          var $g = $(this);
+          if (mq.matches) {
+            if (!$g.hasClass('slick-initialized')) {
+              $g.slick({
+                dots: true,
+                arrows: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                adaptiveHeight: true,
+                infinite: false
+              });
+            }
+          } else if ($g.hasClass('slick-initialized')) {
+            $g.slick('unslick');
+          }
+        });
+      }
+      toggle();
+      if (mq.addEventListener) mq.addEventListener('change', toggle);
+      else mq.addListener(toggle);
+    }
+    ready(boot);
+  })();
+</script>

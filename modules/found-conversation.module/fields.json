@@ -1,0 +1,283 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "conversation"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "The Conversation IT Leaders Need to Have"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2 class=\"ff-section-title\">Search Engine Optimization gets you found. Answer Engine Optimization gets you cited.<br>Generative Engine Optimization gets you known. People sign.</h2>"
+}, {
+  "id" : "intro",
+  "name" : "intro",
+  "label" : "Intro",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p class=\"ff-section-intro\">SEO, AEO, and GEO are three machine layers that get you into the conversation. The fourth layer is the one that actually closes: a person, weighing risk and budget, who still has to say yes.</p>"
+}, {
+  "id" : "cards",
+  "name" : "cards",
+  "label" : "Discipline Cards",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "cards.letters",
+    "name" : "letters",
+    "label" : "Letters",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "SEO"
+  }, {
+    "id" : "cards.full_name",
+    "name" : "full_name",
+    "label" : "Full Name",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Search Engine Optimization"
+  }, {
+    "id" : "cards.question",
+    "name" : "question",
+    "label" : "Question",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Can a crawler reach, read, and trust your site?"
+  }, {
+    "id" : "cards.description",
+    "name" : "description",
+    "label" : "Body",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>The technical foundation. Without this layer, nothing downstream matters.</p>"
+  }, {
+    "id" : "cards.bullets",
+    "name" : "bullets",
+    "label" : "Bullets",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 3
+    },
+    "children" : [ {
+      "id" : "cards.bullets.text",
+      "name" : "text",
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "Technical health + Core Web Vitals"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : [ {
+      "text" : "Technical health + Core Web Vitals"
+    }, {
+      "text" : "Site architecture + crawlability"
+    }, {
+      "text" : "On-page fundamentals"
+    } ]
+  }, {
+    "id" : "cards.answers",
+    "name" : "answers",
+    "label" : "Answers Line (rich text)",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "Answers: <em>\"Can a search engine even see us?\"</em>"
+  }, {
+    "id" : "cards.is_people",
+    "name" : "is_people",
+    "label" : "Style as People Card?",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "letters" : "SEO",
+    "full_name" : "Search Engine Optimization",
+    "question" : "Can a crawler reach, read, and trust your site?",
+    "description" : "<p>The technical foundation. Without this layer, nothing downstream matters: AI answer engines still rely on crawlable, well-structured sites as a primary source.</p>",
+    "bullets" : [ {
+      "text" : "Technical health + Core Web Vitals"
+    }, {
+      "text" : "Site architecture + crawlability"
+    }, {
+      "text" : "On-page fundamentals"
+    } ],
+    "answers" : "Answers: <em>\"Can a search engine even see us?\"</em>",
+    "is_people" : false
+  }, {
+    "letters" : "AEO",
+    "full_name" : "Answer Engine Optimization",
+    "question" : "Can an AI extract a direct, citable answer from your page?",
+    "description" : "<p>The structured content layer. AI engines cite the source that gives the cleanest, most direct answer, not the longest or most creative one.</p>",
+    "bullets" : [ {
+      "text" : "Direct-answer + FAQ formatting"
+    }, {
+      "text" : "Schema markup (FAQPage, Service, HowTo)"
+    }, {
+      "text" : "Content built around buyer questions"
+    } ],
+    "answers" : "Answers: <em>\"When someone asks right now, do we show up?\"</em>",
+    "is_people" : false
+  }, {
+    "letters" : "GEO",
+    "full_name" : "Generative Engine Optimization",
+    "question" : "Does the AI already know and trust your brand?",
+    "description" : "<p>The entity + authority layer. This is what happens outside your own site: the signals that shape an AI model's underlying knowledge of who you are before it ever loads your page.</p>",
+    "bullets" : [ {
+      "text" : "Consistent entity + NAP data"
+    }, {
+      "text" : "Third-party mentions + digital PR"
+    }, {
+      "text" : "Structured data across the web"
+    } ],
+    "answers" : "Answers: <em>\"Does the model already know who we are?\"</em>",
+    "is_people" : false
+  }, {
+    "letters" : "People",
+    "full_name" : "The Human Layer",
+    "question" : "Once an AI recommends you, does the person reading still trust you?",
+    "description" : "<p>The layer every algorithm eventually hands off to. AI can get you shortlisted. It can't sign a contract. Someone with a budget, a boss, and a reputation to protect still has to read your page and decide you're the safe, credible choice.</p>",
+    "bullets" : [ {
+      "text" : "Message clarity for a non-technical decision-maker"
+    }, {
+      "text" : "Trust + credibility signals (proof, case studies, plain answers)"
+    }, {
+      "text" : "A clear, low-risk next step"
+    } ],
+    "answers" : "Answers: <em>\"Do I trust this company enough to say yes?\"</em>",
+    "is_people" : true
+  } ]
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.background_color",
+    "name" : "background_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.text_color",
+    "name" : "text_color",
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 96,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 96,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 56,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 56,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

@@ -1,0 +1,248 @@
+[ {
+  "id" : "f77aa767-a09e-3364-9998-0c72a3cd6746",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "3b0a672b-00f2-4ed1-d3e9-26c1b8dcb2ec",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 48,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 48,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "c85b1912-cf6c-bbf9-539f-e4dd8affb240",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "e491ed72-19e0-b9a5-74de-1e1921570a4f",
+    "name" : "background_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#1A1A2E",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "c1e6f2a4-3b5d-4e6f-8091-a2b3c4d5e6f7",
+    "name" : "num_typography",
+    "label" : "Number Typography",
+    "help_text" : "Default keeps the original fixed 64px number size (existing pages are unaffected). H3 (Design System) switches the number to the theme's H3 type scale — used on the new Home page.",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "default", "Default (64px)" ], [ "h3", "H3 (Design System)" ] ],
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "default"
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 48,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 48,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "background_color" : {
+      "color" : "#1A1A2E",
+      "opacity" : 100
+    },
+    "num_typography" : "default"
+  }
+}, {
+  "id" : "5ee0f9a5-80bd-d04a-7ece-fe1ae23ceabd",
+  "name" : "stats",
+  "label" : "Stats",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "626612b3-edf7-c8da-142e-d742dc75ae91",
+    "name" : "num",
+    "label" : "Num",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "70"
+  }, {
+    "id" : "65f5523b-34ce-27ae-cdd7-2796b8d72b0d",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>of B2B IT buying decisions made before the first vendor call <em>(Gartner)</em></p>"
+  }, {
+    "id" : "67df92f3-d7ce-2863-6ef7-edfd43d89241",
+    "name" : "suffix",
+    "label" : "Suffix",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "%"
+  }, {
+    "id" : "b6e3a4c4-5e6f-4a71-9293-af10e1f2a3b5",
+    "name" : "highlight",
+    "label" : "Highlight this stat (accent color number)",
+    "help_text" : "Optional. When on, the number renders in the brand accent color instead of white.",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
+  }, {
+    "id" : "d2f4a6b8-7c9e-4f10-b234-5c6d7e8f9a0b",
+    "name" : "border_color",
+    "label" : "Left Border Color",
+    "help_text" : "Color of this stat's short left-edge accent bar.",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#7209B7",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "num" : "70",
+    "text" : "<p>of B2B IT buying decisions made before the first vendor call <em>(Gartner)</em></p>",
+    "suffix" : "%",
+    "highlight" : false,
+    "border_color" : {
+      "color" : "#7209B7",
+      "opacity" : 100
+    }
+  }, {
+    "num" : "70",
+    "text" : "<p>of B2B IT buying decisions made before the first vendor call <em>(Gartner)</em></p>",
+    "suffix" : "%",
+    "highlight" : false,
+    "border_color" : {
+      "color" : "#7209B7",
+      "opacity" : 100
+    }
+  }, {
+    "num" : "70",
+    "text" : "<p>of B2B IT buying decisions made before the first vendor call <em>(Gartner)</em></p>",
+    "suffix" : "%",
+    "highlight" : false,
+    "border_color" : {
+      "color" : "#7209B7",
+      "opacity" : 100
+    }
+  }, {
+    "num" : "70",
+    "text" : "<p>of B2B IT buying decisions made before the first vendor call <em>(Gartner)</em></p>",
+    "suffix" : "%",
+    "highlight" : false,
+    "border_color" : {
+      "color" : "#7209B7",
+      "opacity" : 100
+    }
+  } ]
+} ]

@@ -1,0 +1,24 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .statement-split {
+    {{ module.style.spacing_desktop.css }};
+  }
+  @media (max-width: 991px) {
+    .statement-split {
+      {{ module.style.spacing_mobile.css }};
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="statement-split"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    {% for row in module.rows %}
+    <div class="statement-split__row{% if loop.last %} statement-split__row--last{% endif %}">
+      <div class="statement-split__label">{{ row.row_label }}</div>
+      <div class="statement-split__statement">{{ row.statement }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

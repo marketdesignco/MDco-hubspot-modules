@@ -1,0 +1,240 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "why-now"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Why Now, For You"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2 class=\"ff-section-title\">Referrals got you here.<br>They won't get you the next stage.</h2>"
+}, {
+  "id" : "stat_number",
+  "name" : "stat_number",
+  "label" : "Stat Number",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "45%"
+}, {
+  "id" : "stat_body",
+  "name" : "stat_body",
+  "label" : "Stat Body",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<strong>Of B2B buyers used AI during a recent purchase</strong>, and Gartner's broader research puts B2B buyers spending only about 17% of their total buying time meeting directly with potential suppliers. The rest happens independently, increasingly with AI in the room."
+}, {
+  "id" : "stat_source",
+  "name" : "stat_source",
+  "label" : "Stat Source",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Source: Gartner Sales Practice, \"Gartner Survey Finds 69% of B2B Buyers Turn to Sales Reps to Validate AI-Generated Insights,\" May 2026; Gartner B2B Buying Journey research."
+}, {
+  "id" : "reasons",
+  "name" : "reasons",
+  "label" : "Reasons (numbered)",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "reasons.title",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Vendor research starts before the referral conversation"
+  }, {
+    "id" : "reasons.description",
+    "name" : "description",
+    "label" : "Body",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>IT buyers increasingly research candidates in AI chat tools before they ever ask a peer for a recommendation.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "Vendor research starts before the referral conversation",
+    "description" : "<p>IT buyers increasingly research candidates in AI chat tools before they ever ask a peer for a recommendation. If you're not structured to be cited there, you're off the shortlist before anyone picks up the phone.</p>"
+  }, {
+    "title" : "Referral-heavy growth doesn't scale predictably",
+    "description" : "<p>Word-of-mouth built the business, but it's founder-dependent and hard to forecast. Found First builds a second, owned channel that compounds independently of any one relationship.</p>"
+  }, {
+    "title" : "PE-backed growth plans need repeatable pipeline",
+    "description" : "<p>Investors want a pipeline model that isn't tied to a single rainmaker. Organic AI + search visibility is the kind of asset that shows up in a diligence deck: durable, measurable, and transferable.</p>"
+  }, {
+    "title" : "Competitors are already claiming the AI-cited spots",
+    "description" : "<p>Answer engines tend to cite a small set of sources per query. Every month you wait is a month a competitor's content becomes the default answer instead of yours.</p>"
+  } ]
+}, {
+  "id" : "icp_title",
+  "name" : "icp_title",
+  "label" : "ICP Card Title",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Built specifically for"
+}, {
+  "id" : "icp_items",
+  "name" : "icp_items",
+  "label" : "ICP Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "icp_items.text",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Managed Service Providers (MSPs)"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "text" : "Managed Service Providers (MSPs)"
+  }, {
+    "text" : "Value-Added Resellers (VARs)"
+  }, {
+    "text" : "Channel + OEM Partners"
+  }, {
+    "text" : "Solution Providers"
+  }, {
+    "text" : "PE-Backed IT Firms"
+  } ]
+}, {
+  "id" : "icp_note",
+  "name" : "icp_note",
+  "label" : "ICP Note",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Long, relationship-driven sales cycles and referral-heavy growth make these buyers especially exposed when discovery moves to AI, and especially well-positioned to win once they're built for it."
+}, {
+  "id" : "background_gradient",
+  "name" : "background_gradient",
+  "label" : "Background (CSS gradient or solid color)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "linear-gradient(180deg, #FAF8FC, #F2ECFB)"
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.text_color",
+    "name" : "text_color",
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#2A1F3F",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 96,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 96,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 56,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 56,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

@@ -1,0 +1,140 @@
+/* found-why-now — static styles */
+.ff-gartner-stat {
+  margin: 32px 0 48px;
+  background: var(--ff-card);
+  border: 1px solid var(--ff-border);
+  border-left: 4px solid var(--ff-purple);
+  border-radius: 0 16px 16px 0;
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.ff-gartner-num {
+  font-family: var(--ff-font-h);
+  font-weight: 900;
+  font-size: 44px;
+  color: var(--ff-purple);
+  line-height: 1;
+}
+
+.ff-gartner-body {
+  font-size: 16px;
+  color: var(--ff-text);
+  grid-column: 2;
+}
+
+.ff-gartner-body p {
+  margin: 0;
+}
+
+.ff-gartner-source {
+  grid-column: 2;
+  font-size: 12px;
+  color: var(--ff-muted);
+  margin-top: 10px;
+}
+
+.ff-why-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: start;
+  margin-top: 40px;
+}
+
+.ff-why-item {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.ff-why-num {
+  font-family: var(--ff-font-h);
+  font-weight: 900;
+  font-size: 15px;
+  color: #fff;
+  background: var(--ff-gradient);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ff-why-copy h4 {
+  font-size: 17px;
+  margin: 0 0 6px;
+}
+
+.ff-why-copy p {
+  color: var(--ff-muted);
+  font-size: 15px;
+  margin: 0;
+}
+
+.ff-icp-card {
+  background: var(--ff-deep);
+  color: #fff;
+  border-radius: 20px;
+  padding: 36px;
+  position: sticky;
+  top: 110px;
+}
+
+.ff-icp-card h3 {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 0 20px;
+}
+
+.ff-icp-list {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.ff-icp-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  gap: 10px;
+}
+
+.ff-icp-list li::before {
+  content: '▸';
+  color: var(--ff-lime);
+}
+
+.ff-icp-note {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 900px) {
+  .ff-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ff-icp-card {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .ff-gartner-stat {
+    grid-template-columns: 1fr;
+  }
+
+  .ff-gartner-num,
+  .ff-gartner-body,
+  .ff-gartner-source {
+    grid-column: 1;
+  }
+}

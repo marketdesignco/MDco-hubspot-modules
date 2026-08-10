@@ -1,0 +1,26 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .quote-banner {
+    {{ module.style.spacing_desktop.css }};
+  }
+  @media (max-width: 991px) {
+    .quote-banner {
+      {{ module.style.spacing_mobile.css }};
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+{% if module.show_module %}
+<section class="quote-banner"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper quote-banner__inner">
+    <blockquote class="quote-banner__quote">
+      <div class="quote-banner__text">{{ module.quote_text }}</div>
+      {% if module.attribution_name %}
+      <div class="quote-banner__attribution">{{ module.attribution_name }}{% if module.attribution_role %} · <span class="quote-banner__role">{{ module.attribution_role }}</span>{% endif %}</div>
+      {% endif %}
+    </blockquote>
+  </div>
+</section>
+{% endif %}

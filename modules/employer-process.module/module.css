@@ -1,0 +1,176 @@
+.eb-proc .eb-eyebrow{
+    font-family: var(--font-primary, 'Lato', sans-serif);
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 17.6px;
+    letter-spacing: 1.76px;
+    text-transform: uppercase;
+    color: #F72585;
+    margin-bottom: 20px;
+}
+
+.eb-proc  .eb-title h2 strong{
+color:#F72585;
+}
+.eb-proc .eb-lede { max-width:900px;color: #4A4A63; margin-bottom: 44px; }
+
+/* Timeline - Desktop */
+.eb-proc .eb-proc-timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  margin: 0 0 56px;
+  position: relative;
+}
+.eb-proc .eb-proc-timeline::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: linear-gradient(90deg, #1E1B4B, #F72585);
+  z-index: 0;
+}
+.eb-proc .eb-proc-step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 8px;
+}
+
+.eb-proc .eb-proc-circle {
+  width: 69px;
+  height: 69px;
+  border-radius: 50%;
+  color: #fff;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 38px;
+  line-height:36.96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  letter-spacing: 1.34px;
+  background: #3A0CA3;
+  box-shadow: 0 0 0 2px #3A0CA3;
+  border: 3px solid #fff;
+}
+.eb-proc .eb-proc-title {
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-h6);
+  letter-spacing: var(--letter-spacing-h6);
+  color: #1E1B4B;
+  margin-bottom: 5px;
+}
+.eb-proc .eb-proc-body { font-size: 14px; color: #4A4A63; line-height: 22px; }
+.eb-proc .eb-proc-body p { margin: 0; }
+
+/* Bottom cards */
+.eb-proc .eb-proc-bottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+}
+.eb-proc .eb-proc-bcard {
+  position: relative;
+  background: #f8f6fc;
+  padding: 28px;
+  border-radius: 8px;
+  box-shadow: 0px 6px 20px 0px #3A0CA30D;
+}
+.eb-proc .eb-proc-bcard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 8px 8px 0 0;
+background: linear-gradient(90deg, #3A0CA3 0%, #7209B7 55%, #7EDB00 100%);
+
+}
+.eb-proc .eb-proc-bcard-title {
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-h6);
+  letter-spacing: var(--letter-spacing-h6);
+  color: #3A0CA3;
+  margin-bottom: 12px;
+  font-weight:900;
+}
+.eb-proc .eb-proc-bcard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.eb-proc .eb-proc-bcard li {
+  color: #1A1A2E;
+  line-height: 22px;
+  position: relative;
+}
+/* Mobile - vertical timeline like the design */
+@media (max-width: 768px) {
+  .eb-proc .eb-proc-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0 0 40px;
+    padding-left: 36px;
+    position: relative;
+  }
+  .eb-proc .eb-proc-timeline::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    bottom: 28px;
+    left: 27px;
+    right: auto;
+    width: 2px;
+    height: auto;
+    background: linear-gradient(180deg, #1E1B4B, #F72585, #7EDB00);
+  }
+  .eb-proc .eb-proc-step {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 28px;
+  }
+  .eb-proc .eb-proc-step:last-child { margin-bottom: 0; }
+  .eb-proc .eb-proc-circle {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 24px;
+    line-height:100%;
+    margin: 0 16px 0 -36px;
+  }
+  .eb-proc .eb-proc-step-content {
+    padding-top: 4px;
+  }
+  .eb-proc .eb-proc-bcard-title{
+  font-size: var(--font-size-h6-mobile);
+  letter-spacing: var(--letter-spacing-h6-mobile);
+  }
+  .eb-proc .eb-proc-bcard li{
+  font-size:14px;
+    line-height:22px;
+  }
+  .eb-proc .eb-proc-title {
+    font-size: var(--font-size-h6-mobile);
+    letter-spacing: var(--letter-spacing-h6-mobile);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    font-weight: 900;
+  }
+  .eb-proc .eb-proc-body p{
+  font-size:14px;
+  }
+  .eb-proc .eb-proc-body { font-size: 14px; line-height: 20px; }
+  .eb-proc .eb-proc-bottom {
+    grid-template-columns: 1fr;
+  }
+}

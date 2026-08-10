@@ -1,0 +1,66 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .assesment{
+    {{ module.style.spacing_desktop.css }};
+    background-color:{{ module.style.background_color.color }};
+  }
+  .section-heading *{
+    color:{{ module.style.color_field.color }};
+    text-align:center;
+  }
+
+  @media (max-width:768px){
+    .assesment{
+
+      {{ module.style.spacing_mobile.css }};
+    }
+  }
+
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="assesment" id="{{ module.id_section }}">
+  <div class="content-wrapper">
+    <div class="columns is-mobile is-multiline is-gapless is-centered">
+      <div class="column is-12-mobile is-8-tablet is-8-desktop is-8-widescreen is-8-fullhd">
+        <div class="section-heading">
+          <div class="section-label">{{ module.subhead }}</div>
+          <div class="section-title">{{ module.heading }}</div>
+          <div class="section-sub">{{ module.description }}</div>
+          {% if module.show_cta_text %}
+          <div class="custom-cta cta-white-outline">
+            {% cta guid="{{ module.cta_field }}" %}
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-mobile is-multiline is-centered">
+
+      <div class="column is-12-mobile is-10-tablet is-8-desktop is-8-widescreen is-8-fullhd">
+        <div class="assessment-embed">
+          <div class="embed-placeholder">
+            <div class="embed">{% inline_text field="embed" value="{{ module.embed }}" %}</div>
+
+          </div>
+          {% if module.show_cta_embed %}
+          <div class="custom-cta cta-primary">
+            {% cta guid="{{ module.cta_2 }}" %}
+          </div>
+          {% endif %}
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+</section>
+

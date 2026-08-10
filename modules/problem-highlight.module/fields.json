@@ -1,0 +1,206 @@
+[
+  {
+    "id": "1bc581c8-c0ae-457c-910b-6c43c86aba47",
+    "name": "section_id",
+    "label": "Id Section (menu anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "",
+    "display_width": null
+  },
+  {
+    "id": "3d09a269-fbb8-4a7f-8e9e-d3e06b830529",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "Your Firm Is Running",
+    "display_width": null
+  },
+  {
+    "id": "5dac6ffb-ff97-4d84-946b-1f17a8f4a22f",
+    "name": "heading",
+    "label": "Heading (rich text — use strong for the accent words)",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<h2>Just Not the Way <strong>You Planned.</strong></h2>",
+    "display_width": null
+  },
+  {
+    "id": "eaa33acf-b597-4bdb-96b0-21f88ee98401",
+    "name": "paragraphs",
+    "label": "Paragraphs",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "default": 2
+    },
+    "children": [
+      {
+        "id": "69e768c6-2b4e-46b0-8eac-b8eae366d674",
+        "name": "text",
+        "label": "Paragraph",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "<p>Paragraph text</p>",
+        "display_width": null
+      }
+    ],
+    "default": [
+      {
+        "text": "<p>Referrals slowed. Email is saturated. Ads cost more than they return. Your buyers research you in answers and feeds you don't control, long before they ever say hello.</p>"
+      },
+      {
+        "text": "<p>You don't need another tool, another tactic, or another dashboard. You need a P.A.T.H. forward — built from what's actually working in tech for firms growing beyond referrals.</p>"
+      }
+    ],
+    "type": "group",
+    "display_width": null
+  },
+  {
+    "id": "b49391a3-ebea-4093-8e5c-3a365ef008a0",
+    "name": "closing_line",
+    "label": "Closing Line (italic)",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<p style='font-weight:900;'>That's the work we do.</p>",
+    "display_width": null
+  },
+  {
+    "id": "39bebbde-a760-4840-a6de-c564678c09ba",
+    "name": "card_eyebrow",
+    "label": "Card — Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "The AI Era Changed the First Move",
+    "display_width": null
+  },
+  {
+    "id": "978bf09d-3520-454e-a55b-516b7378c1ab",
+    "name": "card_heading",
+    "label": "Card — Heading",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<h5>Your Next Buyer Asks an AI About You Before They Ask Anyone Else.</h5>",
+    "display_width": null
+  },
+  {
+    "id": "6504660e-7ed2-40b9-af53-363e956cd8f6",
+    "name": "card_items",
+    "label": "Card — Bullet Items",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "ffe48f8c-c9f3-4bdd-8b4a-2b0012544952",
+        "name": "text",
+        "label": "Item",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "Bullet text",
+        "display_width": null
+      }
+    ],
+    "default": [
+      {
+        "text": "If ChatGPT, Perplexity, and Google's AI answers can't cite you, you're not in the shortlist conversation."
+      },
+      {
+        "text": "Answer-engine visibility is earned with structured, specific, credible content — not more keywords."
+      },
+      {
+        "text": "AI augments. People decide. We use AI to move faster, never to replace the judgment you're paying for."
+      }
+    ],
+    "type": "group",
+    "display_width": null
+  },
+  {
+    "id": "a3815cd9-f7ba-4f50-87e4-2486213fe577",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "tab": "STYLE",
+    "children": [
+      {
+        "id": "dd903abb-d00f-49af-b3e5-f5f4c3f2d606",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 96,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 96,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      },
+      {
+        "id": "d65f6ead-7cca-409c-9699-d61bc088f5fc",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 48,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 48,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      }
+    ],
+    "display_width": null
+  }
+]

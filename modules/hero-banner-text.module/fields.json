@@ -1,0 +1,284 @@
+[ {
+  "id" : "f77aa767-a09e-3364-9998-0c72a3cd6746",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "3b0a672b-00f2-4ed1-d3e9-26c1b8dcb2ec",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 80,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 80,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      },
+      "margin" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "c85b1912-cf6c-bbf9-539f-e4dd8affb240",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      },
+      "margin" : {
+        "top" : {
+          "value" : 80,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 80,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 80,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      },
+      "margin" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      },
+      "margin" : {
+        "top" : {
+          "value" : 80,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }
+}, {
+  "id" : "2e63571a-3168-61e6-3ed8-6cee870a1550",
+  "name" : "caption",
+  "label" : "Caption",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "FOR MID-MARKET TECH COMPANIES · COMPETING IN THE AI ERA"
+}, {
+  "id" : "50c0390d-e449-52cf-fb93-9e3e43377412",
+  "name" : "title",
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h1><span>When AI tools <strong>aren't enough</strong>, mid-market tech firms hire us.</span>&nbsp;</h1>"
+}, {
+  "id" : "b80337a8-ee59-1ebf-6406-ab181de75650",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>The AI era shifted the game. Your buyers are researching you in answers and feeds you don't control — long before they ever say hello.</p>"
+}, {
+  "id" : "0050ba91-630d-939b-f27b-10042d3431b8",
+  "name" : "description_2",
+  "label" : "Description 2",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h4>You need <strong>a PATH forward</strong>. That's what we build.</h4>"
+}, {
+  "id" : "2a62fb7b-cf04-af3d-53af-778befa3b48d",
+  "name" : "show_cta_1",
+  "label" : "Show CTA 1",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : true
+}, {
+  "id" : "59a1e7da-0aff-07ed-cc46-f831453359b5",
+  "name" : "cta_field",
+  "label" : "CTA",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "display_width" : null,
+  "default" : "3678d63e-e2b7-48d1-af5f-259e447c75ad"
+}, {
+  "id" : "d1b9a9e0-1a2c-4b3d-8e5f-6a7b8c9d0e1f",
+  "name" : "cta_1_link",
+  "label" : "CTA 1 — Link (optional, takes priority over the CTA above)",
+  "help_text" : "Optional. If set, renders a plain link button using this URL and the text below instead of the Smart CTA above. Leave empty to keep using the Smart CTA.",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "CALL_TO_ACTION", "PHONE_NUMBER" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "e2c0b1f1-2b3d-4c4e-9f60-7b8c9d0e1f2a",
+  "name" : "cta_1_text",
+  "label" : "CTA 1 — Text (used with the link above)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : ""
+}, {
+  "id" : "9f78b792-f374-afac-b630-38b14e7deec3",
+  "name" : "show_cta_2",
+  "label" : "Show CTA 2",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : true
+}, {
+  "id" : "8caa4202-2b8f-9da4-8752-75fd2924e095",
+  "name" : "cta_2",
+  "label" : "CTA 2",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "display_width" : null,
+  "default" : "a31a96bd-e21e-46c9-aa9b-854089585617"
+}, {
+  "id" : "f3d1c2a2-3c4e-4d5f-a071-8c9d0e1f2a3b",
+  "name" : "cta_2_link",
+  "label" : "CTA 2 — Link (optional, takes priority over the CTA above)",
+  "help_text" : "Optional. If set, renders a plain link button using this URL and the text below instead of the Smart CTA above. Leave empty to keep using the Smart CTA.",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "CALL_TO_ACTION", "PHONE_NUMBER" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "a4e2d3b3-4d5f-4e60-b182-9d0e1f2a3b4c",
+  "name" : "cta_2_text",
+  "label" : "CTA 2 — Text (used with the link above)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : ""
+} ]

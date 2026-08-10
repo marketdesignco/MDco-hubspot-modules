@@ -1,0 +1,85 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .matters-section{
+    background:{{ module.style.background_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:768px){
+    .matters-section{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="matters-section" {% if module.section_id %}id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+
+    <div class="matters-caption">
+      {{ module.caption }}
+    </div>
+
+    <div class="matters-heading">
+      {{ module.heading }}
+    </div>
+
+    <div class="matters-columns">
+
+      <!-- Left column -->
+      <div class="matters-col">
+        <div class="matters-intro">
+        {{ module.description }}
+        </div>
+
+        <div class="matters-list js-matters-slider">
+          {% for mistake in module.cards %}
+            <div class="matters-card">
+              <div class="matters-num" aria-hidden="true">
+                {% if loop.index < 10 %}0{% endif %}{{ loop.index }}
+              </div>
+
+              <div class="matters-card-body">
+                <div class="matters-card-heading">
+                  {{ mistake.title }}
+                </div>
+
+                <div class="matters-card-text">
+                  {{ mistake.text }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Right column -->
+      <div class="matters-panel">
+        <div class="matters-panel-glow" aria-hidden="true"></div>
+
+        <div class="matters-panel-heading">
+          {{ module.panel_heading }}
+        </div>
+
+        <div class="matters-panel-text">
+          {{ module.panel_text }}
+        </div>
+
+        <ul class="matters-panel-list">
+          {% for finding in module.bullets %}
+            <li class="matters-panel-item">
+              {% icon
+	name="{{ finding.icon_field.name }}"
+	style="{{ finding.icon_field.type }}"
+	unicode="{{ finding.icon_field.unicode }}"
+	icon_set="{{ finding.icon_field.icon_set }}"
+%}
+              <div>{{ finding.text }}</div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>

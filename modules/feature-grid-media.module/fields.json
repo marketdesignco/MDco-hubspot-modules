@@ -1,0 +1,317 @@
+[
+  {
+    "id": "edaa3ddc-e103-44bc-a4fd-a717a3931aa1",
+    "name": "section_id",
+    "label": "Id Section (menu anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "why-us",
+    "display_width": null
+  },
+  {
+    "id": "800cee5b-91f7-4cc9-9ae7-9e8bc0f792d8",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "Why Us",
+    "display_width": null
+  },
+  {
+    "id": "bd311f21-3997-4022-88ad-bfed6f42b1c7",
+    "name": "heading",
+    "label": "Heading (rich text — use strong for the accent words)",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<h2>We Win Because <strong>We've Been in Your Shoes.</strong></h2>",
+    "display_width": null
+  },
+  {
+    "id": "488ec106-04f3-4fa7-bb66-c2d2ff136e1e",
+    "name": "lede",
+    "label": "Lede",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<p>Three things make us different, and all three came from doing the job inside technology companies first.</p>",
+    "display_width": null
+  },
+  {
+    "id": "adaf3714-c3a7-4b82-9da1-38557e1743bd",
+    "name": "image",
+    "label": "Media Image",
+    "required": false,
+    "locked": false,
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "MarketDesign consultants working together"
+    },
+    "display_width": null
+  },
+  {
+    "id": "78c39123-dafa-47b7-9759-02d014eedabb",
+    "name": "cards",
+    "label": "Feature Cards",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "6b039b42-3c48-47b7-a4af-6a516ab2a321",
+        "name": "icon_type",
+        "label": "Icon Type",
+        "help_text": "Choose whether this card's icon uses an uploaded image or HubSpot's built-in icon library. Existing cards default to Image, so they keep rendering exactly as before.",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [ [ "image", "Image" ], [ "icon", "HubSpot Icon" ] ],
+        "type": "choice",
+        "default": "image",
+        "display_width": null
+      },
+      {
+        "id": "431d437e-f421-4334-9678-940234f3af1c",
+        "name": "icon",
+        "label": "Icon — Image (used when Icon Type = Image)",
+        "required": false,
+        "locked": false,
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        },
+        "display_width": null
+      },
+      {
+        "id": "0f2b6c6a-89cd-415b-91d0-116b5fb7af9d",
+        "name": "icon_native",
+        "label": "Icon — HubSpot Icon (used when Icon Type = HubSpot Icon)",
+        "required": false,
+        "locked": false,
+        "icon_set": "fontawesome-6.4.2",
+        "type": "icon",
+        "default": {
+          "name": "lightbulb",
+          "type": "SOLID",
+          "unicode": "f0eb"
+        },
+        "display_width": null
+      },
+      {
+        "id": "91fec74b-91f0-4e77-9f44-de2f1fe757e3",
+        "name": "background_style",
+        "label": "Icon Box Background Style",
+        "help_text": "Existing cards default to Linear Gradient, matching the box's original fixed gradient — no visual change on pages that predate this option.",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [ [ "solid", "Solid Color" ], [ "gradient", "Linear Gradient" ] ],
+        "type": "choice",
+        "default": "gradient",
+        "display_width": null
+      },
+      {
+        "id": "90ca7cd8-b996-44e9-bd58-f317d957dde9",
+        "name": "background_color",
+        "label": "Icon Box — Solid Color (used when Background Style = Solid)",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "default": {
+          "color": "#3A0CA3",
+          "opacity": 100
+        },
+        "display_width": null
+      },
+      {
+        "id": "12c8d54c-1fb5-4dfa-aca3-07c0c7ab1b78",
+        "name": "gradient_start",
+        "label": "Icon Box — Gradient Start (used when Background Style = Gradient)",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "default": {
+          "color": "#3A0CA3",
+          "opacity": 100
+        },
+        "display_width": null
+      },
+      {
+        "id": "d6d5df86-5987-42d6-b48c-b5aa22fb1adb",
+        "name": "gradient_end",
+        "label": "Icon Box — Gradient End (used when Background Style = Gradient)",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "default": {
+          "color": "#7209B7",
+          "opacity": 100
+        },
+        "display_width": null
+      },
+      {
+        "id": "4bfa7d8c-9ab3-4393-92d0-4608240a51c6",
+        "name": "gradient_direction",
+        "label": "Icon Box — Gradient Direction",
+        "required": false,
+        "locked": false,
+        "display": "text",
+        "max": 360,
+        "step": 1,
+        "suffix": "deg",
+        "type": "number",
+        "default": 135,
+        "display_width": null
+      },
+      {
+        "id": "24085c59-2f34-4195-b4e9-f9c63f1d2043",
+        "name": "title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "<h3>Feature title</h3>",
+        "display_width": null
+      },
+      {
+        "id": "9201977c-48b5-4a69-b22d-c43169039ad2",
+        "name": "description",
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "<p>Description</p>",
+        "display_width": null
+      }
+    ],
+    "default": [
+      {
+        "icon_type": "image",
+        "icon": {
+          "src": "",
+          "alt": ""
+        },
+        "icon_native": { "name": "lightbulb", "type": "SOLID", "unicode": "f0eb" },
+        "background_style": "gradient",
+        "background_color": { "color": "#3A0CA3", "opacity": 100 },
+        "gradient_start": { "color": "#3A0CA3", "opacity": 100 },
+        "gradient_end": { "color": "#7209B7", "opacity": 100 },
+        "gradient_direction": 135,
+        "title": "<h6>Techies at Heart</h6>",
+        "description": "<p>Technology is all we do. We've studied it, worked in it, and never stopped learning it.</p>"
+      },
+      {
+        "icon_type": "image",
+        "icon": {
+          "src": "",
+          "alt": ""
+        },
+        "icon_native": { "name": "lightbulb", "type": "SOLID", "unicode": "f0eb" },
+        "background_style": "gradient",
+        "background_color": { "color": "#3A0CA3", "opacity": 100 },
+        "gradient_start": { "color": "#3A0CA3", "opacity": 100 },
+        "gradient_end": { "color": "#7209B7", "opacity": 100 },
+        "gradient_direction": 135,
+        "title": "<h6>More Than Marketing</h6>",
+        "description": "<p>We've carried the number, run the teams, and sat at the leadership table. Marketing + sales + service, unified.</p>"
+      },
+      {
+        "icon_type": "image",
+        "icon": {
+          "src": "",
+          "alt": ""
+        },
+        "icon_native": { "name": "lightbulb", "type": "SOLID", "unicode": "f0eb" },
+        "background_style": "gradient",
+        "background_color": { "color": "#3A0CA3", "opacity": 100 },
+        "gradient_start": { "color": "#3A0CA3", "opacity": 100 },
+        "gradient_end": { "color": "#7209B7", "opacity": 100 },
+        "gradient_direction": 135,
+        "title": "<h6>Perspective With Proof</h6>",
+        "description": "<p>A fresh outside view and a proven process, measured to a single source of truth.</p>"
+      }
+    ],
+    "type": "group",
+    "display_width": null
+  },
+  {
+    "id": "ea21c7c8-7c7e-49cc-af2d-7ede0ab5365b",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "tab": "STYLE",
+    "children": [
+      {
+        "id": "cb99f01d-e6f1-43c9-894a-42077eb9b2e2",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 96,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 96,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      },
+      {
+        "id": "d28fffd6-8e47-490f-9c5e-901d6feda367",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 48,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 48,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      }
+    ],
+    "display_width": null
+  }
+]

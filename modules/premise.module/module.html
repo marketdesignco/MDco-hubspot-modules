@@ -1,0 +1,48 @@
+{% require_css %}
+<style>
+	{% scope_css %}
+  .mdcompass-premise{
+    background: #3A0CA3;
+     {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:768px){
+     .mdcompass-premise{
+  {{ module.style.spacing_mobile.css }}
+  }
+  }
+	{% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="mdcompass-premise" id="{{ module.id_section }}" aria-labelledby="premise-heading">
+  <div class="mdcompass-premise__glow" aria-hidden="true"></div>
+
+  <div class="mdcompass-premise__container content-wrapper">
+    <!-- Colu 1-->
+
+    <div>
+      <span class="mdcompass-premise__eyebrow">{{ module.badge_text }}</span>
+      <div  class="mdcompass-premise__title">
+      {{ module.heading }}
+      </div>
+      
+    </div>
+      
+
+
+    <!-- Colum 2 -->
+    <div class="mdcompass-premise__body">
+      <div class="mdcompass-premise__text">
+       {{ module.description }}
+      </div>
+
+      <figure class="mdcompass-premise__card">
+        <blockquote class="mdcompass-premise__quote">
+          {{ module.quote }}
+        </blockquote>
+        <figcaption class="mdcompass-premise__attribution">
+        {{ module.quote_attr }}
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>

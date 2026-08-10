@@ -1,0 +1,44 @@
+{% require_css %}
+<style>
+{% scope_css %}
+.eb-svc {
+  background: {{ module.style.background_color.color }};
+  color: {{ module.style.text_color.color }};
+  {{ module.style.spacing_desktop.css }}
+}
+.eb-svc .eb-svc-retainer {
+  border-left: 4px solid {{ module.style.retainer_accent_color.color }};
+}
+@media (max-width: 768px) {
+  .eb-svc { {{ module.style.spacing_mobile.css }} }
+}
+{% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="eb-svc"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    {% if module.eyebrow %}<div class="eb-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+    <div class="eb-title">{{ module.heading }}</div>
+    <div class="eb-lede">{{ module.lede }}</div>
+
+    <div class="eb-svc-grid">
+      {% for s in module.services %}
+      <div class="eb-svc-card">
+        <div class="eb-svc-head" style="background: {{ s.header_bg.color }};">
+          <div class="eb-svc-title">{{ s.title }}</div>
+          <div class="eb-svc-subtitle">{{ s.subtitle }}</div>
+        </div>
+        <ul class="eb-svc-items">
+          {% for it in s.items %}<li>{{ it.html }}</li>{% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if module.retainer_note %}
+    <div class="eb-svc-retainer">{{ module.retainer_note }}</div>
+    {% endif %}
+  </div>
+</section>
+

@@ -1,0 +1,42 @@
+.hero-banner__title{
+    margin:0 0 30px;
+}
+.hero-banner__title strong{
+ background: linear-gradient(90deg, #3A0CA3 0%, #7209B7 55%, #7EDB00 100%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #3A0CA3;
+}
+.hero-banner__description{
+
+    max-width:800px;
+}
+.hero-banner__description_2 *{
+  letter-spacing:-.32px;
+}
+.hero-banner__description_2 strong{
+   background: linear-gradient(
+        90deg,
+        #3A0CA3 0%,
+        #7209B7 35%,
+        #F72585 70%,
+        #7EDB00 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #3A0CA3;
+}
+.hero-banner__buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+@media(max-width:768px){
+    .hero-banner__buttons{
+        flex-direction:column;
+    }
+}

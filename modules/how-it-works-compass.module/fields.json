@@ -1,0 +1,225 @@
+[ {
+  "id" : "f77aa767-a09e-3364-9998-0c72a3cd6746",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "3b0a672b-00f2-4ed1-d3e9-26c1b8dcb2ec",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      },
+      "margin" : {
+        "top" : {
+          "value" : null,
+          "units" : "NaNaN"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "c85b1912-cf6c-bbf9-539f-e4dd8affb240",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      },
+      "margin" : {
+        "top" : {
+          "value" : null,
+          "units" : "NaNaN"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }
+}, {
+  "id" : "6d8265b1-033e-3dbe-e3bd-f3947c090c3a",
+  "name" : "caption",
+  "label" : "Caption",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "How MDCompass Works"
+}, {
+  "id" : "547abd29-f0ce-9825-297c-6231ec9f084c",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>Six moves. One clear <strong>picture</strong>.</h2>"
+}, {
+  "id" : "e38d2486-e54f-d546-119e-2366bf9f3981",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>MDCompass is not an opinion-gathering exercise. Each step is designed to build on the last, converting individual perspective into organizational intelligence.</p>"
+}, {
+  "id" : "aceff064-d085-9b54-3132-5c0a7c8e7134",
+  "name" : "steps",
+  "label" : "Steps",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 6
+  },
+  "children" : [ {
+    "id" : "5fe743f8-2fb5-725f-d38c-35e1654b0477",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Listen"
+  }, {
+    "id" : "41240092-377f-bb8b-e9e4-facb48f60233",
+    "name" : "text",
+    "label" : "text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>We begin by creating conditions for honest conversation. Confidential one-on-one interviews remove the social pressure to align before thinking. Each leader is asked the same structured questions, in the same way, so the data is comparable.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "Listen",
+    "text" : "<p>We begin by creating conditions for honest conversation. Confidential one-on-one interviews remove the social pressure to align before thinking. Each leader is asked the same structured questions, in the same way, so the data is comparable.</p>"
+  }, {
+    "title" : "Listen",
+    "text" : "<p>We begin by creating conditions for honest conversation. Confidential one-on-one interviews remove the social pressure to align before thinking. Each leader is asked the same structured questions, in the same way, so the data is comparable.</p>"
+  }, {
+    "title" : "Listen",
+    "text" : "<p>We begin by creating conditions for honest conversation. Confidential one-on-one interviews remove the social pressure to align before thinking. Each leader is asked the same structured questions, in the same way, so the data is comparable.</p>"
+  }, {
+    "title" : "Listen",
+    "text" : "<p>We begin by creating conditions for honest conversation. Confidential one-on-one interviews remove the social pressure to align before thinking. Each leader is asked the same structured questions, in the same way, so the data is comparable.</p>"
+  }, {
+    "title" : "Listen",
+    "text" : "<p>We begin by creating conditions for honest conversation. Confidential one-on-one interviews remove the social pressure to align before thinking. Each leader is asked the same structured questions, in the same way, so the data is comparable.</p>"
+  }, {
+    "title" : "Listen",
+    "text" : "<p>We begin by creating conditions for honest conversation. Confidential one-on-one interviews remove the social pressure to align before thinking. Each leader is asked the same structured questions, in the same way, so the data is comparable.</p>"
+  } ]
+}, {
+  "id" : "406f888f-97ef-b332-9a95-59b650a615ee",
+  "name" : "section_id",
+  "label" : "Id Section",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "how"
+} ]

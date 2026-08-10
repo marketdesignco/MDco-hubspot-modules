@@ -1,0 +1,422 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "journey"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "The Framework"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>The Candidate<br>Journey</h2>"
+}, {
+  "id" : "lede",
+  "name" : "lede",
+  "label" : "Lede",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Building a healthy workforce is a perpetual cycle — not a linear process. A candidate who becomes a team member in Stage 6 becomes your referral source in Stage 8, feeding Stage 1 again. MarketDesign evaluates and optimizes every stage.</p>"
+}, {
+  "id" : "hint_text",
+  "name" : "hint_text",
+  "label" : "Hint Text (italic below lede)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Hover or click any segment to explore what your organization needs at each stage."
+}, {
+  "id" : "center_top_text",
+  "name" : "center_top_text",
+  "label" : "Wheel Center — Top (italic)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Employer"
+}, {
+  "id" : "center_bottom_text",
+  "name" : "center_bottom_text",
+  "label" : "Wheel Center — Bottom (bold)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Brand"
+}, {
+  "id" : "default_info_label",
+  "name" : "default_info_label",
+  "label" : "Default Info Box — Small Label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "The Candidate Journey"
+}, {
+  "id" : "default_info_title",
+  "name" : "default_info_title",
+  "label" : "Default Info Box — Title",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Eight Moments. One Decision."
+}, {
+  "id" : "default_info_desc",
+  "name" : "default_info_desc",
+  "label" : "Default Info Box — Description",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Hover or click any segment to explore what your organization needs at that touchpoint — and where the gaps are today."
+}, {
+  "id" : "stages",
+  "name" : "stages",
+  "label" : "Wheel Stages",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 8
+  },
+  "children" : [ {
+    "id" : "stages.label_text",
+    "name" : "label_text",
+    "label" : "Small Label (e.g. Stage 01)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Stage 01"
+  }, {
+    "id" : "stages.title",
+    "name" : "title",
+    "label" : "Title (shown on slice)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Find Me"
+  }, {
+    "id" : "stages.color",
+    "name" : "color",
+    "label" : "Slice Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "stages.description",
+    "name" : "description",
+    "label" : "Description (shown on hover)",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Description</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "label_text" : "Stage 01",
+    "title" : "Find Me",
+    "color" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    },
+    "description" : "<p>Careers page, LinkedIn, job boards, referrals, community college & vocational partnerships, trade unions, military transition programs. If you're not visible where this talent lives — someone else is.</p>"
+  }, {
+    "label_text" : "Stage 02",
+    "title" : "Tell Me",
+    "color" : {
+      "color" : "#7209B7",
+      "opacity" : 100
+    },
+    "description" : "<p>Job descriptions, brand content, social media, employee stories, EVP messaging. Every word either sells the opportunity — or kills it. Right now, this story isn't being told.</p>"
+  }, {
+    "label_text" : "Stage 03",
+    "title" : "Engage Me",
+    "color" : {
+      "color" : "#9A93B4",
+      "opacity" : 100
+    },
+    "description" : "<p>Recruiter outreach, talent community, programmatic job ads, referral network activation. Warm candidates come from a warm pipeline. Cold calls mean no pipeline.</p>"
+  }, {
+    "label_text" : "Stage 04",
+    "title" : "Compel Me",
+    "color" : {
+      "color" : "#F72585",
+      "opacity" : 100
+    },
+    "description" : "<p>Compensation transparency, commission structure, certification investment, 30/60/90 milestones, career path visibility. Show them what winning looks like here — before they ask.</p>"
+  }, {
+    "label_text" : "Stage 05",
+    "title" : "Convince Me",
+    "color" : {
+      "color" : "#F72585",
+      "opacity" : 100
+    },
+    "description" : "<p>Interview experience, hiring manager credibility, process speed, team quality. Every hour of delay is a competitor's opportunity. The best candidates have options.</p>"
+  }, {
+    "label_text" : "Stage 06",
+    "title" : "Welcome Me",
+    "color" : {
+      "color" : "#7209B7",
+      "opacity" : 100
+    },
+    "description" : "<p>Onboarding, day-one experience, manager quality, introduction to the bench and the culture. First impressions set the retention trajectory.</p>"
+  }, {
+    "label_text" : "Stage 07",
+    "title" : "Enable Me",
+    "color" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    },
+    "description" : "<p>Training, employer-sponsored certification, 30/60/90 milestones, career path, cert support. Invest in them before you need them — so they're ready when you do.</p>"
+  }, {
+    "label_text" : "Stage 08",
+    "title" : "Remind Me",
+    "color" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    },
+    "description" : "<p>Internal culture, referral program, recognition, pride in the craft. The employee who feels seen becomes the recruiter. This is how the bench builds itself.</p>"
+  } ]
+}, {
+  "id" : "footer_note",
+  "name" : "footer_note",
+  "label" : "Bottom Footer Note",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Most organizations invest only in Stages 5–6 — the interview and offer. Stages 1–4, where candidates decide whether your organization is worth their time, are where employer brand investment pays off."
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.center_bg_color",
+    "name" : "center_bg_color",
+    "label" : "Wheel Center Background",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.center_top_color",
+    "name" : "center_top_color",
+    "label" : "Center Top Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#7EDB00",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.center_bottom_color",
+    "name" : "center_bottom_color",
+    "label" : "Center Bottom Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.wheel_ring_color",
+    "name" : "wheel_ring_color",
+    "label" : "Wheel Outer Ring Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#7EDB00",
+      "opacity" : 20
+    }
+  }, {
+    "id" : "style.footer_accent_color",
+    "name" : "footer_accent_color",
+    "label" : "Footer Note Left-border Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#7EDB00",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "center_bg_color" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    },
+    "center_top_color" : {
+      "color" : "#7EDB00",
+      "opacity" : 100
+    },
+    "center_bottom_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "wheel_ring_color" : {
+      "color" : "#7EDB00",
+      "opacity" : 20
+    },
+    "footer_accent_color" : {
+      "color" : "#7EDB00",
+      "opacity" : 100
+    },
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }
+} ]

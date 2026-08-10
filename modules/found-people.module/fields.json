@@ -1,0 +1,151 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "people"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Never Forget Who's Reading"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2 class=\"ff-section-title\">Optimized for AI.<br>Written for the person who says yes.</h2>"
+}, {
+  "id" : "lede",
+  "name" : "lede",
+  "label" : "Lede (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p class=\"ff-people-lede\">Every recommendation below (schema markup, entity signals, structured answers) exists to get in front of one person: the IT decision-maker weighing risk, budget, and their own reputation on this call. Get them to your page and lose them with jargon or a vague pitch, and the AEO/GEO work was wasted. Content has to pass two audiences in order: it has to be legible to the machine <strong>and</strong> persuasive to the human the machine hands it to.</p>"
+}, {
+  "id" : "checklist",
+  "name" : "checklist",
+  "label" : "Checklist Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "checklist.html",
+    "name" : "html",
+    "label" : "Item (rich text)",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<strong>Plain language over acronyms.</strong> Lead with the outcome."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "html" : "<strong>Plain language over acronyms.</strong> Lead with the outcome (\"you're invisible, we fix that\"), not SEO/AEO/GEO jargon."
+  }, {
+    "html" : "<strong>Proof a busy exec can scan.</strong> Case studies, numbers, and named risk-reduction, not paragraphs to wade through."
+  }, {
+    "html" : "<strong>A next step with no ambiguity.</strong> One clear CTA, sized to how ready they actually are (audit first, not a contract)."
+  }, {
+    "html" : "<strong>Language that matches who's deciding.</strong> A CEO hears pipeline risk; a marketing lead hears methodology. Write to the actual reader on the page, not a generic buyer."
+  } ]
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.background_color",
+    "name" : "background_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.text_color",
+    "name" : "text_color",
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#2A1F3F",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 72,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 72,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 48,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 48,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

@@ -1,0 +1,31 @@
+{% require_css %}
+<style>
+	{% scope_css %}
+  .blockquote{
+  margin:50px 0px;
+  }
+  @media (max-width:768px){
+    .blockquote{
+    margin:30px 0px;
+    }
+  }
+	
+	{% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="blockquote">
+  <div class="content-wrapper">
+    <div class="blockquote-content">
+      <div class="description">
+        {{ module.description }}
+        
+      </div>
+      <div class="role">
+          {{ module.role }}
+        </div>
+      
+    </div>
+    
+  </div>
+  
+</section>

@@ -1,0 +1,76 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .ff-conv {
+    background: {{ module.style.background_color.color }};
+    color: {{ module.style.text_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 768px) { .ff-conv { {{ module.style.spacing_mobile.css }} } }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="ff-conv"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="ff-wrap">
+    {% if module.eyebrow %}<div class="ff-eyebrow"><span>{{ module.eyebrow }}</span></div>{% endif %}
+    {{ module.heading }}
+    {{ module.intro }}
+
+    <div class="ff-disc-grid" data-ff-disc-slider>
+      {% for c in module.cards %}
+        <div class="ff-disc-card{% if c.is_people %} is-people{% endif %}">
+          <div class="ff-disc-letters">{{ c.letters }}</div>
+          <div class="ff-disc-name">{{ c.full_name }}</div>
+          <div class="ff-disc-question">{{ c.question }}</div>
+          <div class="ff-disc-body">{{ c.description }}</div>
+          <ul class="ff-disc-list">
+            {% for b in c.bullets %}<li>{{ b.text }}</li>{% endfor %}
+          </ul>
+          {% if c.answers %}<div class="ff-disc-answers">{{ c.answers }}</div>{% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  (function initDiscSlider(){
+    function ready(fn){
+      if (document.readyState !== 'loading') fn();
+      else document.addEventListener('DOMContentLoaded', fn);
+    }
+    function boot(){
+      if (typeof window.jQuery === 'undefined' || typeof window.jQuery.fn.slick === 'undefined') {
+        return setTimeout(boot, 150);
+      }
+      var $ = window.jQuery;
+      var $grid = $('[data-ff-disc-slider]');
+      if (!$grid.length) return;
+      var mq = window.matchMedia('(max-width: 768px)');
+      function toggle(){
+        $grid.each(function(){
+          var $g = $(this);
+          if (mq.matches) {
+            if (!$g.hasClass('slick-initialized')) {
+              $g.slick({
+                dots: true,
+                arrows: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                adaptiveHeight: true,
+                infinite: false
+              });
+            }
+          } else if ($g.hasClass('slick-initialized')) {
+            $g.slick('unslick');
+          }
+        });
+      }
+      toggle();
+      if (mq.addEventListener) mq.addEventListener('change', toggle);
+      else mq.addListener(toggle);
+    }
+    ready(boot);
+  })();
+</script>

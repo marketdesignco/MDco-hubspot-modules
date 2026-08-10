@@ -1,0 +1,92 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .hero-banner{
+    {{ module.style.spacing_desktop.css }};
+  }
+
+  @media (max-width:768px){
+    .hero-banner{
+      {{ module.style.spacing_mobile.css }};
+    }
+  }
+
+
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="hero-banner">
+  <div class="content-wrapper">
+    <div class="columns is-mobile is-multiline is-gapless is-vcentered">
+      <div class="column is-12-mobile is-12-tablet is-11-desktop is-11-widescreen is-11-fullhd">
+        <div class="hero-banner__content">
+          {% if module.caption %}
+          <span class="hero-banner__caption caption-text">
+            {{ module.caption }}
+          </span>
+          {% endif %}
+
+          <div class="hero-banner__title">
+            {{ module.title }}
+          </div>
+
+          {% if module.description %}
+          <div class="hero-banner__description">
+            {{ module.description }}
+          </div>
+          {% endif %}
+          {% if module.description_2 %}
+          <div class="hero-banner__description_2">
+            {{ module.description_2 }}
+          </div>
+          {% endif %}
+
+          <div class="hero-banner__buttons">
+            {% if module.show_cta_1 %}
+              {% if module.cta_1_link.url.href %}
+                {% set cta_1_href = module.cta_1_link.url.href %}
+                {% if module.cta_1_link.url.type is equalto "EMAIL_ADDRESS" %}{% set cta_1_href = "mailto:" + cta_1_href %}
+                {% elif module.cta_1_link.url.type is equalto "PHONE_NUMBER" %}{% set cta_1_href = "tel:" + cta_1_href %}{% endif %}
+                <div class="custom-cta cta-primary">
+                  <a href="{{ cta_1_href|escape_url }}"
+                     {% if module.cta_1_link.open_in_new_tab %}target="_blank"{% endif %}
+                     {% if module.cta_1_link.rel %}rel="{{ module.cta_1_link.rel|escape_attr }}"{% endif %}>
+                    {{ module.cta_1_text }}
+                  </a>
+                </div>
+              {% elif module.cta_field %}
+                <div class="custom-cta cta-primary">
+                  {% cta guid="{{ module.cta_field }}" %}
+                </div>
+              {% endif %}
+            {% endif %}
+
+            {% if module.show_cta_2 %}
+              {% if module.cta_2_link.url.href %}
+                {% set cta_2_href = module.cta_2_link.url.href %}
+                {% if module.cta_2_link.url.type is equalto "EMAIL_ADDRESS" %}{% set cta_2_href = "mailto:" + cta_2_href %}
+                {% elif module.cta_2_link.url.type is equalto "PHONE_NUMBER" %}{% set cta_2_href = "tel:" + cta_2_href %}{% endif %}
+                <div class="custom-cta cta-primary-outline">
+                  <a href="{{ cta_2_href|escape_url }}"
+                     {% if module.cta_2_link.open_in_new_tab %}target="_blank"{% endif %}
+                     {% if module.cta_2_link.rel %}rel="{{ module.cta_2_link.rel|escape_attr }}"{% endif %}>
+                    {{ module.cta_2_text }}
+                  </a>
+                </div>
+              {% elif module.cta_2 %}
+                <div class="custom-cta cta-primary-outline">
+                  {% cta guid="{{ module.cta_2 }}" %}
+                </div>
+              {% endif %}
+            {% endif %}
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

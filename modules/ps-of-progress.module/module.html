@@ -1,0 +1,52 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .pillars-section{
+    background: #E4DCEF;
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:768px){
+    .pillars-section{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="pillars-section" {% if module.section_id %}id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+
+    <div class="pillars-caption">
+      {{ module.caption }}
+    </div>
+
+    <div class="pillars-heading">
+      {{ module.heading }}
+    </div>
+
+    <div class="pillars-intro">
+     {{ module.description }}
+    </div>
+
+    <div class="pillars-grid js-pillars-slider">
+      {% for pillar in module.pillars %}
+        <div class="pillars-card {{ pillar.color }}">
+          <div class="pillars-num" aria-hidden="true">{{ loop.index }}</div>
+
+          <div class="pillars-card-heading">
+            {{ pillar.title }}
+          </div>
+
+          <div class="pillars-card-text">
+            {{ pillar.text }}
+          </div>
+
+          <div class="pillars-reveals">
+            {{ pillar.reveals }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

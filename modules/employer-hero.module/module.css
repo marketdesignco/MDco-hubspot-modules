@@ -1,0 +1,81 @@
+
+.eb-hero::before {
+  content: ''; position: absolute; top: -180px; right: -80px;
+  width: 680px; height: 680px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(114,9,183,0.14) 0%, transparent 65%);
+  pointer-events: none;
+}
+.eb-hero::after {
+  content: ''; position: absolute; bottom: -120px; left: -60px;
+  width: 480px; height: 480px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(126,219,0,0.08) 0%, transparent 65%);
+  pointer-events: none;
+  display: none;
+}
+.eb-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  vertical-align: middle;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  padding: 9px 13px;
+  border-radius: 100px;
+  background: var(--color-deep-purple, #3A0CA3);
+  margin-bottom: 20px; position: relative; z-index: 1;
+}
+.eb-hero-headline { position: relative; z-index: 1; margin-bottom: 24px; }
+.eb-hero-headline h1 {
+  letter-spacing: -1.8px;
+  color: var(--color-dark-navy, #1A1A2E);
+  font-weight: 900;
+}
+.eb-hero-headline h1 strong {
+  background:linear-gradient(90deg, #3A0CA3 0%, #7209B7 55%, #7EDB00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900 !important;
+}
+.eb-hero-bar {
+  width: 60px; height: 3px;
+  margin-bottom: 28px; position: relative; z-index: 1;
+  display: none;
+}
+.eb-hero-lede {
+  color: var(--color-slate-gray, #4A4A63);
+  max-width: 800px;
+  position: relative; z-index: 1; margin-bottom: 40px;
+}
+.eb-hero-lede p { margin: 0;
+  color: var(--color-slate-gray, #4A4A63); }
+.eb-hero-cta {
+  display: inline-flex; align-items: center; gap: 10px;
+font-weight: 700;
+font-size: 19px;
+line-height: 150%;
+  text-align: center;
+  padding: 14px 28px; border-radius: var(--button-radius, 6px);
+  box-shadow: var(--button-shadow, 0 4px 40px 0 rgba(247,37,133,0.35));
+  text-decoration: none; position: relative; z-index: 1;
+  transition: opacity .2s, transform .15s; align-self: flex-start;
+}
+.eb-hero-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+
+@media (max-width:768px){
+  .eb-hero-headline h1{
+    font-size: 28px;
+    line-height: 100%;
+  }
+  .eb-hero-cta{
+    letter-spacing:2px;
+  }
+  .eb-hero-lede p{
+    font-size:16px;
+    line-height:22px;
+  }
+}

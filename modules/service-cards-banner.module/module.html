@@ -1,0 +1,41 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .service-cards-banner {
+    {{ module.style.spacing_desktop.css }};
+  }
+  @media (max-width: 991px) {
+    .service-cards-banner {
+      {{ module.style.spacing_mobile.css }};
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="service-cards-banner"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    <div class="service-cards-banner__intro">
+      {% if module.eyebrow %}<div class="service-cards-banner__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <div class="service-cards-banner__heading">{{ module.heading }}</div>
+      {% if module.lede %}<div class="service-cards-banner__lede">{{ module.lede }}</div>{% endif %}
+    </div>
+    <div class="service-cards-banner__grid">
+      {% for card in module.cards %}
+      <article class="service-cards-banner__card{% if card.featured %} service-cards-banner__card--featured{% endif %}">
+        <div class="service-cards-banner__card-bar"></div>
+        <div class="service-cards-banner__card-body">
+          {% if card.tag %}<span class="service-cards-banner__tag">{{ card.tag }}</span>{% endif %}
+          <div class="service-cards-banner__card-title">{{ card.title }}</div>
+          <div class="service-cards-banner__card-desc">{{ card.description }}</div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% if module.show_banner %}
+    <div class="service-cards-banner__banner">
+      {% if module.banner_eyebrow %}<div class="service-cards-banner__banner-eyebrow">{{ module.banner_eyebrow }}</div>{% endif %}
+      <div class="service-cards-banner__banner-text">{{ module.banner_text }}</div>
+    </div>
+    {% endif %}
+  </div>
+</section>

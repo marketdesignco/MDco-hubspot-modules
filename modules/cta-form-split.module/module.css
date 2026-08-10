@@ -1,0 +1,102 @@
+.cta-form-split {
+  position: relative;
+  overflow: hidden;
+  background: var(--gradient-1, linear-gradient(270deg, #7EDB00 0%, #7209B7 36.26%, #3A0CA3 70.47%, #F72585 100%));
+}
+.cta-form-split .content-wrapper {
+  position: relative;
+}
+.cta-form-split__grid {
+  display: grid;
+  grid-template-columns: 1fr .85fr;
+  gap: 56px;
+  align-items: center;
+}
+.cta-form-split__heading *{
+  color: #fff;
+}
+.cta-form-split__form-heading *{
+  color:#1E1B4B;
+}
+.cta-form-split__lede {
+  margin-top: 18px;
+  color: #F3EEFF;
+}
+.cta-form-split__list {
+  list-style: none;
+  margin: 26px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cta-form-split__list li {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.cta-form-split__dot {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #7EDB00;
+}
+.cta-form-split__list li span:last-child {
+  color: #F3EEFF;
+}
+.cta-form-split__form-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 24px 60px rgba(26,10,46,.22);
+}
+.cta-form-split__form-eyebrow {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #F72585;
+}
+.cta-form-split__form-heading {
+  margin-top: 10px;
+}
+.cta-form-split__form-embed {
+  margin-top: 22px;
+}
+.cta-form-split .form-title{
+  display:none;
+}
+/* Submit button — inherits font, size, color, background, and base padding from the
+   global form button system (theme.forms.button.*). Only the properties needed to
+   match this card's pill-button design are overridden here, scoped to this module. */
+.cta-form-split__form-embed input[type=submit],
+.cta-form-split__form-embed .hs-button {
+  background-color:#7209B7;
+  width: 100%;
+  border-radius: 999px;
+  box-shadow: var(--button-shadow, 0 4px 40px 0 rgba(247,37,133,.35));
+  transition: box-shadow .2s ease, transform .2s ease, background-color .2s ease;
+}
+.cta-form-split__form-embed input[type=submit]:hover,
+.cta-form-split__form-embed input[type=submit]:focus,
+.cta-form-split__form-embed .hs-button:hover,
+.cta-form-split__form-embed .hs-button:focus {
+  background-color: #3A0CA3;
+  transform: translateY(-1px);
+}
+.cta-form-split__disclaimer {
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #6B6B85;
+}
+
+@media (max-width: 991px) {
+  .cta-form-split__grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}

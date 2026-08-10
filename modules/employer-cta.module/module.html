@@ -1,0 +1,41 @@
+{% set button_font = theme.buttons.text.font %}
+{% set button_text_transform = theme.buttons.text.transform %}
+{% require_css %}
+<style>
+{% scope_css %}
+.eb-cta {
+  background: linear-gradient(270deg, #7EDB00 0%, #7209B7 36.26%, #3A0CA3 70.47%, #F72585 100%);
+  color: #fff;
+  {{ module.style.spacing_desktop.css }}
+}
+.eb-cta .eb-cta-btn {
+  {{ button_font.style }};
+  font-family: 'Lato', sans-serif;
+  text-transform: {{ button_text_transform }};
+}
+@media (max-width: 768px) {
+  .eb-cta { {{ module.style.spacing_mobile.css }} }
+}
+{% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="eb-cta"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    {% if module.eyebrow %}<div class="eb-cta-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+    <div class="eb-cta-heading">{{ module.heading }}</div>
+    <div class="eb-cta-lede">{{ module.lede }}</div>
+    
+    {% if module.show_cta %}
+	{% set cta_href = module.cta_link.url.href %}
+    {% if module.cta_link.url.type is equalto "EMAIL_ADDRESS" %}{% set cta_href = "mailto:" + cta_href %}
+    {% elif module.cta_link.url.type is equalto "PHONE_NUMBER" %}{% set cta_href = "tel:" + cta_href %}{% endif %}
+    <a class="eb-cta-btn" href="{{ cta_href|escape_url }}"
+      {% if module.cta_link.open_in_new_tab %}target="_blank"{% endif %}
+      {% if module.cta_link.rel %}rel="{{ module.cta_link.rel|escape_attr }}"{% endif %}>
+      {{ module.cta_text }}
+    </a>
+{% endif %}
+    
+  </div>
+</section>

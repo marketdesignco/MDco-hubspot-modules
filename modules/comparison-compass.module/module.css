@@ -1,0 +1,160 @@
+/* ═══ CAPTION ═══ */
+.signals-caption,
+.signals-caption p {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #f72585;
+  margin: 0 0 16px;
+}
+
+/* ═══ HEADING ═══ */
+.signals-heading,
+.signals-heading h2,
+.signals-heading div {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+  letter-spacing: var(--letter-spacing-h2);
+  color: #171f6f;
+  margin: 0 0 16px;
+}
+
+/* Accent words: mark them italic in the rich text editor */
+.signals-heading h2 strong,
+.signals-heading h2 b {
+  background: linear-gradient(90deg, #3A0CA3 0%, #7209B7 55%, #7EDB00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #3A0CA3;
+  font-style: normal;
+}
+
+/* ═══ INTRO ═══ */
+.signals-intro,
+.signals-intro p {
+color: #6b5880;
+  max-width: 620px;
+  margin: 0 0 48px;
+}
+
+/* ═══ CARD GRID ═══ */
+.signals-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.signals-card {
+  background: #ffffff;
+  border: 1px solid #7209b7;
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.signals-card-label,
+.signals-card-label p {
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
+  letter-spacing: var(--letter-spacing-h5);
+  color: #7209b7;
+  margin: 0 0 8px;
+}
+.signals-card-subtitle p strong{
+color:#1A0A2E;
+  font-size:15px;
+}
+.signals-card-subtitle,
+.signals-card-subtitle p {
+  font-size: 14px;
+  color: #6B5880;
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+
+.signals-card-text,
+.signals-card-text p {
+  font-size: 14px;
+  color: #6b5880;
+  line-height: 1.7;
+  margin: 0 0 20px;
+}
+
+/* ═══ QUOTES ═══ */
+.signals-quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+}
+
+.signals-quote {
+  background: #FAF8FC;
+border: 1px solid #7209B71F;
+  border-radius: 6px;
+  padding:20px;
+  margin:0px;
+}
+
+.signals-quote-text,
+.signals-quote-text p {
+  font-size: 14px;
+  color: #1a0a2e;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
+  font-weight:700;
+}
+
+.signals-quote-author,
+.signals-quote-author p {
+  margin: 8px 0 0;
+  font-style: normal;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #7209b7;
+}
+
+/* ═══ COLOR VARIANTS PER CARD ═══ */
+.signals-card--1 { border-color: #1A1A2E; }
+.signals-card--1 .signals-card-label { color: #1A1A2E; }
+
+.signals-card--2 { border-color: #f72585; }
+.signals-card--2 .signals-card-label { color: #f72585; }
+
+.signals-card--3 { border-color: #7EDB00 }
+.signals-card--3 .signals-card-label { color: #7EDB00; }
+
+.signals-card--4 { border-color: #7209b7; }
+.signals-card--4 .signals-card-label { color: #7209b7; }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 767px) {
+  .signals-heading,
+  .signals-heading h2,
+  .signals-heading div {
+    font-size: var(--font-size-h2-mobile);
+    line-height: var(--line-height-h2);
+    letter-spacing: var(--letter-spacing-h2-mobile);
+  }
+
+  .signals-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .signals-card {
+    padding: 24px 20px;
+  }
+
+  .signals-quote {
+    padding: 14px 16px;
+  }
+}

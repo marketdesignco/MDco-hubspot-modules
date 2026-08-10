@@ -1,0 +1,32 @@
+.cta-bar .content *{
+  color:#fff;
+  text-align:center;
+}
+.cta-bar .heading h2{
+  text-align: center;
+
+}
+.cta-bar .container-cta {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  margin-top:16px;
+}
+.cta-bar .container-cta a {
+  transition: transform 0.25s ease;
+}
+
+.cta-bar .container-cta a:hover {
+  transform: scale(1.03);
+}
+@media (max-width:992px){
+  .cta-bar .container-cta{
+    flex-wrap:wrap;
+  }
+
+  .custom-cta, .custom-cta a{
+  width:100%;
+    text-align:center;
+  }
+}

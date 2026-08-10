@@ -1,0 +1,75 @@
+{% require_css %}
+<style>
+	{% scope_css %}
+  .mdcompass-hero{
+  {{ module.style.spacing_desktop.css }};
+  }
+  @media (max-width:768px){
+     .mdcompass-hero{
+  {{ module.style.spacing_mobile.css }};
+  }
+  }
+	{% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<!-- HERO -->
+<section class="mdcompass-hero" aria-labelledby="hero-heading">
+  <!-- Decorative glows -->
+  <div class="mdcompass-hero__glow--right" aria-hidden="true"></div>
+  <div class="mdcompass-hero__glow--left" aria-hidden="true"></div>
+
+  <div class="mdcompass-hero__container content-wrapper">
+    <header class="mdcompass-hero__content">
+      <!-- Badge -->
+      <span class="mdcompass-hero__badge caption-text">
+        <span class="mdcompass-hero__badge-brand">{{ module.brand_name }}</span>
+        · {{ module.badge_text }}
+      </span>
+
+      <!-- Heading -->
+      <div id="hero-heading" class="mdcompass-hero__title">
+      {{ module.heading }}
+      </div>
+
+      <!-- Subtitle -->
+      <div class="mdcompass-hero__subtitle">
+        {{ module.description }}
+      </div>
+
+      <!-- Quote -->
+      <div class="mdcompass-hero__quote">
+       {{ module.quote }}
+      </div>
+
+      <!-- CTAs -->
+      <div class="mdcompass-hero__ctas">
+        {% for item in module.ctas %}
+        <div class="custom-cta hover-scale {{ item.color }}">
+          {% set href = item.link_field.url.href %}
+{% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+  {% set href = "mailto:" + href %}
+{% elif item.link_field.url.type is equalto "PHONE_NUMBER" %}
+  {% set href = "tel:" + href %}
+{% endif %}
+<a
+  {% if item.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+    href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+  {% else %}
+    href="{{ href|escape_url }}"
+  {% endif %}
+  {% if item.link_field.open_in_new_tab %}
+    target="_blank"
+  {% endif %}
+  {% if item.link_field.rel %}
+    rel="{{ item.link_field.rel|escape_attr }}"
+  {% endif %}
+  >
+  {{ item.text_field }}
+</a>
+        </div>
+        {% endfor %}
+      </div>
+    </header>
+  </div>
+</section>

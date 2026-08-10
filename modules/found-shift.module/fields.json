@@ -1,0 +1,210 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "shift"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "The Transition"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2 class=\"ff-section-title\">Web. Content. Digital.<br>Three eras, one collapse into the next.</h2>"
+}, {
+  "id" : "intro",
+  "name" : "intro",
+  "label" : "Intro",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p class=\"ff-section-intro\">Search didn't get harder. It changed shape. Every era below solved for the tools buyers were actually using, and each one made the last one necessary but no longer sufficient.</p>"
+}, {
+  "id" : "eras",
+  "name" : "eras",
+  "label" : "Eras",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "eras.number",
+    "name" : "number",
+    "label" : "Number (2 digits)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "01"
+  }, {
+    "id" : "eras.period",
+    "name" : "period",
+    "label" : "Period Label",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "The Web Era"
+  }, {
+    "id" : "eras.title",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Having a site was the finish line"
+  }, {
+    "id" : "eras.description",
+    "name" : "description",
+    "label" : "Body",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>A working website with the right keywords was enough to rank. Visibility meant a URL existed and Google could find it. The bar was presence, not proof.</p>"
+  }, {
+    "id" : "eras.is_now",
+    "name" : "is_now",
+    "label" : "Highlight as Current Era?",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "number" : "01",
+    "period" : "The Web Era",
+    "title" : "Having a site was the finish line",
+    "description" : "<p>A working website with the right keywords was enough to rank. Visibility meant a URL existed and Google could find it. The bar was presence, not proof.</p>",
+    "is_now" : false
+  }, {
+    "number" : "02",
+    "period" : "The Content Era",
+    "title" : "Content became the currency",
+    "description" : "<p>Blogs, backlinks, and inbound marketing took over. Ranking meant publishing consistently and building authority through volume and links. The bar moved from presence to production.</p>",
+    "is_now" : false
+  }, {
+    "number" : "03",
+    "period" : "Right now",
+    "title" : "The Digital + AI Era",
+    "description" : "<p>AI answer engines now sit between your buyer and the click. ChatGPT, Perplexity, Gemini, and Copilot summarize, compare, and recommend before a single site gets visited. The bar is no longer \"can they find you.\" It's <strong>\"does the AI already know and trust you enough to say your name.\"</strong></p>",
+    "is_now" : true
+  } ]
+}, {
+  "id" : "callout",
+  "name" : "callout",
+  "label" : "Callout (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Web, content, and digital used to be three separate jobs on three separate timelines. <span>They've collapsed into one discipline</span> because the AI deciding what to recommend doesn't care which department built which asset. It just reads the whole picture."
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.background_color",
+    "name" : "background_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FAF8FC",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.text_color",
+    "name" : "text_color",
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#2A1F3F",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 96,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 96,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 56,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 56,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

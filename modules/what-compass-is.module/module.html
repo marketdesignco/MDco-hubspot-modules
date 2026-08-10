@@ -1,0 +1,81 @@
+{% require_css %}
+<style>
+	{% scope_css %}
+  .what-section{
+    background: var(--color-purple-gray, #FAF7FB);
+     {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:768px){
+     .what-section{
+  {{ module.style.spacing_mobile.css }}
+  }
+  }
+	{% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="what-section" id="{{ module.id_section }}">
+  <div class="what-wrap content-wrapper">
+
+    <!-- Encabezado -->
+    <div class="what-eyebrow">
+    {{ module.badge_text }}
+    </div>
+
+    <div class="what-title">
+    {{ module.heading }}
+    </div>
+
+    <div class="what-grid">
+      <div class="what-col">
+        <div class="what-text">
+         {{ module.description }}
+        </div>
+
+        <div class="what-card">
+          <div class="what-card-label">
+            {{ module.card_label }}
+          </div>
+
+          <ul class="what-steps">
+            {% for item in module.steps %}
+              <li class="what-step">
+               {% icon
+	name="{{ item.icon.name }}"
+	style="{{ item.icon.type }}"
+	unicode="{{ item.icon.unicode }}"
+	icon_set="{{ item.icon.icon_set }}"
+%}
+                <div>{{ item.text }}</div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+    
+      <div class="what-panel">
+        <div class="what-glow" aria-hidden="true"></div>
+
+        <div class="what-panel-title">
+         {{ module.title_col_2 }}
+        </div>
+
+        <ul class="what-rules">
+          {% for rule in module.rules %}
+            <li class="what-rule">
+              {% icon
+	name="{{ rule.icon_field.name }}"
+	style="{{ rule.icon_field.type }}"
+	unicode="{{ rule.icon_field.unicode }}"
+	icon_set="{{ rule.icon_field.icon_set }}"
+%}
+              <div>{{ rule.text }}</div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>

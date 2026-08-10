@@ -1,0 +1,82 @@
+/* found-subnav — static styles */
+.ff-subnav-wrap {
+  position: relative;
+}
+
+.ff-subnav-wrap.is-fixed {
+  padding-top: var(--ff-subnav-h, 0px);
+}
+
+.ff-subnav {
+  background: var(--ff-subnav-bg, #FAF8FC);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--ff-border);
+  width: 100%;
+}
+
+.ff-subnav-wrap.is-fixed .ff-subnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(58, 12, 163, 0.06);
+}
+
+.ff-subnav-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  overflow-x: auto;
+}
+
+.ff-subnav-label {
+  font-family: var(--ff-font-h);
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  padding-right: 4px;
+  color: var(--ff-subnav-text, #7A6888);
+}
+
+.ff-subnav-links {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.ff-subnav-links a {
+  font-family: var(--ff-font-h);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ff-subnav-text, #7A6888);
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: background .15s, color .15s;
+}
+
+.ff-subnav-links a:hover {
+  background: rgba(58, 12, 163, 0.12) !important;
+  color: #7A6888 !important;
+}
+
+.ff-subnav-links a.active {
+  background: var(--ff-subnav-active-bg, #3A0CA3);
+  color: var(--ff-subnav-active-text, #FFFFFF);
+}
+
+@media (max-width: 700px) {
+  .ff-subnav-label {
+    display: none;
+  }
+
+  .ff-subnav-links a {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

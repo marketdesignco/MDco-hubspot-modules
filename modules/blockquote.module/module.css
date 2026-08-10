@@ -1,0 +1,44 @@
+.blockquote .blockquote-content{
+background: #FAF7FB;
+border-radius:0px 12px 12px 0px;
+  padding:48px;
+  position:relative;
+
+}
+.blockquote .blockquote-content::before{
+    top: 50%;
+  transform: translateY(-50%);
+  left:0;
+  width:3px;
+  height:80%;
+background: linear-gradient(270deg, #7EDB00 0%, #7209B7 0.01%, #F72585 92.31%, #3A0CA3 95.67%);
+position:absolute;
+content:"";
+}
+.blockquote .description{
+font-family: var(--font-primary, 'Lato', sans-serif);
+font-size: 38px;
+line-height: 47.5px;
+letter-spacing: -0.38px;
+color:#1A1A2E;
+}
+.blockquote .role{
+padding:10px 0px;
+}
+.blockquote .role *{
+font-family: Lato;
+font-size: 14px;
+line-height: 21.7px;
+letter-spacing: 0.7px;
+
+}
+
+@media (max-width:768px){
+  .blockquote .description{
+font-size: 30px;
+line-height:36px;
+  }
+  .blockquote .blockquote-content{
+  padding:40px 20px;
+  }
+}

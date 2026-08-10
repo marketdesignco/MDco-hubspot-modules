@@ -1,0 +1,40 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .ff-shift {
+    background: {{ module.style.background_color.color }};
+    color: {{ module.style.text_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 768px) {
+    .ff-shift { {{ module.style.spacing_mobile.css }} }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="ff-shift"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="ff-wrap">
+    {% if module.eyebrow %}<div class="ff-eyebrow"><span>{{ module.eyebrow }}</span></div>{% endif %}
+    {{ module.heading }}
+    {{ module.intro }}
+
+    <div class="ff-shift-track">
+      <div class="ff-shift-line"></div>
+      <div class="ff-era-grid">
+        {% for era in module.eras %}
+          <div class="ff-era-card{% if era.is_now %} now{% endif %}">
+            <div class="ff-era-dot">{{ era.number }}</div>
+            <div class="ff-era-period">{{ era.period }}</div>
+            <h3 class="ff-era-title">{{ era.title }}</h3>
+            <div class="ff-era-body">{{ era.description }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% if module.callout %}
+      <div class="ff-shift-callout">{{ module.callout }}</div>
+    {% endif %}
+  </div>
+</section>

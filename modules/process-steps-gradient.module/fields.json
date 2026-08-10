@@ -1,0 +1,199 @@
+[
+  {
+    "id": "2571c05b-7b6e-4b81-a730-9c930bb39a1e",
+    "name": "section_id",
+    "label": "Id Section (menu anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "how-we-work",
+    "display_width": null
+  },
+  {
+    "id": "e292f00d-75ab-473f-8dc4-2cfbfefa21f5",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "Consultant-Led Engagements",
+    "display_width": null
+  },
+  {
+    "id": "5ffcd54e-152e-4f88-b8b2-1012fdbfcd42",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<h2>How to Work With Us</h2>",
+    "display_width": null
+  },
+  {
+    "id": "5259c6eb-d726-4f6c-8132-4a3e4c4ec727",
+    "name": "lede",
+    "label": "Lede",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<p>Three steps, in order. No 18-month discovery, no proposal you can't read.</p>",
+    "display_width": null
+  },
+  {
+    "id": "994845ee-a841-493f-8284-575b59d3c43c",
+    "name": "steps",
+    "label": "Steps",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "2a03ca56-1276-4a03-bc1c-2166ae5e416e",
+        "name": "number",
+        "label": "Number",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "default": "01",
+        "display_width": null
+      },
+      {
+        "id": "7a49da23-066a-4fe2-9569-e49323ef9ff7",
+        "name": "gradient_style",
+        "label": "Number Gradient Style",
+        "help_text": "Choose which brand-approved gradient applies to this step's large number. Existing steps default to Gradient 1, matching the number's original fixed gradient — no visual change on pages that predate this option.",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [ "gradient_1", "Gradient 1 — Deep Purple → Medium Purple" ],
+          [ "gradient_2", "Gradient 2 — Medium Purple → Bright Purple" ],
+          [ "gradient_3", "Gradient 3 — Medium Purple → Bright Green" ]
+        ],
+        "type": "choice",
+        "default": "gradient_1",
+        "display_width": null
+      },
+      {
+        "id": "ff6db19c-ce04-44cb-ad2c-bc361cd24253",
+        "name": "title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "default": "Step title",
+        "display_width": null
+      },
+      {
+        "id": "c172a8bd-59f6-4ef9-b528-dc0483c1cf2b",
+        "name": "description",
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "<p>Description</p>",
+        "display_width": null
+      }
+    ],
+    "default": [
+      {
+        "number": "01",
+        "gradient_style": "gradient_1",
+        "title": "Free Consulting, No Catch",
+        "description": "<p>We talk tech, business, and growth. Worst case, you leave with three new ideas and we make a new friend. Best case, we book a call to go deeper.</p>"
+      },
+      {
+        "number": "02",
+        "gradient_style": "gradient_1",
+        "title": "The Deep Dive",
+        "description": "<p>You bring the challenges, questions, and problems to solve; we listen. Then we build a diagnostic readout of what we heard, how we can help, and what we recommend next.</p>"
+      },
+      {
+        "number": "03",
+        "gradient_style": "gradient_1",
+        "title": "Your P.A.T.H. Forward",
+        "description": "<p>From the diagnostic and your feedback, we build your P.A.T.H. Forward: how we'll work together, confirmed growth goals, and measurements we can hit. Then you decide.</p>"
+      }
+    ],
+    "type": "group",
+    "display_width": null
+  },
+  {
+    "id": "ce538b71-4ff7-40ce-846f-f770024ef0c3",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "tab": "STYLE",
+    "children": [
+      {
+        "id": "b5d003e0-d7ba-4112-8258-da2502272ba6",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 96,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 96,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      },
+      {
+        "id": "9fb5c0b1-2251-4f76-bf42-f4ac687f8c97",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 48,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 48,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      }
+    ],
+    "display_width": null
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "a72a129f-c131-42dd-b6a4-29803a60947a",
+    "name": "section_id",
+    "label": "Id Section (menu anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "what-we-do",
+    "display_width": null
+  },
+  {
+    "id": "8e02bb55-8e5c-4cd6-bd94-d5bee735e0cc",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "Signature Engagements",
+    "display_width": null
+  },
+  {
+    "id": "1ccaaadc-9d8a-431f-abf2-08032f753ba1",
+    "name": "heading",
+    "label": "Heading (rich text — use strong for the accent words)",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<h2>Six Proprietary Engagements. <strong>Fixed Scope. The Door to Every Partnership.</strong></h2>",
+    "display_width": null
+  },
+  {
+    "id": "2ffe5e0f-f8b6-41a0-b6f3-be3b7eb36344",
+    "name": "lede",
+    "label": "Lede",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<p>Standalone, or the on-ramp to a full partnership. Built to Big 4 consulting standards. No competitor in this market carries a portfolio like this one — and the combination is the differentiator. We run every one of these on ourselves first.</p>",
+    "display_width": null
+  },
+  {
+    "id": "9d580594-76c8-4dda-a74e-b338e3d8aa32",
+    "name": "cards",
+    "label": "Cards",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "default": 6
+    },
+    "children": [
+      {
+        "id": "e9eaaf35-f79d-476f-8bed-fb1e5b974b39",
+        "name": "featured",
+        "label": "Featured (solid purple card)",
+        "required": false,
+        "locked": false,
+        "display": "toggle",
+        "type": "boolean",
+        "default": false,
+        "display_width": null
+      },
+      {
+        "id": "2e2db714-0a1d-4842-ba74-7db49ff0a264",
+        "name": "tag",
+        "label": "Tag",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "default": "Signature",
+        "display_width": null
+      },
+      {
+        "id": "84d3088d-6099-4c80-ad1d-70ea5d223c91",
+        "name": "title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "<h6>Card title</h6>",
+        "display_width": null
+      },
+      {
+        "id": "eb29979f-91cf-4a60-984a-d355079e1f21",
+        "name": "description",
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "<p>Description</p>",
+        "display_width": null
+      }
+    ],
+    "default": [
+      {
+        "featured": true,
+        "tag": "Signature · Strategy",
+        "title": "<h6>MDCompass</h6>",
+        "description": "<p>Our flagship corporate identity engagement — facilitated leadership alignment, a strategic priorities framework, and a 90-day sequenced roadmap. Built for firms ready to define who they are and where they're going. We ran it on ourselves first.</p>"
+      },
+      {
+        "featured": false,
+        "tag": "Signature · Thought Leadership",
+        "title": "<h6>V.O.I.C.E. Program</h6>",
+        "description": "<p>Leadership interviews, rubric scoring, radar-chart analysis, and a full messaging framework — positioning, boilerplate, and brand voice. Our own executives run V.O.I.C.E., because the best proof of an offering is using it on yourself.</p>"
+      },
+      {
+        "featured": false,
+        "tag": "Signature · Talent",
+        "title": "<h6>Employer Brand</h6>",
+        "description": "<p>Internal culture audit, EVP development, employer brand messaging, visual direction, and a recruitment content framework. Built for technology companies competing for the same talent everyone else wants.</p>"
+      },
+      {
+        "featured": false,
+        "tag": "Signature · Experience",
+        "title": "<h6>Events</h6>",
+        "description": "<p>Full-service event strategy, production, and execution — tradeshow programs, executive roundtables, Food + Learn series, and partner events. Twenty years of building programs that don't just happen. They perform.</p>"
+      },
+      {
+        "featured": false,
+        "tag": "Signature · Platform",
+        "title": "<h6>Growth Platform Accelerator</h6>",
+        "description": "<p>A comprehensive HubSpot audit, full-hub strategy, migration and integration expertise, and our proprietary Metrics by MarketDesign tool — 360° visibility across every hub. For firms ready to turn the platform into a revenue engine.</p>"
+      },
+      {
+        "featured": false,
+        "tag": "Signature · Innovation",
+        "title": "<h6>Found First</h6>",
+        "description": "<p>Our proprietary AI-powered diagnostics and operational frameworks — built to help technology organizations understand, adopt, and operationalize AI across marketing and sales.</p>"
+      }
+    ],
+    "type": "group",
+    "display_width": null
+  },
+  {
+    "id": "a560273f-f68d-4070-898c-878f7dbd4ceb",
+    "name": "show_banner",
+    "label": "Show Bottom Banner",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "default": true,
+    "display_width": null
+  },
+  {
+    "id": "e50f0dd7-c0bc-408d-a5f4-c17f4793e46d",
+    "name": "banner_eyebrow",
+    "label": "Banner — Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "We Use Our Own Offerings on Ourselves First",
+    "display_width": null
+  },
+  {
+    "id": "7c0a02c6-7d45-41ed-aa8c-3add6bb0b201",
+    "name": "banner_text",
+    "label": "Banner — Text (rich text — use strong for the accent words)",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<p>MDCompass shaped our own strategic clarity. V.O.I.C.E. powers our executives' visibility. The Growth Platform Accelerator runs our own HubSpot pipeline and revenue reporting. Our Events engagement is already building the room where our next clients are sitting. <strong>A firm that practices what it sells is the most credible version of the pitch.</strong></p>",
+    "display_width": null
+  },
+  {
+    "id": "ade9e409-1df6-4b24-9b97-2625d054d816",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "tab": "STYLE",
+    "children": [
+      {
+        "id": "e6eb797b-f93a-43ef-8039-b52927daa9a7",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 96,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 96,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      },
+      {
+        "id": "661c11ad-432c-4884-9f60-3c716fec3724",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 48,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 48,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      }
+    ],
+    "display_width": null
+  }
+]

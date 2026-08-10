@@ -1,0 +1,67 @@
+.credential-grid__intro {
+  max-width: 880px;
+}
+.credential-grid__eyebrow {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #F72585;
+  margin-bottom: 14px;
+}
+.credential-grid__heading strong {
+  color: #3A0CA3;
+}
+.credential-grid__lede {
+  margin-top: 18px;
+  color: #4A4A63;
+}
+.credential-grid__grid {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.credential-grid__card {
+  background: #fff;
+  border: 1px solid #E4DCEF;
+  border-radius: 16px;
+  padding: 26px;
+  box-shadow: 0 6px 20px rgba(58,12,163,.05);
+}
+.credential-grid__badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 900;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.credential-grid__badge--gradient {
+  background: linear-gradient(135deg, #7209B7, #7EDB00);
+}
+.credential-grid__card-title * {
+  color: #3A0CA3;
+  font-weight:900;
+}
+.credential-grid__card-desc {
+  margin-top: 8px;
+  color: #4A4A63;
+}
+
+@media (max-width: 991px) {
+  .credential-grid__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .credential-grid__grid {
+    grid-template-columns: 1fr;
+  }
+}

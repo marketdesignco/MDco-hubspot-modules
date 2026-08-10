@@ -1,0 +1,93 @@
+<header class="header">
+  <div class="content-wrapper">
+    <div class="columns is-gapless is-multiline is-mobile is-vcentered">
+      <div class="column is-12-mobile is-12-tablet is-3-desktop is-3-widescreen is-3-fullhd">
+        <div class="header__desktop__logo">
+          {% set href = module.url_logo.url.href %}
+          {% if module.url_logo.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          <a href="{{ href }}"
+             {% if module.url_logo.open_in_new_tab %}target="_blank"{% endif %}
+             {% if module.url_logo.rel %}rel="{{ module.url_logo.rel }}"{% endif %}
+             >
+            <img src="{{ module.logo.src }}" alt="{{ module.logo.alt }}">
+          </a>
+        </div>
+      </div>
+      <div class="column is-12-mobile is-12-tablet is-7-desktop is-7-widescreen is-7-fullhd">
+        {%- macro render_link_item(link,depth,looop)-%}
+        {%- if link != [] && link.label -%}
+        <li class="menu-item menu-depth-{{depth}}{% if link.activeBranch %} active-branch{% endif %}{% if link.activeNode %} active{% endif %}">
+          <a href="{{link.url if link.url else '#'}}">{{link.label}}</a>
+          {%- if link.children -%}
+          <label title="Toggle Drop-down" class="drop-icon" for="sm{{looop}}_{{depth}}"><i class="fas fa-angle-down"></i></label>
+          <input type="checkbox" id="sm{{looop}}_{{depth}}">
+          <ul class="sub-menu">
+            {% set depth = depth + 1%}
+            {%- for sublink in link.children -%}
+            {{render_link_item(sublink,depth,loop.index)}}
+            {%- endfor -%}
+          </ul>
+          {%- endif -%}
+        </li>
+        {%- endif -%}
+        {%- endmacro -%}
+
+        {% set menu = menu(module.menu_field , "site_root").children %}
+
+        <nav id="menu">
+          <label for="tm" id="toggle-menu">
+            {% set href = module.url_logo.url.href %}
+            {% if module.url_logo.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}"
+               {% if module.url_logo.open_in_new_tab %}target="_blank"{% endif %}
+               {% if module.url_logo.rel %}rel="{{ module.url_logo.rel }}"{% endif %}
+               >
+              <img src="{{ module.logo.src }}" alt="{{ module.logo.alt }}">
+            </a>
+            <span class="drop-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+<path d="M0 0H18V2H0V0ZM0 7H18V9H0V7ZM0 14H18V16H0V14Z" fill="#1A1A2E"/>
+</svg></span></label>
+          <input type="checkbox" id="tm">
+          <ul class="main-menu cf">
+
+            {% for link in menu %}   
+            {{render_link_item(link,1,loop.index)}}
+            {% endfor %}
+
+          </ul>
+        </nav>
+      </div>
+      <div class="column is-12-mobile is-12-tablet is-2-desktop is-2-widescreen is-2-fullhd">
+         <div class="header__cta">
+        <div class="cta-pink custom-cta">
+          {% set href = module.link_field.url.href %}
+{% if module.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+  {% set href = "mailto:" + href %}
+{% elif module.link_field.url.type is equalto "PHONE_NUMBER" %}
+  {% set href = "tel:" + href %}
+{% endif %}
+<a
+  {% if module.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+    href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+  {% else %}
+    href="{{ href|escape_url }}"
+  {% endif %}
+  {% if module.link_field.open_in_new_tab %}
+    target="_blank"
+  {% endif %}
+  {% if module.link_field.rel %}
+    rel="{{ module.link_field.rel|escape_attr }}"
+  {% endif %}
+  >
+{{ module.link_text }}
+</a>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

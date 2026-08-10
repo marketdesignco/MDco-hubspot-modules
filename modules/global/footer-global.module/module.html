@@ -1,0 +1,111 @@
+{% require_css %}
+<style>
+	{% scope_css %}
+  .footer{
+    {{ module.style.spacing_desktop.css }};
+  }
+  
+  @media (max-width:768px){
+    .footer{
+    {{ module.style.spacing_mobile.css }};
+    
+    }
+  }
+	
+	{% end_scope_css %}
+</style>
+{% end_require_css %}
+<div class="footer">
+  <div class="content-wrapper">
+  <div class="columns is-gapless">
+  <div class="column is-5">
+    <div class="footer__badge">
+      <img src="{{ module.badges_images.src }}" alt="{{ module.badges_images.alt }}">
+
+      <div class="description">
+        {{ module.address }}
+      </div>
+    </div>
+    <div class="footer__social">
+      {% for item in module.social_icons %}
+      {% set social_href = item.link.url.href %}
+      {% if item.link.url.type == "EMAIL_ADDRESS" %}{% set social_href = "mailto:" + social_href %}{% endif %}
+      <a class="footer__social-link" href="{{ social_href|escape_url }}"
+        {% if item.link.open_in_new_tab %}target="_blank"{% endif %}
+        {% if item.link.rel %}rel="{{ item.link.rel|escape_attr }}"{% endif %}>
+        {% icon
+          extra_classes="footer__social-icon",
+          name="{{ item.icon.name }}",
+          icon_set="fontawesome-6.4.2",
+          style="{{ item.icon.type }}",
+          purpose="decorative",
+          unique_in_loop=True
+        %}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="column is-7">
+    <div class="columns is-gapless">
+      <div class="column is-3">
+        <div class="footer__menu">
+          <div class="footer__menu_title">
+            <h3>{{ module.column_1.title }}</h3>
+          </div>
+          <div class="footer__menu_content">
+            {% menu id="{{ module.column_1.menu_field }}" %}
+          </div>
+        </div>
+      </div>
+      <div class="column is-3">
+        <div class="footer__menu">
+          <div class="footer__menu_title">
+            <h3>{{ module.column_2.title }}</h3>
+          </div>
+          <div class="footer__menu_content">
+            {% menu id="{{ module.column_2.menu_field }}" %}
+          </div>
+        </div>
+      </div>
+      <div class="column is-3">
+        <div class="footer__menu">
+          <div class="footer__menu_title">
+            <h3>{{ module.column_3.title }}</h3>
+          </div>
+          <div class="footer__menu_content">
+            {% menu id="{{ module.column_3.menu_field }}" %}
+          </div>
+        </div>
+      </div>
+      <div class="column is-3">
+        <div class="footer__menu">
+          <div class="footer__menu_title">
+            <h3>{{ module.column_4.title }}</h3>
+          </div>
+          <div class="footer__menu_content">
+            {% menu id="{{ module.column_4.menu_field }}" %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    
+</div>
+    <div class="columns  is-gapless">
+      <div class="column is-12">
+      <div class="copyright-bottom">
+        <div>
+          {{ module.copyright }}
+        </div>
+        <div>
+          {{ module.copyright_2 }}
+        </div>
+        
+      </div>
+      
+    </div>
+    </div>
+
+</div>
+</div>

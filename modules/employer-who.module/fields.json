@@ -1,0 +1,376 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "who"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Who We Work With"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2 class=\"eb-title\">The Right Fit<br><strong><span class=\"accent\">for This Work</span></strong></h2>"
+}, {
+  "id" : "lede",
+  "name" : "lede",
+  "label" : "Lede",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>MarketDesign's employer brand practice is built for organizations with a real culture story that isn't translating externally — and for the HR, People, and Marketing leaders who need a trusted partner to help them close that gap.</p>"
+}, {
+  "id" : "audiences",
+  "name" : "audiences",
+  "label" : "Audience Cards",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "audiences.title",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "People + Culture Leaders"
+  }, {
+    "id" : "audiences.items",
+    "name" : "items",
+    "label" : "Bullet Items",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 5
+    },
+    "children" : [ {
+      "id" : "audiences.items.html",
+      "name" : "html",
+      "label" : "Item (rich text)",
+      "required" : false,
+      "locked" : false,
+      "type" : "richtext",
+      "display_width" : null,
+      "default" : "Text"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : [ {
+      "html" : "Item one"
+    }, {
+      "html" : "Text"
+    }, {
+      "html" : "Text"
+    }, {
+      "html" : "Text"
+    }, {
+      "html" : "Text"
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "People + Culture Leaders",
+    "items" : [ {
+      "html" : "High time-to-fill or poor pipeline quality"
+    }, {
+      "html" : "Glassdoor reviews that don't reflect the real culture"
+    }, {
+      "html" : "Onboarding issues tied to expectation mismatch"
+    }, {
+      "html" : "Retention problems in competitive talent markets"
+    }, {
+      "html" : "No formal EVP or an EVP that hasn't been deployed"
+    } ]
+  }, {
+    "title" : "Marketing Leaders",
+    "items" : [ {
+      "html" : "EB brief handed to marketing with no strategy behind it"
+    }, {
+      "html" : "Careers content that reads like a client pitch"
+    }, {
+      "html" : "Social channels that have no employer brand presence"
+    }, {
+      "html" : "Need to integrate EB into existing brand + content systems"
+    }, {
+      "html" : "Executive thought leadership without a talent-facing angle"
+    } ]
+  }, {
+    "title" : "Executive + Leadership Teams",
+    "items" : [ {
+      "html" : "Competing for talent against better-known brands"
+    }, {
+      "html" : "Scaling fast and need a talent pipeline that keeps up"
+    }, {
+      "html" : "Strong internal culture that candidates can't see externally"
+    }, {
+      "html" : "Prior recruiting spend that isn't producing quality results"
+    }, {
+      "html" : "Preparing for a rebrand or culture transformation"
+    } ]
+  } ]
+}, {
+  "id" : "tags",
+  "name" : "tags",
+  "label" : "Bottom Tags",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 8
+  },
+  "children" : [ {
+    "id" : "tags.text",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Mid-market companies"
+  }, {
+    "id" : "tags.color",
+    "name" : "color",
+    "label" : "Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#2d0a4e",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "text" : "Mid-market companies",
+    "color" : {
+      "color" : "#2d0a4e",
+      "opacity" : 100
+    }
+  }, {
+    "text" : "PE-backed organizations",
+    "color" : {
+      "color" : "#2d0a4e",
+      "opacity" : 100
+    }
+  }, {
+    "text" : "IT services + MSPs",
+    "color" : {
+      "color" : "#2d0a4e",
+      "opacity" : 100
+    }
+  }, {
+    "text" : "Professional services",
+    "color" : {
+      "color" : "#2d0a4e",
+      "opacity" : 100
+    }
+  }, {
+    "text" : "High-growth startups",
+    "color" : {
+      "color" : "#d6007f",
+      "opacity" : 100
+    }
+  }, {
+    "text" : "Organizations scaling regionally",
+    "color" : {
+      "color" : "#d6007f",
+      "opacity" : 100
+    }
+  }, {
+    "text" : "Companies in talent transformation",
+    "color" : {
+      "color" : "#d6007f",
+      "opacity" : 100
+    }
+  }, {
+    "text" : "Teams with a real culture story to tell",
+    "color" : {
+      "color" : "#4a7800",
+      "opacity" : 100
+    }
+  } ]
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.background_color",
+    "name" : "background_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#F8F6FC",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.text_color",
+    "name" : "text_color",
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#1a0a2e",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "background_color" : {
+      "color" : "#F8F6FC",
+      "opacity" : 100
+    },
+    "text_color" : {
+      "color" : "#1a0a2e",
+      "opacity" : 100
+    },
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }
+} ]

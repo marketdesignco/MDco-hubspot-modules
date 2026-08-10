@@ -1,0 +1,86 @@
+{% require_css %}
+<style>
+	{% scope_css %}
+  .ft-tabs{
+  {{ module.style.spacing_desktop.css }};
+  }
+  @media (max-width:768px){
+    .ft-tabs{
+  {{ module.style.spacing_mobile.css }};
+  }
+  }
+	
+	{% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="ft-tabs" id="{{ module.id_section }}">
+  <div class="ft-wrap">
+    <div class="ft-label"><span>{{ module.featured_label }}</span></div>
+
+    <div class="ft-tablist" role="tablist">
+      {% for tab in module.tabs %}
+        <button type="button"
+                class="ft-tab{% if loop.first %} is-active{% endif %}"
+                role="tab"
+                data-ft-target="ft-panel-{{ loop.index }}-{{ module.id_section }}">
+          {% if tab.tab_prefix %}<span class="ft-tab-strong">{{ tab.tab_prefix }}</span> {% endif %}{{ tab.tab_label }}
+        </button>
+      {% endfor %}
+    </div>
+
+    <div class="ft-divider"></div>
+
+    {% for tab in module.tabs %}
+      <div class="ft-panel{% if loop.first %} is-active{% endif %}"
+           role="tabpanel"
+           id="ft-panel-{{ loop.index }}-{{ module.id_section }}">
+        <div class="case-row">
+          {% for card in tab.cards %}
+            <article class="case-card">
+              <div class="case-img case-img--{{ card.gradient }}">{{ card.image_text }}</div>
+              <div class="case-content">
+                {% if card.eyebrow %}<div class="case-label">{{ card.eyebrow }}</div>{% endif %}
+                <h3>{{ card.heading }}</h3>
+                <p>{{ card.description }}</p>
+
+                {% set href = card.link.url.href %}
+                {% if card.link.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                {% elif card.link.url.type is equalto "PHONE_NUMBER" %}
+                  {% set href = "tel:" + href %}
+                {% endif %}
+                <a class="case-link"
+                  {% if card.link.url.type is equalto "CALL_TO_ACTION" %}
+                    href="{{ href }}"
+                  {% else %}
+                    href="{{ href|escape_url }}"
+                  {% endif %}
+                  {% if card.link.open_in_new_tab %}target="_blank"{% endif %}
+                  {% if card.link.rel %}rel="{{ card.link.rel|escape_attr }}"{% endif %}>
+                  {{ card.link_text }} <span class="arrow">&rarr; </span>
+                </a>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+<script>
+(function () {
+  var root = document.getElementById("{{ module.id_section }}");
+  if (!root) return;
+  var tabs = root.querySelectorAll(".ft-tab");
+  var panels = root.querySelectorAll(".ft-panel");
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      tabs.forEach(function (t) { t.classList.remove("is-active"); });
+      panels.forEach(function (p) { p.classList.remove("is-active"); });
+      tab.classList.add("is-active");
+      var panel = document.getElementById(tab.getAttribute("data-ft-target"));
+      if (panel) panel.classList.add("is-active");
+    });
+  });
+})();
+</script>

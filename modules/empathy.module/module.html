@@ -1,0 +1,49 @@
+{% require_css %}
+<style>
+	{% scope_css %}
+  .empathy{
+    {{ module.style.spacing_desktop.css }};
+  }
+  
+  @media (max-width:768px){
+   .empathy{
+  
+    {{ module.style.spacing_mobile.css }};
+  }
+  }
+	
+	{% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="empathy">
+  <div class="content-wrapper">
+    <div class="columns is-mobile is-multiline is-gapless">
+      
+      <div class="column is-12-mobile is-6-tablet is-6-desktop is-6-widescreen is-6-fullhd">
+         <div>
+           <div class="heading">{{ module.heading }} </div>
+       <div class="description">
+         {{ module.description }}
+           </div>
+      </div>
+      </div>
+      <div class="column is-12-mobile is-1-tablet is-1-desktop is-1-widescreen is-1-fullhd">
+      </div>
+      <div class="column is-12-mobile is-5-tablet is-5-desktop is-5-widescreen is-5-fullhd">
+        <aside class="empathy-stats">
+        <h4>{{ module.title_list }}</h4>
+        <ul>
+          {% for item in module.list %}
+          <li><span>{{ item.text }}</span> <span class="big">{{item.num}}</span></li>
+          {% endfor %}
+        </ul>
+      </aside>
+        
+      </div>
+     
+      
+    </div>
+    
+  </div>
+  
+</section>

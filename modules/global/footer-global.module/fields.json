@@ -1,0 +1,365 @@
+[ {
+  "id" : "b21730c1-d1f2-0ac6-1773-f26da767a76c",
+  "name" : "badges_images",
+  "label" : "Logo",
+  "required" : false,
+  "locked" : true,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://5407411.fs1.hubspotusercontent-na1.net/hubfs/5407411/2022%20ARCHIVE/Group%201.png",
+    "alt" : "Group 1",
+    "loading" : "lazy",
+    "width" : 274,
+    "height" : 47,
+    "max_width" : 274,
+    "max_height" : 47
+  }
+}, {
+  "id" : "e15e02b4-ae9f-0324-857f-c9e7c6d73f9f",
+  "name" : "column_1",
+  "label" : "Column 1",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "35aaffec-bacc-04f3-7466-a6687670f265",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "WHO WE SERVE"
+  }, {
+    "id" : "8a637d58-ca25-230b-e6be-e1cba739efd9",
+    "name" : "menu_field",
+    "label" : "Menu",
+    "required" : false,
+    "locked" : false,
+    "type" : "menu",
+    "display_width" : null,
+    "default" : 67047119121
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "title" : "WHO WE SERVE",
+    "menu_field" : 67047119121
+  }
+}, {
+  "id" : "2576f9b2-0b80-1563-5fc9-231880771689",
+  "name" : "column_2",
+  "label" : "Column 2",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "b0913e75-8cd6-04ac-e202-1608e7eee2d4",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "WHO WE BUILT THIS FOR"
+  }, {
+    "id" : "03ed42d7-4ec7-0efb-5df4-3d8bbb393cfd",
+    "name" : "menu_field",
+    "label" : "Menu",
+    "required" : false,
+    "locked" : false,
+    "type" : "menu",
+    "display_width" : null,
+    "default" : 67047119121
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "title" : "WHO WE BUILT THIS FOR",
+    "menu_field" : 67047119121
+  }
+}, {
+  "id" : "9514fe11-53a0-01f2-3deb-ccba5b7cd346",
+  "name" : "column_3",
+  "label" : "Column 3",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "9e908f1a-30e9-e024-9b76-58cd78e3308d",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Company"
+  }, {
+    "id" : "fadc5d95-1883-638c-5a13-c8327ebf75cc",
+    "name" : "menu_field",
+    "label" : "Menu",
+    "required" : false,
+    "locked" : false,
+    "type" : "menu",
+    "display_width" : null,
+    "default" : 67047119121
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "title" : "Company",
+    "menu_field" : 67047119121
+  }
+}, {
+  "id" : "2c64d494-7f90-4435-ba14-7804a514d41b",
+  "name" : "column_4",
+  "label" : "Column 4",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "93171d20-69e2-4820-86aa-aeebd716d21a",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Resources"
+  }, {
+    "id" : "b5d8aeab-d3bd-4d24-a72f-294fc703efcb",
+    "name" : "menu_field",
+    "label" : "Menu",
+    "required" : false,
+    "locked" : false,
+    "type" : "menu",
+    "display_width" : null,
+    "default" : 67047119121
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "title" : "Resources",
+    "menu_field" : 67047119121
+  }
+}, {
+  "id" : "d5ba91fe-f188-ec17-1e00-6c5d9aef7ec4",
+  "name" : "address",
+  "label" : "Description",
+  "required" : false,
+  "locked" : true,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>When AI tools aren't enough, mid-market tech firms hire us.</p>"
+}, {
+  "id" : "153a0c66-e7fd-71bd-d920-f9cb2c93d7ec",
+  "name" : "copyright",
+  "label" : "Copyright",
+  "required" : false,
+  "locked" : true,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "© 2026 MarketDesign Co. — Your irrefutable engine of growth."
+}, {
+  "id" : "627644c2-d1d7-477f-aaec-d7fcba507251",
+  "name" : "social_icons",
+  "label" : "Social Icons",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "ced3bbed-0d25-4f75-971a-b1c20f729378",
+    "name" : "icon",
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-6.4.2",
+    "type" : "icon",
+    "display_width" : null,
+    "default" : {
+      "name" : "arrow-alt-circle-up",
+      "type" : "SOLID",
+      "unicode" : "f35b"
+    }
+  }, {
+    "id" : "0fef8b79-caf3-49f2-bb14-c0ce744373c5",
+    "name" : "link",
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "EMAIL_ADDRESS" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://www.facebook.com",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : true,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "icon" : { "name" : "arrow-alt-circle-up", "type" : "SOLID", "unicode" : "f35b" },
+    "link" : { "url" : { "content_id" : null, "href" : "https://www.facebook.com", "type" : "EXTERNAL" }, "open_in_new_tab" : true, "no_follow" : false }
+  }, {
+    "icon" : { "name" : "arrow-alt-circle-up", "type" : "SOLID", "unicode" : "f35b" },
+    "link" : { "url" : { "content_id" : null, "href" : "https://www.linkedin.com", "type" : "EXTERNAL" }, "open_in_new_tab" : true, "no_follow" : false }
+  }, {
+    "icon" : { "name" : "arrow-alt-circle-up", "type" : "SOLID", "unicode" : "f35b" },
+    "link" : { "url" : { "content_id" : null, "href" : "https://www.twitter.com", "type" : "EXTERNAL" }, "open_in_new_tab" : true, "no_follow" : false }
+  }, {
+    "icon" : { "name" : "arrow-alt-circle-up", "type" : "SOLID", "unicode" : "f35b" },
+    "link" : { "url" : { "content_id" : null, "href" : "https://www.instagram.com", "type" : "EXTERNAL" }, "open_in_new_tab" : true, "no_follow" : false }
+  } ]
+}, {
+  "id" : "328f4bd6-bc16-7c62-3ca9-ef21ed63fbbe",
+  "name" : "copyright_2",
+  "label" : "Copyright 2",
+  "required" : false,
+  "locked" : true,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "For mid-market tech companies competing in the AI era"
+}, {
+  "id" : "b09ed2e3-82c3-debc-bc35-dcdf68e57cfd",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "41f37bf2-2df0-5968-5085-65447d392914",
+    "name" : "spacing_desktop",
+    "label" : "Spacing Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 80,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "64bdf4d5-afd1-4789-0706-f6fcfa04f416",
+    "name" : "spacing_mobile",
+    "label" : "Spacing Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 30,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 80,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 30,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }
+} ]

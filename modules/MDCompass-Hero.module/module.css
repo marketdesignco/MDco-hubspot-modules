@@ -1,0 +1,90 @@
+/* ═══ HERO ═══ */
+.mdcompass-hero {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.mdcompass-hero__glow--right {
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(114, 9, 183, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.mdcompass-hero__glow--left {
+  position: absolute;
+  bottom: -160px;
+  left: -120px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(114, 9, 183, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.mdcompass-hero__container {
+  position: relative;
+  z-index: 1;
+}
+
+.mdcompass-hero__content {
+  max-width: 860px;
+}
+
+/* Badge */
+.mdcompass-hero__badge-brand {
+  text-transform: none;
+}
+
+/* Heading */
+.mdcompass-hero__title h1 strong {
+  background: linear-gradient(90deg, #3A0CA3 0%, #7209B7 55%, #7EDB00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #3A0CA3;
+}
+
+/* Subtitle */
+.mdcompass-hero__subtitle {
+  margin: 0 0 1.5rem;
+  max-width: 800px;
+}
+
+/* Quote */
+.mdcompass-hero__quote * {
+  margin: 0px;
+}
+.mdcompass-hero__quote {
+  margin: 0 0 2.5rem;
+  max-width: 800px;
+}
+.mdcompass-hero__quote h5 {
+  color: #3A0CA3;
+}
+
+/* CTAs */
+.mdcompass-hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 4.5rem;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 768px) {
+  .mdcompass-hero__ctas > div,
+    .mdcompass-hero__ctas a{
+  width:100%;
+      text-align:center;
+  }
+  .mdcompass-hero__ctas {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:20px;
+  }
+}

@@ -1,0 +1,35 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .ff-pillars {
+    background: {{ module.style.background_color.color }};
+    color: {{ module.style.text_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 768px) { .ff-pillars { {{ module.style.spacing_mobile.css }} } }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="ff-pillars"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="ff-wrap">
+    {% if module.eyebrow %}<div class="ff-eyebrow"><span>{{ module.eyebrow }}</span></div>{% endif %}
+    {{ module.heading }}
+    {{ module.intro }}
+
+    <div class="ff-pillar-grid">
+      {% for p in module.pillars %}
+        <div class="ff-pillar-card">
+          <span class="ff-pillar-tag">{{ p.tag }}</span>
+          <h3 class="ff-pillar-title">{{ p.title }}</h3>
+          <div class="ff-pillar-body">{{ p.description }}</div>
+          <ul class="ff-pillar-items">
+            {% for it in p.items %}<li>{{ it.text }}</li>{% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if module.compound_note %}<div class="ff-compound-note">{{ module.compound_note }}</div>{% endif %}
+  </div>
+</section>

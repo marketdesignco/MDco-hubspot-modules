@@ -1,0 +1,16 @@
+/* found-cta-band — static styles */
+.ff-cta {
+  text-align: center;
+}
+
+.ff-cta h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 16px;
+}
+
+.ff-cta p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 17px;
+  margin: 0 auto 32px;
+  max-width: 560px;
+}

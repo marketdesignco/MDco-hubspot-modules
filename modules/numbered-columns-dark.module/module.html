@@ -1,0 +1,56 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .numbered-columns-dark {
+    {{ module.style.spacing_desktop.css }};
+  }
+  @media (max-width: 991px) {
+    .numbered-columns-dark {
+      {{ module.style.spacing_mobile.css }};
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="numbered-columns-dark"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  {% if module.background_image.src %}
+    <img class="numbered-columns-dark__pattern" src="{{ module.background_image.src }}" alt="" loading="lazy">
+  {% endif %}
+  <div class="content-wrapper">
+    <div class="numbered-columns-dark__intro">
+      {% if module.eyebrow %}<div class="numbered-columns-dark__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <div class="numbered-columns-dark__heading">{{ module.heading }}</div>
+      {% if module.lede %}<div class="numbered-columns-dark__lede">{{ module.lede }}</div>{% endif %}
+    </div>
+    <div class="numbered-columns-dark__columns">
+      <div class="numbered-columns-dark__column">
+        {% if module.column_1_label %}<div class="numbered-columns-dark__column-label">{{ module.column_1_label }}</div>{% endif %}
+        <div class="numbered-columns-dark__items">
+          {% for item in module.column_1_items %}
+          <div class="numbered-columns-dark__item">
+            <div class="numbered-columns-dark__number numbered-columns-dark__number--{{ item.circle_style }}">{{ item.number }}</div>
+            <div>
+              <div class="numbered-columns-dark__item-title">{{ item.title }}</div>
+              <div class="numbered-columns-dark__item-desc">{{ item.description }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="numbered-columns-dark__column">
+        {% if module.column_2_label %}<div class="numbered-columns-dark__column-label">{{ module.column_2_label }}</div>{% endif %}
+        <div class="numbered-columns-dark__items">
+          {% for item in module.column_2_items %}
+          <div class="numbered-columns-dark__item">
+            <div class="numbered-columns-dark__number numbered-columns-dark__number--{{ item.circle_style }}">{{ item.number }}</div>
+            <div>
+              <div class="numbered-columns-dark__item-title">{{ item.title }}</div>
+              <div class="numbered-columns-dark__item-desc">{{ item.description }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

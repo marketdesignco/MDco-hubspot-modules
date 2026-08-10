@@ -1,0 +1,303 @@
+[ {
+  "id" : "f77aa767-a09e-3364-9998-0c72a3cd6746",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "3b0a672b-00f2-4ed1-d3e9-26c1b8dcb2ec",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      },
+      "margin" : {
+        "top" : {
+          "value" : null,
+          "units" : "NaNaN"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "c85b1912-cf6c-bbf9-539f-e4dd8affb240",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      },
+      "margin" : {
+        "top" : {
+          "value" : null,
+          "units" : "NaNaN"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }
+}, {
+  "id" : "6d8265b1-033e-3dbe-e3bd-f3947c090c3a",
+  "name" : "caption",
+  "label" : "Caption",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "What Comes Next: Find Your V.O.I.C.E."
+}, {
+  "id" : "547abd29-f0ce-9825-297c-6231ec9f084c",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2><strong>MDCompass</strong> reveals the gaps.<br><strong>V.O.I.C.E. closes them</strong>.</h2>"
+}, {
+  "id" : "e58eb4b9-8b73-b62a-f7ba-bed18ca7b739",
+  "name" : "intro",
+  "label" : "Intro",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "Once an organization knows where it stands, it needs a framework for moving forward with clarity, consistency, and market presence. That is where V.O.I.C.E. begins."
+}, {
+  "id" : "e38d2486-e54f-d546-119e-2366bf9f3981",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>MDCompass is the diagnostic. V.O.I.C.E. is the operating system. When MDCompass surfaces the gaps between leadership perspective and organizational reality, V.O.I.C.E. provides the structure for addressing them: systematically, visibly, and with a shared vocabulary.</p>\n<p><span style=\"color: #6b5880;\">Most organizations already have some version of each element. What they lack is the coherence between them. V.O.I.C.E. connects the work so that visibility, optimization, insight, content, and engagement are no longer separate initiatives. They become a single, compounding motion.</span></p>\n<p><span style=\"color: #6b5880;\">MDCompass tells you where the organization is. V.O.I.C.E. defines how it shows up from there.</span></p>"
+}, {
+  "id" : "aceff064-d085-9b54-3132-5c0a7c8e7134",
+  "name" : "pillars",
+  "label" : "Pillars",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "5fe743f8-2fb5-725f-d38c-35e1654b0477",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Visibility"
+  }, {
+    "id" : "41240092-377f-bb8b-e9e4-facb48f60233",
+    "name" : "text",
+    "label" : "text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Being found, recognized, and remembered in the markets that matter. MDCompass reveals whether your visibility reflects your actual positioning or a misaligned one.</p>"
+  }, {
+    "id" : "64e92f27-11f1-c681-2af0-a8e625578c3c",
+    "name" : "color",
+    "label" : "Color",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "voice-row--1", "Purple" ], [ "voice-row--2", "Pink" ], [ "voice-row--3", "Blue" ], [ "voice-row--4", "Green" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "voice-row--2"
+  }, {
+    "id" : "5279aba8-a72d-b034-3840-3ddea95a6977",
+    "name" : "letter",
+    "label" : "Letter",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "V"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "Visibility",
+    "text" : "<p>Being found, recognized, and remembered in the markets that matter. MDCompass reveals whether your visibility reflects your actual positioning or a misaligned one.</p>",
+    "color" : "voice-row--2",
+    "letter" : "V"
+  }, {
+    "title" : "Visibility",
+    "text" : "<p>Being found, recognized, and remembered in the markets that matter. MDCompass reveals whether your visibility reflects your actual positioning or a misaligned one.</p>",
+    "color" : "voice-row--2",
+    "letter" : "V"
+  }, {
+    "title" : "Visibility",
+    "text" : "<p>Being found, recognized, and remembered in the markets that matter. MDCompass reveals whether your visibility reflects your actual positioning or a misaligned one.</p>",
+    "color" : "voice-row--2",
+    "letter" : "V"
+  }, {
+    "title" : "Visibility",
+    "text" : "<p>Being found, recognized, and remembered in the markets that matter. MDCompass reveals whether your visibility reflects your actual positioning or a misaligned one.</p>",
+    "color" : "voice-row--2",
+    "letter" : "V"
+  } ]
+}, {
+  "id" : "f3ec6dc7-c9f9-8270-ad69-7044257c9f00",
+  "name" : "button",
+  "label" : "Button",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "href" : "https://www.marketdesignco.com/",
+      "type" : "EXTERNAL"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "208bc69a-54d2-1707-ec9b-0704af86bd03",
+  "name" : "button_label",
+  "label" : "Button label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "FIND YOUR V.O.I.C.E."
+}, {
+  "id" : "cae636fc-c828-4389-700a-665296302902",
+  "name" : "icon_field",
+  "label" : "Icon",
+  "required" : false,
+  "locked" : false,
+  "icon_set" : "fontawesome-6.4.2",
+  "type" : "icon",
+  "display_width" : null,
+  "default" : {
+    "name" : "Arrow Right",
+    "unicode" : "f061",
+    "type" : "SOLID"
+  }
+}, {
+  "id" : "406f888f-97ef-b332-9a95-59b650a615ee",
+  "name" : "section_id",
+  "label" : "Section Id",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : ""
+} ]

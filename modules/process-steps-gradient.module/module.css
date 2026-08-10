@@ -1,0 +1,96 @@
+.process-steps-gradient__intro {
+  max-width: 860px;
+}
+.process-steps-gradient__eyebrow {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #F72585;
+  margin-bottom: 14px;
+}
+.process-steps-gradient__heading strong {
+  color: #3A0CA3;
+}
+.process-steps-gradient__lede {
+  margin-top: 18px;
+  color: #4A4A63;
+}
+.process-steps-gradient__steps {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+.process-steps-gradient__step {
+  padding: 0 32px;
+}
+.process-steps-gradient__step:first-child {
+  padding-left: 0;
+}
+.process-steps-gradient__step:last-child {
+  padding-right: 0;
+}
+.process-steps-gradient__step:not(:last-child) {
+  border-right: 1px solid #E4DCEF;
+}
+.process-steps-gradient__step-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.process-steps-gradient__number {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 900;
+  font-size: var(--font-size-h4, 38px);
+  line-height: var(--line-height-h4, 140%);
+  letter-spacing: var(--letter-spacing-h4, -0.76px);
+  -webkit-background-clip: text!important;
+  background-clip: text!important;
+  -webkit-text-fill-color: transparent!important;
+  color: #3A0CA3;
+}
+/* Number Gradient Style — brand-approved options only, from design-system.md "Number Gradient 01-03" */
+.process-steps-gradient__number--gradient_1 {
+  background: linear-gradient(90deg, #3A0CA3 0%, #7209B7 100%);
+}
+.process-steps-gradient__number--gradient_2 {
+  background: linear-gradient(90deg, #7209B7 0%, #9333C9 100%);
+}
+.process-steps-gradient__number--gradient_3 {
+  background: linear-gradient(90deg, #7209B7 0%, #7EDB00 100%);
+}
+.process-steps-gradient__title {
+    font-weight: 900;
+  font-size: var(--font-size-h6, 21px);
+  line-height: var(--line-height-h6, 140%);
+  letter-spacing: var(--letter-spacing-h6, -0.21px);
+  color: #3A0CA3;
+}
+.process-steps-gradient__desc {
+  margin-top: 12px;
+  color: #4A4A63;
+}
+
+@media (max-width: 991px) {
+  .process-steps-gradient__steps {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .process-steps-gradient__step {
+    padding: 0 !important;
+    border-right: none !important;
+  }
+  .process-steps-gradient__number {
+    font-size: var(--font-size-h4-mobile, 18px);
+    line-height: var(--line-height-h4, 140%);
+    letter-spacing: var(--letter-spacing-h4-mobile, -0.36px);
+  }
+  .process-steps-gradient__title {
+    font-size: var(--font-size-h6-mobile, 14px);
+    line-height: var(--line-height-h6, 140%);
+    letter-spacing: var(--letter-spacing-h6-mobile, -0.14px);
+  }
+}

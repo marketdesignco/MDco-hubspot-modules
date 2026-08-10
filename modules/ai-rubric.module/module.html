@@ -1,0 +1,66 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .rubric-section{
+
+    background:{{ module.style.background_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:768px){
+    .rubric-section{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="rubric-section" id="{{ module.id_section }}">
+  <div class="rubric-wrap content-wrapper">
+    <div class="rubric-grid">
+
+
+      <div class="rubric-col">
+        <div class="rubric-eyebrow">
+          {{ module.badge_text }}
+        </div>
+
+        <div class="rubric-title">
+          {{ module.heading }}
+        </div>
+
+        <div class="rubric-intro">
+          {{ module.description }}
+        </div>
+      </div>
+
+      <div class="rubric-col">
+
+        <div class="rubric-cards">
+          {% for level in module.levels %}
+          <div class="rubric-card">
+            <div class="rubric-num" aria-hidden="true">{{ loop.index }}</div>
+
+            <h6 class="rubric-card-title">
+              {{ level.title }}
+            </h6>
+
+            <div class="rubric-card-text">
+              {{ level.text }}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="rubric-note">
+          {{ module.note }}
+        </div>
+
+        <div class="rubric-callout">
+          {{ module.callout }}
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

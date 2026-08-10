@@ -1,0 +1,36 @@
+.assesment  .section-label{
+  font-size:12px;
+  letter-spacing:0.22em;
+  font-weight:800;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  text-transform:uppercase;
+  margin-bottom:14px;
+color:#fff;
+}
+.assesment .section-title span{
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-style: italic;
+}
+.assesment  .section-sub{
+  max-width:750px;
+}
+
+.assessment-embed{
+box-shadow: 0px 32px 80px 0px #00000059;
+  border-radius:14px;
+  padding:60px 40px;
+  background:#fff;
+  text-align:center;
+}
+.embed-placeholder{
+border: 1px dashed #7209B7;
+  border-radius:10px;
+  background: #FAF7FB;
+min-height:200px;
+  margin-bottom:30px;
+}
+@media (max-width:768px){
+  .assessment-embed{
+  padding:14px;
+  }
+}

@@ -1,0 +1,447 @@
+[ {
+  "id" : "f77aa767-a09e-3364-9998-0c72a3cd6746",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "3b0a672b-00f2-4ed1-d3e9-26c1b8dcb2ec",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "c85b1912-cf6c-bbf9-539f-e4dd8affb240",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 40,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }
+}, {
+  "id" : "401acef4-36d1-38c5-d7f4-54b2289d7bc2",
+  "name" : "id_section",
+  "label" : "ID Section",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "case-study"
+}, {
+  "id" : "81a8452b-2fc3-3946-ce94-2a6ae3ff42a9",
+  "name" : "featured_label",
+  "label" : "Featured Label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "FEATURED IN"
+}, {
+  "id" : "236be1c4-7555-ec2e-de15-cf128bf540de",
+  "name" : "tabs",
+  "label" : "Tabs",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "de81234e-1bb7-e489-ce13-718ca94c6116",
+    "name" : "tab_prefix",
+    "label" : "Tab Prefix",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "MarTech"
+  }, {
+    "id" : "5e54044e-4e4a-0a21-f393-9a60fa745324",
+    "name" : "tab_label",
+    "label" : "Tab Label",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Outlook"
+  }, {
+    "id" : "bc54b675-8a00-2a2d-ee10-6fbd420fbd40",
+    "name" : "cards",
+    "label" : "Cards",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 2
+    },
+    "children" : [ {
+      "id" : "872869a3-5ca4-0024-5bf1-5c4b36ffdbd8",
+      "name" : "eyebrow",
+      "label" : "Card Eyebrow",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "RETAIL IT · MULTI-LOCATION"
+    }, {
+      "id" : "9bbbf1e3-1eeb-b814-c54d-826f484821ab",
+      "name" : "image_text",
+      "label" : "Card Image Text",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "CASE STUDY · COMPUGEN SYSTEMS"
+    }, {
+      "id" : "370e2235-044c-3343-fb50-aff8ee2b5db7",
+      "name" : "gradient",
+      "label" : "Gradient Image",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "grad1", "Grad 1" ], [ "grad2", "Grad 2" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "grad2"
+    }, {
+      "id" : "8c2ee57e-6388-29b3-f111-f02a34192f3f",
+      "name" : "heading",
+      "label" : "Heading",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "From invisible to inbound: building Compugen Systems' retail pillar."
+    }, {
+      "id" : "9e33e804-13fd-4a58-9112-1f003c40ce49",
+      "name" : "description",
+      "label" : "Description",
+      "required" : false,
+      "locked" : false,
+      "type" : "richtext",
+      "display_width" : null,
+      "default" : "<p>Pillar page launch, embedded readiness assessment, 4-week paid campaign — delivered Compugen's first inbound retail leads inside 30 days.</p>"
+    }, {
+      "id" : "5e4889fa-749a-1902-e865-053d81d82c78",
+      "name" : "link",
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "display_width" : null,
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.marketdesignco.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "4af4fd7f-044b-f07d-ae7e-98ba164527a0",
+      "name" : "link_text",
+      "label" : "Link Text",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "Read the case"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : [ {
+      "eyebrow" : "RETAIL IT · MULTI-LOCATION",
+      "image_text" : "CASE STUDY · COMPUGEN SYSTEMS",
+      "gradient" : "grad2",
+      "heading" : "From invisible to inbound: building Compugen Systems' retail pillar.",
+      "description" : "<p>Pillar page launch, embedded readiness assessment, 4-week paid campaign — delivered Compugen's first inbound retail leads inside 30 days.</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.marketdesignco.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "link_text" : "Read the case"
+    }, {
+      "eyebrow" : "RETAIL IT · MULTI-LOCATION",
+      "image_text" : "CASE STUDY · COMPUGEN SYSTEMS",
+      "gradient" : "grad2",
+      "heading" : "From invisible to inbound: building Compugen Systems' retail pillar.",
+      "description" : "<p>Pillar page launch, embedded readiness assessment, 4-week paid campaign — delivered Compugen's first inbound retail leads inside 30 days.</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.marketdesignco.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "link_text" : "Read the case"
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "tab_prefix" : "MarTech",
+    "tab_label" : "Outlook",
+    "cards" : [ {
+      "eyebrow" : "RETAIL IT · MULTI-LOCATION",
+      "image_text" : "CASE STUDY · COMPUGEN SYSTEMS",
+      "gradient" : "grad2",
+      "heading" : "From invisible to inbound: building Compugen Systems' retail pillar.",
+      "description" : "<p>Pillar page launch, embedded readiness assessment, 4-week paid campaign — delivered Compugen's first inbound retail leads inside 30 days.</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.marketdesignco.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "link_text" : "Read the case"
+    }, {
+      "eyebrow" : "RETAIL IT · MULTI-LOCATION",
+      "image_text" : "CASE STUDY · COMPUGEN SYSTEMS",
+      "gradient" : "grad2",
+      "heading" : "From invisible to inbound: building Compugen Systems' retail pillar.",
+      "description" : "<p>Pillar page launch, embedded readiness assessment, 4-week paid campaign — delivered Compugen's first inbound retail leads inside 30 days.</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.marketdesignco.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "link_text" : "Read the case"
+    } ]
+  }, {
+    "tab_prefix" : "MarTech",
+    "tab_label" : "Outlook",
+    "cards" : [ {
+      "eyebrow" : "RETAIL IT · MULTI-LOCATION",
+      "image_text" : "CASE STUDY · COMPUGEN SYSTEMS",
+      "gradient" : "grad2",
+      "heading" : "From invisible to inbound: building Compugen Systems' retail pillar.",
+      "description" : "<p>Pillar page launch, embedded readiness assessment, 4-week paid campaign — delivered Compugen's first inbound retail leads inside 30 days.</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.marketdesignco.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "link_text" : "Read the case"
+    }, {
+      "eyebrow" : "RETAIL IT · MULTI-LOCATION",
+      "image_text" : "CASE STUDY · COMPUGEN SYSTEMS",
+      "gradient" : "grad2",
+      "heading" : "From invisible to inbound: building Compugen Systems' retail pillar.",
+      "description" : "<p>Pillar page launch, embedded readiness assessment, 4-week paid campaign — delivered Compugen's first inbound retail leads inside 30 days.</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.marketdesignco.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "link_text" : "Read the case"
+    } ]
+  }, {
+    "tab_prefix" : "MarTech",
+    "tab_label" : "Outlook",
+    "cards" : [ {
+      "eyebrow" : "RETAIL IT · MULTI-LOCATION",
+      "image_text" : "CASE STUDY · COMPUGEN SYSTEMS",
+      "gradient" : "grad2",
+      "heading" : "From invisible to inbound: building Compugen Systems' retail pillar.",
+      "description" : "<p>Pillar page launch, embedded readiness assessment, 4-week paid campaign — delivered Compugen's first inbound retail leads inside 30 days.</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.marketdesignco.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "link_text" : "Read the case"
+    }, {
+      "eyebrow" : "RETAIL IT · MULTI-LOCATION",
+      "image_text" : "CASE STUDY · COMPUGEN SYSTEMS",
+      "gradient" : "grad2",
+      "heading" : "From invisible to inbound: building Compugen Systems' retail pillar.",
+      "description" : "<p>Pillar page launch, embedded readiness assessment, 4-week paid campaign — delivered Compugen's first inbound retail leads inside 30 days.</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.marketdesignco.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "link_text" : "Read the case"
+    } ]
+  }, {
+    "tab_prefix" : "MarTech",
+    "tab_label" : "Outlook",
+    "cards" : [ {
+      "eyebrow" : "RETAIL IT · MULTI-LOCATION",
+      "image_text" : "CASE STUDY · COMPUGEN SYSTEMS",
+      "gradient" : "grad2",
+      "heading" : "From invisible to inbound: building Compugen Systems' retail pillar.",
+      "description" : "<p>Pillar page launch, embedded readiness assessment, 4-week paid campaign — delivered Compugen's first inbound retail leads inside 30 days.</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.marketdesignco.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "link_text" : "Read the case"
+    }, {
+      "eyebrow" : "RETAIL IT · MULTI-LOCATION",
+      "image_text" : "CASE STUDY · COMPUGEN SYSTEMS",
+      "gradient" : "grad2",
+      "heading" : "From invisible to inbound: building Compugen Systems' retail pillar.",
+      "description" : "<p>Pillar page launch, embedded readiness assessment, 4-week paid campaign — delivered Compugen's first inbound retail leads inside 30 days.</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "https://www.marketdesignco.com/",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "link_text" : "Read the case"
+    } ]
+  } ]
+} ]

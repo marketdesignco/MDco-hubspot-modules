@@ -1,0 +1,62 @@
+{% require_css %}
+<style>
+{% scope_css %}
+.eb-diag {
+  background: {{ module.style.background_color.color }};
+  color: {{ module.style.text_color.color }};
+  {{ module.style.spacing_desktop.css }}
+}
+.eb-diag-del-card {
+  background: {{ module.style.deliverables_bg.color }};
+}
+.eb-diag-del-title {
+  color: {{ module.style.deliverables_title_color.color }};
+}
+@media (max-width: 768px) {
+  .eb-diag { {{ module.style.spacing_mobile.css }} }
+}
+{% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="eb-diag"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  
+  <div class="content-wrapper">
+     {% if module.eyebrow %}<div class="eb-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+  
+  <div class="eb-title">
+     {{ module.heading }}
+  </div>
+ 
+  <div class="eb-lede">{{ module.lede }}</div>
+
+  {% if module.quote_html %}
+    <div class="eb-diag-quote">{{ module.quote_html }}</div>
+  {% endif %}
+
+  <div class="eb-diag-subtitle">{{ module.touchpoints_title }}</div>
+  <div class="eb-diag-grid">
+  {% for t in module.touchpoints %}
+  <div class="eb-diag-card">
+    <div class="eb-diag-num">{{ t.number }}</div>
+    <div class="eb-diag-card-title">{{ t.title }}</div>
+    <div class="eb-diag-card-body">{{ t.description }}</div>
+    {% if t.quote %}<div class="eb-diag-card-quote">{{ t.quote }}</div>{% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+  <div{% if module.deliverables_id %} id="{{ module.deliverables_id }}"{% endif %} style="scroll-margin-top:80px;">
+    <div class="eb-diag-subtitle">{{ module.deliverables_title }}</div>
+    <div class="eb-diag-deliverables-grid">
+      {% for d in module.deliverables %}
+        <div class="eb-diag-del-card">
+          <div class="eb-diag-del-title">{{ d.title }}</div>
+          <div class="eb-diag-del-body">{{ d.description }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  </div>
+ 
+</section>

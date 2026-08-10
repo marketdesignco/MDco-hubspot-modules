@@ -1,0 +1,329 @@
+[ {
+  "id" : "f77aa767-a09e-3364-9998-0c72a3cd6746",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "3b0a672b-00f2-4ed1-d3e9-26c1b8dcb2ec",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      },
+      "margin" : {
+        "top" : {
+          "value" : null,
+          "units" : "NaNaN"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "c85b1912-cf6c-bbf9-539f-e4dd8affb240",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      },
+      "margin" : {
+        "top" : {
+          "value" : null,
+          "units" : "NaNaN"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }
+}, {
+  "id" : "6d8265b1-033e-3dbe-e3bd-f3947c090c3a",
+  "name" : "badge_text",
+  "label" : "Caption",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "What MDCompass Is"
+}, {
+  "id" : "547abd29-f0ce-9825-297c-6231ec9f084c",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>A diagnostic built to measure the thing <strong>nobody is measuring</strong></h2>"
+}, {
+  "id" : "e38d2486-e54f-d546-119e-2366bf9f3981",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Every organization has goals. Values. A message that has been repeated in all-hands, embedded in decks, printed on walls. And somewhere along the way, the language became the substitute for the belief. People stopped pressure-testing the goals because they seemed settled. They stopped questioning the values because questioning felt disloyal.</p>\n<p>MDCompass doesn't fix the message. It tells you what the message actually is. What people have heard. What they believe. What they have been quietly interpreting alone. And what needs to change, or be retired, before the organization can move forward as one.</p>"
+}, {
+  "id" : "54206490-5afd-999c-1135-065829ec98ff",
+  "name" : "card_label",
+  "label" : "Card Label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "How the diagnostic runs"
+}, {
+  "id" : "aceff064-d085-9b54-3132-5c0a7c8e7134",
+  "name" : "steps",
+  "label" : "Steps",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "5fe743f8-2fb5-725f-d38c-35e1654b0477",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Confidential, individual interviews that create space for honest perspective"
+  }, {
+    "id" : "481a104f-603e-8291-6287-af42bb33e283",
+    "name" : "icon",
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-6.4.2",
+    "type" : "icon",
+    "display_width" : null,
+    "default" : {
+      "name" : "Arrow Right Long",
+      "unicode" : "f178",
+      "type" : "SOLID"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "text" : "Confidential, individual interviews that create space for honest perspective",
+    "icon" : {
+      "name" : "Arrow Right Long",
+      "unicode" : "f178",
+      "type" : "SOLID"
+    }
+  }, {
+    "text" : "Confidential, individual interviews that create space for honest perspective",
+    "icon" : {
+      "name" : "Arrow Right Long",
+      "unicode" : "f178",
+      "type" : "SOLID"
+    }
+  }, {
+    "text" : "Confidential, individual interviews that create space for honest perspective",
+    "icon" : {
+      "name" : "Arrow Right Long",
+      "unicode" : "f178",
+      "type" : "SOLID"
+    }
+  }, {
+    "text" : "Confidential, individual interviews that create space for honest perspective",
+    "icon" : {
+      "name" : "Arrow Right Long",
+      "unicode" : "f178",
+      "type" : "SOLID"
+    }
+  } ]
+}, {
+  "id" : "8c1242e4-60c6-c687-521a-81648a07652d",
+  "name" : "title_col_2",
+  "label" : "Title Col 2",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h3>Data integrity is <strong>not negotiable</strong></h3>"
+}, {
+  "id" : "f7e7858e-8a5e-4f3a-4879-e46dbad1b048",
+  "name" : "rules",
+  "label" : "Rules",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "8403244a-047e-bebe-cbf4-0635846eec1f",
+    "name" : "icon_field",
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-6.4.2",
+    "type" : "icon",
+    "display_width" : null,
+    "default" : {
+      "name" : "Check",
+      "unicode" : "f00c",
+      "type" : "SOLID"
+    }
+  }, {
+    "id" : "8829ee47-b372-662f-0063-26ba6ba99605",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p><strong>No forced alignment. </strong>Genuine disagreement is data, not a problem to resolve before the readout.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "icon_field" : {
+      "name" : "Check",
+      "unicode" : "f00c",
+      "type" : "SOLID"
+    },
+    "text" : "<p><strong>No forced alignment. </strong>Genuine disagreement is data, not a problem to resolve before the readout.</p>"
+  }, {
+    "icon_field" : {
+      "name" : "Check",
+      "unicode" : "f00c",
+      "type" : "SOLID"
+    },
+    "text" : "<p><strong>No forced alignment. </strong>Genuine disagreement is data, not a problem to resolve before the readout.</p>"
+  }, {
+    "icon_field" : {
+      "name" : "Check",
+      "unicode" : "f00c",
+      "type" : "SOLID"
+    },
+    "text" : "<p><strong>No forced alignment. </strong>Genuine disagreement is data, not a problem to resolve before the readout.</p>"
+  }, {
+    "icon_field" : {
+      "name" : "Check",
+      "unicode" : "f00c",
+      "type" : "SOLID"
+    },
+    "text" : "<p><strong>No forced alignment. </strong>Genuine disagreement is data, not a problem to resolve before the readout.</p>"
+  } ]
+}, {
+  "id" : "406f888f-97ef-b332-9a95-59b650a615ee",
+  "name" : "id_section",
+  "label" : "Id Section",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "what"
+} ]

@@ -1,0 +1,214 @@
+.outcomes-section {
+      overflow-x: clip;
+    }
+
+    /* Slick writes inline widths on the track and slides. Without border-box any
+       padding or border adds on top of that width and overflows the viewport. */
+    .outcomes-section *,
+    .outcomes-section *::before,
+    .outcomes-section *::after {
+      box-sizing: border-box;
+    }
+
+    /* ═══ CAPTION ═══ */
+    .outcomes-caption,
+    .outcomes-caption p {
+      font-family: var(--font-primary, 'Lato', sans-serif);
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 17.6px;
+      letter-spacing: 1.76px;
+      text-transform: uppercase;
+      color: #f72585;
+      margin: 0 0 16px;
+    }
+
+    /* ═══ HEADING ═══ */
+    .outcomes-heading,
+    .outcomes-heading h2,
+    .outcomes-heading div {
+      font-size: var(--font-size-h2);
+      line-height: var(--line-height-h2);
+      letter-spacing: var(--letter-spacing-h2);
+      color: #171f6f;
+      margin: 0 0 16px;
+      overflow-wrap: break-word;
+    }
+
+    /* Brand word: mark it bold in the rich text editor */
+    .outcomes-heading strong,
+    .outcomes-heading b {
+      color: #7209b7;
+    }
+
+    /* ═══ INTRO ═══ */
+    .outcomes-intro,
+    .outcomes-intro p {
+      font-size: 16px;
+      color: #6b5880;
+      line-height: 1.8;
+      max-width: 620px;
+      margin: 0 0 48px;
+    }
+
+    /* ═══ CARD GRID ═══ */
+    .outcomes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .outcomes-card {
+      background: #F8F6FC;
+      border: 1px solid #E4DCEF;
+      box-shadow: 0px 6px 20px 0px #3A0CA30F;
+      border-radius: 8px;
+      padding: 1.4rem 1.2rem;
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .outcomes-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: #3A0CA3;
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      font-weight: 900;
+      font-size: 18.53px;
+      line-height: 29.65px;
+      letter-spacing: 0;
+      text-align: center;
+      pointer-events: none;
+      margin-bottom: 10px;
+    }
+
+    .outcomes-card-heading,
+    .outcomes-card-heading p {
+      font-size: var(--font-size-h6);
+      letter-spacing: var(--letter-spacing-h6);
+      line-height: var(--line-height-h6);
+      color: #3A0CA3;
+      margin: 0 0 10px;
+      position: relative;
+    }
+
+    .outcomes-card-text,
+    .outcomes-card-text p {
+      font-size: 14px;
+      color: #6b5880;
+      line-height: 1.7;
+      margin: 0;
+      position: relative;
+      overflow-wrap: break-word;
+    }
+
+    /* ═══ SLICK SLIDER (MOBILE ONLY) ═══ */
+    .outcomes-grid.slick-initialized {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .outcomes-grid .slick-list {
+      overflow: hidden;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0 !important;
+    }
+
+    .outcomes-grid .slick-track {
+      display: flex;
+      align-items: stretch;
+      margin: 0;
+    }
+
+    .outcomes-grid .slick-slide {
+      height: auto;
+      min-width: 0;
+
+      margin: 0;
+    }
+
+    .outcomes-grid .slick-slide > div {
+      height: 100%;
+      max-width: 100%;
+    }
+
+    .outcomes-grid.slick-initialized .outcomes-card {
+      height: 100%;
+    }
+
+    .outcomes-grid .slick-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      list-style: none;
+      margin: 24px 0 0;
+      padding: 0;
+    }
+
+    .outcomes-grid .slick-dots li button {
+      font-size: 0;
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(114, 9, 183, 0.25);
+      cursor: pointer;
+      transition: background 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .outcomes-grid .slick-dots li.slick-active button {
+      background: #f72585;
+    }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media (max-width: 1024px) {
+      .outcomes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 767px) {
+      .outcomes-heading,
+      .outcomes-heading h2,
+      .outcomes-heading div {
+        font-size: var(--font-size-h2-mobile);
+        line-height: var(--line-height-h2);
+        letter-spacing: var(--letter-spacing-h2-mobile);
+      }
+
+      .outcomes-intro,
+      .outcomes-intro p {
+        font-size: 14px;
+        margin-bottom: 32px;
+      }
+
+      .outcomes-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+      }
+
+      .outcomes-card {
+        padding: 24px 20px;
+      }
+
+      /* Hard cap so the slider can never exceed the visible area, whatever
+         width its parent reports at init time */
+      .outcomes-grid,
+      .outcomes-grid .slick-list,
+      .outcomes-grid .slick-slide,
+      .outcomes-grid .slick-slide > div {
+        max-width: 100vw;
+      }
+    }

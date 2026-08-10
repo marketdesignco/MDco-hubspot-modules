@@ -1,0 +1,40 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .ff-hero {
+    background: {{ module.style.background_color.color }};
+    color: {{ module.style.text_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  .ff-hero-badge { color: {{ module.style.badge_color.color }}; }
+  .ff-hero h1 { color: {{ module.style.text_color.color }}; }
+  @media (max-width: 768px) {
+    .ff-hero { {{ module.style.spacing_mobile.css }} }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<header class="ff-hero"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="ff-wrap">
+    <div class="ff-hero-inner">
+      {% if module.badge_text %}<div class="ff-hero-badge">{{ module.badge_text }}</div>{% endif %}
+      {{ module.headline }}
+      <div class="ff-hero-lede">{{ module.lede }}</div>
+      <div class="ff-hero-actions">
+        {% for btn in module.actions %}
+          {% if btn.show %}
+            {% set href = btn.link.url.href %}
+            {% if btn.link.url.type is equalto "EMAIL_ADDRESS" %}{% set href = "mailto:" + href %}
+            {% elif btn.link.url.type is equalto "PHONE_NUMBER" %}{% set href = "tel:" + href %}{% endif %}
+            <a class="{% if btn.style == 'secondary' %}ff-btn-secondary{% else %}ff-btn-primary{% endif %}"
+               href="{{ href|escape_url }}"
+               {% if btn.link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if btn.link.rel %}rel="{{ btn.link.rel|escape_attr }}"{% endif %}>{{ btn.text }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% if module.oneline %}<div class="ff-hero-oneline">{{ module.oneline }}</div>{% endif %}
+    </div>
+  </div>
+</header>

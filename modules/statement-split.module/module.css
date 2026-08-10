@@ -1,0 +1,32 @@
+.statement-split__row {
+  border-top: 1px solid #E4DCEF;
+  padding: 48px 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.statement-split__row--last {
+  border-bottom: 1px solid #E4DCEF;
+}
+.statement-split__label {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #F72585;
+  white-space: nowrap;
+}
+.statement-split__statement strong {
+  color: #3A0CA3;
+}
+
+@media (max-width: 991px) {
+  .statement-split__row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 32px 0;
+  }
+}

@@ -1,0 +1,390 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "diagnostic"
+}, {
+  "id" : "deliverables_id",
+  "name" : "deliverables_id",
+  "label" : "Deliverables Anchor Id",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "deliverables"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Signature Offering"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>Employer Brand <strong>Diagnostic</strong></h2>"
+}, {
+  "id" : "lede",
+  "name" : "lede",
+  "label" : "Lede",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>See your organization exactly the way candidates do — then fix what's costing you talent. MarketDesign's Employer Brand Diagnostic is a comprehensive, outside-in audit of every public-facing touchpoint a candidate encounters, conducted with no internal bias and no assumptions.</p>"
+}, {
+  "id" : "quote_html",
+  "name" : "quote_html",
+  "label" : "Highlight Quote",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "We don't audit your employer brand the way your team sees it. We audit it the way a candidate sees it — from the outside, with the same information, friction, and first impressions they experience. That's the only way to find what's actually broken."
+}, {
+  "id" : "touchpoints_title",
+  "name" : "touchpoints_title",
+  "label" : "Touchpoints Subtitle",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "The Six Diagnostic Touchpoints"
+}, {
+  "id" : "touchpoints",
+  "name" : "touchpoints",
+  "label" : "Touchpoints",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 6
+  },
+  "children" : [ {
+    "id" : "touchpoints.number",
+    "name" : "number",
+    "label" : "Number (01, 02...)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "01"
+  }, {
+    "id" : "touchpoints.title",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Careers Site"
+  }, {
+    "id" : "touchpoints.description",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Question</p>"
+  }, {
+    "id" : "touchpoints.quote",
+    "name" : "quote",
+    "label" : "Italic Quote",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "\"Question quote?\""
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "number" : "01",
+    "title" : "Careers Site",
+    "description" : "<p>Can a candidate find you, understand you, and picture themselves here in 60 seconds?</p>",
+    "quote" : "\"Does this speak to candidates — or to clients?\""
+  }, {
+    "number" : "02",
+    "title" : "Social Footprint",
+    "description" : "<p>Is there a story being told — or just job posts and silence? Are rogue accounts diluting your brand?</p>",
+    "quote" : "\"Is there any employer brand signal here at all?\""
+  }, {
+    "number" : "03",
+    "title" : "Job Descriptions",
+    "description" : "<p>Do your JDs compel or repel? Are they written for the candidate or for a hiring manager checklist?</p>",
+    "quote" : "\"Why this company and not the ten others posting this role?\""
+  }, {
+    "number" : "04",
+    "title" : "Online Sentiment",
+    "description" : "<p>What does Glassdoor, Indeed, and LinkedIn say — and is anyone responding to it?</p>",
+    "quote" : "\"What does the market already believe about working here?\""
+  }, {
+    "number" : "05",
+    "title" : "Talent Pipeline",
+    "description" : "<p>Is there a community a candidate can join — or does recruiting start from zero every time a role opens?</p>",
+    "quote" : "\"How do I stay connected if I'm not ready to apply today?\""
+  }, {
+    "number" : "06",
+    "title" : "Application Process",
+    "description" : "<p>How many clicks? How much friction? Does anyone follow up — and how fast?</p>",
+    "quote" : "\"Does this apply experience feel like this company — or a generic form?\""
+  } ]
+}, {
+  "id" : "deliverables_title",
+  "name" : "deliverables_title",
+  "label" : "Deliverables Subtitle",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "What the Diagnostic Produces"
+}, {
+  "id" : "deliverables",
+  "name" : "deliverables",
+  "label" : "Deliverables",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "deliverables.title",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Findings Deck"
+  }, {
+    "id" : "deliverables.description",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Text</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "Findings Deck",
+    "description" : "<p>A fully branded PPTX ready for leadership — cover slide, candidate journey, methodology, one slide per touchpoint, cross-touchpoint SWOT, prioritized road map, next steps, and close. Speaker notes on every slide.</p>"
+  }, {
+    "title" : "Interactive HTML Report",
+    "description" : "<p>A shareable, self-contained web report with navigation anchors, candidate journey visualization, SWOT grids, and road map phase cards. Easy to navigate, easy to reference, easy to share with stakeholders who weren't in the room.</p>"
+  }, {
+    "title" : "SWOT by Touchpoint",
+    "description" : "<p>Strengths, gaps, opportunities, and risks mapped for each of the six areas — not as generic observations, but as specific findings framed from the candidate's point of view.</p>"
+  }, {
+    "title" : "Prioritized Road Map",
+    "description" : "<p>Three phases: fix now, build next, amplify. No vague recommendations. Every item is specific, sequenced, and actionable — tied to a stage of the candidate journey and a measurable outcome.</p>"
+  } ]
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.background_color",
+    "name" : "background_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.text_color",
+    "name" : "text_color",
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#1A1A2E",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.deliverables_bg",
+    "name" : "deliverables_bg",
+    "label" : "Deliverables Card Background",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#F8F6FC",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.deliverables_title_color",
+    "name" : "deliverables_title_color",
+    "label" : "Deliverables Title Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "background_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "text_color" : {
+      "color" : "#1A1A2E",
+      "opacity" : 100
+    },
+    "deliverables_bg" : {
+      "color" : "#F8F6FC",
+      "opacity" : 100
+    },
+    "deliverables_title_color" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    },
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }
+} ]

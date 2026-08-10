@@ -1,0 +1,130 @@
+[
+  {
+    "id": "62a68dc0-d00f-4583-b3c9-2b4842247523",
+    "name": "section_id",
+    "label": "Id Section (menu anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "",
+    "display_width": null
+  },
+  {
+    "id": "94d94fcc-c25b-4f6d-9cf7-677fd283256f",
+    "name": "rows",
+    "label": "Statement Rows",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "default": 2
+    },
+    "children": [
+      {
+        "id": "2e37cedf-2da3-4a98-b305-4c6b8a5cea31",
+        "name": "row_label",
+        "label": "Label",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "default": "Label",
+        "display_width": null
+      },
+      {
+        "id": "2a06b665-e209-4d73-915b-0103ffdf5da6",
+        "name": "statement",
+        "label": "Statement (rich text — use strong for the accent words)",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "<h3>Statement text</h3>",
+        "display_width": null
+      }
+    ],
+    "default": [
+      {
+        "row_label": "Our Mission",
+        "statement": "<h4>To Build the Growth Systems That Turn IT Companies Into <strong>Market Leaders.</strong></h4>"
+      },
+      {
+        "row_label": "Our Vision",
+        "statement": "<h6>We're techies at heart, and we're building an industry in our own image: one where growth is measured in impact on <strong>real people</strong>, not just pipeline. Heart-led. Purpose-driven. Growth on purpose.</h6>"
+      }
+    ],
+    "type": "group",
+    "display_width": null
+  },
+  {
+    "id": "0dbfdf5a-250e-4c3f-8959-38742fc22035",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "tab": "STYLE",
+    "children": [
+      {
+        "id": "3a99ac69-a582-4858-a8c7-0c49dda73a53",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 0,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 0,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      },
+      {
+        "id": "25c28aae-9790-425d-b6f5-d0a228ac64f8",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 0,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 0,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        },
+        "display_width": null
+      }
+    ],
+    "display_width": null
+  }
+]

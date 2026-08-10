@@ -1,0 +1,39 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .problem-highlight {
+    {{ module.style.spacing_desktop.css }};
+  }
+  @media (max-width: 991px) {
+    .problem-highlight {
+      {{ module.style.spacing_mobile.css }};
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="problem-highlight"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    <div class="problem-highlight__grid">
+      <div class="problem-highlight__col">
+        {% if module.eyebrow %}<div class="problem-highlight__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+        <div class="problem-highlight__heading">{{ module.heading }}</div>
+        {% for p in module.paragraphs %}
+          <div class="problem-highlight__paragraph">{{ p.text }}</div>
+        {% endfor %}
+        {% if module.closing_line %}<div class="problem-highlight__closing">{{ module.closing_line }}</div>{% endif %}
+      </div>
+      <div class="problem-highlight__col">
+        <div class="problem-highlight__card">
+          {% if module.card_eyebrow %}<div class="problem-highlight__card-eyebrow">{{ module.card_eyebrow }}</div>{% endif %}
+          <div class="problem-highlight__card-heading">{{ module.card_heading }}</div>
+          <ul class="problem-highlight__card-list">
+            {% for item in module.card_items %}
+              <li><span class="problem-highlight__dot"></span><span>{{ item.text }}</span></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

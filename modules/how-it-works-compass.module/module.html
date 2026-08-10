@@ -1,0 +1,56 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .how-section{
+    background: #3A0CA3;
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:768px){
+    .how-section{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="how-section" {% if module.section_id %}id="{{ module.section_id }}"{% endif %}>
+  <div class="how-glow" aria-hidden="true"></div>
+
+  <div class="content-wrapper">
+
+    <div class="how-header">
+      <div class="how-caption">
+        {{ module.caption }}
+      </div>
+
+      <div class="how-heading">
+        {{ module.heading }}
+      </div>
+
+      <div class="how-intro">
+       {{ module.description }}
+      </div>
+    </div>
+
+    <div class="how-grid js-how-slider">
+      {% for step in module.steps %}
+        <div class="how-card{% if loop.last %} how-card--last{% endif %}">
+          <div class="how-card-top">
+            <span class="how-num" aria-hidden="true">
+              {% if loop.index < 10 %}0{% endif %}{{ loop.index }}
+            </span>
+
+            <h6 class="how-card-heading">
+              {{ step.title }}
+            </h6>
+          </div>
+
+          <div class="how-card-text">
+            {{ step.text }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

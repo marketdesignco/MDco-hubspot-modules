@@ -1,0 +1,60 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .feature-grid-media {
+    {{ module.style.spacing_desktop.css }};
+  }
+  @media (max-width: 991px) {
+    .feature-grid-media {
+      {{ module.style.spacing_mobile.css }};
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="feature-grid-media"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    <div class="feature-grid-media__top">
+      <div class="feature-grid-media__intro">
+        {% if module.eyebrow %}<div class="feature-grid-media__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+        <div class="feature-grid-media__heading">{{ module.heading }}</div>
+        {% if module.lede %}<div class="feature-grid-media__lede">{{ module.lede }}</div>{% endif %}
+      </div>
+      {% if module.image.src %}
+      <div class="feature-grid-media__media">
+        <div class="feature-grid-media__media-bar"></div>
+        <img src="{{ module.image.src }}" alt="{{ module.image.alt|escape_attr }}" loading="lazy">
+      </div>
+      {% endif %}
+    </div>
+    <div class="feature-grid-media__grid">
+      {% for card in module.cards %}
+      <div class="feature-grid-media__card">
+        {% if (card.icon_type == "icon" and card.icon_native.name) or (card.icon_type != "icon" and card.icon.src) %}
+        <div class="feature-grid-media__icon-wrap">
+          <div class="feature-grid-media__icon-box feature-grid-media__icon-box--{{ card.background_style }}"
+               style="{% if card.background_style == "solid" %}background: {{ card.background_color.color }};{% else %}background: linear-gradient({{ card.gradient_direction }}deg, {{ card.gradient_start.color }}, {{ card.gradient_end.color }});{% endif %}">
+          </div>
+          <div class="feature-grid-media__icon">
+            {% if card.icon_type == "icon" %}
+              {% icon
+                extra_classes="feature-grid-media__icon-glyph",
+                name="{{ card.icon_native.name }}",
+                icon_set="fontawesome-6.4.2",
+                purpose="decorative",
+                style="{{ card.icon_native.type }}",
+                unique_in_loop=True
+              %}
+            {% else %}
+              <img class="feature-grid-media__icon-glyph" src="{{ card.icon.src }}" alt="{{ card.icon.alt|escape_attr }}" loading="lazy">
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+        <div class="feature-grid-media__card-title">{{ card.title }}</div>
+        <div class="feature-grid-media__card-desc">{{ card.description }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

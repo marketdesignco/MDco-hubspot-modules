@@ -1,0 +1,30 @@
+.mdcompass-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.mdcompass-stats__stat {
+  border-left: 3px solid var(--stat-border-color, #7EDB00);
+  padding-left: 1.25rem;
+}
+
+.mdcompass-stats__number {
+  color: #fff;
+  margin: 0 0 0.4rem;
+}
+
+.mdcompass-stats__stat:last-child .mdcompass-stats__number {
+  color: #7EDB00;
+}
+
+.mdcompass-stats__label {
+  color: #C9C4DC;
+}
+
+@media (max-width: 768px) {
+  .mdcompass-stats__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

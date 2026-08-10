@@ -1,0 +1,180 @@
+/* found-what-we-do — static styles */
+.ff-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 48px;
+  position: relative;
+}
+
+.ff-journey-step {
+  padding: 0 20px 0 0;
+  position: relative;
+}
+
+.ff-journey-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 22px;
+  right: -10px;
+  width: 20px;
+  height: 2px;
+  background: var(--ff-border);
+}
+
+.ff-journey-num {
+  font-family: var(--ff-font-h);
+  font-weight: 900;
+  font-size: 13px;
+  color: var(--ff-purple);
+  border: 2px solid var(--ff-purple);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.ff-journey-title {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.ff-journey-body {
+  font-size: 14px;
+  color: var(--ff-muted);
+}
+
+.ff-journey-body p {
+  margin: 0;
+}
+
+.ff-boundary-box {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--ff-border);
+}
+
+.ff-boundary-col {
+  padding: 30px 32px;
+}
+
+.ff-boundary-col.in {
+  background: rgba(126, 219, 0, 0.07);
+}
+
+.ff-boundary-col.out {
+  background: rgba(122, 104, 136, 0.06);
+}
+
+.ff-boundary-label {
+  font-family: var(--ff-font-h);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.ff-boundary-col.in .ff-boundary-label {
+  color: var(--ff-lime-dark);
+}
+
+.ff-boundary-col.out .ff-boundary-label {
+  color: var(--ff-muted);
+}
+
+.ff-boundary-col ul {
+  list-style: none;
+  font-size: 14.5px;
+  padding: 0;
+  margin: 0;
+}
+
+.ff-boundary-col li {
+  margin-bottom: 8px;
+}
+
+.ff-wwd-note {
+  margin-top: 24px;
+  padding: 22px 28px;
+  border-left: 3px solid var(--ff-pink);
+  background: var(--ff-card);
+  border-radius: 0 12px 12px 0;
+  font-size: 15px;
+  color: var(--ff-muted);
+  max-width: 760px;
+}
+
+@media (max-width: 900px) {
+  .ff-journey-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .ff-journey-step:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Slick takes over — reset grid, steps render as slides */
+  .ff-journey-grid.slick-initialized {
+    display: block;
+    gap: 0;
+  }
+
+  .ff-journey-grid.slick-initialized .ff-journey-step {
+    padding: 0 8px;
+  }
+
+  .ff-journey-grid.slick-initialized .slick-dots {
+    position: static;
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .ff-journey-grid.slick-initialized .slick-dots li {
+    width: auto;
+    height: auto;
+    margin: 0;
+  }
+
+  .ff-journey-grid.slick-initialized .slick-dots li button {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    background: rgba(58, 12, 163, 0.25);
+    border: 0;
+    border-radius: 50%;
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+  }
+
+  .ff-journey-grid.slick-initialized .slick-dots li button:before {
+    content: none;
+  }
+
+  .ff-journey-grid.slick-initialized .slick-dots li.slick-active button {
+    background: var(--ff-pink);
+    transform: scale(1.15);
+  }
+}
+
+@media (max-width: 700px) {
+  .ff-boundary-box {
+    grid-template-columns: 1fr;
+  }
+}

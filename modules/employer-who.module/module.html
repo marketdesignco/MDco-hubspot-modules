@@ -1,0 +1,60 @@
+{% require_css %}
+<style>
+ {% scope_css %}
+.eb-who {
+  background: {{ module.style.background_color.color }};
+  color: {{ module.style.text_color.color }};
+  {{ module.style.spacing_desktop.css }}
+}
+@media (max-width: 768px) {
+  .eb-who { {{ module.style.spacing_mobile.css }} }
+}
+{% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="eb-who"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    {% if module.eyebrow %}<div class="eb-eyebrow">{{ module.eyebrow }}</div>{% endif %}
+    <div class="eb-title">{{ module.heading }}</div>
+    <div class="eb-lede">{{ module.lede }}</div>
+
+    <div class="eb-who-grid">
+      {% for a in module.audiences %}
+      <div class="eb-who-card">
+        <div class="eb-who-head">
+          <span>{{ a.title }}</span>
+        </div>
+        <ul class="eb-who-items">
+          {% for i in a.items %}<li>{{ i.html }}</li>{% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+<div class="eb-who-tags">
+  <div class="eb-who-tags-row eb-who-tags-row--1">
+    {% for t in module.tags %}{% if loop.index0 % 3 == 0 %}
+    <span class="eb-who-tag" style="color: {{ t.color.color }}; border: 1px solid {{ t.color.color }}55;">{{ t.text }}</span>
+    {% endif %}{% endfor %}
+    {% for t in module.tags %}{% if loop.index0 % 3 == 0 %}
+    <span class="eb-who-tag eb-duplicate" style="color: {{ t.color.color }}; border: 1px solid {{ t.color.color }}55;">{{ t.text }}</span>
+    {% endif %}{% endfor %}
+  </div>
+  <div class="eb-who-tags-row eb-who-tags-row--2">
+    {% for t in module.tags %}{% if loop.index0 % 3 == 1 %}
+    <span class="eb-who-tag" style="color: {{ t.color.color }}; border: 1px solid {{ t.color.color }}55;">{{ t.text }}</span>
+    {% endif %}{% endfor %}
+    {% for t in module.tags %}{% if loop.index0 % 3 == 1 %}
+    <span class="eb-who-tag eb-duplicate" style="color: {{ t.color.color }}; border: 1px solid {{ t.color.color }}55;">{{ t.text }}</span>
+    {% endif %}{% endfor %}
+  </div>
+  <div class="eb-who-tags-row eb-who-tags-row--3">
+    {% for t in module.tags %}{% if loop.index0 % 3 == 2 %}
+    <span class="eb-who-tag" style="color: {{ t.color.color }}; border: 1px solid {{ t.color.color }}55;">{{ t.text }}</span>
+    {% endif %}{% endfor %}
+    {% for t in module.tags %}{% if loop.index0 % 3 == 2 %}
+    <span class="eb-who-tag eb-duplicate" style="color: {{ t.color.color }}; border: 1px solid {{ t.color.color }}55;">{{ t.text }}</span>
+    {% endif %}{% endfor %}
+  </div>
+</div>
+  </div>
+</section>

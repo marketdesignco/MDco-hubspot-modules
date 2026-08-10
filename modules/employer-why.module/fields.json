@@ -1,0 +1,352 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "why-eb"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Why It Matters"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>How you do what you do is <strong>who you are</strong>.</h2>"
+}, {
+  "id" : "intro_paragraphs",
+  "name" : "intro_paragraphs",
+  "label" : "Intro Paragraphs",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "intro_paragraphs.html",
+    "name" : "html",
+    "label" : "Paragraph",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Paragraph text</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "html" : "<p>Nothing defines the experience of working at an organization more than how the people who work there feel — and talk — about it. Your employer brand is the promise you make to candidates and team members about what it means to be part of your organization.</p>"
+  }, {
+    "html" : "<p>The problem? Most employer brands exist only inside the building. What candidates find externally — on your careers page, your job descriptions, your Glassdoor profile, your social channels — tells a different story. Or no story at all.</p>"
+  } ]
+}, {
+  "id" : "top_cards",
+  "name" : "top_cards",
+  "label" : "Top Cards (3-across)",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "top_cards.title",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Card title"
+  }, {
+    "id" : "top_cards.description",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Text</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "Candidates research before they apply",
+    "description" : "<p>What they find — or don't find — determines whether they click or walk away. Glassdoor, LinkedIn, and your careers page are the first interview.</p>",
+    "accent_color" : {
+      "color" : "#F72585",
+      "opacity" : 100
+    }
+  }, {
+    "title" : "The candidate experience shapes the decision to accept",
+    "description" : "<p>A strong candidate experience directly influences whether your top choice says yes — before you've made an offer.</p>",
+    "accent_color" : {
+      "color" : "#1E1B4B",
+      "opacity" : 100
+    }
+  }, {
+    "title" : "Every unfilled role has a cost",
+    "description" : "<p>Time-to-fill, agency fees, productivity gaps, and bad hires all compound when your employer brand isn't doing its job.</p>",
+    "accent_color" : {
+      "color" : "#7EDB00",
+      "opacity" : 100
+    }
+  } ]
+}, {
+  "id" : "quote_html",
+  "name" : "quote_html",
+  "label" : "Highlighted Quote",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "\"Maintaining an employer brand requires expertise, creativity, and marketplace knowledge to highlight what differentiates your organization from its competitors. Without it, candidates fill in the gaps themselves — usually with the worst-case assumption.\""
+}, {
+  "id" : "bottom_cards",
+  "name" : "bottom_cards",
+  "label" : "Bottom Cards (2-across)",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "bottom_cards.title",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Card title"
+  }, {
+    "id" : "bottom_cards.description",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Text</p>"
+  }, {
+    "id" : "bottom_cards.accent_color",
+    "name" : "accent_color",
+    "label" : "Top Border Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#1E1B4B",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "The EVP Problem",
+    "description" : "<p>Your Employee Value Proposition (EVP) is the promise you make about opportunity and culture. Most organizations either don't have one, haven't deployed it externally, or have one that hasn't been pressure-tested for truth and relevance. MarketDesign closes that gap.</p>",
+    "accent_color" : {
+      "color" : "#1E1B4B",
+      "opacity" : 100
+    }
+  }, {
+    "title" : "The Visibility Gap",
+    "description" : "<p>Exceptional internal culture is common. Exceptional external visibility about that culture is rare. The organizations that win talent are not necessarily the best places to work — they're the ones that make it obvious they are.</p>",
+    "accent_color" : {
+      "color" : "#F72585",
+      "opacity" : 100
+    }
+  } ]
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.background_color",
+    "name" : "background_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.text_color",
+    "name" : "text_color",
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#1A1A2E",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.quote_accent_color",
+    "name" : "quote_accent_color",
+    "label" : "Quote Left-border Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "background_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "text_color" : {
+      "color" : "#1A1A2E",
+      "opacity" : 100
+    },
+    "quote_accent_color" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    },
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 90,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }
+} ]

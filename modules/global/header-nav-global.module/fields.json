@@ -1,0 +1,88 @@
+[ {
+  "id" : "d109d31d-3d3b-641f-b74d-da2181ddf753",
+  "name" : "logo",
+  "label" : "Logo",
+  "required" : false,
+  "locked" : true,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://5407411.fs1.hubspotusercontent-na1.net/hubfs/5407411/assets-2026/logo-gradient.svg",
+    "alt" : "logo-gradient",
+    "loading" : "lazy",
+    "width" : 202,
+    "height" : 47,
+    "max_width" : 202,
+    "max_height" : 47
+  }
+}, {
+  "id" : "6e12c421-c522-2bbc-eb24-33b455e3e21c",
+  "name" : "menu_field",
+  "label" : "Menu",
+  "required" : false,
+  "locked" : true,
+  "type" : "menu",
+  "display_width" : null,
+  "default" : 10276246310
+}, {
+  "id" : "9086cbef-4f34-da83-f1d9-21b16162e5e9",
+  "name" : "url_logo",
+  "label" : "Url Logo",
+  "required" : false,
+  "locked" : true,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "39017a08-f456-0861-7e20-5609f2d99381",
+  "name" : "cta_field",
+  "label" : "CTA",
+  "required" : false,
+  "locked" : true,
+  "type" : "cta",
+  "display_width" : null,
+  "default" : "311e6450-de23-4e53-850d-68ee84c397ca"
+}, {
+  "id" : "00564d47-8f6f-d2da-5fc4-4a96a9bb635a",
+  "name" : "link_field",
+  "label" : "Link",
+  "required" : false,
+  "locked" : true,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "href" : "#assesment",
+      "type" : "EXTERNAL"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "5a38f9dd-9e04-0e8d-269b-842932f88ee0",
+  "name" : "link_text",
+  "label" : "Link Text",
+  "required" : false,
+  "locked" : true,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "PATH Assessment"
+} ]

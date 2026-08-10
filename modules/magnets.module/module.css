@@ -1,0 +1,139 @@
+
+.magnets  .section-label{
+  font-size:11px;
+  letter-spacing:0.22em;
+  font-weight:900;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  text-transform:uppercase;
+  margin-bottom:14px;
+  background: linear-gradient(90deg, #F72585 76.42%, #7209B7 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.magnets .section-title strong{
+  background: linear-gradient(270deg, #7EDB00 6.25%, #7209B7 43.75%, #3A0CA3 79.81%);
+
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-style: italic;
+}
+.magnets  .section-sub{
+  max-width:750px;
+}
+.magnets  .section-sub p{font-size:19px;
+  line-height:1.55}
+.magnets  .magnets-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.magnets  .magnets-card{
+  padding:45px 30px;
+  border-radius:12px;
+  position:relative;
+  overflow:hidden;
+  transition:all .25s;
+}
+.magnets-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg, #F72585 0%, #3A0CA3 25%, #7209B7 55%, #7EDB00 100%);
+}
+.magnets-card:hover{transform:translateY(-4px);
+  background:white;
+  box-shadow:0 16px 40px rgba(58,12,163,0.10)}
+
+.magnets .form-content h3{
+  display:none;
+}
+/** DARK**/
+.magnets .card-dark{
+  background:#1A1A2E;
+}
+.magnets .card-dark .magnets-caption{
+  color:#7EDB00;
+}
+.magnets .card-dark h3{
+  color:#fff!important;
+}
+.magnets .card-dark .content *{
+  color: #FFFFFFCC;
+}
+.magnets .card-dark .form-content form{
+  background:none!important;
+}
+.magnets .card-dark .form-content form *{
+  color: #FFFFFF80;
+}
+.magnets .card-dark form input[type=submit]{
+  color:#1A1A2E!important;
+  background:#7EDB00;
+}
+.magnets .card-dark form input[type=submit]:hover{
+  background:#39AC00;
+  color:#fff!important;
+}
+
+.magnets .card-dark form input{
+  background:transparent;
+}
+/** Light **/
+.magnets .card-light{
+  background:#fff;
+}
+.magnets .card-light .magnets-caption{
+color:#7209B7;
+}
+.magnets .card-light form input[type=submit]{
+  color:#fff!important;
+background: #7209B7;
+  box-shadow: 0px 4px 16px 0px #F7258533;
+}
+.magnets .card-light form input[type=submit]:hover{
+  background:#7209B7;
+  box-shadow: 0px 4px 40px 0px #F7258559;
+
+}
+
+.magnets .card-dark form input{
+  background:transparent;
+}
+@media (min-width:769px){
+  .magnets .form-content form{
+
+  position: relative;
+  gap: 10px;
+}
+
+
+}
+
+.magnets-card h3{
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight:900;
+  margin-bottom:5px;
+}
+
+.magnets-caption{
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 11px;
+  line-height: 18.6px;
+  letter-spacing:2.4px;
+  text-transform:uppercase;
+}
+
+@media (max-width:768px){
+  .magnets .magnets-grid{grid-template-columns:repeat(1,1fr)
+  }
+  .magnets .magnets-card{
+  padding:35px 18px;
+  }
+  .magnets-caption{
+  margin-bottom:12px;
+    display:inline-block;
+  }
+  .magnets .section-label{
+    font-size:10px;
+  }
+  .magnets  form input[type=submit]{
+  width:100%;
+  }
+
+}
