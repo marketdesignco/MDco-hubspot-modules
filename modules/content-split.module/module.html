@@ -1,0 +1,62 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .content-split{
+    background: #F8F6FC;
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:991px){
+    .content-split{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="content-split"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    <div class="content-split__grid">
+      <div class="content-split__left">
+        {% if module.eyebrow %}<div class="content-split__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+        <div class="content-split__heading">{{ module.heading }}</div>
+        {% if module.intro %}<div class="content-split__lede">{{ module.intro }}</div>{% endif %}
+
+        {% if module.checklist_items %}
+        <ul class="content-split__checklist">
+          {% for item in module.checklist_items %}
+          <li>
+            {% icon name="Check" style="SOLID" unicode="f00c" icon_set="fontawesome-6.4.2" %}
+            <span>{{ item }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+
+      <div class="content-split__right">
+        <div class="content-split__card">
+          {% if module.card_eyebrow %}<div class="content-split__card-eyebrow">{{ module.card_eyebrow }}</div>{% endif %}
+          {% if module.card_name %}<h5 class="content-split__card-name">{{ module.card_name }}</h5>{% endif %}
+          {% if module.card_description %}<p class="content-split__card-description">{{ module.card_description }}</p>{% endif %}
+
+          <div class="content-split__card-box content-split__card-box--price">
+            <div class="content-split__card-price">
+              <h3 class="content-split__card-price-amount">{{ module.card_price }} <span class="content-split__card-price-timeframe">{{ module.card_timeframe }}</span></h3>
+            </div>
+            {% if module.card_price_note %}<p class="content-split__card-price-note">{{ module.card_price_note }}</p>{% endif %}
+          </div>
+
+          {% if module.card_note_label or module.card_note_text %}
+          <div class="content-split__card-box content-split__card-box--note">
+            {% if module.card_note_label %}<div class="content-split__card-note-label">{{ module.card_note_label }}</div>{% endif %}
+            {% if module.card_note_text %}<div class="content-split__card-note-text">{{ module.card_note_text }}</div>{% endif %}
+          </div>
+          {% endif %}
+
+          {% if module.card_footer_text %}<p class="content-split__card-footer">{{ module.card_footer_text }}</p>{% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

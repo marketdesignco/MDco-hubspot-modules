@@ -1,0 +1,281 @@
+[ {
+  "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e5a",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "packages"
+}, {
+  "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e5b",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Packages"
+}, {
+  "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e5c",
+  "name" : "heading",
+  "label" : "Heading (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>Choose Your Level of Voice</h2>"
+}, {
+  "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e6d",
+  "name" : "lede",
+  "label" : "Lede",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Every package is built on the V.O.I.C.E. framework. We scale the depth, frequency, and hands-on support to match your goals and bandwidth.</p>"
+}, {
+  "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e5d",
+  "name" : "tiers",
+  "label" : "Pricing Tiers",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : 4,
+    "sorting_label_field" : "tier_name",
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e5e",
+    "name" : "featured",
+    "label" : "Featured (\"Most Popular\")",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
+  }, {
+    "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e5f",
+    "name" : "badge_text",
+    "label" : "Featured Badge Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Most Popular"
+  }, {
+    "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e60",
+    "name" : "tier_name",
+    "label" : "Tier Name",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Voice Essentials"
+  }, {
+    "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e61",
+    "name" : "tier_subtitle",
+    "label" : "Tier Subtitle",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Retainer - Entry Level"
+  }, {
+    "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e62",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "For executives building their foundation."
+  }, {
+    "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e63",
+    "name" : "price",
+    "label" : "Price",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "$2,500"
+  }, {
+    "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e64",
+    "name" : "timeframe",
+    "label" : "Timeframe",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "/ mo"
+  }, {
+    "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e65",
+    "name" : "features",
+    "label" : "Features",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : 20,
+      "sorting_label_field" : null,
+      "default" : 5
+    },
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : [ "Linkedin profile audit", "1 bylined article per quarter", "Quarterly content calendar", "Monthly executive column", "Email support" ]
+  }, {
+    "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e66",
+    "name" : "style_cta",
+    "label" : "Button Style",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "cta-primary-outline", "Primary Outline" ], [ "cta-white", "White" ], [ "cta-primary", "Primary" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "cta-primary-outline"
+  }, {
+    "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e67",
+    "name" : "cta",
+    "label" : "HubSpot CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "display_width" : null
+  }, {
+    "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e68",
+    "name" : "link_field",
+    "label" : "Link (optional — overrides the HubSpot CTA above if set)",
+    "help_text" : "Optional. If set, renders a plain link button using this URL and the text below instead of the HubSpot CTA above. Leave empty to keep using the HubSpot CTA.",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "" },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e69",
+    "name" : "text_field",
+    "label" : "Text (used with the link override above)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Get Started"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "featured" : false, "badge_text" : "Most Popular",
+    "tier_name" : "Voice Essentials", "tier_subtitle" : "Retainer · Entry Level",
+    "description" : "For executives building their foundation",
+    "price" : "$2,500", "timeframe" : "/ mo",
+    "features" : [ "LinkedIn profile full optimization", "Executive POV Workshop (90 min)", "Personal narrative & messaging guide", "Topic pillar framework (3 pillars)", "4 LinkedIn posts/month", "1 long-form article/month", "Media + awards target list", "2 award nominations/year", "Monthly performance report", "Voice Intelligence available as add-on ($400/mo)" ],
+    "style_cta" : "cta-primary-outline",
+    "link_field" : { "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "" }, "open_in_new_tab" : false, "no_follow" : false },
+    "text_field" : "Get Started"
+  }, {
+    "featured" : true, "badge_text" : "Most Popular",
+    "tier_name" : "Voice Authority", "tier_subtitle" : "Retainer · Mid Level",
+    "description" : "For executives ready to own their space",
+    "price" : "$5,000", "timeframe" : "/ mo",
+    "features" : [ "Everything in Voice Essentials", "Monthly executive interview (60 min)", "8–12 LinkedIn posts/month", "Reactive commentary (24–48 hr turnaround)", "Speaker one-sheet + proposal writing", "2 speaking submissions/quarter", "4 award nominations/year + 2 press pitches/quarter", "Podcast + guest feature outreach", "LinkedIn network growth plan", "Rolling 90-day content calendar", "Voice Intelligence included" ],
+    "style_cta" : "cta-white",
+    "link_field" : { "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "" }, "open_in_new_tab" : false, "no_follow" : false },
+    "text_field" : "Get Started"
+  }, {
+    "featured" : false, "badge_text" : "Most Popular",
+    "tier_name" : "Voice Amplified", "tier_subtitle" : "Retainer · Premium",
+    "description" : "For executives who want full-service execution",
+    "price" : "$8,500", "timeframe" : "/ mo",
+    "features" : [ "Everything in Voice Authority", "Annual thought leadership white paper", "Quarterly video series (script + direction)", "Quarterly webinar/panel placement", "Award + press management", "Competitive voice audit", "Annual POV + messaging refresh", "Dedicated MDCo strategist" ],
+    "style_cta" : "cta-primary-outline",
+    "link_field" : { "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "" }, "open_in_new_tab" : false, "no_follow" : false },
+    "text_field" : "Get Started"
+  } ]
+}, {
+  "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e6a",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e6b",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  }, {
+    "id" : "e5f5a5b5-5555-4e5e-8e5e-5e5e5e5e5e6c",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  }
+} ]

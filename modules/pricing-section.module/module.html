@@ -1,0 +1,74 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .pricing-section{
+    background: #3A0CA3;
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:991px){
+    .pricing-section{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="pricing-section"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    <div class="pricing-section__intro">
+      {% if module.eyebrow %}<div class="pricing-section__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <div class="pricing-section__heading">{{ module.heading }}</div>
+      {% if module.lede %}<div class="pricing-section__lede">{{ module.lede }}</div>{% endif %}
+    </div>
+
+    <div class="pricing-section__grid">
+      {% for tier in module.tiers %}
+      <article class="pricing-section__card{% if tier.featured %} pricing-section__card--featured{% endif %}">
+        <div class="pricing-section__tier-row">
+          <h5 class="pricing-section__tier-name">{{ tier.tier_name }}</h5>
+          {% if tier.featured and tier.badge_text %}
+          <span class="pricing-section__badge">{{ tier.badge_text }}</span>
+          {% endif %}
+        </div>
+        {% if tier.description %}<p class="pricing-section__tier-desc">{{ tier.description }}</p>{% endif %}
+        <div class="pricing-section__divider"></div>
+        {% if tier.tier_subtitle %}<h6 class="pricing-section__tier-subtitle">{{ tier.tier_subtitle }}</h6>{% endif %}
+
+        <ul class="pricing-section__features">
+          {% for feature in tier.features %}
+          <li>
+            {% icon name="Check" style="SOLID" unicode="f00c" icon_set="fontawesome-6.4.2" %}
+            <span>{{ feature }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <div class="custom-cta pricing-section__cta {{ tier.style_cta }}">
+          {% if tier.link_field.url.href %}
+            {% set href = tier.link_field.url.href %}
+            {% if tier.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+            {% elif tier.link_field.url.type is equalto "PHONE_NUMBER" %}
+              {% set href = "tel:" + href %}
+            {% endif %}
+            <a
+              {% if tier.link_field.url.type is equalto "CALL_TO_ACTION" %}
+                href="{{ href }}"
+              {% else %}
+                href="{{ href|escape_url }}"
+              {% endif %}
+              {% if tier.link_field.open_in_new_tab %}target="_blank"{% endif %}
+              {% if tier.link_field.rel %}rel="{{ tier.link_field.rel|escape_attr }}"{% endif %}
+              >
+              {{ tier.text_field }}
+            </a>
+          {% elif tier.cta %}
+            {% cta guid="{{ tier.cta }}" %}
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

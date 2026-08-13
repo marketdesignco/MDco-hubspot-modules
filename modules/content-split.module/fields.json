@@ -1,0 +1,281 @@
+[ {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a7a",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "voice-intelligence"
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a7b",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Powered by AI"
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a7c",
+  "name" : "heading",
+  "label" : "Heading (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>Introducing Voice Intelligence by MDCo</h2>"
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a7d",
+  "name" : "intro",
+  "label" : "Intro",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Every executive has a distinct way of thinking, communicating, and showing up. Voice Intelligence is MDCo's proprietary AI layer — a custom GPT trained specifically on your language, tone, cadence, and expertise — so everything we produce sounds unmistakably like you.</p><p>It's not AI replacing your voice. It's AI protecting it — ensuring consistency whether we're writing a LinkedIn post, a press pitch, or a conference abstract on your behalf.</p>"
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a7e",
+  "name" : "checklist_items",
+  "label" : "Checklist Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 12,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : [
+    "Custom GPT trained on your writing samples, interviews, and content",
+    "Monthly trending reports surfacing what your audience is talking about",
+    "Voice + tone guardrails that keep every piece of content on-brand and on-message",
+    "Direct access to your Voice GPT for on-demand content ideation between MDCo touchpoints",
+    "Ongoing model refinement as your voice and positioning evolves"
+  ]
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a90",
+  "name" : "card_eyebrow",
+  "label" : "Card Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Add-On"
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a7f",
+  "name" : "card_name",
+  "label" : "Card Name",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Voice Intelligence"
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a91",
+  "name" : "card_description",
+  "label" : "Card Description",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Your custom AI voice model, built and maintained by MDCo"
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a80",
+  "name" : "card_price",
+  "label" : "Card Price",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "$400"
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a81",
+  "name" : "card_timeframe",
+  "label" : "Card Timeframe",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "/mo"
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a92",
+  "name" : "card_price_note",
+  "label" : "Card Price Note",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Add to any V.O.I.C.E. tier"
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a93",
+  "name" : "card_note_label",
+  "label" : "Card Inclusion Note — Label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Included in Voice Authority + Amplified"
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a94",
+  "name" : "card_note_text",
+  "label" : "Card Inclusion Note — Text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Voice Authority and Amplified clients receive Voice Intelligence as part of their engagement — no add-on fee required</p>"
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a95",
+  "name" : "card_footer_text",
+  "label" : "Card Footer Text",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Available as a standalone add-on for Voice Essentials clients"
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a82",
+  "name" : "card_features",
+  "label" : "Card Features",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 12,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : [
+    "Custom GPT trained on your voice",
+    "Unlimited monthly draft requests",
+    "Quarterly retraining on new content",
+    "Dedicated onboarding session"
+  ]
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a83",
+  "name" : "style_cta",
+  "label" : "Button Style",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "cta-white-outline", "White Outline" ], [ "cta-white", "White" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "cta-white-outline"
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a84",
+  "name" : "cta",
+  "label" : "HubSpot CTA",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "display_width" : null
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a85",
+  "name" : "link_field",
+  "label" : "Link (optional — overrides the HubSpot CTA above if set)",
+  "help_text" : "Optional. If set, renders a plain link button using this URL and the text below instead of the HubSpot CTA above. Leave empty to keep using the HubSpot CTA.",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "" },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a86",
+  "name" : "text_field",
+  "label" : "Text (used with the link override above)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Learn More"
+}, {
+  "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a87",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a88",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  }, {
+    "id" : "a7b7c7d7-7777-4a7a-8a7a-7a7a7a7a7a89",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  }
+} ]

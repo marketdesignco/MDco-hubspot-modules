@@ -1,41 +1,9 @@
-{% set button_border = theme.buttons.border.border.css %}
-{% set button_spacing = theme.buttons.spacing.spacing.css %}
-{% set button_font = theme.buttons.text.font %}
-{% set button_text_transform = theme.buttons.text.transform %}
-{% set button_border_hover = theme.buttons.hover.border.border.css %}
-{% set button_hover_text_opacity = theme.buttons.hover.text.color.opacity %}
-{% if button_hover_text_opacity == null %}{% set button_hover_text_opacity = 100 %}{% endif %}
-{% set button_color_hover = "rgba(" ~ theme.buttons.hover.text.color.color|convert_rgb ~ ", " ~ (button_hover_text_opacity / 100) ~ ")" %}
-{% set button_hover_bg_opacity = theme.buttons.hover.background.color.opacity %}
-{% if button_hover_bg_opacity == null %}{% set button_hover_bg_opacity = 100 %}{% endif %}
-{% set button_background_hover = "rgba(" ~ theme.buttons.hover.background.color.color|convert_rgb ~ ", " ~ (button_hover_bg_opacity / 100) ~ ")" %}
 {% require_css %}
 <style>
   {% scope_css %}
   .voice-section{
     background: var(--color-purple-gray, #FAF7FB);
     {{ module.style.spacing_desktop.css }}
-  }
-  .voice-button {
-    {{ button_border }}
-    {{ button_spacing }}
-    {{ button_font.style }};
-    background: #7209B7;
-    color: {{ button_font.color }};
-    text-transform: {{ button_text_transform }};
-  }
-  .voice-button svg {
-    fill: {{ button_font.color }};
-  }
-  .voice-button:hover,
-  .voice-button:focus-visible {
-    {{ button_border_hover }};
-    background: {{ button_background_hover }};
-    color: {{ button_color_hover }};
-  }
-  .voice-button:hover svg,
-  .voice-button:focus-visible svg {
-    fill: {{ button_color_hover }};
   }
   @media (max-width:768px){
     .voice-section{
@@ -68,20 +36,23 @@
          {{ module.description }}
         </div>
 
-        {% if module.button.url.href %}
-          <a
-            class="voice-button"
-            href="{{ module.button.url.href }}"
-            {% if module.button.url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}
-          >
-          {{ module.button_label }} {% icon
+        <div class="custom-cta {{ module.style_cta }}">
+          {% if module.button.url.href %}
+            <a
+              href="{{ module.button.url.href|escape_url }}"
+              {% if module.button.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}
+            >
+            {{ module.button_label }} {% icon
 	name="{{ module.icon_field.name }}"
 	style="{{ module.icon_field.type }}"
 	unicode="{{ module.icon_field.unicode }}"
 	icon_set="{{ module.icon_field.icon_set }}"
 %}
-          </a>
-        {% endif %}
+            </a>
+          {% elif module.cta %}
+            {% cta guid="{{ module.cta }}" %}
+          {% endif %}
+        </div>
       </div>
 
       <!-- Right column -->

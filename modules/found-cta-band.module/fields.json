@@ -37,9 +37,31 @@
   "display_width" : null,
   "default" : true
 }, {
+  "id" : "b1c2d3e4-5f6a-4b7c-8d9e-0f1a2b3c4d5e",
+  "name" : "style_cta",
+  "label" : "CTA Style",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "cta-white", "White" ], [ "cta-white-outline", "White Outline" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "cta-white"
+}, {
+  "id" : "c2d3e4f5-6a7b-4c8d-9e0f-1a2b3c4d5e6f",
+  "name" : "cta",
+  "label" : "HubSpot CTA",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "display_width" : null
+}, {
   "id" : "button_text",
   "name" : "button_text",
-  "label" : "Button Text",
+  "label" : "Text (used with the link override below)",
   "required" : false,
   "locked" : false,
   "allow_new_line" : false,
@@ -49,7 +71,8 @@
 }, {
   "id" : "button_link",
   "name" : "button_link",
-  "label" : "Button Link",
+  "label" : "Link (optional — overrides the HubSpot CTA above if set)",
+  "help_text" : "Optional. If set, renders a plain link button using this URL and the text above instead of the HubSpot CTA above. Leave empty to keep using the HubSpot CTA.",
   "required" : false,
   "locked" : false,
   "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "CALL_TO_ACTION", "PHONE_NUMBER" ],
@@ -90,30 +113,6 @@
     "display_width" : null,
     "default" : {
       "color" : "#FFFFFF",
-      "opacity" : 100
-    }
-  }, {
-    "id" : "style.button_bg_color",
-    "name" : "button_bg_color",
-    "label" : "Button Background",
-    "required" : false,
-    "locked" : false,
-    "type" : "color",
-    "display_width" : null,
-    "default" : {
-      "color" : "#FFFFFF",
-      "opacity" : 100
-    }
-  }, {
-    "id" : "style.button_text_color",
-    "name" : "button_text_color",
-    "label" : "Button Text Color",
-    "required" : false,
-    "locked" : false,
-    "type" : "color",
-    "display_width" : null,
-    "default" : {
-      "color" : "#3A0CA3",
       "opacity" : 100
     }
   }, {

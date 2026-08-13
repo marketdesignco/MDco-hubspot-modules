@@ -213,7 +213,7 @@ padding:11px 21px;
     width: 100%;
   }
   #toggle-menu span.drop-icon{
-    margin-top: -12px;
+    margin-top: 0;
   }
   .header__cta {
    text-align:center;

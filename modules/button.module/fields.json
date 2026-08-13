@@ -17,6 +17,15 @@
     "open_in_new_tab" : false
   }
 }, {
+  "id" : "d3e4f5a6-7b8c-4d9e-af10-2b3c4d5e6f7a",
+  "name" : "cta",
+  "label" : "HubSpot CTA (optional — for click tracking)",
+  "help_text" : "Optional. If the button link above is set, it takes priority and renders using this module's custom styling. Leave the link empty and select a HubSpot CTA here to render a trackable native CTA instead.",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "display_width" : null
+}, {
   "id" : "button_text",
   "name" : "button_text",
   "label" : "Button text",

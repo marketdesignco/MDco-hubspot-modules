@@ -49,9 +49,31 @@
     "default" : 2
   },
   "children" : [ {
+    "id" : "actions.style",
+    "name" : "style",
+    "label" : "Style",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "cta-pink", "Primary (pink)" ], [ "cta-white-outline", "Secondary (outline)" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "cta-pink"
+  }, {
+    "id" : "actions.cta",
+    "name" : "cta",
+    "label" : "HubSpot CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "display_width" : null
+  }, {
     "id" : "actions.text",
     "name" : "text",
-    "label" : "Button Text",
+    "label" : "Text (used with the link override below)",
     "required" : false,
     "locked" : false,
     "allow_new_line" : false,
@@ -61,7 +83,8 @@
   }, {
     "id" : "actions.link",
     "name" : "link",
-    "label" : "Link",
+    "label" : "Link (optional — overrides the HubSpot CTA above if set)",
+    "help_text" : "Optional. If set, renders a plain link button using this URL and the text above instead of the HubSpot CTA above. Leave empty to keep using the HubSpot CTA.",
     "required" : false,
     "locked" : false,
     "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "CALL_TO_ACTION", "PHONE_NUMBER" ],
@@ -76,20 +99,6 @@
       "open_in_new_tab" : false,
       "no_follow" : false
     }
-  }, {
-    "id" : "actions.style",
-    "name" : "style",
-    "label" : "Style",
-    "required" : false,
-    "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "primary", "Primary (pink)" ], [ "secondary", "Secondary (outline)" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "display_width" : null,
-    "default" : "primary"
   }, {
     "id" : "actions.show",
     "name" : "show",
@@ -114,7 +123,7 @@
         "href" : "#cta"
       }
     },
-    "style" : "primary",
+    "style" : "cta-pink",
     "show" : true
   }, {
     "text" : "See How It Works",
@@ -124,7 +133,7 @@
         "href" : "#how"
       }
     },
-    "style" : "secondary",
+    "style" : "cta-white-outline",
     "show" : true
   } ]
 }, {

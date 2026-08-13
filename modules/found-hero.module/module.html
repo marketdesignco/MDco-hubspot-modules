@@ -24,13 +24,18 @@
       <div class="ff-hero-actions">
         {% for btn in module.actions %}
           {% if btn.show %}
-            {% set href = btn.link.url.href %}
-            {% if btn.link.url.type is equalto "EMAIL_ADDRESS" %}{% set href = "mailto:" + href %}
-            {% elif btn.link.url.type is equalto "PHONE_NUMBER" %}{% set href = "tel:" + href %}{% endif %}
-            <a class="{% if btn.style == 'secondary' %}ff-btn-secondary{% else %}ff-btn-primary{% endif %}"
-               href="{{ href|escape_url }}"
-               {% if btn.link.open_in_new_tab %}target="_blank"{% endif %}
-               {% if btn.link.rel %}rel="{{ btn.link.rel|escape_attr }}"{% endif %}>{{ btn.text }}</a>
+          <div class="custom-cta {{ btn.style }}">
+            {% if btn.link.url.href %}
+              {% set href = btn.link.url.href %}
+              {% if btn.link.url.type is equalto "EMAIL_ADDRESS" %}{% set href = "mailto:" + href %}
+              {% elif btn.link.url.type is equalto "PHONE_NUMBER" %}{% set href = "tel:" + href %}{% endif %}
+              <a href="{{ href|escape_url }}"
+                 {% if btn.link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if btn.link.rel %}rel="{{ btn.link.rel|escape_attr }}"{% endif %}>{{ btn.text }}</a>
+            {% elif btn.cta %}
+              {% cta guid="{{ btn.cta }}" %}
+            {% endif %}
+          </div>
           {% endif %}
         {% endfor %}
       </div>

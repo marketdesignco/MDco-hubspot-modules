@@ -1,0 +1,139 @@
+.content-split__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.content-split__eyebrow {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #7209B7;
+  margin-bottom: 14px;
+}
+.content-split__heading h2 {
+  color: #3A0CA3;
+  margin: 0 0 16px;
+}
+.content-split__lede {
+  color: #7A6888;
+  margin-bottom: 28px;
+}
+.content-split__lede p {
+  margin: 0 0 16px;
+}
+.content-split__lede p:last-child {
+  margin-bottom: 0;
+}
+
+.content-split__checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.content-split__checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #7A6888;
+}
+.content-split__checklist li svg {
+  flex: 0 0 auto;
+  width: 14px;
+  height: 14px;
+  margin-top: 4px;
+  fill: #7EDB00;
+}
+
+.content-split__card {
+  background: #3A0CA3;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+.content-split__card-eyebrow {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #7EDB00;
+  margin-bottom: 12px;
+}
+.content-split__card-name {
+  color: #FFFFFF;
+  margin: 0 0 8px;
+}
+.content-split__card-description {
+  color:#FFFFFF99;
+
+  margin: 0 0 24px;
+}
+
+.content-split__card-box {
+  border: 1px solid #FFFFFF24;
+  background: #FFFFFF0D;
+  border-radius: 18px;
+  padding: 24px;
+}
+.content-split__card-box + .content-split__card-box {
+  margin-top: 16px;
+}
+
+.content-split__card-price {
+  margin-bottom: 8px;
+}
+.content-split__card-price-amount {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 900;
+  color: #7EDB00;
+  margin-bottom:15px;
+}
+
+.content-split__card-price-note {
+  color:#FFFFFFB8;
+  margin: 0;
+}
+
+.content-split__card-note-label {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #7EDB00;
+  margin-bottom: 10px;
+}
+.content-split__card-note-text {
+  color: #FFFFFFB8;
+;
+}
+.content-split__card-note-text p {
+  margin: 0;
+}
+
+.content-split__card-footer {
+  color: #FFFFFF99;
+  margin: 20px 0 0;
+}
+
+@media (max-width: 991px) {
+  .content-split__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .content-split__card {
+    padding:30px 16px;
+  }
+  .content-split__card-box {
+    padding: 20px;
+  }
+}

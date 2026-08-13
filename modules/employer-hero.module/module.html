@@ -24,11 +24,6 @@
   .eb-hero-bar {
     background: {{ module.style.accent_color.color }};
   }
-  .eb-hero-cta {
-    background: {{ module.style.cta_bg_color.color }};
-    color: {{ module.style.cta_text_color.color }} !important;
-
-  }
 
  @media (max-width: 768px) {
     .eb-hero { {{ module.style.spacing_mobile.css }} }
@@ -45,14 +40,20 @@
   <div class="eb-hero-lede">{{ module.lede }}</div>
     
     {% if module.show_cta %}
-	{% set cta_href = module.cta_link.url.href %}
-  {% if module.cta_link.url.type is equalto "EMAIL_ADDRESS" %}{% set cta_href = "mailto:" + cta_href %}
-  {% elif module.cta_link.url.type is equalto "PHONE_NUMBER" %}{% set cta_href = "tel:" + cta_href %}{% endif %}
-  <a class="eb-hero-cta" href="{{ cta_href|escape_url }}"
-     {% if module.cta_link.open_in_new_tab %}target="_blank"{% endif %}
-     {% if module.cta_link.rel %}rel="{{ module.cta_link.rel|escape_attr }}"{% endif %}>
-    {{ module.cta_text }}
-  </a>
+  <div class="custom-cta {{ module.style_cta }}">
+    {% if module.cta_link.url.href %}
+      {% set cta_href = module.cta_link.url.href %}
+      {% if module.cta_link.url.type is equalto "EMAIL_ADDRESS" %}{% set cta_href = "mailto:" + cta_href %}
+      {% elif module.cta_link.url.type is equalto "PHONE_NUMBER" %}{% set cta_href = "tel:" + cta_href %}{% endif %}
+      <a href="{{ cta_href|escape_url }}"
+         {% if module.cta_link.open_in_new_tab %}target="_blank"{% endif %}
+         {% if module.cta_link.rel %}rel="{{ module.cta_link.rel|escape_attr }}"{% endif %}>
+        {{ module.cta_text }}
+      </a>
+    {% elif module.cta %}
+      {% cta guid="{{ module.cta }}" %}
+    {% endif %}
+  </div>
 {% endif %}
   
     

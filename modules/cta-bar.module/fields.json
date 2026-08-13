@@ -154,9 +154,18 @@
     "display_width" : null,
     "default" : "cta-white"
   }, {
+    "id" : "05b363c1-110f-4b3f-a4f5-beb640ab0ca6",
+    "name" : "cta",
+    "label" : "HubSpot CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "display_width" : null
+  }, {
     "id" : "649bcc1d-f560-2dab-ef75-12ee6aef140d",
     "name" : "link_field",
-    "label" : "Link",
+    "label" : "Link (optional — overrides the HubSpot CTA above if set)",
+    "help_text" : "Optional. If set, renders a plain link button using this URL and the text below instead of the HubSpot CTA above. Leave empty to keep using the HubSpot CTA.",
     "required" : false,
     "locked" : false,
     "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
@@ -175,7 +184,7 @@
   }, {
     "id" : "a8ebaeb6-b5f1-ab1c-6d19-77435d1fc240",
     "name" : "text_field",
-    "label" : "Text",
+    "label" : "Text (used with the link override above)",
     "required" : false,
     "locked" : false,
     "allow_new_line" : false,

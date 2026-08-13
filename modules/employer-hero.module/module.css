@@ -53,26 +53,14 @@
 }
 .eb-hero-lede p { margin: 0;
   color: var(--color-slate-gray, #4A4A63); }
-.eb-hero-cta {
-  display: inline-flex; align-items: center; gap: 10px;
-font-weight: 700;
-font-size: 19px;
-line-height: 150%;
-  text-align: center;
-  padding: 14px 28px; border-radius: var(--button-radius, 6px);
-  box-shadow: var(--button-shadow, 0 4px 40px 0 rgba(247,37,133,0.35));
-  text-decoration: none; position: relative; z-index: 1;
-  transition: opacity .2s, transform .15s; align-self: flex-start;
+.eb-hero .custom-cta {
+  position: relative; z-index: 1; align-self: flex-start;
 }
-.eb-hero-cta:hover { opacity: 0.9; transform: translateY(-1px); }
 
 @media (max-width:768px){
   .eb-hero-headline h1{
     font-size: 28px;
     line-height: 100%;
-  }
-  .eb-hero-cta{
-    letter-spacing:2px;
   }
   .eb-hero-lede p{
     font-size:16px;

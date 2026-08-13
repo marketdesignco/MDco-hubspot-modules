@@ -90,29 +90,6 @@
   margin-bottom: 32px;
 }
 
-/* ═══ BUTTON ═══ */
-.voice-button {
-  font-size: var(--font-size-button);
-  line-height: var(--line-height-button);
-  letter-spacing: var(--letter-spacing-button);
-  text-decoration: none;
-  display: inline-flex;
-  align-items:center;
-  gap:10px;
-  border-radius:6px;
-  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
-}
-
-.voice-button:hover,
-.voice-button:focus-visible {
-  text-decoration:none;
-}
-.voice-button svg{
-  width:14px;
-}
-
-
-
 /* ═══ PILLAR ROWS ═══ */
 .voice-list {
   display: flex;
@@ -227,7 +204,7 @@
     font-size: 14px;
   }
 
-  .voice-button {
+  .voice-col .custom-cta {
     display: block;
     text-align: center;
   }

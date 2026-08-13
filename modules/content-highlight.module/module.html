@@ -1,0 +1,70 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .content-highlight{
+    background: #fff;
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:991px){
+    .content-highlight{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="content-highlight"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    <div class="content-highlight__intro">
+      {% if module.eyebrow %}<div class="content-highlight__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <div class="content-highlight__heading">{{ module.heading }}</div>
+      {% if module.intro %}<div class="content-highlight__lede">{{ module.intro }}</div>{% endif %}
+    </div>
+
+    {% if module.pillars_row %}
+    <div class="content-highlight__badges">
+      {% for item in module.pillars_row %}
+      <div class="content-highlight__badge">
+        <span class="content-highlight__badge-letter h2">{{ item.letter }}</span>
+        <p class="content-highlight__badge-label">{{ item.card_label }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if module.closing_text %}
+    <div class="content-highlight__closing">{{ module.closing_text }}</div>
+    {% endif %}
+
+    {% if module.ctas %}
+    <div class="content-highlight__ctas">
+      {% for item in module.ctas %}
+      <div class="custom-cta {{ item.style_cta }}">
+        {% if item.link_field.url.href %}
+          {% set href = item.link_field.url.href %}
+          {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+          {% elif item.link_field.url.type is equalto "PHONE_NUMBER" %}
+            {% set href = "tel:" + href %}
+          {% endif %}
+          <a
+            {% if item.link_field.url.type is equalto "CALL_TO_ACTION" %}
+              href="{{ href }}"
+            {% else %}
+              href="{{ href|escape_url }}"
+            {% endif %}
+            {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %}
+            {% if item.link_field.rel %}rel="{{ item.link_field.rel|escape_attr }}"{% endif %}
+            >
+            {{ item.text_field }}
+          </a>
+        {% elif item.cta %}
+          {% cta guid="{{ item.cta }}" %}
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>

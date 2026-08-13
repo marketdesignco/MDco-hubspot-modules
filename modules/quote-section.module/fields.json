@@ -1,0 +1,315 @@
+[ {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b8a",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "philosophy"
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b8b",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Powered by AI"
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b8c",
+  "name" : "heading",
+  "label" : "Heading (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>The Philosophy Behind Voice Intelligence</h2>"
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8ba0",
+  "name" : "intro",
+  "label" : "Intro",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Voice Intelligence isn't a tool we stumbled into — it's the result of years of research, practice, and a deeply held belief about what thought leadership actually requires.</p>"
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b8d",
+  "name" : "left_label",
+  "label" : "Left Column Label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Key Ideas"
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b8e",
+  "name" : "quote_chips",
+  "label" : "Quote Chips",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : 6,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b8f",
+    "name" : "quote_text",
+    "label" : "Quote Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>\"AI can't invent your voice, but it can help you understand it, define it, and amplify it.\"</p>"
+  }, {
+    "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b90",
+    "name" : "chip_color",
+    "label" : "Chip Accent Color",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "pink", "Pink" ], [ "purple", "Purple" ], [ "green", "Green" ], [ "white", "White" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "white"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "quote_text" : "<p>\"AI can't invent your voice, but it can help you understand it, define it, and amplify it.\"</p>",
+    "chip_color" : "pink"
+  }, {
+    "quote_text" : "<p>\"Used well, AI becomes a mirror. Not to replace our humanity but to reflect it back with heightened awareness and clarity.\"</p>",
+    "chip_color" : "white"
+  }, {
+    "quote_text" : "<p>\"We treat voice analysis not as a dataset, but as a digital fingerprint of thought leadership.\"</p>",
+    "chip_color" : "white"
+  }, {
+    "quote_text" : "<p>\"I don't use AI to write for me. I use it to listen to me.\"</p>",
+    "chip_color" : "white"
+  } ]
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8ba1",
+  "name" : "build_list_label",
+  "label" : "Build List Label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "What We Build For You"
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8ba2",
+  "name" : "build_list_items",
+  "label" : "Build List Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 10,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : [
+    "Tone, cadence & emotional drivers",
+    "Personality traits & communication habits",
+    "Expertise & lived experience",
+    "Your voice — unmistakably yours"
+  ]
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b91",
+  "name" : "right_label",
+  "label" : "Right Column Label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "MarketDesign Voices"
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b92",
+  "name" : "advisor_heading",
+  "label" : "Advisor Card Heading",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "The Future of Thought Leadership is Human-Directed, AI-Augmented"
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b93",
+  "name" : "advisor_quote",
+  "label" : "Advisor Quote / Bio",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>The question isn't whether AI can generate content — it can. The real question is whether that content constitutes thought leadership. Spoiler: it doesn't. Thought leadership requires judgment, humility, and a point of view shaped by lived experience. Things AI cannot replicate.</p><p>In this article, MDCo's Christina Nordquist Jacobs draws on her master's research in AI and communications to explain exactly how custom GPTs can be trained on a leader's writing samples, personality profile, and communication patterns — not to generate a generic voice, but to codify and protect an authentic one.</p><p>The result is what she calls a digital fingerprint of thought leadership — and it's the foundation everything in Voice Intelligence is built on.</p>"
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b94",
+  "name" : "advisor_name",
+  "label" : "Advisor Name",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Christina Nordquist Jacobs"
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b95",
+  "name" : "advisor_role",
+  "label" : "Advisor Role",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "B2B Tech Marketing + Communications Leader, MDCo"
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8ba3",
+  "name" : "advisor_initials",
+  "label" : "Advisor Initials (shown if no photo is set)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "CN"
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b96",
+  "name" : "advisor_photo",
+  "label" : "Advisor Photo",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : { "size_type" : "auto", "src" : "", "alt" : "" }
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b97",
+  "name" : "style_cta",
+  "label" : "Button Style",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "cta-pink", "Pink" ], [ "cta-primary", "Primary" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "cta-pink"
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b98",
+  "name" : "cta",
+  "label" : "HubSpot CTA",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "display_width" : null
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b99",
+  "name" : "link_field",
+  "label" : "Link (optional — overrides the HubSpot CTA above if set)",
+  "help_text" : "Optional. If set, renders a plain link button using this URL and the text below instead of the HubSpot CTA above. Leave empty to keep using the HubSpot CTA.",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "" },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b9a",
+  "name" : "text_field",
+  "label" : "Text (used with the link override above)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Read Article"
+}, {
+  "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b9b",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b9c",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  }, {
+    "id" : "b8c8d8e8-8888-4b8b-8b8b-8b8b8b8b8b9d",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  }
+} ]

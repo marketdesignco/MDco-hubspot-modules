@@ -1,0 +1,181 @@
+[ {
+  "id" : "f6a6b6c6-6666-4f6f-8f6f-6f6f6f6f6f6a",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "what-you-get"
+}, {
+  "id" : "f6a6b6c6-6666-4f6f-8f6f-6f6f6f6f6f6b",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "What You Get"
+}, {
+  "id" : "f6a6b6c6-6666-4f6f-8f6f-6f6f6f6f6f6c",
+  "name" : "heading",
+  "label" : "Heading (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>What a Strong Voice Delivers</h2>"
+}, {
+  "id" : "f6a6b6c6-6666-4f6f-8f6f-6f6f6f6f6f74",
+  "name" : "lede",
+  "label" : "Lede",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Thought leadership isn't vanity — it's a revenue driver. Here's what executives in the V.O.I.C.E. Program are built to achieve.</p>"
+}, {
+  "id" : "f6a6b6c6-6666-4f6f-8f6f-6f6f6f6f6f6d",
+  "name" : "items",
+  "label" : "Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "title",
+    "default" : 8
+  },
+  "children" : [ {
+    "id" : "f6a6b6c6-6666-4f6f-8f6f-6f6f6f6f6f6e",
+    "name" : "icon",
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-6.4.2",
+    "type" : "icon",
+    "display_width" : null,
+    "default" : { "name" : "Magnifying Glass", "unicode" : "f002", "type" : "SOLID" }
+  }, {
+    "id" : "f6a6b6c6-6666-4f6f-8f6f-6f6f6f6f6f6f",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Search Presence"
+  }, {
+    "id" : "f6a6b6c6-6666-4f6f-8f6f-6f6f6f6f6f70",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Show up when buyers and AI engines search for the topics you own.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "icon" : { "name" : "Magnifying Glass", "unicode" : "f002", "type" : "SOLID" },
+    "title" : "Search Presence",
+    "description" : "<p>Show up when buyers and AI engines search for the topics you own.</p>"
+  }, {
+    "icon" : { "name" : "Chart Line", "unicode" : "f201", "type" : "SOLID" },
+    "title" : "Smarter Sales Cycles",
+    "description" : "<p>Prospects arrive pre-sold on your credibility, shortening the trust-building phase of every deal.</p>"
+  }, {
+    "icon" : { "name" : "Trophy", "unicode" : "f091", "type" : "SOLID" },
+    "title" : "Award Recognition",
+    "description" : "<p>CRN, Channel Futures, and regional award nominations built on a real, submittable narrative.</p>"
+  }, {
+    "icon" : { "name" : "Microphone", "unicode" : "f130", "type" : "SOLID" },
+    "title" : "Speaking Platform",
+    "description" : "<p>A pipeline of conference, panel, and podcast opportunities in your area of expertise.</p>"
+  }, {
+    "icon" : { "name" : "Users", "unicode" : "f0c0", "type" : "SOLID" },
+    "title" : "Talent Attraction",
+    "description" : "<p>Candidates research leadership before applying. Your visibility becomes their reason to say yes.</p>"
+  }, {
+    "icon" : { "name" : "Newspaper", "unicode" : "f1ea", "type" : "SOLID" },
+    "title" : "Press Coverage",
+    "description" : "<p>Journalists cover names they already know. Consistent visibility makes you the easy call.</p>"
+  }, {
+    "icon" : { "name" : "Sitemap", "unicode" : "f0e8", "type" : "SOLID" },
+    "title" : "Network Growth",
+    "description" : "<p>A compounding LinkedIn and industry network built around content people actually want to share.</p>"
+  }, {
+    "icon" : { "name" : "Handshake", "unicode" : "f2b5", "type" : "SOLID" },
+    "title" : "Reverse Influence",
+    "description" : "<p>Peers and partners reference your point of view, extending your reach without extra effort.</p>"
+  } ]
+}, {
+  "id" : "f6a6b6c6-6666-4f6f-8f6f-6f6f6f6f6f71",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "f6a6b6c6-6666-4f6f-8f6f-6f6f6f6f6f72",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  }, {
+    "id" : "f6a6b6c6-6666-4f6f-8f6f-6f6f6f6f6f73",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  }
+} ]

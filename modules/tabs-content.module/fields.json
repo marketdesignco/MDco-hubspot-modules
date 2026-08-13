@@ -1,0 +1,292 @@
+[ {
+  "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d4a",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "framework"
+}, {
+  "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d4b",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "The Framework"
+}, {
+  "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d4c",
+  "name" : "heading",
+  "label" : "Heading (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>Five Pillars. One Voice.</h2>"
+}, {
+  "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d4d",
+  "name" : "lede",
+  "label" : "Lede",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Every element of the V.O.I.C.E. Program maps to a pillar. Hover (or tap) each one to explore what's included.</p>"
+}, {
+  "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d4e",
+  "name" : "pillars",
+  "label" : "Pillars",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : 5,
+    "sorting_label_field" : "tab_label",
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d4f",
+    "name" : "letter",
+    "label" : "Letter",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "V"
+  }, {
+    "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d50",
+    "name" : "tab_label",
+    "label" : "Label",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Visibility"
+  }, {
+    "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d51",
+    "name" : "accent_color",
+    "label" : "Accent Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : { "color" : "#7EDB00", "opacity" : 100 }
+  }, {
+    "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d52",
+    "name" : "tab_bg_color",
+    "label" : "Tab Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : { "color" : "#EAF8D2", "opacity" : 100 }
+  }, {
+    "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d53",
+    "name" : "panel_subheading",
+    "label" : "Panel Subheading",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Getting seen in the right places by the right people."
+  }, {
+    "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d54",
+    "name" : "panel_description",
+    "label" : "Panel Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Visibility is the foundation. We audit where you currently show up, identify the highest-impact presence gaps, and make sure your name appears where your buyers are already paying attention. Examples include but are not limited to:</p>"
+  }, {
+    "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d55",
+    "name" : "cards",
+    "label" : "Cards",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 6
+    },
+    "children" : [ {
+      "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d56",
+      "name" : "heading",
+      "label" : "Heading",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "Card Heading"
+    }, {
+      "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d57",
+      "name" : "description",
+      "label" : "Description",
+      "required" : false,
+      "locked" : false,
+      "type" : "richtext",
+      "display_width" : null,
+      "default" : "<p>Card description.</p>"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : [
+      { "heading" : "LinkedIn Profile Optimization", "description" : "<p>Full audit and rewrite of headline, about section, featured content, and banner to reflect your positioning.</p>" },
+      { "heading" : "Presence Audit & Gap Analysis", "description" : "<p>Assessment of current digital footprint across Google, LinkedIn, publications, and analyst mentions.</p>" },
+      { "heading" : "Media & Analyst Target List", "description" : "<p>Curated list of the top 25 publications and analysts relevant to your category and audience.</p>" },
+      { "heading" : "Speaker One-Sheet", "description" : "<p>Professional bio, headshot guidance, panelist and speaker credentials, and talking points for outreach.</p>" },
+      { "heading" : "Press & Award Submissions", "description" : "<p>Research, write, and submit up to 4 award nominations per year on your behalf.</p>" },
+      { "heading" : "Visibility Dashboard", "description" : "<p>Report tracking mentions, search visibility, and share of voice against named competitors.</p>" }
+    ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "letter" : "V", "tab_label" : "Visibility",
+    "accent_color" : { "color" : "#7EDB00", "opacity" : 100 },
+    "tab_bg_color" : { "color" : "#EAF8D2", "opacity" : 100 },
+    "panel_subheading" : "Getting seen in the right places by the right people.",
+    "panel_description" : "<p>Visibility is the foundation. We audit where you currently show up, identify the highest-impact presence gaps, and make sure your name appears where your buyers are already paying attention. Examples include but are not limited to:</p>",
+    "cards" : [
+      { "heading" : "LinkedIn Profile Optimization", "description" : "<p>Full audit and rewrite of headline, about section, featured content, and banner to reflect your positioning.</p>" },
+      { "heading" : "Presence Audit & Gap Analysis", "description" : "<p>Assessment of current digital footprint across Google, LinkedIn, publications, and analyst mentions.</p>" },
+      { "heading" : "Media & Analyst Target List", "description" : "<p>Curated list of the top 25 publications and analysts relevant to your category and audience.</p>" },
+      { "heading" : "Speaker One-Sheet", "description" : "<p>Professional bio, headshot guidance, panelist and speaker credentials, and talking points for outreach.</p>" },
+      { "heading" : "Press & Award Submissions", "description" : "<p>Research, write, and submit up to 4 award nominations per year on your behalf.</p>" },
+      { "heading" : "Visibility Dashboard", "description" : "<p>Report tracking mentions, search visibility, and share of voice against named competitors.</p>" }
+    ]
+  }, {
+    "letter" : "O", "tab_label" : "Ownership",
+    "accent_color" : { "color" : "#F72585", "opacity" : 100 },
+    "tab_bg_color" : { "color" : "#FBE3EE", "opacity" : 100 },
+    "panel_subheading" : "Claiming your lane and making it undeniably yours.",
+    "panel_description" : "<p>Ownership is about staking your claim in the market. We define your unique point of view, identify the specific intersection of topics you should own, and build the messaging framework that makes your voice consistent, recognizable, and impossible to ignore. Examples include but are not limited to:</p>",
+    "cards" : [
+      { "heading" : "Executive Positioning Workshop", "description" : "<p>90-minute facilitated session to define your unique perspective, core beliefs, and the 3-5 topics you will own in your market.</p>" },
+      { "heading" : "Messaging & Narrative Guide", "description" : "<p>A fully developed executive messaging guide: your story, positioning statement, key messages, and proof points.</p>" },
+      { "heading" : "Topic Pillar Definition", "description" : "<p>3-5 defined content pillars mapped to your expertise and audience needs, with 10+ content ideas per pillar.</p>" },
+      { "heading" : "Competitive White-Space Analysis", "description" : "<p>Analysis of what peers and competitors are saying, identifying the white space for you to own.</p>" },
+      { "heading" : "Visual Identity Assets", "description" : "<p>Brand-aligned visual assets and written assets for LinkedIn, your website bio, and event profiles.</p>" },
+      { "heading" : "Positioning Refresh (Annual)", "description" : "<p>Annual review and refresh of your point of view and messaging to stay ahead of industry shifts.</p>" }
+    ]
+  }, {
+    "letter" : "I", "tab_label" : "Insights",
+    "accent_color" : { "color" : "#7209B7", "opacity" : 100 },
+    "tab_bg_color" : { "color" : "#EFE0F7", "opacity" : 100 },
+    "panel_subheading" : "Turning your expertise into content that moves the market.",
+    "panel_description" : "<p>Insights is the content engine. We extract your ideas through interviews and collaboration, then transform them into a steady stream of high-quality content, so you show up consistently without it consuming your time. Examples include but are not limited to:</p>",
+    "cards" : [
+      { "heading" : "Executive POV Workshop", "description" : "<p>60-minute recorded session with an MDCo strategist to extract ideas, reactions to trends, and original perspectives each month.</p>" },
+      { "heading" : "Ghostwritten Thought Leadership Posts", "description" : "<p>Ghost-written, voice-matched posts across your topic pillars. Delivered for review and approval before publishing.</p>" },
+      { "heading" : "Bylined Article Placement", "description" : "<p>800-1,200 word bylined article for LinkedIn, your company blog, or trade press submission.</p>" },
+      { "heading" : "Executive Newsletter Column", "description" : "<p>Monthly executive column contribution to the MDCo eNewsletter and/or MarketDesign Voices program.</p>" },
+      { "heading" : "Rapid-Response Commentary", "description" : "<p>Rapid-response content when industry news breaks, positioning you as a timely, relevant voice within 24-48 hours.</p>" },
+      { "heading" : "Quarterly Content Calendar", "description" : "<p>Rolling 90-day content plan mapped to industry events, award cycles, and seasonal business topics.</p>" }
+    ]
+  }, {
+    "letter" : "C", "tab_label" : "Community",
+    "accent_color" : { "color" : "#3A0CA3", "opacity" : 100 },
+    "tab_bg_color" : { "color" : "#E8E2F7", "opacity" : 100 },
+    "panel_subheading" : "Building relationships that amplify your reach and reputation.",
+    "panel_description" : "<p>Community is where thought leadership compounds. We identify and activate the right communities, peer groups, and platforms where your voice will have the most impact, and build a strategy for showing up consistently and meaningfully. Examples include but are not limited to:</p>",
+    "cards" : [
+      { "heading" : "Community Mapping", "description" : "<p>Identification of the top communities, peer groups, and platforms where your buyers and peers are most active.</p>" },
+      { "heading" : "Personal Narrative + Messaging", "description" : "<p>A practical guide for how to show up in each community: what to say, how often, and what to avoid.</p>" },
+      { "heading" : "Speaking Opportunity Pipeline", "description" : "<p>Ongoing research and submission of speaking proposals to relevant conferences and events on your behalf.</p>" },
+      { "heading" : "Podcast + Guest Feature Strategy", "description" : "<p>Identification of relevant podcasts and guest article opportunities; pitch writing and outreach managed by MDCo.</p>" },
+      { "heading" : "Co-Marketing Opportunities", "description" : "<p>Identification of vendor, partner, and peer collaboration opportunities to co-create content and expand reach.</p>" },
+      { "heading" : "LinkedIn Network Growth Plan", "description" : "<p>Monthly connection strategy targeting ideal-profile contacts: buyers, press, peers, and conference organizers.</p>" }
+    ]
+  }, {
+    "letter" : "E", "tab_label" : "Expertise",
+    "accent_color" : { "color" : "#1A1A2E", "opacity" : 100 },
+    "tab_bg_color" : { "color" : "#DCD5F5", "opacity" : 100 },
+    "panel_subheading" : "Formalizing your knowledge into assets that work for you 24/7.",
+    "panel_description" : "<p>Expertise is about packaging what you know into formats that scale. We turn your knowledge into reusable, high-credibility assets, frameworks, guides, and media, that continue building your reputation long after they're published. Examples include but are not limited to:</p>",
+    "cards" : [
+      { "heading" : "Signature Framework Development", "description" : "<p>Facilitated development of 1 named, ownable framework or methodology that defines your approach and becomes your calling card.</p>" },
+      { "heading" : "Thought Leadership White Paper", "description" : "<p>Annual long-form report or white paper (2,000-3,000 words) on a topic you own, gated for lead generation or used as a credibility asset.</p>" },
+      { "heading" : "Video Series (Quarterly)", "description" : "<p>Script and production guidance for a quarterly short-form video, LinkedIn-native or YouTube, on a topic pillar.</p>" },
+      { "heading" : "Webinar / Panel Positioning", "description" : "<p>Quarterly placement as a featured speaker or host on an MDCo-produced or partner webinar in your area of expertise.</p>" },
+      { "heading" : "MarketDesign Voices Feature", "description" : "<p>Featured profile and contributed content placement within the MDCo MarketDesign Voices thought leadership program.</p>" },
+      { "heading" : "End-of-Year Impact Report", "description" : "<p>Annual summary of your thought leadership activity, reach, and outcomes, shareable internally and with your board.</p>" }
+    ]
+  } ]
+}, {
+  "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d58",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d59",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  }, {
+    "id" : "d4e4f4a4-4444-4d4d-8d4d-4d4d4d4d4d5a",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  }
+} ]

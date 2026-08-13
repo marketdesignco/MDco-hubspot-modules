@@ -1,0 +1,42 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .feature-section{
+    background: #F8F6FC;
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:991px){
+    .feature-section{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="feature-section"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    <div class="feature-section__intro">
+      {% if module.eyebrow %}<div class="feature-section__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <div class="feature-section__heading">{{ module.heading }}</div>
+      {% if module.lede %}<div class="feature-section__lede">{{ module.lede }}</div>{% endif %}
+    </div>
+
+    <div class="feature-section__grid">
+      {% for item in module.items %}
+      <article class="feature-section__card">
+        <div class="feature-section__icon">
+          {% icon
+            name="{{ item.icon.name }}"
+            style="{{ item.icon.type }}"
+            unicode="{{ item.icon.unicode }}"
+            icon_set="{{ item.icon.icon_set }}"
+          %}
+        </div>
+        <h6 class="feature-section__title">{{ item.title }}</h6>
+        <div class="feature-section__desc">{{ item.description }}</div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

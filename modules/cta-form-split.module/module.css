@@ -71,12 +71,12 @@
 }
 /* Submit button — inherits font, size, color, background, and base padding from the
    global form button system (theme.forms.button.*). Only the properties needed to
-   match this card's pill-button design are overridden here, scoped to this module. */
+   match this card's layout are overridden here, scoped to this module. */
 .cta-form-split__form-embed input[type=submit],
 .cta-form-split__form-embed .hs-button {
   background-color:#7209B7;
   width: 100%;
-  border-radius: 999px;
+  border-radius: var(--button-radius);
   box-shadow: var(--button-shadow, 0 4px 40px 0 rgba(247,37,133,.35));
   transition: box-shadow .2s ease, transform .2s ease, background-color .2s ease;
 }

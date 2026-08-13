@@ -1,0 +1,181 @@
+[ {
+  "id" : "c3d3e3f3-3333-4c3c-8c3c-3c3c3c3c3c3a",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "who-its-for"
+}, {
+  "id" : "c3d3e3f3-3333-4c3c-8c3c-3c3c3c3c3c3b",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Who It's For"
+}, {
+  "id" : "c3d3e3f3-3333-4c3c-8c3c-3c3c3c3c3c3c",
+  "name" : "heading",
+  "label" : "Heading (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>Built for Leaders Who Have Something to Say</h2>"
+}, {
+  "id" : "c3d3e3f3-3333-4c3c-8c3c-3c3c3c3c3c3d",
+  "name" : "lede",
+  "label" : "Lede",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>The V.O.I.C.E. Program is designed for executives in IT solution providers, SaaS companies, MSPs, and VARs who are ready to show up as the authority in their space.</p>"
+}, {
+  "id" : "c3d3e3f3-3333-4c3c-8c3c-3c3c3c3c3c3e",
+  "name" : "cards",
+  "label" : "Cards",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 6
+  },
+  "children" : [ {
+    "id" : "c3d3e3f3-3333-4c3c-8c3c-3c3c3c3c3c3f",
+    "name" : "tag",
+    "label" : "Tag (optional)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "c3d3e3f3-3333-4c3c-8c3c-3c3c3c3c3c40",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<h5>The Founder / CEO</h5>"
+  }, {
+    "id" : "c3d3e3f3-3333-4c3c-8c3c-3c3c3c3c3c41",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>You built something people trust. Now you need to explain why, clearly and often, to buyers, talent, and investors who weren't there at the start.</p>"
+  }, {
+    "id" : "c3d3e3f3-3333-4c3c-8c3c-3c3c3c3c3c42",
+    "name" : "accent_color",
+    "label" : "Accent Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : { "color" : "#7EDB00", "opacity" : 100 }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "tag" : "", "title" : "<h5>The Founder / CEO</h5>",
+    "description" : "<p>You built something people trust. Now you need to explain why, clearly and often, to buyers, talent, and investors who weren't there at the start.</p>",
+    "accent_color" : { "color" : "#7EDB00", "opacity" : 100 }
+  }, {
+    "tag" : "", "title" : "<h5>The Marketing Leader</h5>",
+    "description" : "<p>You understand the tone of thought leadership but haven't found the executive voice that lands and doesn't sound like everyone else's.</p>",
+    "accent_color" : { "color" : "#F72585", "opacity" : 100 }
+  }, {
+    "tag" : "", "title" : "<h5>The Sales Leader</h5>",
+    "description" : "<p>Your prospects Google you before every call. What they find either builds credibility or shortens the meeting.</p>",
+    "accent_color" : { "color" : "#9A93B4", "opacity" : 100 }
+  }, {
+    "tag" : "", "title" : "<h5>The Technical Expert</h5>",
+    "description" : "<p>You have deep expertise your clients trust. We translate it into accessible thought leadership that positions you as the go-to expert, not just the person who does the work.</p>",
+    "accent_color" : { "color" : "#F72585", "opacity" : 100 }
+  }, {
+    "tag" : "", "title" : "<h5>The Emerging Executive</h5>",
+    "description" : "<p>You're building your reputation before the title catches up. Consistent visibility now compounds into credibility later.</p>",
+    "accent_color" : { "color" : "#9A93B4", "opacity" : 100 }
+  }, {
+    "tag" : "", "title" : "<h5>The Award-Ready Leader</h5>",
+    "description" : "<p>You deserve recognition, but haven't built the profile, proof, or narrative that gets you nominated, let alone shortlisted.</p>",
+    "accent_color" : { "color" : "#7EDB00", "opacity" : 100 }
+  } ]
+}, {
+  "id" : "c3d3e3f3-3333-4c3c-8c3c-3c3c3c3c3c43",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "c3d3e3f3-3333-4c3c-8c3c-3c3c3c3c3c44",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  }, {
+    "id" : "c3d3e3f3-3333-4c3c-8c3c-3c3c3c3c3c45",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  }
+} ]

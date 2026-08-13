@@ -64,27 +64,31 @@
       <div class="column is-12-mobile is-12-tablet is-2-desktop is-2-widescreen is-2-fullhd">
          <div class="header__cta">
         <div class="cta-pink custom-cta">
-          {% set href = module.link_field.url.href %}
-{% if module.link_field.url.type is equalto "EMAIL_ADDRESS" %}
-  {% set href = "mailto:" + href %}
-{% elif module.link_field.url.type is equalto "PHONE_NUMBER" %}
-  {% set href = "tel:" + href %}
-{% endif %}
-<a
-  {% if module.link_field.url.type is equalto "CALL_TO_ACTION"  %}
-    href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
-  {% else %}
-    href="{{ href|escape_url }}"
-  {% endif %}
-  {% if module.link_field.open_in_new_tab %}
-    target="_blank"
-  {% endif %}
-  {% if module.link_field.rel %}
-    rel="{{ module.link_field.rel|escape_attr }}"
-  {% endif %}
-  >
-{{ module.link_text }}
-</a>
+          {% if module.link_field.url.href %}
+            {% set href = module.link_field.url.href %}
+            {% if module.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+            {% elif module.link_field.url.type is equalto "PHONE_NUMBER" %}
+              {% set href = "tel:" + href %}
+            {% endif %}
+            <a
+              {% if module.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+                href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+              {% else %}
+                href="{{ href|escape_url }}"
+              {% endif %}
+              {% if module.link_field.open_in_new_tab %}
+                target="_blank"
+              {% endif %}
+              {% if module.link_field.rel %}
+                rel="{{ module.link_field.rel|escape_attr }}"
+              {% endif %}
+              >
+              {{ module.link_text }}
+            </a>
+          {% elif module.cta_field %}
+            {% cta guid="{{ module.cta_field }}" %}
+          {% endif %}
            </div>
         </div>
       </div>

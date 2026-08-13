@@ -189,6 +189,20 @@
   "display_width" : null,
   "default" : true
 }, {
+  "id" : "9c1d2e3f-4a5b-4c6d-8e7f-1a2b3c4d5e6f",
+  "name" : "style_cta_text",
+  "label" : "CTA Style",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "cta-white-outline", "White Outline" ], [ "cta-white", "White" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "cta-white-outline"
+}, {
   "id" : "f91501aa-398e-3527-ca79-13865f0324e2",
   "name" : "cta_field",
   "label" : "CTA",
@@ -216,6 +230,20 @@
   "type" : "boolean",
   "display_width" : null,
   "default" : true
+}, {
+  "id" : "a2b3c4d5-6e7f-4a8b-9c0d-2e3f4a5b6c7d",
+  "name" : "style_cta_embed",
+  "label" : "CTA 2 Style",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "cta-primary", "Primary" ], [ "cta-primary-outline", "Primary Outline" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "cta-primary"
 }, {
   "id" : "907bbe9f-f675-cfbd-2e9c-1cbadfd89b8c",
   "name" : "cta_2",

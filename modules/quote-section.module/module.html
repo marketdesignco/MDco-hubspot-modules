@@ -1,0 +1,99 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .quote-section{
+    background: #fff;
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:991px){
+    .quote-section{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="quote-section"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    <div class="quote-section__intro">
+      {% if module.eyebrow %}<div class="quote-section__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <div class="quote-section__heading">{{ module.heading }}</div>
+      {% if module.intro %}<div class="quote-section__lede">{{ module.intro }}</div>{% endif %}
+    </div>
+
+    <div class="quote-section__grid">
+      <div class="quote-section__left">
+        {% if module.left_label %}<div class="quote-section__label">{{ module.left_label }}</div>{% endif %}
+
+        <div class="quote-section__chips">
+          {% for chip in module.quote_chips %}
+          <div class="quote-section__chip quote-section__chip--{{ chip.chip_color }}">
+            {{ chip.quote_text }}
+          </div>
+          {% endfor %}
+        </div>
+
+        {% if module.build_list_label or module.build_list_items %}
+        <div class="quote-section__build">
+          {% if module.build_list_label %}<div class="quote-section__build-label">{{ module.build_list_label }}</div>{% endif %}
+          {% if module.build_list_items %}
+          <ul class="quote-section__build-list">
+            {% for item in module.build_list_items %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="quote-section__right">
+        {% if module.right_label %}<div class="quote-section__badge">{{ module.right_label }}</div>{% endif %}
+
+        <div class="quote-section__advisor-card">
+          {% if module.advisor_heading %}<h5 class="quote-section__advisor-heading">{{ module.advisor_heading }}</h5>{% endif %}
+          {% if module.advisor_quote %}<div class="quote-section__advisor-quote">{{ module.advisor_quote }}</div>{% endif %}
+
+          <div class="quote-section__contact">
+            <div class="quote-section__contact-info">
+              {% if module.advisor_photo.src %}
+                <img class="quote-section__advisor-photo" src="{{ module.advisor_photo.src }}" alt="{{ module.advisor_photo.alt|escape_attr }}" loading="lazy">
+              {% elif module.advisor_initials %}
+                <span class="quote-section__advisor-initials" aria-hidden="true">{{ module.advisor_initials }}</span>
+              {% endif %}
+              <div>
+                {% if module.advisor_name %}<div class="quote-section__advisor-name">{{ module.advisor_name }}</div>{% endif %}
+                {% if module.advisor_role %}<div class="quote-section__advisor-role">{{ module.advisor_role }}</div>{% endif %}
+              </div>
+            </div>
+
+            <div class="custom-cta quote-section__cta {{ module.style_cta }}">
+              {% if module.link_field.url.href %}
+                {% set href = module.link_field.url.href %}
+                {% if module.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                {% elif module.link_field.url.type is equalto "PHONE_NUMBER" %}
+                  {% set href = "tel:" + href %}
+                {% endif %}
+                <a
+                  {% if module.link_field.url.type is equalto "CALL_TO_ACTION" %}
+                    href="{{ href }}"
+                  {% else %}
+                    href="{{ href|escape_url }}"
+                  {% endif %}
+                  {% if module.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                  {% if module.link_field.rel %}rel="{{ module.link_field.rel|escape_attr }}"{% endif %}
+                  >
+                  {{ module.text_field }}
+                </a>
+              {% elif module.cta %}
+                {% cta guid="{{ module.cta }}" %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -47,9 +47,31 @@
   "display_width" : null,
   "default" : true
 }, {
+  "id" : "e3a1c3f4-6d8c-4c4b-9e5f-9c3a7f0d12c3",
+  "name" : "style_cta",
+  "label" : "CTA Style",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "cta-primary", "Primary" ], [ "cta-primary-outline", "Primary Outline" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "cta-primary"
+}, {
+  "id" : "f4b2d4a5-7e9d-4d5c-af60-ad4b8f1e23d4",
+  "name" : "cta",
+  "label" : "HubSpot CTA",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "display_width" : null
+}, {
   "id" : "cta_text",
   "name" : "cta_text",
-  "label" : "CTA Text",
+  "label" : "Text (used with the link override below)",
   "required" : false,
   "locked" : false,
   "allow_new_line" : false,
@@ -59,7 +81,8 @@
 }, {
   "id" : "cta_link",
   "name" : "cta_link",
-  "label" : "CTA Link",
+  "label" : "Link (optional — overrides the HubSpot CTA above if set)",
+  "help_text" : "Optional. If set, renders a plain link button using this URL and the text below instead of the HubSpot CTA above. Leave empty to keep using the HubSpot CTA.",
   "required" : false,
   "locked" : false,
   "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "CALL_TO_ACTION", "PHONE_NUMBER" ],
@@ -138,30 +161,6 @@
     "display_width" : null,
     "default" : {
       "color" : "#F72585",
-      "opacity" : 100
-    }
-  }, {
-    "id" : "style.cta_bg_color",
-    "name" : "cta_bg_color",
-    "label" : "CTA Background",
-    "required" : false,
-    "locked" : false,
-    "type" : "color",
-    "display_width" : null,
-    "default" : {
-      "color" : "#7209B7",
-      "opacity" : 100
-    }
-  }, {
-    "id" : "style.cta_text_color",
-    "name" : "cta_text_color",
-    "label" : "CTA Text Color",
-    "required" : false,
-    "locked" : false,
-    "type" : "color",
-    "display_width" : null,
-    "default" : {
-      "color" : "#FFFFFF",
       "opacity" : 100
     }
   }, {
@@ -265,14 +264,6 @@
     },
     "accent_color" : {
       "color" : "#F72585",
-      "opacity" : 100
-    },
-    "cta_bg_color" : {
-      "color" : "#7209B7",
-      "opacity" : 100
-    },
-    "cta_text_color" : {
-      "color" : "#FFFFFF",
       "opacity" : 100
     },
     "spacing_desktop" : {

@@ -1,0 +1,39 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .content-cards{
+    position: relative;
+    overflow: hidden;
+    background: #3A0CA3;
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:991px){
+    .content-cards{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="content-cards"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <img class="content-cards__glow" src="{{ get_asset_url('/MDCo-theme-2026/images/hero-navigation-glow.svg') }}" alt="" aria-hidden="true" loading="lazy">
+
+  <div class="content-wrapper">
+    <div class="content-cards__intro">
+      {% if module.eyebrow %}<div class="content-cards__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <div class="content-cards__heading">{{ module.heading }}</div>
+      {% if module.lede %}<div class="content-cards__lede">{{ module.lede }}</div>{% endif %}
+    </div>
+    <div class="content-cards__grid">
+      {% for card in module.cards %}
+      <article class="content-cards__card" style="--card-accent: {{ card.accent_color.color }};">
+        {% if card.tag %}<span class="content-cards__tag">{{ card.tag }}</span>{% endif %}
+        <div class="content-cards__title">{{ card.title }}</div>
+        <div class="content-cards__divider"></div>
+        <div class="content-cards__desc">{{ card.description }}</div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

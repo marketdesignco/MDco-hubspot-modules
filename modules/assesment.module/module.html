@@ -29,7 +29,7 @@
           <div class="section-title">{{ module.heading }}</div>
           <div class="section-sub">{{ module.description }}</div>
           {% if module.show_cta_text %}
-          <div class="custom-cta cta-white-outline">
+          <div class="custom-cta {{ module.style_cta_text }}">
             {% cta guid="{{ module.cta_field }}" %}
           </div>
           {% endif %}
@@ -47,7 +47,7 @@
 
           </div>
           {% if module.show_cta_embed %}
-          <div class="custom-cta cta-primary">
+          <div class="custom-cta {{ module.style_cta_embed }}">
             {% cta guid="{{ module.cta_2 }}" %}
           </div>
           {% endif %}

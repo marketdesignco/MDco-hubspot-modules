@@ -41,33 +41,7 @@
   z-index: 1;
 }
 .eb-cta .eb-cta-lede p { margin: 0; }
-.eb-cta .eb-cta-btn {
-  background: #fff;
-  color: #3A0CA3;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: var(--font-size-button);
-  line-height: var(--line-height-button);
-  letter-spacing: var(--letter-spacing-button);
-  padding: 16px 32px;
-  border-radius: 100px;
-  text-decoration: none;
+.eb-cta .custom-cta {
   position: relative;
   z-index: 1;
-  transition: background-color .2s ease, color .2s ease, transform .15s ease, box-shadow .2s ease;
-}
-.eb-cta .eb-cta-btn:hover {
-  background: #3A0CA3;
-  color: #fff;
-  transform: translateY(-1px);
-  box-shadow: var(--button-shadow, 0 4px 40px 0 rgba(247,37,133,.35));
-}
-
-
-@media(max-width:768px){
-  .eb-cta .eb-cta-btn{
-  font-size: var(--font-size-button-mobile);
-  letter-spacing: var(--letter-spacing-button-mobile);
-  }
 }

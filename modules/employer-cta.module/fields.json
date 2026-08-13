@@ -47,9 +47,31 @@
   "display_width" : null,
   "default" : true
 }, {
+  "id" : "c1e9a1d2-4b6a-4a2f-9c3d-7a1f5e8b90a1",
+  "name" : "style_cta",
+  "label" : "CTA Style",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "cta-white", "White" ], [ "cta-white-outline", "White Outline" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "cta-white"
+}, {
+  "id" : "d2f0b2e3-5c7b-4b3a-8d4e-8b2f6f9c01b2",
+  "name" : "cta",
+  "label" : "HubSpot CTA",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "display_width" : null
+}, {
   "id" : "cta_text",
   "name" : "cta_text",
-  "label" : "CTA Text",
+  "label" : "Text (used with the link override below)",
   "required" : false,
   "locked" : false,
   "allow_new_line" : false,
@@ -59,7 +81,8 @@
 }, {
   "id" : "cta_link",
   "name" : "cta_link",
-  "label" : "CTA Link",
+  "label" : "Link (optional — overrides the HubSpot CTA above if set)",
+  "help_text" : "Optional. If set, renders a plain link button using this URL and the text below instead of the HubSpot CTA above. Leave empty to keep using the HubSpot CTA.",
   "required" : false,
   "locked" : false,
   "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "CALL_TO_ACTION", "PHONE_NUMBER" ],

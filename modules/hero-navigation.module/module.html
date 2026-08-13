@@ -1,0 +1,96 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .hero-navigation{
+    position: relative;
+    overflow: hidden;
+    background: #3A0CA3;
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:991px){
+    .hero-navigation{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="hero-navigation"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <img class="hero-navigation__glow" src="{{ get_asset_url('/MDCo-theme-2026/images/hero-navigation-glow.svg') }}" alt="" aria-hidden="true" loading="lazy">
+
+  <div class="content-wrapper">
+    <div class="hero-navigation__inner">
+      <div class="hero-navigation__content">
+        <div class="hero-navigation__heading">
+          {{ module.heading }}
+        </div>
+        <div class="hero-navigation__description">
+          {{ module.description }}
+        </div>
+
+        {% if module.ctas %}
+        <div class="hero-navigation__ctas">
+          {% for item in module.ctas %}
+          <div class="custom-cta {{ item.style_cta }}">
+            {% if item.link_field.url.href %}
+              {% set href = item.link_field.url.href %}
+              {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+              {% elif item.link_field.url.type is equalto "PHONE_NUMBER" %}
+                {% set href = "tel:" + href %}
+              {% endif %}
+              <a
+                {% if item.link_field.url.type is equalto "CALL_TO_ACTION" %}
+                  href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+                {% else %}
+                  href="{{ href|escape_url }}"
+                {% endif %}
+                {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                {% if item.link_field.rel %}rel="{{ item.link_field.rel|escape_attr }}"{% endif %}
+                >
+                {{ item.text_field }}
+              </a>
+            {% elif item.cta %}
+              {% cta guid="{{ item.cta }}" %}
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+
+      {% if module.nav_items %}
+      <nav class="hero-navigation__nav" aria-label="Quick links">
+        {% for item in module.nav_items %}
+          {% set href = item.link.url.href %}
+          {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+          {% elif item.link.url.type is equalto "PHONE_NUMBER" %}
+            {% set href = "tel:" + href %}
+          {% endif %}
+          <a class="hero-navigation__navlink"
+            {% if item.link.url.type is equalto "CALL_TO_ACTION" %}
+              href="{{ href }}"
+            {% else %}
+              href="{{ href|escape_url }}"
+            {% endif %}
+            {% if item.link.open_in_new_tab %}target="_blank"{% endif %}
+            {% if item.link.rel %}rel="{{ item.link.rel|escape_attr }}"{% endif %}
+            aria-label="{{ item.menu_label|escape_attr }}">
+            <span class="hero-navigation__navicon">
+              {% icon
+                name="{{ item.icon.name }}"
+                style="{{ item.icon.type }}"
+                unicode="{{ item.icon.unicode }}"
+                icon_set="{{ item.icon.icon_set }}"
+              %}
+            </span>
+            <span class="hero-navigation__navlabel">{{ item.menu_label }}</span>
+          </a>
+        {% endfor %}
+      </nav>
+      {% endif %}
+    </div>
+  </div>
+</section>

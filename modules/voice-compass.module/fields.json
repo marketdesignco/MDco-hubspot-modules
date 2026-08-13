@@ -248,9 +248,32 @@
     "letter" : "V"
   } ]
 }, {
+  "id" : "b3c4d5e6-7f8a-4b9c-8d0e-1f2a3b4c5d6e",
+  "name" : "style_cta",
+  "label" : "CTA Style",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "cta-primary", "Primary" ], [ "cta-primary-outline", "Primary Outline" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "cta-primary"
+}, {
+  "id" : "c4d5e6f7-8a9b-4c0d-9e1f-2a3b4c5d6e7f",
+  "name" : "cta",
+  "label" : "HubSpot CTA",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "display_width" : null
+}, {
   "id" : "f3ec6dc7-c9f9-8270-ad69-7044257c9f00",
   "name" : "button",
-  "label" : "Button",
+  "label" : "Link (optional — overrides the HubSpot CTA above if set)",
+  "help_text" : "Optional. If set, renders a plain link button using this URL and the label below instead of the HubSpot CTA above. Leave empty to keep using the HubSpot CTA.",
   "required" : false,
   "locked" : false,
   "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
@@ -269,13 +292,13 @@
 }, {
   "id" : "208bc69a-54d2-1707-ec9b-0704af86bd03",
   "name" : "button_label",
-  "label" : "Button label",
+  "label" : "Text (used with the link override above)",
   "required" : false,
   "locked" : false,
   "allow_new_line" : false,
   "type" : "text",
   "display_width" : null,
-  "default" : "FIND YOUR V.O.I.C.E."
+  "default" : "Find Your V.O.I.C.E."
 }, {
   "id" : "cae636fc-c828-4389-700a-665296302902",
   "name" : "icon_field",

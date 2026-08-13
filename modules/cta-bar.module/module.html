@@ -32,39 +32,42 @@
         <div class="container-cta">
           {% for item in module.ctas %}
           <div class="custom-cta {{ item.style_cta }}">
-            {% set href = item.link_field.url.href %}
-{% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
-  {% set href = "mailto:" + href %}
-{% elif item.link_field.url.type is equalto "PHONE_NUMBER" %}
-  {% set href = "tel:" + href %}
-{% endif %}
-<a
-  {% if item.link_field.url.type is equalto "CALL_TO_ACTION"  %}
-    href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
-  {% else %}
-    href="{{ href|escape_url }}"
-  {% endif %}
-  {% if item.link_field.open_in_new_tab %}
-    target="_blank"
-  {% endif %}
-  {% if item.link_field.rel %}
-    rel="{{ item.link_field.rel|escape_attr }}"
-  {% endif %}
-  >
- {{ item.text_field }}
-  {% if item.show_icon %}
-
-  {% icon
-	name="{{ item.icon_field.name }}"
-	style="{{ item.icon_field.type }}"
-	unicode="{{ item.icon_field.unicode }}"
-	icon_set="{{ item.icon_field.icon_set }}"
-%}
-  {% endif %}
-</a>
+            {% if item.link_field.url.href %}
+              {% set href = item.link_field.url.href %}
+              {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+              {% elif item.link_field.url.type is equalto "PHONE_NUMBER" %}
+                {% set href = "tel:" + href %}
+              {% endif %}
+              <a
+                {% if item.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+                  href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+                {% else %}
+                  href="{{ href|escape_url }}"
+                {% endif %}
+                {% if item.link_field.open_in_new_tab %}
+                  target="_blank"
+                {% endif %}
+                {% if item.link_field.rel %}
+                  rel="{{ item.link_field.rel|escape_attr }}"
+                {% endif %}
+                >
+                {{ item.text_field }}
+                {% if item.show_icon %}
+                  {% icon
+                    name="{{ item.icon_field.name }}"
+                    style="{{ item.icon_field.type }}"
+                    unicode="{{ item.icon_field.unicode }}"
+                    icon_set="{{ item.icon_field.icon_set }}"
+                  %}
+                {% endif %}
+              </a>
+            {% elif item.cta %}
+              {% cta guid="{{ item.cta }}" %}
+            {% endif %}
           </div>
           {% endfor %}
-          
+
         </div>
         
       </div>

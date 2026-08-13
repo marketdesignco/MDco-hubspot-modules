@@ -1,0 +1,223 @@
+.quote-section__intro {
+  max-width: 720px;
+  margin: 0 auto 44px;
+  text-align: center;
+}
+.quote-section__eyebrow {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #7209B7;
+  margin-bottom: 14px;
+}
+.quote-section__heading h2 {
+  color: #3A0CA3;
+  margin: 0 0 16px;
+}
+.quote-section__lede {
+  color: #7A6888;
+}
+.quote-section__lede p {
+  margin: 0;
+}
+
+.quote-section__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.quote-section__left {
+  background: #3A0CA3;
+  padding: 40px;
+}
+.quote-section__right {
+  background: #FAF8FC;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quote-section__label {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #7EDB00;
+  margin-bottom: 20px;
+}
+
+.quote-section__badge {
+  display: inline-flex;
+  align-self: flex-start;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.76px;
+  line-height:17.6px;
+  text-transform: uppercase;
+  color: #C41A6A;
+  background: #F725851F;
+  border-radius: 100px;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+}
+
+.quote-section__chips {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.quote-section__chip {
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 4px solid transparent;
+  border-radius: 10px;
+  padding: 20px 24px;
+  font-style: italic;
+  color: #FFFFFF;
+}
+.quote-section__chip p {
+  margin: 0;
+}
+.quote-section__chip--pink { border-left-color: #F72585; }
+.quote-section__chip--purple { border-left-color: #7209B7; }
+.quote-section__chip--green { border-left-color: #7EDB00; }
+.quote-section__chip--white { border-left-color:#F3ECFB; }
+
+.quote-section__build {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 30px 40px;
+}
+.quote-section__build-label {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #7EDB00;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.quote-section__build-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.quote-section__build-list li {
+  position: relative;
+  padding-left: 18px;
+  color: #FFFFFFD9;
+}
+.quote-section__build-list li::before {
+  content: '\25B8';
+  position: absolute;
+  left: 0;
+  color: #7EDB00;
+}
+
+.quote-section__advisor-card {
+  background: none;
+  padding: 0;
+}
+.quote-section__advisor-heading {
+  color: #3A0CA3;
+  margin: 0 0 16px;
+}
+.quote-section__advisor-quote {
+  color: #7A6888;
+  margin-bottom: 32px;
+}
+.quote-section__advisor-quote p {
+  margin: 0 0 16px;
+}
+.quote-section__advisor-quote p:last-child {
+  margin-bottom: 0;
+}
+
+.quote-section__contact {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0px 6px 20px 0px #3A0CA30D;
+
+}
+.quote-section__cta{
+  flex-shrink: 0;
+}
+.quote-section__contact-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.quote-section__advisor-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+.quote-section__advisor-initials {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #7209B7, #7EDB00);
+  color: #FFFFFF;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 900;
+  font-size: 15px;
+}
+.quote-section__advisor-name {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  color: #3A0CA3;
+font-weight: 900;
+font-size: 12px;
+line-height: 140%;
+letter-spacing: -0.21px;
+
+}
+.quote-section__advisor-role {
+  color: #7A6888;
+font-size: 12px;
+line-height: 140%;
+letter-spacing: -0.21px;
+
+}
+
+.quote-section__cta a {
+  display: inline-block;
+}
+
+@media (max-width: 991px) {
+  .quote-section__grid {
+    grid-template-columns: 1fr;
+  }
+  .quote-section__contact {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .quote-section__cta a {
+    display: block;
+    text-align: center;
+  }
+}

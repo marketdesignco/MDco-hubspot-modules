@@ -1,0 +1,127 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .tabs-content{
+    background: #fff;
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:991px){
+    .tabs-content{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="tabs-content"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    <div class="tabs-content__intro">
+      {% if module.eyebrow %}<div class="tabs-content__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <div class="tabs-content__heading">{{ module.heading }}</div>
+      {% if module.lede %}<div class="tabs-content__lede">{{ module.lede }}</div>{% endif %}
+    </div>
+
+    <div class="tabs-content__tablist" role="tablist" aria-label="{{ module.heading|striptags }}">
+      {% for pillar in module.pillars %}
+      <button type="button"
+        class="tabs-content__tab{% if loop.first %} is-active{% endif %}"
+        role="tab"
+        id="tabs-content-tab-{{ loop.index }}-{{ module.section_id }}"
+        aria-selected="{% if loop.first %}true{% else %}false{% endif %}"
+        aria-controls="tabs-content-panel-{{ loop.index }}-{{ module.section_id }}"
+        tabindex="{% if loop.first %}0{% else %}-1{% endif %}"
+        style="--tab-bg: {{ pillar.tab_bg_color.color }}; --tab-accent: {{ pillar.accent_color.color }};">
+        <span class="tabs-content__tab-letter">{{ pillar.letter }}</span>
+        <p class="tabs-content__tab-label">{{ pillar.tab_label }}</p>
+      </button>
+      {% endfor %}
+    </div>
+
+    <div class="tabs-content__panels">
+      {% for pillar in module.pillars %}
+      <div class="tabs-content__panel{% if loop.first %} is-active{% endif %}"
+        role="tabpanel"
+        id="tabs-content-panel-{{ loop.index }}-{{ module.section_id }}"
+        aria-labelledby="tabs-content-tab-{{ loop.index }}-{{ module.section_id }}"
+        style="--pillar-color: {{ pillar.accent_color.color }};">
+        <div class="tabs-content__panel-header">
+          <div class="tabs-content__panel-badge" style="background:{{ pillar.tab_bg_color.color }}; color:{{ pillar.accent_color.color }};">
+            {{ pillar.letter }}
+          </div>
+          <div class="tabs-content__panel-heading-group">
+            <h5 class="tabs-content__panel-heading">{{ pillar.tab_label }}</h5>
+            {% if pillar.panel_subheading %}<p class="tabs-content__panel-subheading">{{ pillar.panel_subheading }}</p>{% endif %}
+          </div>
+        </div>
+
+        {% if pillar.panel_description %}
+        <div class="tabs-content__panel-description">{{ pillar.panel_description }}</div>
+        {% endif %}
+
+        <div class="tabs-content__cards">
+          {% for card in pillar.cards %}
+          <div class="tabs-content__card">
+            <h6 class="tabs-content__card-heading">{{ card.heading }}</h6>
+            <div class="tabs-content__card-description">{{ card.description }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var root = document.getElementById("{{ module.section_id }}");
+  if (!root) return;
+  var tabs = root.querySelectorAll(".tabs-content__tab");
+  var panels = root.querySelectorAll(".tabs-content__panel");
+  var canHover = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  function activate(tab) {
+    tabs.forEach(function (t) {
+      t.classList.remove("is-active");
+      t.setAttribute("aria-selected", "false");
+      t.setAttribute("tabindex", "-1");
+    });
+    panels.forEach(function (p) { p.classList.remove("is-active"); });
+
+    tab.classList.add("is-active");
+    tab.setAttribute("aria-selected", "true");
+    tab.setAttribute("tabindex", "0");
+
+    var panel = document.getElementById(tab.getAttribute("aria-controls"));
+    if (panel) panel.classList.add("is-active");
+  }
+
+  tabs.forEach(function (tab, index) {
+    tab.addEventListener("click", function () { activate(tab); });
+
+    if (canHover) {
+      tab.addEventListener("mouseenter", function () { activate(tab); });
+    }
+
+    tab.addEventListener("keydown", function (e) {
+      var newIndex = null;
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        newIndex = (index + 1) % tabs.length;
+      } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        newIndex = (index - 1 + tabs.length) % tabs.length;
+      } else if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        activate(tab);
+        return;
+      }
+      if (newIndex !== null) {
+        e.preventDefault();
+        var newTab = tabs[newIndex];
+        activate(newTab);
+        newTab.focus();
+      }
+    });
+  });
+})();
+</script>

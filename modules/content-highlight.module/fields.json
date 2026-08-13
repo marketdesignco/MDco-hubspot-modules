@@ -1,0 +1,257 @@
+[ {
+  "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b2a",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "program"
+}, {
+  "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b2b",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "A MarketDesign Co. Offering"
+}, {
+  "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b2c",
+  "name" : "heading",
+  "label" : "Heading (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>The V.O.I.C.E. Program</h2>"
+}, {
+  "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b2d",
+  "name" : "intro",
+  "label" : "Intro",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Search didn't get harder. It changed shape — every leader knows the industry needs the right message, but not everyone knows the path we take to get there or how far we need to go to get it right.</p>"
+}, {
+  "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b2e",
+  "name" : "pillars_row",
+  "label" : "Pillar Badges",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : 5,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b2f",
+    "name" : "letter",
+    "label" : "Letter",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "V"
+  }, {
+    "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b30",
+    "name" : "card_label",
+    "label" : "Label",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Visibility"
+  }, {
+    "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b31",
+    "name" : "bg_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : { "color" : "#EAF8D2", "opacity" : 100 }
+  }, {
+    "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b32",
+    "name" : "letter_color",
+    "label" : "Letter Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : { "color" : "#7EDB00", "opacity" : 100 }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "letter" : "V", "card_label" : "Visibility",
+    "bg_color" : { "color" : "#EAF8D2", "opacity" : 100 }, "letter_color" : { "color" : "#7EDB00", "opacity" : 100 }
+  }, {
+    "letter" : "O", "card_label" : "Ownership",
+    "bg_color" : { "color" : "#FBE3EE", "opacity" : 100 }, "letter_color" : { "color" : "#F72585", "opacity" : 100 }
+  }, {
+    "letter" : "I", "card_label" : "Insight",
+    "bg_color" : { "color" : "#EFE0F7", "opacity" : 100 }, "letter_color" : { "color" : "#7209B7", "opacity" : 100 }
+  }, {
+    "letter" : "C", "card_label" : "Community",
+    "bg_color" : { "color" : "#E8E2F7", "opacity" : 100 }, "letter_color" : { "color" : "#3A0CA3", "opacity" : 100 }
+  }, {
+    "letter" : "E", "card_label" : "Expertise",
+    "bg_color" : { "color" : "#DCD5F5", "opacity" : 100 }, "letter_color" : { "color" : "#1A1A2E", "opacity" : 100 }
+  } ]
+}, {
+  "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b33",
+  "name" : "closing_text",
+  "label" : "Closing Text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>You have something worth saying. We make sure the right people hear it — and remember who said it first.</p>"
+}, {
+  "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b34",
+  "name" : "ctas",
+  "label" : "CTAs",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : 3,
+    "sorting_label_field" : null,
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b35",
+    "name" : "style_cta",
+    "label" : "Style",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "cta-primary", "Primary" ], [ "cta-primary-outline", "Primary Outline" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "cta-primary"
+  }, {
+    "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b36",
+    "name" : "cta",
+    "label" : "HubSpot CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "display_width" : null
+  }, {
+    "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b37",
+    "name" : "link_field",
+    "label" : "Link (optional — overrides the HubSpot CTA above if set)",
+    "help_text" : "Optional. If set, renders a plain link button using this URL and the text below instead of the HubSpot CTA above. Leave empty to keep using the HubSpot CTA.",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "" },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b38",
+    "name" : "text_field",
+    "label" : "Text (used with the link override above)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "View Packages"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "style_cta" : "cta-primary",
+    "link_field" : { "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "#packages" }, "open_in_new_tab" : false, "no_follow" : false },
+    "text_field" : "View Packages"
+  }, {
+    "style_cta" : "cta-primary-outline",
+    "link_field" : { "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "#framework" }, "open_in_new_tab" : false, "no_follow" : false },
+    "text_field" : "See the Framework"
+  } ]
+}, {
+  "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b39",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b3a",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  }, {
+    "id" : "b2c2d2e2-2222-4b2b-8b2b-2b2b2b2b2b3b",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  }
+} ]
