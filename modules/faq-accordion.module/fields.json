@@ -1,0 +1,129 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "faq"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "COMMON QUESTIONS"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>Straight answers.</h2>"
+}, {
+  "id" : "items",
+  "name" : "items",
+  "label" : "Questions",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 20,
+    "sorting_label_field" : null,
+    "default" : 7
+  },
+  "children" : [ {
+    "id" : "items.question",
+    "name" : "question",
+    "label" : "Question",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Question"
+  }, {
+    "id" : "items.answer",
+    "name" : "answer",
+    "label" : "Answer",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Add the answer for this question.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "question" : "Where is MarketDesign Co. located in Syracuse?",
+    "answer" : "<p>MDCo is headquartered at 100 Clinton Square, 126 North Salina Street, Syracuse, NY 13202, in downtown Syracuse. Reach us at 844.499.8446 or hello@marketdesignco.com.</p>"
+  }, {
+    "question" : "Do you only work with Syracuse companies?",
+    "answer" : "<p>No. Syracuse is home and we work with clients across the United States. Being headquartered in Central New York means CNY, Mohawk Valley, and Finger Lakes companies get in-person consulting that clients elsewhere get on video.</p>"
+  }, {
+    "question" : "What kind of companies do you work with?",
+    "answer" : "<p>Technology companies only: managed service providers, VARs, solution providers, channel partners, IT start-ups, and PE-backed technology firms. If you sell technology services or products, you're in scope. If you don't, we'll point you to someone better suited.</p>"
+  }, {
+    "question" : "Are you a marketing agency?",
+    "answer" : "<p>We're a boutique consulting firm. The difference is where the work starts: with a diagnostic of the six things that have to be true for you to grow, and a plan tied to a number. Creative and campaign execution follow the strategy rather than standing in for it.</p>"
+  }, {
+    "question" : "What are the 6 Ps of Progress?",
+    "answer" : "<p>The diagnostic MDCo runs on every engagement. The what you'll need: People, Process, Platform. The how you win: Purpose, Plan, Pipeline. Most companies get four right and bleed revenue on the other two.</p>"
+  }, {
+    "question" : "What does the first conversation cost?",
+    "answer" : "<p>Nothing. Step one is free consulting with no catch: we talk tech, business, and growth. Worst case you leave with three new ideas. Pricing only enters the conversation once a diagnostic has shown what the work actually is.</p>"
+  }, {
+    "question" : "Do you work in HubSpot?",
+    "answer" : "<p>Yes. MDCo is a multi-certified HubSpot Platinum Partner, with integration experience across Salesforce, Microsoft Dynamics, ConnectWise, Quoteworks, and Autotask.</p>"
+  } ]
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

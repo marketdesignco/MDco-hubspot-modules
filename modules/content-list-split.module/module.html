@@ -1,0 +1,38 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .content-list-split {
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 768px) {
+    .content-list-split { {{ module.style.spacing_mobile.css }} }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="content-list-split"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    <div class="content-list-split__grid">
+      <div class="content-list-split__content">
+        {% if module.eyebrow %}<div class="content-list-split__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+        {{ module.heading }}
+        {% if module.body_text %}<div class="content-list-split__body">{{ module.body_text }}</div>{% endif %}
+      </div>
+
+      <div class="content-list-split__card">
+        {% if module.card_title %}<h6 class="content-list-split__card-title">{{ module.card_title }}</h6>{% endif %}
+
+        {% if module.list_items %}
+        <ul class="content-list-split__list">
+          {% for item in module.list_items %}
+            {% if item.show %}<li>{{ item.text }}</li>{% endif %}
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if module.card_note %}<div class="content-list-split__card-note">{{ module.card_note }}</div>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>

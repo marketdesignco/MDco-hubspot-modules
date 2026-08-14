@@ -1,0 +1,164 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "who-we-work-with"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "BUILT IN CENTRAL NEW YORK"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>A national consulting firm with a Syracuse address.</h2>"
+}, {
+  "id" : "body_text",
+  "name" : "body_text",
+  "label" : "Body (rich text — use strong for highlighted phrases)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>MDCo runs from <strong>100 Clinton Square.</strong> Same downtown, same winters, same handshake economy where a reputation takes years to build and one bad quarter to dent. Syracuse rewards companies that show up and do the work, and that is exactly how we consult.</p><p>We work exclusively with technology companies: managed service providers, VARs, solution providers, and IT start-ups. Some of them are ten minutes from our office. Most are not. <strong>Being local means you get partners you can sit across from</strong>, not an account manager three time zones away reading a status report.</p><p>If you run a tech company in CNY, the Mohawk Valley, or the Finger Lakes and growth has stalled at referrals, that is a conversation worth having. We win because we've been in your shoes.</p>"
+}, {
+  "id" : "card_title",
+  "name" : "card_title",
+  "label" : "Card Title",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Who we work with here"
+}, {
+  "id" : "list_items",
+  "name" : "list_items",
+  "label" : "List Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 8,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "list_items.text",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Managed Service Providers (MSPs)"
+  }, {
+    "id" : "list_items.show",
+    "name" : "show",
+    "label" : "Show this item",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "text" : "Managed Service Providers (MSPs)",
+    "show" : true
+  }, {
+    "text" : "Value-Added Resellers (VARs)",
+    "show" : true
+  }, {
+    "text" : "Solution providers + channel partners",
+    "show" : true
+  }, {
+    "text" : "IT start-ups and founder-led firms",
+    "show" : true
+  }, {
+    "text" : "PE-backed technology companies",
+    "show" : true
+  } ]
+}, {
+  "id" : "card_note",
+  "name" : "card_note",
+  "label" : "Card Note (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Owner-operators carrying marketing themselves, and revenue leaders accountable for pipeline they didn't build. Both start the same way: a conversation, no invoice.</p>"
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 96,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 96,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 48,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 48,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

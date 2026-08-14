@@ -1,0 +1,41 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .service-card-grid {
+    background: #F8F6FC;
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 991px) {
+    .service-card-grid { {{ module.style.spacing_mobile.css }} }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="service-card-grid"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    <div class="service-card-grid__intro">
+      {% if module.eyebrow %}<div class="service-card-grid__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      {{ module.heading }}
+      {% if module.intro %}<div class="service-card-grid__lede">{{ module.intro }}</div>{% endif %}
+    </div>
+
+    <div class="service-card-grid__grid">
+      {% for card in module.cards %}
+      <div class="service-card-grid__card">
+        {% if card.tag %}<span class="service-card-grid__tag">{{ card.tag }}</span>{% endif %}
+        <h6 class="service-card-grid__title">{{ card.title }}</h6>
+        <div class="service-card-grid__body">{{ card.description }}</div>
+        {% if card.items %}
+        <hr class="service-card-grid__divider">
+        <ul class="service-card-grid__items">
+          {% for it in card.items %}<li>{{ it.text }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if module.closing_note %}<div class="service-card-grid__note">{{ module.closing_note }}</div>{% endif %}
+  </div>
+</section>

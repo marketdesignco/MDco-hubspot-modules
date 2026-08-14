@@ -1,331 +1,330 @@
-[
-  {
-    "id": "2c5dad1d-b197-41d5-a01f-f052b2aef147",
-    "name": "section_id",
-    "label": "Id Section (menu anchor)",
-    "required": false,
-    "locked": false,
-    "allow_new_line": false,
-    "type": "text",
-    "default": "six-ps",
-    "display_width": null
-  },
-  {
-    "id": "bf594422-a5bd-4b55-bbb7-bd58f03d186c",
-    "name": "background_image",
-    "label": "Decorative Background Pattern (optional)",
-    "required": false,
-    "locked": false,
-    "type": "image",
-    "default": {
-      "src": "",
-      "alt": ""
-    },
-    "display_width": null
-  },
-  {
-    "id": "5d540ee6-8aa0-4d0a-886b-b80f3ac3a3d4",
-    "name": "eyebrow",
-    "label": "Eyebrow",
-    "required": false,
-    "locked": false,
-    "allow_new_line": false,
-    "type": "text",
-    "default": "The Approach",
-    "display_width": null
-  },
-  {
-    "id": "32f54295-a114-4949-9379-c82d46a757c2",
-    "name": "heading",
-    "label": "Heading",
-    "required": false,
-    "locked": false,
-    "type": "richtext",
-    "default": "<h2>The 6 Ps of Progress</h2>",
-    "display_width": null
-  },
-  {
-    "id": "3c6e0e4c-7c5e-4d12-b0ab-36fba64c4790",
-    "name": "lede",
-    "label": "Lede",
-    "required": false,
-    "locked": false,
-    "type": "richtext",
-    "default": "<p>Six things have to be true for a technology company to grow. Most get four right and bleed revenue on the other two. We diagnose all six in 30 minutes — whether you hire us or not.</p>",
-    "display_width": null
-  },
-  {
-    "id": "a6247e0e-f478-400b-a4e7-4bdc271b042f",
-    "name": "column_1_label",
-    "label": "Column 1 — Label",
-    "required": false,
-    "locked": false,
-    "allow_new_line": false,
-    "type": "text",
-    "default": "The How — How You Win",
-    "display_width": null
-  },
-  {
-    "id": "5a1542a0-9553-4c49-b8a0-8bc1362e0509",
-    "name": "column_1_items",
-    "label": "Column 1 — Items",
-    "required": false,
-    "locked": false,
-    "occurrence": {
-      "min": null,
-      "max": null,
-      "default": 3
-    },
-    "children": [
-      {
-        "id": "a927c751-730e-4d4c-ab40-ff1a38be85e0",
-        "name": "number",
-        "label": "Number",
-        "required": false,
-        "locked": false,
-        "allow_new_line": false,
-        "type": "text",
-        "default": "1",
-        "display_width": null
-      },
-      {
-        "id": "e22f212c-9d4f-4a87-8b12-20d2dec6dad5",
-        "name": "title",
-        "label": "Title",
-        "required": false,
-        "locked": false,
-        "allow_new_line": false,
-        "type": "text",
-        "default": "Title",
-        "display_width": null
-      },
-      {
-        "id": "f6160c47-85fc-4aee-ae41-a4805a1177f1",
-        "name": "description",
-        "label": "Description",
-        "required": false,
-        "locked": false,
-        "type": "richtext",
-        "default": "<p>Description</p>",
-        "display_width": null
-      },
-      {
-        "id": "7aa9659b-22b2-4f9f-a01f-bba602d019d1",
-        "name": "circle_style",
-        "label": "Number Circle Style",
-        "required": false,
-        "locked": false,
-        "type": "choice",
-        "choices": [
-          [
-            "light",
-            "Light (white)"
-          ],
-          [
-            "accent",
-            "Accent (green)"
-          ]
-        ],
-        "display": "select",
-        "default": "light",
-        "display_width": null
-      }
-    ],
-    "tab": "CONTENT",
-    "expanded": false,
-    "type": "group",
-    "default": [
-      {
-        "number": "1",
-        "title": "<h6>People</h6>",
-        "description": "<p>The right humans in the right seats, leading the right numbers.</p>",
-        "circle_style": "light"
-      },
-      {
-        "number": "2",
-        "title": "<h6>Process</h6>",
-        "description": "<p>The marketing-to-sales handoff that doesn't leak.</p>",
-        "circle_style": "light"
-      },
-      {
-        "number": "3",
-        "title": "<h6>Platform</h6>",
-        "description": "<p>One source of truth, surfaced to everyone.</p>",
-        "circle_style": "light"
-      }
-    ],
-    "display_width": null
-  },
-  {
-    "id": "a14e8de8-cb69-429f-aef4-5d9262332045",
-    "name": "column_2_label",
-    "label": "Column 2 — Label",
-    "required": false,
-    "locked": false,
-    "allow_new_line": false,
-    "type": "text",
-    "default": "The What — What You'll Need",
-    "display_width": null
-  },
-  {
-    "id": "337b5f65-50fd-426d-9a89-0bc18e0602f6",
-    "name": "column_2_items",
-    "label": "Column 2 — Items",
-    "required": false,
-    "locked": false,
-    "occurrence": {
-      "min": null,
-      "max": null,
-      "default": 3
-    },
-    "children": [
-      {
-        "id": "3cd20eb2-3d10-4c6d-aa6d-105de9e4dc07",
-        "name": "number",
-        "label": "Number",
-        "required": false,
-        "locked": false,
-        "allow_new_line": false,
-        "type": "text",
-        "default": "4",
-        "display_width": null
-      },
-      {
-        "id": "08714b00-6ed9-4736-97dc-bab2ce111eee",
-        "name": "title",
-        "label": "Title",
-        "required": false,
-        "locked": false,
-        "allow_new_line": false,
-        "type": "text",
-        "default": "Title",
-        "display_width": null
-      },
-      {
-        "id": "c45b7c9f-ab92-4fb7-8286-0571e693e445",
-        "name": "description",
-        "label": "Description",
-        "required": false,
-        "locked": false,
-        "type": "richtext",
-        "default": "<p>Description</p>",
-        "display_width": null
-      },
-      {
-        "id": "9b8587d1-fbba-4706-8269-ffda13e1b8e7",
-        "name": "circle_style",
-        "label": "Number Circle Style",
-        "required": false,
-        "locked": false,
-        "type": "choice",
-        "choices": [
-          [
-            "light",
-            "Light (white)"
-          ],
-          [
-            "accent",
-            "Accent (green)"
-          ]
-        ],
-        "display": "select",
-        "default": "accent",
-        "display_width": null
-      }
-    ],
-    "tab": "CONTENT",
-    "expanded": false,
-    "type": "group",
-    "default": [
-      {
-        "number": "4",
-        "title": "<h6>Purpose</h6>",
-        "description": "<p>Market differentiation + go-to-market credibility.</p>",
-        "circle_style": "accent"
-      },
-      {
-        "number": "5",
-        "title": "<h6>Plan</h6>",
-        "description": "<p>Top, middle, and bottom of funnel as one revenue office. One calendar. One number.</p>",
-        "circle_style": "accent"
-      },
-      {
-        "number": "6",
-        "title": "<h6>Pipeline</h6>",
-        "description": "<p>Prospecting that fills it, pricing that protects profit.</p>",
-        "circle_style": "accent"
-      }
-    ],
-    "display_width": null
-  },
-  {
-    "id": "9d5b7cd0-4f0e-4705-81e6-6c9ace20b3c0",
-    "name": "style",
-    "label": "Style",
-    "required": false,
-    "locked": false,
-    "tab": "STYLE",
-    "type": "group",
-    "children": [
-      {
-        "id": "bd759751-868d-4f4f-9e15-72a1d50fb158",
-        "name": "spacing_desktop",
-        "label": "Spacing - Desktop",
-        "required": false,
-        "locked": false,
-        "type": "spacing",
-        "default": {
-          "padding": {
-            "top": {
-              "value": 96,
-              "units": "px"
-            },
-            "bottom": {
-              "value": 96,
-              "units": "px"
-            },
-            "left": {
-              "value": null,
-              "units": null
-            },
-            "right": {
-              "value": null,
-              "units": null
-            }
-          }
-        },
-        "display_width": null
-      },
-      {
-        "id": "67cba211-0ad0-4d77-b7f1-4670a7aa1908",
-        "name": "spacing_mobile",
-        "label": "Spacing - Mobile",
-        "required": false,
-        "locked": false,
-        "type": "spacing",
-        "default": {
-          "padding": {
-            "top": {
-              "value": 48,
-              "units": "px"
-            },
-            "bottom": {
-              "value": 48,
-              "units": "px"
-            },
-            "left": {
-              "value": null,
-              "units": null
-            },
-            "right": {
-              "value": null,
-              "units": null
-            }
-          }
-        },
-        "display_width": null
-      }
-    ],
-    "display_width": null
+[ {
+  "id" : "2c5dad1d-b197-41d5-a01f-f052b2aef147",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "six-ps"
+}, {
+  "id" : "bf594422-a5bd-4b55-bbb7-bd58f03d186c",
+  "name" : "background_image",
+  "label" : "Decorative Background Pattern (optional)",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "src" : "",
+    "alt" : ""
   }
-]
+}, {
+  "id" : "5d540ee6-8aa0-4d0a-886b-b80f3ac3a3d4",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "The Approach"
+}, {
+  "id" : "32f54295-a114-4949-9379-c82d46a757c2",
+  "name" : "heading",
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>The 6 Ps of Progress</h2>"
+}, {
+  "id" : "3c6e0e4c-7c5e-4d12-b0ab-36fba64c4790",
+  "name" : "lede",
+  "label" : "Lede",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Six things have to be true for a technology company to grow. Most get four right and bleed revenue on the other two. We diagnose all six in 30 minutes — whether you hire us or not.</p>"
+}, {
+  "id" : "a6247e0e-f478-400b-a4e7-4bdc271b042f",
+  "name" : "column_1_label",
+  "label" : "Column 1 — Label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "The How — How You Win"
+}, {
+  "id" : "5a1542a0-9553-4c49-b8a0-8bc1362e0509",
+  "name" : "column_1_items",
+  "label" : "Column 1 — Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "a927c751-730e-4d4c-ab40-ff1a38be85e0",
+    "name" : "number",
+    "label" : "Number",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "1"
+  }, {
+    "id" : "e22f212c-9d4f-4a87-8b12-20d2dec6dad5",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Title"
+  }, {
+    "id" : "f6160c47-85fc-4aee-ae41-a4805a1177f1",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Description</p>"
+  }, {
+    "id" : "7aa9659b-22b2-4f9f-a01f-bba602d019d1",
+    "name" : "circle_style",
+    "label" : "Number Circle Style",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "light", "Light (white)" ], [ "accent", "Accent (green)" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "light"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "number" : "1",
+    "title" : "<h6>People</h6>",
+    "description" : "<p>The right humans in the right seats, leading the right numbers.</p>",
+    "circle_style" : "light"
+  }, {
+    "number" : "2",
+    "title" : "<h6>Process</h6>",
+    "description" : "<p>The marketing-to-sales handoff that doesn't leak.</p>",
+    "circle_style" : "light"
+  }, {
+    "number" : "3",
+    "title" : "<h6>Platform</h6>",
+    "description" : "<p>One source of truth, surfaced to everyone.</p>",
+    "circle_style" : "light"
+  } ]
+}, {
+  "id" : "a14e8de8-cb69-429f-aef4-5d9262332045",
+  "name" : "column_2_label",
+  "label" : "Column 2 — Label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "The What — What You'll Need"
+}, {
+  "id" : "337b5f65-50fd-426d-9a89-0bc18e0602f6",
+  "name" : "column_2_items",
+  "label" : "Column 2 — Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "3cd20eb2-3d10-4c6d-aa6d-105de9e4dc07",
+    "name" : "number",
+    "label" : "Number",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "4"
+  }, {
+    "id" : "08714b00-6ed9-4736-97dc-bab2ce111eee",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Title"
+  }, {
+    "id" : "c45b7c9f-ab92-4fb7-8286-0571e693e445",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Description</p>"
+  }, {
+    "id" : "9b8587d1-fbba-4706-8269-ffda13e1b8e7",
+    "name" : "circle_style",
+    "label" : "Number Circle Style",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "light", "Light (white)" ], [ "accent", "Accent (green)" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "accent"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "number" : "4",
+    "title" : "<h6>Purpose</h6>",
+    "description" : "<p>Market differentiation + go-to-market credibility.</p>",
+    "circle_style" : "accent"
+  }, {
+    "number" : "5",
+    "title" : "<h6>Plan</h6>",
+    "description" : "<p>Top, middle, and bottom of funnel as one revenue office. One calendar. One number.</p>",
+    "circle_style" : "accent"
+  }, {
+    "number" : "6",
+    "title" : "<h6>Pipeline</h6>",
+    "description" : "<p>Prospecting that fills it, pricing that protects profit.</p>",
+    "circle_style" : "accent"
+  } ]
+}, {
+  "id" : "b1a2c3d4-5566-4e7f-8899-aabbccddeeff",
+  "name" : "show_quote",
+  "label" : "Show Closing Quote",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : false
+}, {
+  "id" : "c2b3d4e5-6677-4f88-99aa-bbccddeeff00",
+  "name" : "quote_text",
+  "label" : "Closing Quote (rich text)",
+  "help_text" : "Only shown when \"Show Closing Quote\" is on. Wrap the highlighted phrase in a span/strong with class numbered-columns-dark__quote-highlight to color it green.",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Referrals built your business. <strong class=\"numbered-columns-dark__quote-highlight\">They won't get you to the next stage on their own.</strong> The 6 Ps are the diagnostic; your P.A.T.H. Forward is the plan we build from what it finds.</p>"
+}, {
+  "id" : "9d5b7cd0-4f0e-4705-81e6-6c9ace20b3c0",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "d3c4e5f6-7788-4a99-aabb-ccddeeff0011",
+    "name" : "version",
+    "label" : "Style Version",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "v1", "Version 1 (current)" ], [ "v2", "Version 2 (Syracuse)" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "v1"
+  }, {
+    "id" : "bd759751-868d-4f4f-9e15-72a1d50fb158",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 96,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 96,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "67cba211-0ad0-4d77-b7f1-4670a7aa1908",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 48,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 48,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

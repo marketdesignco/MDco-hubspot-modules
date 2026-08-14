@@ -1,0 +1,41 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .faq-accordion {
+    background: #F8F6FC;
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 991px) {
+    .faq-accordion { {{ module.style.spacing_mobile.css }} }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="faq-accordion"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    {% if module.eyebrow %}<div class="faq-accordion__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+    {{ module.heading }}
+
+    <div class="faq-accordion__list">
+      {% for item in module.items %}
+      <div class="faq-accordion__item">
+        <button type="button"
+                class="faq-accordion__question"
+                aria-expanded="false"
+                aria-controls="{{ module.section_id }}-answer-{{ loop.index }}"
+                id="{{ module.section_id }}-question-{{ loop.index }}">
+          <span>{{ item.question }}</span>
+          <span class="faq-accordion__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-accordion__answer"
+             id="{{ module.section_id }}-answer-{{ loop.index }}"
+             role="region"
+             aria-labelledby="{{ module.section_id }}-question-{{ loop.index }}">
+          {{ item.answer }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

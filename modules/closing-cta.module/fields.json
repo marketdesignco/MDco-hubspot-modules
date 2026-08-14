@@ -60,6 +60,19 @@
         }
       }
     }
+  }, {
+    "id" : "d4e5f6a7-b8c9-4012-9def-0123456789ab",
+    "name" : "background_override",
+    "label" : "Background Override (leave empty to keep the default gradient)",
+    "help_text" : "Leave empty to use the theme's default gradient background. Set a color here to override it with a solid color for this instance.",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "",
+      "opacity" : 100
+    }
   } ],
   "tab" : "STYLE",
   "expanded" : false,
@@ -155,7 +168,7 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "cta-white", "White" ], [ "cta-white-outline", "White Outline" ] ],
+    "choices" : [ [ "cta-white", "White" ], [ "cta-white-outline", "White Outline" ], [ "cta-purple-v2", "Primary (purple)" ], [ "cta-pink-v2", "Primary (pink)" ], [ "cta-white-v2", "White (v2)" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
@@ -329,4 +342,25 @@
   }, {
     "text" : "Confidential interviews"
   } ]
+}, {
+  "id" : "a1b2c3d4-e5f6-4789-9abc-def012345678",
+  "name" : "show_watermark",
+  "label" : "Show Background Watermark",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : false
+}, {
+  "id" : "b2c3d4e5-f6a7-4890-abcd-ef0123456789",
+  "name" : "watermark_text",
+  "label" : "Watermark Text",
+  "help_text" : "Only shown when \"Show Background Watermark\" is on. Renders as a giant, low-opacity word behind the heading.",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : ""
 } ]

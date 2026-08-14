@@ -2,7 +2,7 @@
 <style>
 	{% scope_css %}
   .cta-section{
-   background: linear-gradient(270deg, #7EDB00 0%, #7209B7 36.26%, #3A0CA3 70.47%, #F72585 100%);
+   background: {% if module.style.background_override.color %}{{ module.style.background_override.color }}{% else %}linear-gradient(270deg, #7EDB00 0%, #7209B7 36.26%, #3A0CA3 70.47%, #F72585 100%){% endif %};
 {{ module.style.spacing_desktop.css }};
   }
   @media (max-width:768px){
@@ -17,6 +17,9 @@
 <section class="cta-section" {% if module.section_id %}id="{{ module.section_id }}"{% endif %}>
   <div class="cta-glow-top" aria-hidden="true"></div>
   <div class="cta-glow-bottom" aria-hidden="true"></div>
+  {% if module.show_watermark and module.watermark_text %}
+  <div class="cta-watermark" aria-hidden="true">{{ module.watermark_text }}</div>
+  {% endif %}
 
   <div class="content-wrapper">
     <div class="cta-inner">

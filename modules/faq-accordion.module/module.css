@@ -1,0 +1,98 @@
+/* faq-accordion — static styles */
+.faq-accordion__eyebrow {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #F72585;
+  margin-bottom: 14px;
+}
+
+.faq-accordion h2 {
+  color: #3A0CA3;
+  margin: 0 0 40px;
+}
+
+.faq-accordion__list {
+  border-top: 1px solid #E4DCEF;
+}
+
+.faq-accordion__item {
+  border-bottom: 1px solid #E4DCEF;
+}
+
+.faq-accordion__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  padding: 24px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 18px;
+  color: #3A0CA3;
+}
+
+/* Neutralize the theme's global button:hover/:focus styling — this is a
+   native <button> for accessibility, not a themed CTA button. */
+.faq-accordion__question:hover,
+.faq-accordion__question:focus {
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: #3A0CA3;
+}
+
+.faq-accordion__icon {
+  position: relative;
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+
+.faq-accordion__icon::before,
+.faq-accordion__icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #7209B7;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+
+.faq-accordion__icon::before {
+  width: 16px;
+  height: 2px;
+}
+
+.faq-accordion__icon::after {
+  width: 2px;
+  height: 16px;
+}
+
+.faq-accordion__item.is-open .faq-accordion__icon {
+  transform: rotate(45deg);
+}
+
+.faq-accordion__answer {
+  display: none;
+  padding: 0 0 24px;
+  color: #4A4A63;
+  max-width: 900px;
+}
+
+.faq-accordion__answer p {
+  margin: 0;
+}
+
+.faq-accordion__item.is-open .faq-accordion__answer {
+  display: block;
+}

@@ -1,0 +1,65 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .hero-gradient {
+    background: linear-gradient(155deg,
+      {{ module.style.background_gradient_start.color }} 0%,
+      {{ module.style.background_gradient_mid.color }} 55%,
+      {{ module.style.background_gradient_end.color }} 100%);
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 768px) {
+    .hero-gradient { {{ module.style.spacing_mobile.css }} }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="hero-gradient"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    <div class="hero-gradient__inner">
+      {% if module.badge_text %}
+      <div class="hero-gradient__badge">
+        <span class="hero-gradient__dot" aria-hidden="true"></span>{{ module.badge_text }}
+      </div>
+      {% endif %}
+
+      {{ module.headline }}
+
+      {% if module.lede %}<div class="hero-gradient__lede">{{ module.lede }}</div>{% endif %}
+
+      <div class="hero-gradient__actions">
+        {% for btn in module.actions %}
+          {% if btn.show %}
+          <div class="custom-cta {{ btn.style }}">
+            {% if btn.link.url.href %}
+              {% set href = btn.link.url.href %}
+              {% if btn.link.url.type is equalto "EMAIL_ADDRESS" %}{% set href = "mailto:" + href %}
+              {% elif btn.link.url.type is equalto "PHONE_NUMBER" %}{% set href = "tel:" + href %}{% endif %}
+              <a href="{{ href|escape_url }}"
+                 {% if btn.link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if btn.link.rel %}rel="{{ btn.link.rel|escape_attr }}"{% endif %}>{{ btn.text }}</a>
+            {% elif btn.cta %}
+              {% cta guid="{{ btn.cta }}" %}
+            {% endif %}
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      {% if module.show_stats and module.stats %}
+      <div class="hero-gradient__stats-wrap">
+        <hr class="hero-gradient__divider">
+        <div class="hero-gradient__stats">
+          {% for stat in module.stats %}
+          <div class="hero-gradient__stat">
+            <h5 class="hero-gradient__stat-label">{{ stat.stat_label }}</h5>
+            <p class="hero-gradient__stat-description">{{ stat.stat_description }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,245 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "what-we-do"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "WHAT WE DO"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>Consulting, creative, and execution under one roof.</h2>"
+}, {
+  "id" : "intro",
+  "name" : "intro",
+  "label" : "Intro",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>Every engagement is audit-based and consultant-led. These are the service lines the audit scopes into, sized to what your company actually needs next.</p>"
+}, {
+  "id" : "cards",
+  "name" : "cards",
+  "label" : "Service Cards",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 12,
+    "sorting_label_field" : null,
+    "default" : 6
+  },
+  "children" : [ {
+    "id" : "cards.tag",
+    "name" : "tag",
+    "label" : "Tag",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Visibility"
+  }, {
+    "id" : "cards.title",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Title"
+  }, {
+    "id" : "cards.description",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Description</p>"
+  }, {
+    "id" : "cards.items",
+    "name" : "items",
+    "label" : "Items",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 4
+    },
+    "children" : [ {
+      "id" : "cards.items.text",
+      "name" : "text",
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "Item"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : [ {
+      "text" : "Item one"
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "tag" : "Visibility",
+    "title" : "Found First - AI + Search Visibility",
+    "description" : "<p>Buyers research you in ChatGPT, Perplexity, and Gemini before they ask a peer. Found First aligns your web foundation, SEO, AEO, and GEO so you get found and cited.</p>",
+    "items" : [ {
+      "text" : "Technical foundation + AI-crawler-ready architecture"
+    }, {
+      "text" : "Pillar pages, FAQ infrastructure, schema markup"
+    }, {
+      "text" : "Entity + authority signals across the web"
+    }, {
+      "text" : "AI citation monitoring + reporting"
+    } ]
+  }, {
+    "tag" : "Platform",
+    "title" : "HubSpot + Revenue Operations",
+    "description" : "<p>As a HubSpot Platinum Partner, we build the one source of truth your team will actually use, and connect it to the systems you already run.</p>",
+    "items" : [ {
+      "text" : "HubSpot implementation, migration + optimization"
+    }, {
+      "text" : "Lifecycle stages, lead scoring + workflow architecture"
+    }, {
+      "text" : "Integrations: Salesforce, Dynamics, ConnectWise, Autotask"
+    }, {
+      "text" : "Attribution + revenue dashboards leadership trusts"
+    } ]
+  }, {
+    "tag" : "Purpose",
+    "title" : "Brand + Go-to-Market",
+    "description" : "<p>Positioning, story, and the site that carries them. What makes you the obvious choice, said in language your buyer repeats back to you.</p>",
+    "items" : [ {
+      "text" : "Positioning, ICP + persona definition"
+    }, {
+      "text" : "StoryBrand messaging + brand identity"
+    }, {
+      "text" : "Website design + conversion build"
+    }, {
+      "text" : "Sales collateral that matches the pitch"
+    } ]
+  }, {
+    "tag" : "Pipeline",
+    "title" : "Demand Generation + Sales Enablement",
+    "description" : "<p>Marketing and sales run as one revenue office: campaigns that fill the funnel and a handoff that doesn't leak on the way to a close.</p>",
+    "items" : [ {
+      "text" : "Full-funnel campaigns, paid media + ABM"
+    }, {
+      "text" : "Content, email + nurture programs"
+    }, {
+      "text" : "Marketing-to-sales handoff + process alignment"
+    }, {
+      "text" : "Pricing and proposal support that protects margin"
+    } ]
+  }, {
+    "tag" : "People",
+    "title" : "Fractional CMO + Advisory",
+    "description" : "<p>Senior leadership without a senior hire. We sit in your leadership meetings, own the number with you, and coach the team you already have.</p>",
+    "items" : [ {
+      "text" : "Fractional CMO / marketing leadership"
+    }, {
+      "text" : "Team structure, hiring + scorecards"
+    }, {
+      "text" : "Quarterly business reviews against goals"
+    }, {
+      "text" : "Budget planning tied to pipeline targets"
+    } ]
+  }, {
+    "tag" : "Authority",
+    "title" : "V.O.I.C.E. - Executive Thought Leadership",
+    "description" : "<p>In a market this relationship-driven, the founder is the brand. V.O.I.C.E. turns your leaders into the recognized experts buyers already follow.</p>",
+    "items" : [ {
+      "text" : "Personal brand baseline audit + scorecard"
+    }, {
+      "text" : "Point of view, content pillars + posting cadence"
+    }, {
+      "text" : "LinkedIn programs written in the executive's voice"
+    }, {
+      "text" : "Earned media, awards + speaking placement"
+    } ]
+  } ]
+}, {
+  "id" : "closing_note",
+  "name" : "closing_note",
+  "label" : "Closing Note (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>These are not tiers on a menu. The diagnostic decides the order, because the 6 Ps compound: platform work underperforms without process, and demand generation underperforms without purpose. We tell you which two are costing you growth first.</p>"
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

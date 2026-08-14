@@ -1,0 +1,33 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .process-steps-cards {
+    background: #F8F6FC;
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 991px) {
+    .process-steps-cards { {{ module.style.spacing_mobile.css }} }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="process-steps-cards"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    <div class="process-steps-cards__intro">
+      {% if module.eyebrow %}<div class="process-steps-cards__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      {{ module.heading }}
+      {% if module.lede %}<div class="process-steps-cards__lede">{{ module.lede }}</div>{% endif %}
+    </div>
+
+    <div class="process-steps-cards__grid">
+      {% for step in module.steps %}
+      <div class="process-steps-cards__card">
+        <div class="process-steps-cards__num">{{ step.number }}</div>
+        <h6 class="process-steps-cards__title">{{ step.title }}</h6>
+        <div class="process-steps-cards__body">{{ step.description }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

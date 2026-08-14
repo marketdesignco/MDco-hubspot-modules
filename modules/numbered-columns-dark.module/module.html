@@ -12,7 +12,7 @@
   {% end_scope_css %}
 </style>
 {% end_require_css %}
-<section class="numbered-columns-dark"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+<section class="numbered-columns-dark{% if module.style.version == "v2" %} numbered-columns-dark--v2{% endif %}"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
   {% if module.background_image.src %}
     <img class="numbered-columns-dark__pattern" src="{{ module.background_image.src }}" alt="" loading="lazy">
   {% endif %}
@@ -52,5 +52,8 @@
         </div>
       </div>
     </div>
+    {% if module.show_quote and module.quote_text %}
+    <div class="numbered-columns-dark__quote">{{ module.quote_text }}</div>
+    {% endif %}
   </div>
 </section>

@@ -1,0 +1,190 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "why-mdco"
+}, {
+  "id" : "eyebrow",
+  "name" : "eyebrow",
+  "label" : "Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "WHY MARKETDESIGN"
+}, {
+  "id" : "heading",
+  "name" : "heading",
+  "label" : "Heading (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h2>We win because we've been in your shoes.</h2>"
+}, {
+  "id" : "reasons",
+  "name" : "reasons",
+  "label" : "Reasons (numbered)",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 8,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "reasons.title",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Title"
+  }, {
+    "id" : "reasons.description",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Description</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "Consultants who've carried the number",
+    "description" : "<p>Our team has run marketing and sales inside MSPs, VARs, and solution providers, from the revenue office to the C-suite. We've lived the same sales cycles, margin pressure, and vendor relationships you navigate today.</p>"
+  }, {
+    "title" : "We diagnose growth like engineers",
+    "description" : "<p>Six things have to be aligned for a tech company to grow. We connect the what (People, Process, Platform) to the how (Purpose, Plan, Pipeline) and name the gap plainly, including what doing nothing costs.</p>"
+  }, {
+    "title" : "Strategy and execution in one team",
+    "description" : "<p>You get the thinking and the doing from the same people. No plan handed off to a junior team, no whiteboard that never ships.</p>"
+  }, {
+    "title" : "One industry, on purpose",
+    "description" : "<p>We only work with technology companies. That focus is why the buyer research, the content formats, and the platform integrations are calibrated to your market instead of borrowed from someone else's.</p>"
+  } ]
+}, {
+  "id" : "card_heading",
+  "name" : "card_heading",
+  "label" : "Card Heading (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h5>We understand the business of tech, <span style=\"color: #7209b7;\">not just the mechanics of marketing it.</span></h5>"
+}, {
+  "id" : "card_description",
+  "name" : "card_description",
+  "label" : "Card Description (rich text)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>MDCo is a boutique consulting firm working with technology companies that want consistent, measurable results over one-time wins. Two decades in this industry, a Syracuse address, and a diagnostic that starts before you've spent a dollar. Where perspective meets proof.</p>"
+}, {
+  "id" : "style_cta",
+  "name" : "style_cta",
+  "label" : "Button Style",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "cta-purple-v2", "Primary (purple)" ], [ "cta-pink-v2", "Primary (pink)" ], [ "cta-white-v2", "White" ], [ "cta-white-outline", "Secondary (outline)" ], [ "cta-primary", "Theme Primary" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "cta-purple-v2"
+}, {
+  "id" : "cta",
+  "name" : "cta",
+  "label" : "HubSpot CTA",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "display_width" : null
+}, {
+  "id" : "link_field",
+  "name" : "link_field",
+  "label" : "Link (optional — overrides the HubSpot CTA above if set)",
+  "help_text" : "Optional. If set, renders a plain link button using this URL and the text below instead of the HubSpot CTA above. Leave empty to keep using the HubSpot CTA.",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : "#contact"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "text_field",
+  "name" : "text_field",
+  "label" : "Text (used with the link override above)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Start the conversation"
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 96, "units" : "px" },
+        "bottom" : { "value" : 96, "units" : "px" }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 48, "units" : "px" },
+        "bottom" : { "value" : 48, "units" : "px" }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

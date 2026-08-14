@@ -1,0 +1,286 @@
+[ {
+  "id" : "section_id",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "hero"
+}, {
+  "id" : "badge_text",
+  "name" : "badge_text",
+  "label" : "Badge Text",
+  "help_text" : "Rendered next to a fixed decorative dot — do not type a bullet character.",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "SYRACUSE, NY · CLINTON SQUARE"
+}, {
+  "id" : "headline",
+  "name" : "headline",
+  "label" : "Headline (rich text — use strong for the highlighted line)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h1>Growth isn't an accident. <strong>It's a system.</strong></h1>"
+}, {
+  "id" : "lede",
+  "name" : "lede",
+  "label" : "Lede",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>You saw the billboard. Here's what's behind it: MarketDesign Co. is the consulting-led growth partner for technology companies, headquartered right here in Central New York. We understand the business of tech, not just the mechanics of marketing it.</p>"
+}, {
+  "id" : "actions",
+  "name" : "actions",
+  "label" : "Buttons",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "actions.style",
+    "name" : "style",
+    "label" : "Style",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "cta-pink-v2", "Primary (pink)" ], [ "cta-purple-v2", "Primary (purple)" ], [ "cta-white-v2", "White" ], [ "cta-white-outline", "Secondary (outline)" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "cta-pink-v2"
+  }, {
+    "id" : "actions.cta",
+    "name" : "cta",
+    "label" : "HubSpot CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "display_width" : null
+  }, {
+    "id" : "actions.text",
+    "name" : "text",
+    "label" : "Text (used with the link override below)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Book a Free Consultation"
+  }, {
+    "id" : "actions.link",
+    "name" : "link",
+    "label" : "Link (optional — overrides the HubSpot CTA above if set)",
+    "help_text" : "Optional. If set, renders a plain link button using this URL and the text above instead of the HubSpot CTA above. Leave empty to keep using the HubSpot CTA.",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "CALL_TO_ACTION", "PHONE_NUMBER" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "type" : "EXTERNAL",
+        "href" : "#cta"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "actions.show",
+    "name" : "show",
+    "label" : "Show this button",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "text" : "Book a Free Consultation",
+    "link" : {
+      "url" : {
+        "type" : "EXTERNAL",
+        "href" : "#cta"
+      }
+    },
+    "style" : "cta-pink-v2",
+    "show" : true
+  }, {
+    "text" : "See the 6 Ps of Progress",
+    "link" : {
+      "url" : {
+        "type" : "EXTERNAL",
+        "href" : "#six-ps"
+      }
+    },
+    "style" : "cta-white-outline",
+    "show" : true
+  } ]
+}, {
+  "id" : "show_stats",
+  "name" : "show_stats",
+  "label" : "Show Stats Row",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : true
+}, {
+  "id" : "stats",
+  "name" : "stats",
+  "label" : "Stats",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "stats.stat_label",
+    "name" : "stat_label",
+    "label" : "Label",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Syracuse"
+  }, {
+    "id" : "stats.stat_description",
+    "name" : "stat_description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Headquartered at 100 Clinton Square, downtown"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "stat_label" : "Syracuse",
+    "stat_description" : "Headquartered at 100 Clinton Square, downtown"
+  }, {
+    "stat_label" : "Two decades",
+    "stat_description" : "Inside marketing and sales seats at technology companies"
+  }, {
+    "stat_label" : "Platinum",
+    "stat_description" : "HubSpot Partner, multi-certified"
+  } ]
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.background_gradient_start",
+    "name" : "background_gradient_start",
+    "label" : "Bg Gradient Start",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.background_gradient_mid",
+    "name" : "background_gradient_mid",
+    "label" : "Bg Gradient Middle",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#7209B7",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.background_gradient_end",
+    "name" : "background_gradient_end",
+    "label" : "Bg Gradient End",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.spacing_desktop",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 120,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 100,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "style.spacing_mobile",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 72,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 56,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null
+} ]

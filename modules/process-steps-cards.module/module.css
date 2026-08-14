@@ -1,0 +1,75 @@
+/* process-steps-cards — static styles */
+.process-steps-cards__intro {
+  max-width: 720px;
+}
+
+.process-steps-cards__eyebrow {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #F72585;
+  margin-bottom: 14px;
+}
+
+.process-steps-cards__intro h2 {
+  color: #3A0CA3;
+  margin: 0 0 16px;
+}
+
+.process-steps-cards__lede {
+  color: #4A4A63;
+}
+
+.process-steps-cards__lede p {
+  margin: 0;
+}
+
+.process-steps-cards__grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.process-steps-cards__card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.process-steps-cards__num {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 900;
+  font-size: 15px;
+  color: #7209B7;
+  border: 2px solid #7209B7;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.process-steps-cards__title {
+  color: #3A0CA3;
+  margin: 0 0 10px;
+}
+
+.process-steps-cards__body {
+  color: #4A4A63;
+}
+
+.process-steps-cards__body p {
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .process-steps-cards__grid {
+    grid-template-columns: 1fr;
+  }
+}
