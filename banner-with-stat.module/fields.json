@@ -1,0 +1,270 @@
+[ {
+  "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c8d",
+  "name" : "section_id",
+  "label" : "Id Section (menu anchor)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "hero"
+}, {
+  "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c8e",
+  "name" : "kicker_eyebrow",
+  "label" : "Kicker — Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "The MarketDesign story"
+}, {
+  "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c8f",
+  "name" : "kicker_label",
+  "label" : "Kicker — Label",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "For the people running IT companies"
+}, {
+  "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c90",
+  "name" : "heading",
+  "label" : "Heading (rich text — use strong for the accent character)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<h1>Growth isn't an accident. It's a system<strong>.</strong></h1>"
+}, {
+  "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c91",
+  "name" : "description",
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>You built a technology company that works. Now you need it to grow without depending on who you happen to know — and you need to prove it with a number, not a feeling. <strong>That is a system problem, and systems can be built.</strong></p>"
+}, {
+  "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c92",
+  "name" : "ctas",
+  "label" : "CTAs",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : 3,
+    "sorting_label_field" : null,
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c93",
+    "name" : "style_cta",
+    "label" : "Style",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "cta-primary-outline", "Primary Outline" ], [ "cta-primary", "Primary" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "cta-primary-outline"
+  }, {
+    "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c94",
+    "name" : "cta",
+    "label" : "HubSpot CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "display_width" : null
+  }, {
+    "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c95",
+    "name" : "link_field",
+    "label" : "Link (optional — overrides the HubSpot CTA above if set)",
+    "help_text" : "Optional. If set, renders a plain link button using this URL and the text below instead of the HubSpot CTA above. Leave empty to keep using the HubSpot CTA.",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "" },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c96",
+    "name" : "text_field",
+    "label" : "Text (used with the link override above)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "See the 6 Ps"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "style_cta" : "cta-primary-outline",
+    "link_field" : { "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "/6ps" }, "open_in_new_tab" : false, "no_follow" : false },
+    "text_field" : "See the 6 Ps"
+  }, {
+    "style_cta" : "cta-primary",
+    "link_field" : { "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "/contact" }, "open_in_new_tab" : false, "no_follow" : false },
+    "text_field" : "Get a Little Free Consulting"
+  } ]
+}, {
+  "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c97",
+  "name" : "note_text",
+  "label" : "Note (below the CTAs)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Thirty minutes with a consultant. Whether you hire us or not."
+}, {
+  "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c98",
+  "name" : "stats",
+  "label" : "Stat Row",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : 8,
+    "sorting_label_field" : null,
+    "default" : 7
+  },
+  "children" : [ {
+    "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c99",
+    "name" : "stat_value",
+    "label" : "Value",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "40"
+  }, {
+    "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c9a",
+    "name" : "stat_suffix",
+    "label" : "Suffix (optional)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c9b",
+    "name" : "stat_label",
+    "label" : "Label",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Technology clients served"
+  }, {
+    "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c9c",
+    "name" : "is_tier",
+    "label" : "Render as a tier/word value (not a number)",
+    "help_text" : "Turn on for cells like \"Platinum\" — shrinks the value to fit long words instead of using the large number treatment.",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "stat_value" : "40", "stat_suffix" : "", "stat_label" : "Technology clients served", "is_tier" : false
+  }, {
+    "stat_value" : "35", "stat_suffix" : "", "stat_label" : "HubSpot onboardings + migrations", "is_tier" : false
+  }, {
+    "stat_value" : "28", "stat_suffix" : "", "stat_label" : "Service + offers developed", "is_tier" : false
+  }, {
+    "stat_value" : "24", "stat_suffix" : "", "stat_label" : "Brand + rebrand engagements", "is_tier" : false
+  }, {
+    "stat_value" : "24", "stat_suffix" : "", "stat_label" : "Website builds + refreshes", "is_tier" : false
+  }, {
+    "stat_value" : "20", "stat_suffix" : "", "stat_label" : "Persona-based content strategies", "is_tier" : false
+  }, {
+    "stat_value" : "Platinum", "stat_suffix" : "", "stat_label" : "HubSpot Partner tier", "is_tier" : true
+  } ]
+}, {
+  "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c9d",
+  "name" : "style",
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c9e",
+    "name" : "spacing_desktop",
+    "label" : "Spacing - Desktop",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 72, "units" : "px" },
+        "bottom" : { "value" : 0, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  }, {
+    "id" : "c9d1e2f3-1010-4a1b-8c2d-3e4f5a6b7c9f",
+    "name" : "spacing_mobile",
+    "label" : "Spacing - Mobile",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "display_width" : null,
+    "default" : {
+      "padding" : {
+        "top" : { "value" : 44, "units" : "px" },
+        "bottom" : { "value" : 0, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "spacing_desktop" : {
+      "padding" : {
+        "top" : { "value" : 72, "units" : "px" },
+        "bottom" : { "value" : 0, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    },
+    "spacing_mobile" : {
+      "padding" : {
+        "top" : { "value" : 44, "units" : "px" },
+        "bottom" : { "value" : 0, "units" : "px" },
+        "left" : { "value" : null, "units" : null },
+        "right" : { "value" : null, "units" : null }
+      }
+    }
+  }
+} ]

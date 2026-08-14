@@ -1,0 +1,80 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .banner-with-stat{
+    background: #fff;
+    border-bottom: 3px solid #3A0CA3;
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:991px){
+    .banner-with-stat{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="banner-with-stat"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+
+    {% if module.kicker_eyebrow or module.kicker_label %}
+    <div class="banner-with-stat__kicker">
+      {% if module.kicker_eyebrow %}<span class="banner-with-stat__kicker-eyebrow">{{ module.kicker_eyebrow }}</span>{% endif %}
+      <span class="banner-with-stat__kicker-rule" aria-hidden="true"></span>
+      {% if module.kicker_label %}<span class="banner-with-stat__kicker-label">{{ module.kicker_label }}</span>{% endif %}
+    </div>
+    {% endif %}
+
+    <div class="banner-with-stat__heading">{{ module.heading }}</div>
+
+    <div class="banner-with-stat__sub">
+      {% if module.description %}<div class="banner-with-stat__description">{{ module.description }}</div>{% endif %}
+
+      <div class="banner-with-stat__actions">
+        {% if module.ctas %}
+        <div class="banner-with-stat__ctas">
+          {% for item in module.ctas %}
+          <div class="custom-cta {{ item.style_cta }}">
+            {% if item.link_field.url.href %}
+              {% set href = item.link_field.url.href %}
+              {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+              {% elif item.link_field.url.type is equalto "PHONE_NUMBER" %}
+                {% set href = "tel:" + href %}
+              {% endif %}
+              <a
+                {% if item.link_field.url.type is equalto "CALL_TO_ACTION" %}
+                  href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+                {% else %}
+                  href="{{ href|escape_url }}"
+                {% endif %}
+                {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                {% if item.link_field.rel %}rel="{{ item.link_field.rel|escape_attr }}"{% endif %}
+                >
+                {{ item.text_field }}
+              </a>
+            {% elif item.cta %}
+              {% cta guid="{{ item.cta }}" %}
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if module.note_text %}<span class="banner-with-stat__note">{{ module.note_text }}</span>{% endif %}
+      </div>
+    </div>
+
+    {% if module.stats %}
+    <div class="banner-with-stat__band">
+      {% for item in module.stats %}
+      <div class="banner-with-stat__cell{% if item.is_tier %} banner-with-stat__cell--tier{% endif %}">
+        <div class="banner-with-stat__num">{{ item.stat_value }}{{ item.stat_suffix }}</div>
+        <div class="banner-with-stat__label">{{ item.stat_label }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </div>
+</section>
