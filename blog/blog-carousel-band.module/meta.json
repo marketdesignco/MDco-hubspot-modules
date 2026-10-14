@@ -1,0 +1,17 @@
+{
+  "global": false,
+  "content_types": [
+    "LANDING_PAGE",
+    "SITE_PAGE",
+    "BLOG_LISTING",
+    "BLOG_POST"
+  ],
+  "host_template_types": [
+    "PAGE",
+    "BLOG_LISTING",
+    "BLOG_POST"
+  ],
+  "label": "Blog Carousel Band",
+  "help_text": "Deep purple band with a horizontally scrolling row of the most recent posts. Posts load from the selected blog.",
+  "is_available_for_new_content": true
+}

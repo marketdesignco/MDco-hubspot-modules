@@ -1,0 +1,310 @@
+[
+  {
+    "id": "ed30603c-89a8-4a81-a1ea-015744d5830b",
+    "name": "blog",
+    "label": "Blog to pull posts from",
+    "required": true,
+    "locked": false,
+    "help_text": "Posts are loaded automatically (most recent first) from the selected blog.",
+    "type": "blog",
+    "display_width": null,
+    "default": "default"
+  },
+  {
+    "id": "574a1b25-e3e2-4989-98e5-f05e6aaa8a55",
+    "name": "post_count",
+    "label": "Number of posts",
+    "required": false,
+    "locked": false,
+    "help_text": "Cards scroll horizontally with snap.",
+    "type": "number",
+    "min": 3,
+    "max": 12,
+    "step": 1,
+    "display_width": null,
+    "default": 6
+  },
+  {
+    "id": "a1c831c3-ef71-49df-824e-669e3bf54850",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "From the Blog"
+  },
+  {
+    "id": "6668a7e7-edac-4530-880d-66738c8301a9",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Latest Insights"
+  },
+  {
+    "id": "6839053c-3d43-456e-a0a0-6efee388e3e8",
+    "name": "card_link_text",
+    "label": "Card link text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Read →"
+  },
+  {
+    "id": "3ca9e7bb-36ce-4260-8e8f-8f7bb3d6b18d",
+    "name": "show_read_time",
+    "label": "Show read time",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "812e93bc-8d2b-411a-952f-ed9f4bea589d",
+    "name": "show_cta",
+    "label": "Show CTA button",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "d8929d0e-af2f-47dc-9933-a8332d6823c6",
+    "name": "cta",
+    "label": "CTA button",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "a6db2b3c-b94c-4102-9a03-6bd1108f5c12",
+        "name": "style_cta",
+        "label": "Style",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "cta-purple-v2",
+            "Primary (purple)"
+          ],
+          [
+            "cta-pink-v2",
+            "Primary (pink)"
+          ],
+          [
+            "cta-white-v2",
+            "White"
+          ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "display_width": null,
+        "default": "cta-white-v2"
+      },
+      {
+        "id": "ee0767cf-f32b-4ed1-87c9-d8b7140cf0af",
+        "name": "link_field",
+        "label": "Link",
+        "required": false,
+        "locked": false,
+        "help_text": "Leave empty to link to the selected blog's listing page automatically. Set a link here to override it.",
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "BLOG"
+        ],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "id": "2146b6ea-5ba3-486d-99c8-256fbe9292aa",
+        "name": "text_field",
+        "label": "Text",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "View All Insights →"
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "visibility": {
+      "controlling_field": "show_cta",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    },
+    "default": {
+      "style_cta": "cta-white-v2",
+      "link_field": {
+        "url": {
+          "content_id": null,
+          "type": "EXTERNAL",
+          "href": ""
+        },
+        "open_in_new_tab": false,
+        "no_follow": false
+      },
+      "text_field": "View All Insights →"
+    }
+  },
+  {
+    "id": "e2b51a6d-4d4a-4e4a-a54d-2436cfd85bc6",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "e22409bf-13fd-48d6-be8a-21bd373a3b13",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 72,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 72,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      },
+      {
+        "id": "c82df8d1-5404-4701-90ec-a899edc7a4ba",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 40,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 40,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      },
+      {
+        "id": "d232cf08-d5a0-419f-87c7-751668fadeee",
+        "name": "background_color",
+        "label": "Background color",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "display_width": null,
+        "default": {
+          "color": "#3A0CA3",
+          "opacity": 100
+        }
+      }
+    ],
+    "tab": "STYLE",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": {
+      "spacing_desktop": {
+        "padding": {
+          "top": {
+            "value": 72,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 72,
+            "units": "px"
+          },
+          "left": {
+            "value": null,
+            "units": null
+          },
+          "right": {
+            "value": null,
+            "units": null
+          }
+        }
+      },
+      "spacing_mobile": {
+        "padding": {
+          "top": {
+            "value": 40,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 40,
+            "units": "px"
+          },
+          "left": {
+            "value": null,
+            "units": null
+          },
+          "right": {
+            "value": null,
+            "units": null
+          }
+        }
+      },
+      "background_color": {
+        "color": "#3A0CA3",
+        "opacity": 100
+      }
+    }
+  }
+]

@@ -1,0 +1,78 @@
+{# Blog Carousel Band — deep purple band, horizontal scroll-snap row of the most recent posts #}
+{% require_css %}
+<style>
+  {% scope_css %}
+  .blog-band{
+    background:{{ module.style.background_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:767px){
+    .blog-band{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+{% set posts = blog_recent_posts(module.blog, module.post_count) %}
+{# Default target is the selected blog's listing page; an editor link takes precedence. #}
+{% set cta_href = module.cta.link_field.url.href if module.cta.link_field.url.href else blog_all_posts_url(module.blog) %}
+{% set cta_text = module.cta.text_field if module.cta.text_field else 'View All Insights →' %}
+{% set grads = [
+  'linear-gradient(135deg, #3A0CA3 0%, #7209B7 100%)',
+  'linear-gradient(135deg, #7209B7 0%, #3A0CA3 100%)',
+  'linear-gradient(160deg, #1A0A2E 0%, #3A0CA3 70%, #7209B7 100%)',
+  'linear-gradient(135deg, #3A0CA3 0%, #7209B7 100%)',
+  'linear-gradient(160deg, #7209B7 0%, #3A0CA3 100%)',
+  'linear-gradient(135deg, #3A0CA3 0%, #1A0A2E 100%)'
+] %}
+
+{% if posts or module.show_cta != false %}
+<section class="blog-band" {% if module.section_id %}id="{{ module.section_id }}"{% endif %}>
+  <div class="blog-band__inner">
+
+    <div class="blog-band__header">
+      <div class="blog-band__titles">
+        {% if module.eyebrow %}<div class="blog-band__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+        {% if module.heading %}<h2 class="blog-band__heading">{{ module.heading }}</h2>{% endif %}
+      </div>
+      {% if module.show_cta != false %}
+        <div class="blog-band__cta custom-cta {{ module.cta.style_cta }}">
+          <a href="{{ cta_href|escape_url }}"{% if module.cta.link_field.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ cta_text|escape_html }}</a>
+        </div>
+      {% endif %}
+    </div>
+
+    {% if posts %}
+    <div class="blog-band__track" tabindex="0" role="region" aria-label="{{ module.heading|escape_attr }}">
+      {% for post in posts %}
+        {# post_list_content is the body text prepared for listing contexts (what blog_recent_posts
+   returns); post_body is a fallback in case that field is empty, and post_summary is the last
+   resort so a post with no body text still gets a non-zero estimate. #}
+        {% set body_text = post.post_list_content if post.post_list_content else (post.post_body if post.post_body else post.post_summary) %}
+        {% set mins = ((body_text|striptags|wordcount) / 225)|round(0, 'ceil')|int %}
+        <a class="blog-band__card" href="{{ post.absolute_url }}">
+          <div class="blog-band__img">
+            {% if post.featured_image %}
+              <img src="{{ post.featured_image }}" alt="{{ post.featured_image_alt_text|escape_attr }}" loading="lazy">
+            {% else %}
+              <div class="blog-band__ph" style="background: {{ grads[(loop.index0 + 5) % 6] }};"></div>
+            {% endif %}
+          </div>
+          <div class="blog-band__body">
+            <div class="blog-band__meta">
+              {% if post.tag_list %}<span class="blog-band__tag">{{ post.tag_list[0].name }}</span>{% endif %}
+              {% if module.show_read_time %}<span class="blog-band__readtime">{% if mins < 1 %}1{% else %}{{ mins }}{% endif %} min read</span>{% endif %}
+            </div>
+            <div class="blog-band__title">{{ post.name }}</div>
+            {% if module.card_link_text %}<span class="blog-band__readmore">{{ module.card_link_text }}</span>{% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+{% endif %}
