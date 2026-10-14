@@ -137,6 +137,21 @@
   "display_width" : null,
   "default" : "<p>Proprietary. Tested. The four pillars that anchor MarketDesign's 2026 State of the Industry Report and every client conversation we have.</p>"
 }, {
+  "id" : "b8210c9b-1074-4f5a-be73-fde7cc5a9474",
+  "name" : "card_style",
+  "label" : "Card style",
+  "required" : false,
+  "locked" : false,
+  "help_text" : "Default keeps the original look. White: white cards (16px radius, 1px border, 5px gradient strip), full-gradient numbers (the Point is hidden), no hover, solid purple eyebrow and 2 / 1 columns on tablet / mobile.",
+  "display" : "select",
+  "choices" : [ [ "default", "Default" ], [ "white", "White cards" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "default"
+}, {
   "id" : "5ee0f9a5-80bd-d04a-7ece-fe1ae23ceabd",
   "name" : "cards",
   "label" : "Cards",

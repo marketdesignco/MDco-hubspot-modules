@@ -15,7 +15,7 @@
   {% end_scope_css %}
 </style>
 {% end_require_css %}
-<section class="path-fram" id="{{ module.id_section }}">
+<section class="path-fram{% if module.card_style == "white" %} path-fram--white{% endif %}" id="{{ module.id_section }}">
   <div class="content-wrapper">
     <div class="columns is-mobile is-multiline is-gapless">
 

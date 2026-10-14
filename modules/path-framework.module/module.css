@@ -93,3 +93,79 @@ line-height: 81.6px;
     }
 }
   @media (max-width:480px){.path-fram .path-grid{grid-template-columns:1fr}}
+
+/* ═══ White card style (card_style = white) — reference: HaaS "How It Works" ═══ */
+.path-fram.path-fram--white .section-label{
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.14em;
+  margin-bottom:16px;
+  background:none;
+  color:#7209B7;
+}
+.path-fram.path-fram--white .section-title h1,
+.path-fram.path-fram--white .section-title h2,
+.path-fram.path-fram--white .section-title h3{
+  font-family:var(--font-primary, 'Lato', sans-serif);
+  font-size:clamp(28px, 3.6vw, 42px);
+  font-weight:900;
+  line-height:1.15;
+  letter-spacing:-0.01em;
+  color:#3A0CA3;
+  margin:0 0 18px;
+}
+.path-fram.path-fram--white .section-sub{max-width:720px}
+.path-fram.path-fram--white .section-sub p{
+  font-family:var(--font-primary, 'Lato', sans-serif);
+  font-size:18px;
+  line-height:1.6;
+  letter-spacing:normal;
+  color:#2A1F3F;
+  margin:0;
+}
+/* 24px here + 1.5rem from the gapless header row = 48px, as in the reference */
+.path-fram.path-fram--white .path-grid{margin-top:24px;grid-template-columns:repeat(4,1fr);gap:24px}
+.path-fram.path-fram--white .path-card{
+  padding:32px 28px;
+  background:#FFFFFF;
+  border:1px solid rgba(58,12,163,0.12);
+  border-radius:16px;
+  transition:none;
+}
+.path-fram.path-fram--white .path-card::before{height:5px}
+.path-fram.path-fram--white .path-card:hover{transform:none;background:#FFFFFF;box-shadow:none}
+.path-fram.path-fram--white .path-letter{
+  display:block;
+  font-size:96px;
+  font-weight:900;
+  line-height:1;
+  background:linear-gradient(90deg, #F72585 0%, #3A0CA3 25%, #7209B7 55%, #7EDB00 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+}
+.path-fram.path-fram--white .point{display:none}
+.path-fram.path-fram--white .path-card h3,
+.path-fram.path-fram--white .path-card h4,
+.path-fram.path-fram--white .path-card h5,
+.path-fram.path-fram--white .path-card h6{
+  font-family:var(--font-primary, 'Lato', sans-serif);
+  font-size:15px;
+  font-weight:900;
+  line-height:1.6;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:#3A0CA3;
+  margin:14px 0 10px;
+}
+.path-fram.path-fram--white .path-card p{
+  font-family:var(--font-primary, 'Lato', sans-serif);
+  font-size:14px;
+  line-height:1.6;
+  letter-spacing:normal;
+  color:#2A1F3F;
+  margin:0;
+}
+@media (max-width:900px){.path-fram.path-fram--white .path-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.path-fram.path-fram--white .path-grid{grid-template-columns:1fr}}
