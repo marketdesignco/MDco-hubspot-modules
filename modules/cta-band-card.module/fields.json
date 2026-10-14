@@ -1,0 +1,336 @@
+[
+  {
+    "id": "3788f032-b940-4550-a224-6b6492853037",
+    "name": "section_id",
+    "label": "Id Section (menu anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "audit"
+  },
+  {
+    "id": "3d8a15a5-775b-44bf-9269-63ca64b68e99",
+    "name": "background_gradient",
+    "label": "Background Gradient (CSS value)",
+    "help_text": "Enter a CSS background value, such as linear-gradient(...).",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "linear-gradient(90deg, #F72585 0%, #3A0CA3 25%, #7209B7 55%, #7EDB00 100%)"
+  },
+  {
+    "id": "c7624ddb-99e4-4b5d-8e20-f8c40182ddcc",
+    "name": "show_section_label",
+    "label": "Show Section Label",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "46ca87dc-2902-4884-801a-056ad2d44ce0",
+    "name": "section_label",
+    "label": "Section Label",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "The First Step",
+    "visibility": {
+      "controlling_field": "c7624ddb-99e4-4b5d-8e20-f8c40182ddcc",
+      "controlling_field_path": "show_section_label",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "8ae7bc03-b661-43f1-b839-382fc999f263",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<h2>Find out what your portal is <strong>really doing.</strong></h2>",
+    "help_text": "Bold text renders in the accent color (lime)."
+  },
+  {
+    "id": "d80d7537-2759-4489-a816-798e25695e14",
+    "name": "show_lede",
+    "label": "Show Lede",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "46f2ec77-e6b4-44eb-9e6a-828202450171",
+    "name": "lede",
+    "label": "Lede",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<p>Every package starts with a HubSpot Audit powered by MarketDesign Metrics — a scored, real-time readout across all your hubs. The baseline is yours to keep, whether you hire us or not.</p>",
+    "visibility": {
+      "controlling_field": "d80d7537-2759-4489-a816-798e25695e14",
+      "controlling_field_path": "show_lede",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "d4334d48-47f0-433c-8774-a70c9b20b3b6",
+    "name": "show_card",
+    "label": "Show Card",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "25310be4-2f29-41dc-9e4c-1ce39a3c2e85",
+    "name": "card_heading",
+    "label": "Card Heading (H3)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Book Your HubSpot Audit",
+    "visibility": {
+      "controlling_field": "d4334d48-47f0-433c-8774-a70c9b20b3b6",
+      "controlling_field_path": "show_card",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "4a88dfde-d687-491f-a274-b2aedb69d7e9",
+    "name": "card_text",
+    "label": "Card Text",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<p>Thirty minutes with a HubSpot-certified consultant. We'll walk your portal, flag the gaps costing you pipeline, and recommend the right level of support.</p>",
+    "visibility": {
+      "controlling_field": "d4334d48-47f0-433c-8774-a70c9b20b3b6",
+      "controlling_field_path": "show_card",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "a22a6e5c-ff32-4bff-8e7b-4e72d9c3e4de",
+    "name": "show_cta",
+    "label": "Show CTA",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true,
+    "visibility": {
+      "controlling_field": "d4334d48-47f0-433c-8774-a70c9b20b3b6",
+      "controlling_field_path": "show_card",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "6130de3e-b2dd-4308-988c-0aa675d38fc9",
+    "name": "card_cta",
+    "label": "Card CTA",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "00f2bdeb-6cc2-4da3-9b4f-4f97e16a2b84",
+        "name": "style_cta",
+        "label": "Style",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "cta-purple-v2",
+            "Primary (purple)"
+          ],
+          [
+            "cta-pink-v2",
+            "Primary (pink)"
+          ],
+          [
+            "cta-white-v2",
+            "White (v2)"
+          ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "display_width": null,
+        "default": "cta-purple-v2"
+      },
+      {
+        "id": "6aa3de74-55ff-4c31-a000-d54505ae5401",
+        "name": "cta",
+        "label": "HubSpot CTA",
+        "required": false,
+        "locked": false,
+        "type": "cta",
+        "display_width": null
+      },
+      {
+        "id": "b96f60b9-2b8f-4f04-8420-a6afb724a61b",
+        "name": "link_field",
+        "label": "Link (optional — overrides the HubSpot CTA above if set)",
+        "help_text": "Optional. If set, renders a plain link button using this URL and the text below instead of the HubSpot CTA above. Leave empty to keep using the HubSpot CTA.",
+        "required": false,
+        "locked": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG",
+          "CALL_TO_ACTION",
+          "PHONE_NUMBER",
+          "WHATSAPP_NUMBER",
+          "PAYMENT"
+        ],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "https://www.marketdesignco.com/meetings/krudy/hubspot-as-a-service"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "id": "d81b7b21-0451-4da9-9d57-167b8597a6e4",
+        "name": "text_field",
+        "label": "Text (used with the link override above)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Schedule the Audit"
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": {
+      "style_cta": "cta-purple-v2",
+      "link_field": {
+        "url": {
+          "content_id": null,
+          "type": "EXTERNAL",
+          "href": "https://www.marketdesignco.com/meetings/krudy/hubspot-as-a-service"
+        },
+        "open_in_new_tab": false,
+        "no_follow": false
+      },
+      "text_field": "Schedule the Audit"
+    },
+    "visibility": {
+      "controlling_field": "a22a6e5c-ff32-4bff-8e7b-4e72d9c3e4de",
+      "controlling_field_path": "show_cta",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "58326432-9175-42c6-8c23-72ab7f70458d",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "64dabdf9-cf87-4c3c-9493-d382e16127b2",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 96,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 96,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      },
+      {
+        "id": "86d45b70-8c89-4504-a021-7da06ffa647d",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 56,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 56,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      }
+    ],
+    "tab": "STYLE",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null
+  }
+]

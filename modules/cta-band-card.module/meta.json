@@ -1,0 +1,8 @@
+{
+  "global": false,
+  "content_types": ["LANDING_PAGE", "SITE_PAGE"],
+  "host_template_types": ["PAGE"],
+  "label": "CTA Band with Card",
+  "help_text": "Gradient band with a section label, heading (bold words render in the accent color) and lede, followed by a white card with a heading, text and a CTA.",
+  "is_available_for_new_content": true
+}

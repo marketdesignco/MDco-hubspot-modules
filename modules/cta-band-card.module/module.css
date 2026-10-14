@@ -1,0 +1,141 @@
+/* cta-band-card — reference: HubSpot Managed Services.dc.html, #audit (.assessment, .assessment-embed, .assessment-cta) */
+
+.cta-band-card {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  color: #FFFFFF;
+  line-height: 1.6;
+}
+
+.cta-band-card *,
+.cta-band-card *::before,
+.cta-band-card *::after {
+  box-sizing: border-box;
+}
+
+.cta-band-card .cta-band-card__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ═══ BAND COPY ═══ */
+.cta-band-card .cta-band-card__label {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.6;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #7EDB00;
+  margin-bottom: 16px;
+}
+
+.cta-band-card .cta-band-card__heading > * {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: clamp(28px, 3.6vw, 42px);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: #FFFFFF;
+  margin: 0 0 18px;
+}
+
+.cta-band-card .cta-band-card__heading strong {
+  font-weight: inherit;
+  color: #7EDB00;
+}
+
+.cta-band-card .cta-band-card__lede {
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+.cta-band-card .cta-band-card__lede p {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0;
+}
+
+/* ═══ CARD ═══ */
+.cta-band-card .cta-band-card__card {
+  display: grid;
+  grid-template-columns: 1.3fr auto;
+  gap: 32px;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 14px;
+  box-shadow: 0 30px 70px rgba(26, 10, 46, 0.35);
+  padding: 40px;
+}
+
+.cta-band-card .cta-band-card__card-heading {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  color: #3A0CA3;
+  margin: 0 0 10px;
+}
+
+.cta-band-card .cta-band-card__card-text p {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: #2A1F3F;
+  margin: 0;
+}
+
+/* ═══ CTA (pill; colors come from the cta-* class, hover matched to the reference) ═══ */
+.cta-band-card .cta-band-card__cta a {
+  display: inline-block;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-transform: none;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 16px 32px;
+  border: 0;
+  /* Temporarily follow the theme button radius; restore 999px if the pill shape is approved. */
+  /* border-radius: 999px; */
+  box-shadow: 0 10px 28px rgba(114, 9, 183, 0.3);
+}
+
+.cta-band-card .cta-band-card__cta.cta-purple-v2 a:hover,
+.cta-band-card .cta-band-card__cta.cta-purple-v2 a:focus {
+  background-color: #5D0796;
+  color: #FFFFFF;
+}
+
+.cta-band-card .cta-band-card__cta.cta-pink-v2 a:hover,
+.cta-band-card .cta-band-card__cta.cta-pink-v2 a:focus {
+  background-color: #C41A6A;
+  color: #FFFFFF;
+}
+
+.cta-band-card .cta-band-card__cta a:focus-visible {
+  outline: 2px solid #7209B7;
+  outline-offset: 3px;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 760px) {
+  .cta-band-card .cta-band-card__card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .cta-band-card .cta-band-card__inner {
+    padding: 0 16px;
+  }
+}

@@ -1,0 +1,65 @@
+{# CTA Band with Card — gradient band + white card holding a heading, text and CTA.
+   reference: HubSpot Managed Services.dc.html — #audit (.assessment) #}
+{% require_css %}
+<style>
+  {% scope_css %}
+  .cta-band-card {
+    background: {% if module.background_gradient %}{{ module.background_gradient }}{% else %}linear-gradient(90deg, #F72585 0%, #3A0CA3 25%, #7209B7 55%, #7EDB00 100%){% endif %};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 768px) { .cta-band-card { {{ module.style.spacing_mobile.css }} } }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="cta-band-card"{% if module.section_id %} id="{{ module.section_id|escape_attr }}"{% endif %}>
+  <div class="cta-band-card__inner">
+
+    {% if module.show_section_label and module.section_label %}
+      <div class="cta-band-card__label">{{ module.section_label }}</div>
+    {% endif %}
+
+    {% if module.heading %}
+      <div class="cta-band-card__heading">{{ module.heading }}</div>
+    {% endif %}
+
+    {% if module.show_lede and module.lede %}
+      <div class="cta-band-card__lede">{{ module.lede }}</div>
+    {% endif %}
+
+    {% if module.show_card %}
+      {% set card_cta = module.card_cta %}
+      <div class="cta-band-card__card">
+        <div class="cta-band-card__card-copy">
+          {% if module.card_heading %}<h3 class="cta-band-card__card-heading">{{ module.card_heading }}</h3>{% endif %}
+          {% if module.card_text %}<div class="cta-band-card__card-text">{{ module.card_text }}</div>{% endif %}
+        </div>
+
+        {% if module.show_cta and (card_cta.link_field.url.href or card_cta.cta) %}
+          <div class="cta-band-card__cta custom-cta {{ card_cta.style_cta }}">
+            {% if card_cta.link_field.url.href %}
+              {% set href = card_cta.link_field.url.href %}
+              {% if card_cta.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+              {% elif card_cta.link_field.url.type is equalto "PHONE_NUMBER" %}
+                {% set href = "tel:" + href %}
+              {% endif %}
+              <a
+                {% if card_cta.link_field.url.type is equalto "CALL_TO_ACTION" %}
+                  href="{{ href }}" {# Not escaped: not editable, functions as a JavaScript call to the associated CTA #}
+                {% else %}
+                  href="{{ href|escape_url }}"
+                {% endif %}
+                {% if card_cta.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                {% if card_cta.link_field.rel %}rel="{{ card_cta.link_field.rel|escape_attr }}"{% endif %}
+              >{{ card_cta.text_field }}</a>
+            {% elif card_cta.cta %}
+              {% cta guid="{{ card_cta.cta }}" %}
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+  </div>
+</section>
