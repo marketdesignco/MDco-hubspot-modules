@@ -84,6 +84,18 @@
     "type" : "choice",
     "display_width" : null,
     "default" : "default"
+  }, {
+    "id" : "c581a907-a493-46fa-8d9d-f6d205b57952",
+    "name" : "variant",
+    "label" : "Variant",
+    "help_text" : "Dark (default) keeps the original look; existing pages are unaffected. Light = lavender proof band: gradient numbers, muted labels with deep-purple bold lead-ins, gradient left border, 4 → 2 (≤860px) → 1 (≤600px) columns. For Light, set Background Color to #F4ECF6. In Light, the numbers are real H3 headings that follow the theme's H3 scale (48px desktop, 22px mobile), so 'Number Typography' does not apply, and the per-stat 'Highlight' and 'Left Border Color' options are ignored (the gradient number and border apply to every stat).",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "dark", "Dark (default)" ], [ "light", "Light" ] ],
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "dark"
   } ],
   "tab" : "STYLE",
   "expanded" : false,
@@ -135,7 +147,8 @@
       "color" : "#1A1A2E",
       "opacity" : 100
     },
-    "num_typography" : "default"
+    "num_typography" : "default",
+    "variant" : "dark"
   }
 }, {
   "id" : "5ee0f9a5-80bd-d04a-7ece-fe1ae23ceabd",

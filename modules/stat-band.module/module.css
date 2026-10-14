@@ -62,3 +62,74 @@
     padding-bottom:10px;
   }
 }
+
+/* ============ LIGHT VARIANT ============
+   Opt-in via style.variant = "light" (adds .stat-band--light). The default (dark) look above is unchanged.
+   Reference: HubSpot Managed Services — proof band (.statband). */
+.stat-band.stat-band--light .columns{
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:32px;
+  margin:0;
+}
+.stat-band.stat-band--light .columns > .column{
+  width:auto;
+  max-width:none;
+  flex:none;
+}
+.stat-band--light .stat{
+  padding:0 0 0 20px;
+  border-left:3px solid;
+  border-image:linear-gradient(90deg, #F72585 0%, #3A0CA3 25%, #7209B7 55%, #7EDB00 100%) 1;
+}
+.stat-band--light .stat::before{
+  content:none;
+}
+/* The number is a real <h3> in this variant: it follows the theme's H3 scale (desktop 48px, 22px at <=768px),
+   set by the --font-size-h3* tokens in theme-overrides.css. */
+.stat-band--light .stat .num{
+  font-family:var(--font-primary, 'Lato', sans-serif);
+  font-size:var(--font-size-h3, 48px);
+  font-weight:900;
+  line-height:var(--line-height-h3, 130%);
+  letter-spacing:var(--letter-spacing-h3, -0.96px);
+  margin:0;
+  background:linear-gradient(90deg, #F72585 0%, #3A0CA3 25%, #7209B7 55%, #7EDB00 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+}
+@media (max-width:768px){
+  .stat-band--light .stat .num{
+    font-size:var(--font-size-h3-mobile, 22px);
+    line-height:var(--line-height-h3, 130%);
+    letter-spacing:var(--letter-spacing-h3-mobile, -0.44px);
+  }
+}
+.stat-band--light .stat .label{
+  font-size:13.5px!important; /* beats the base .label 14px!important */
+  color:#7A6888;
+  line-height:1.45;
+  margin-top:10px;
+}
+.stat-band--light .stat .label p{
+  font-size:inherit;
+  line-height:inherit;
+  letter-spacing:normal;
+  color:inherit;
+  margin:0;
+}
+.stat-band--light .stat .label strong{
+  color:#3A0CA3;
+}
+@media (max-width:860px){
+  .stat-band.stat-band--light .columns{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width:600px){
+  .stat-band.stat-band--light .columns{
+    grid-template-columns:minmax(0, 1fr);
+  }
+}

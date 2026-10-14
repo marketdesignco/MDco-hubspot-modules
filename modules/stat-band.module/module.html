@@ -16,13 +16,17 @@
 	{% end_scope_css %}
 </style>
 {% end_require_css %}
-<section class="stat-band stat-band--num-{{ module.style.num_typography }}">
+<section class="stat-band stat-band--num-{{ module.style.num_typography }}{% if module.style.variant == "light" %} stat-band--light{% endif %}">
   <div class="content-wrapper">
     <div class="columns is-mobile is-multiline is-gapless">
       {% for item in module.stats %}
       <div class="column is-12-mobile is-6-tablet is-3-desktop is-3-widescreen is-3-fullhd">
          <div class="stat{% if item.highlight %} stat--highlight{% endif %}" style="--stat-border-color: {{ item.border_color.color }};">
+      {% if module.style.variant == "light" %}
+      <h3 class="num">{{ item.num }}{{ item.suffix }}</h3>
+      {% else %}
       <div class="num">{{ item.num }}{{ item.suffix }}</div>
+      {% endif %}
       <div class="label">{{ item.text }}</div>
     </div>
       </div>
