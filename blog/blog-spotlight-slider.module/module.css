@@ -1,0 +1,282 @@
+/* Blog Spotlight Slider — reference: "1e Featured This Week — Rotating Spotlight" */
+.blog-spotlight {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  color: #3A0CA3;
+}
+.blog-spotlight__inner {
+  max-width: 1264px;
+  margin: 0 auto;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+/* Header */
+.blog-spotlight__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.blog-spotlight .blog-spotlight__eyebrow {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #F72585;
+  margin-bottom: 10px;
+}
+.blog-spotlight .blog-spotlight__heading {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: #3A0CA3;
+  margin: 0;
+}
+
+/* Dots (slick appends <ul class="slick-dots"> into .blog-spotlight__dots) */
+.blog-spotlight .blog-spotlight__dots .slick-dots {
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.blog-spotlight .blog-spotlight__dots .slick-dots li {
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+.blog-spotlight .blog-spotlight__dots .slick-dots li button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  /* Temporarily follow the theme button radius; restore 999px if the pill shape is approved. */
+  /* border-radius: 999px; */
+  background: rgba(58, 12, 163, 0.25);
+  font-size: 0;
+  line-height: 0;
+  cursor: pointer;
+  transition: all 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-spotlight .blog-spotlight__dots .slick-dots li button::before {
+  display: none;
+}
+.blog-spotlight .blog-spotlight__dots .slick-dots li.slick-active button {
+  width: 28px;
+  background: #7209B7;
+}
+
+/* Slider */
+.blog-spotlight .slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+/* slick-list clips overflow; give the card shadow room to render */
+.blog-spotlight .slick-list {
+  padding: 0 32px 80px;
+  margin: 0 -32px -80px;
+}
+.blog-spotlight__slider:not(.slick-initialized) .blog-spotlight__slide:not(:first-child) {
+  display: none;
+}
+.blog-spotlight__slide {
+  height: 380px;
+  outline: none;
+}
+.blog-spotlight__card {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  height: 100%;
+  background: var(--slide-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px -12px rgba(58, 12, 163, 0.3);
+}
+
+/* Looks (rotate every 3 slides) */
+.blog-spotlight__slide--look-0 { --slide-bg: #3A0CA3; --photo-filter: grayscale(1) contrast(1.12); --overlay: linear-gradient(135deg, #3A0CA3, #7209B7); }
+.blog-spotlight__slide--look-1 { --slide-bg: #1A0A2E; --photo-filter: saturate(1.18) contrast(1.05); --overlay: none; }
+.blog-spotlight__slide--look-2 { --slide-bg: #7209B7; --photo-filter: grayscale(1) contrast(1.2) brightness(0.9); --overlay: linear-gradient(160deg, #1A0A2E, #3A0CA3 55%, #7209B7); }
+
+/* Text
+   The card is a fixed 380px, so the text is bounded: title max 3 lines, blurb max 2,
+   and the CTA is always the last item. A long title can't push the button out of the card. */
+.blog-spotlight__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+  padding: 48px 52px;
+}
+.blog-spotlight .blog-spotlight__meta {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7EDB00;
+  margin-bottom: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.blog-spotlight .blog-spotlight__title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  margin: 0 0 14px;
+  text-wrap: pretty;
+}
+.blog-spotlight .blog-spotlight__blurb {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 16.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 440px;
+  margin: 0 0 26px;
+}
+
+/* CTA — theme .custom-cta wrapper + a style choice (green is local; the others come from the theme) */
+.blog-spotlight .blog-spotlight__cta {
+  flex: none;
+  width: auto;
+}
+.blog-spotlight__all-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+.blog-spotlight .blog-spotlight__cta a,
+.blog-spotlight .blog-spotlight__all-cta a {
+  display: inline-block;
+  width: auto;
+  padding: 14px 30px;
+  border: 0;
+  /* Temporarily follow the theme button radius; restore 999px if the pill shape is approved. */
+  /* border-radius: 999px; */
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: none;
+  text-decoration: none;
+  transition: background 200ms cubic-bezier(0.22, 1, 0.36, 1), color 200ms cubic-bezier(0.22, 1, 0.36, 1), transform 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.blog-spotlight .blog-spotlight__cta a:hover,
+.blog-spotlight .blog-spotlight__cta a:focus,
+.blog-spotlight .blog-spotlight__all-cta a:hover,
+.blog-spotlight .blog-spotlight__all-cta a:focus {
+  transform: translateY(-1px);
+}
+.blog-spotlight .cta-spotlight-green a {
+  background: #7EDB00;
+  color: #1A0A2E;
+}
+.blog-spotlight .cta-spotlight-green a:hover,
+.blog-spotlight .cta-spotlight-green a:focus {
+  background: #8FF01A;
+  color: #1A0A2E;
+}
+
+/* Media */
+.blog-spotlight__media {
+  position: relative;
+  overflow: hidden;
+}
+.blog-spotlight__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: var(--photo-filter);
+}
+.blog-spotlight__photo--fallback {
+  filter: none;
+}
+.blog-spotlight__overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay);
+  mix-blend-mode: color;
+  pointer-events: none;
+}
+.blog-spotlight__photo--fallback ~ .blog-spotlight__overlay {
+  display: none;
+}
+.blog-spotlight__fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--slide-bg) 0%, rgba(26, 10, 46, 0) 45%);
+  pointer-events: none;
+}
+
+@media (max-width: 991px) {
+  .blog-spotlight__text { padding: 40px 36px; }
+  .blog-spotlight .blog-spotlight__title { font-size: 28px; }
+}
+
+@media (max-width: 767px) {
+  .blog-spotlight__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+  }
+  /* Heading first, slider next, dots underneath the slider */
+  .blog-spotlight__header { display: contents; }
+  .blog-spotlight__titles { order: 1; margin-bottom: 20px; }
+  .blog-spotlight__slider { order: 2; }
+  .blog-spotlight__dots { order: 3; margin-top: 18px; }
+  .blog-spotlight__all-cta { order: 4; width: 100%; }
+  .blog-spotlight__all-cta .custom-cta { width: 100%; text-align: center; }
+  .blog-spotlight__all-cta a { box-sizing: border-box; }
+  .blog-spotlight .blog-spotlight__dots .slick-dots { justify-content: center; }
+  .blog-spotlight .blog-spotlight__heading { font-size: 26px; }
+
+  .blog-spotlight .slick-list {
+    padding: 0 16px 60px;
+    margin: 0 -16px -60px;
+  }
+  .blog-spotlight__slide { height: auto; }
+  .blog-spotlight__card {
+    grid-template-columns: 1fr;
+    height: auto;
+    /* keep the shadow inside the 16px the slick-list leaves on each side */
+    box-shadow: 0 12px 24px -8px rgba(58, 12, 163, 0.3);
+  }
+  .blog-spotlight__text { padding: 28px 24px; }
+  /* card height is auto on mobile, so the full title/blurb can show */
+  .blog-spotlight .blog-spotlight__title { display: block; -webkit-line-clamp: unset; font-size: 24px; }
+  .blog-spotlight .blog-spotlight__blurb { display: block; -webkit-line-clamp: unset; font-size: 15px; margin-bottom: 20px; }
+  .blog-spotlight__media { height: 200px; }
+  .blog-spotlight__fade {
+    background: linear-gradient(180deg, var(--slide-bg) 0%, rgba(26, 10, 46, 0) 45%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blog-spotlight .blog-spotlight__cta a,
+  .blog-spotlight .blog-spotlight__all-cta a,
+  .blog-spotlight .blog-spotlight__dots .slick-dots li button {
+    transition: none;
+  }
+}

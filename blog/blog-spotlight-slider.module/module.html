@@ -1,0 +1,91 @@
+{# Blog Spotlight Slider — most recent posts from the selected blog, rotating with fade #}
+{% require_css %}
+<style>
+  {% scope_css %}
+  .blog-spotlight{
+    background:{{ module.style.background_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:767px){
+    .blog-spotlight{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+{% set posts = blog_recent_posts(module.blog, module.post_count) %}
+{% set cta_href = module.cta.link_field.url.href if module.cta.link_field.url.href else blog_all_posts_url(module.blog) %}
+{% set cta_text = module.cta.text_field if module.cta.text_field else 'View All Insights →' %}
+{% set grads = [
+  'linear-gradient(135deg, #3A0CA3 0%, #7209B7 100%)',
+  'linear-gradient(135deg, #7209B7 0%, #3A0CA3 100%)',
+  'linear-gradient(160deg, #1A0A2E 0%, #3A0CA3 70%, #7209B7 100%)'
+] %}
+
+{% if posts or module.show_cta != false %}
+<section class="blog-spotlight" {% if module.section_id %}id="{{ module.section_id }}"{% endif %}>
+  <div class="blog-spotlight__inner">
+
+    {% if posts %}
+    <div class="blog-spotlight__header">
+      <div class="blog-spotlight__titles">
+        {% if module.eyebrow %}<div class="blog-spotlight__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+        {% if module.heading %}<h2 class="blog-spotlight__heading">{{ module.heading }}</h2>{% endif %}
+      </div>
+      <div class="blog-spotlight__dots js-blog-spotlight-dots"></div>
+    </div>
+    {% endif %}
+
+    {% if posts %}
+    <div class="blog-spotlight__slider js-blog-spotlight" data-autoplay="{{ module.autoplay_seconds }}">
+      {% for post in posts %}
+        {# post_list_content is the body text prepared for listing contexts (what blog_recent_posts
+   returns); post_body is a fallback in case that field is empty, and post_summary is the last
+   resort so a post with no body text still gets a non-zero estimate. #}
+        {% set body_text = post.post_list_content if post.post_list_content else (post.post_body if post.post_body else post.post_summary) %}
+        {% set mins = ((body_text|striptags|wordcount) / 225)|round(0, 'ceil')|int %}
+        <div class="blog-spotlight__slide blog-spotlight__slide--look-{{ loop.index0 % 3 }}">
+          <div class="blog-spotlight__card">
+            <div class="blog-spotlight__text">
+              <span class="blog-spotlight__meta">
+                {% if post.tag_list %}{{ post.tag_list[0].name }}{% endif %}
+                {% if post.tag_list and module.show_read_time %} · {% endif %}
+                {% if module.show_read_time %}{% if mins < 1 %}1{% else %}{{ mins }}{% endif %} min read{% endif %}
+              </span>
+              <h3 class="blog-spotlight__title">{{ post.name }}</h3>
+              {% if post.post_summary %}
+                <p class="blog-spotlight__blurb">{{ post.post_summary|striptags|truncate(150) }}</p>
+              {% endif %}
+              {# CTA: the link always points to this post (dynamic), so it can't be a fixed HubSpot CTA object #}
+              <div class="custom-cta blog-spotlight__cta {{ module.style_cta }}">
+                <a href="{{ post.absolute_url }}" aria-label="{{ module.button_text|escape_attr }}: {{ post.name|escape_attr }}">{{ module.button_text }}</a>
+              </div>
+            </div>
+            <div class="blog-spotlight__media">
+              {% if post.featured_image %}
+                <img class="blog-spotlight__photo" src="{{ post.featured_image }}" alt="{{ post.featured_image_alt_text|escape_attr }}" loading="lazy">
+              {% else %}
+                <div class="blog-spotlight__photo blog-spotlight__photo--fallback" style="background: {{ grads[loop.index0 % 3] }};"></div>
+              {% endif %}
+              <div class="blog-spotlight__overlay"></div>
+              <div class="blog-spotlight__fade"></div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if module.show_cta != false %}
+      <div class="blog-spotlight__all-cta">
+        <div class="custom-cta blog-spotlight__cta {{ module.style_cta }}">
+          <a href="{{ cta_href|escape_url }}"{% if module.cta.link_field.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ cta_text|escape_html }}</a>
+        </div>
+      </div>
+    {% endif %}
+
+  </div>
+</section>
+{% endif %}

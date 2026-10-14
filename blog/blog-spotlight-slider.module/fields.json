@@ -1,0 +1,328 @@
+[
+  {
+    "id": "b2c3aef0-7b2a-4a8e-92b6-bcdfd05727c9",
+    "name": "blog",
+    "label": "Blog to pull posts from",
+    "required": true,
+    "locked": false,
+    "help_text": "Posts are loaded automatically (most recent first) from the selected blog.",
+    "type": "blog",
+    "display_width": null,
+    "default": "default"
+  },
+  {
+    "id": "d4639c04-78e2-429f-8563-17ab01e3f208",
+    "name": "post_count",
+    "label": "Number of posts",
+    "required": false,
+    "locked": false,
+    "help_text": "Each post becomes one slide.",
+    "type": "number",
+    "min": 1,
+    "max": 6,
+    "step": 1,
+    "display_width": null,
+    "default": 3
+  },
+  {
+    "id": "e0ff8a7a-2680-4756-97d3-deb5f198febf",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Featured This Week"
+  },
+  {
+    "id": "59eb3332-d8f9-4497-8d51-8463ebb7b015",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Worth Your Next Fifteen Minutes"
+  },
+  {
+    "id": "5c9819d1-20ab-4a16-a661-b53ee473ce8e",
+    "name": "button_text",
+    "label": "Slide button text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Read the post"
+  },
+  {
+    "id": "06288c39-984e-4dfe-b304-25de4b8343ad",
+    "name": "style_cta",
+    "label": "Button style",
+    "required": false,
+    "locked": false,
+    "help_text": "Applies to the post links and the View All Insights button.",
+    "display": "select",
+    "choices": [
+      [
+        "cta-spotlight-green",
+        "Green (default)"
+      ],
+      [
+        "cta-white-v2",
+        "White"
+      ],
+      [
+        "cta-purple-v2",
+        "Primary (purple)"
+      ],
+      [
+        "cta-pink-v2",
+        "Primary (pink)"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "cta-spotlight-green"
+  },
+  {
+    "id": "9d186bc0-2f2d-4625-a18a-1c9a824125aa",
+    "name": "show_read_time",
+    "label": "Show read time",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "4ae8f53b-7040-4ab6-b808-51d0baf98a54",
+    "name": "show_cta",
+    "label": "Show View All Insights button",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "7dc52046-2548-4e81-8581-85598bfc7553",
+    "name": "cta",
+    "label": "View All Insights button",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "36d66a1d-4cac-4e14-b3db-861d7ecc92ad",
+        "name": "link_field",
+        "label": "Link",
+        "required": false,
+        "locked": false,
+        "help_text": "Leave empty to link to the selected blog's listing page. Set a link here to override it.",
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "BLOG"
+        ],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "id": "79a58a41-55a5-43b8-95d5-a9b5b7c7b2fc",
+        "name": "text_field",
+        "label": "Text",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "View All Insights →"
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "visibility": {
+      "controlling_field": "show_cta",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    },
+    "default": {
+      "link_field": {
+        "url": {
+          "content_id": null,
+          "type": "EXTERNAL",
+          "href": ""
+        },
+        "open_in_new_tab": false,
+        "no_follow": false
+      },
+      "text_field": "View All Insights →"
+    }
+  },
+  {
+    "id": "2d0dd30f-9ac1-4dfb-b678-11cc438ac3a5",
+    "name": "autoplay_seconds",
+    "label": "Autoplay interval (seconds)",
+    "required": false,
+    "locked": false,
+    "help_text": "Set to 0 to turn autoplay off. Autoplay is always off for visitors who prefer reduced motion.",
+    "type": "number",
+    "min": 0,
+    "max": 30,
+    "step": 1,
+    "display_width": null,
+    "default": 5
+  },
+  {
+    "id": "43308667-5ff4-45dc-85b5-5dbc7124b166",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "1adaa9ae-d4c4-4e11-a84e-933aff7212d2",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 64,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 64,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      },
+      {
+        "id": "22a31e4b-95d7-4bd3-82da-08f99dc7bd0c",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 40,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 40,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      },
+      {
+        "id": "e10672f9-fbe1-46de-9f16-a09c6d647a61",
+        "name": "background_color",
+        "label": "Background color",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "display_width": null,
+        "default": {
+          "color": "#F8F6FC",
+          "opacity": 100
+        }
+      }
+    ],
+    "tab": "STYLE",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": {
+      "spacing_desktop": {
+        "padding": {
+          "top": {
+            "value": 64,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 64,
+            "units": "px"
+          },
+          "left": {
+            "value": null,
+            "units": null
+          },
+          "right": {
+            "value": null,
+            "units": null
+          }
+        }
+      },
+      "spacing_mobile": {
+        "padding": {
+          "top": {
+            "value": 40,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 40,
+            "units": "px"
+          },
+          "left": {
+            "value": null,
+            "units": null
+          },
+          "right": {
+            "value": null,
+            "units": null
+          }
+        }
+      },
+      "background_color": {
+        "color": "#F8F6FC",
+        "opacity": 100
+      }
+    }
+  }
+]
