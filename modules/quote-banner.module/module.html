@@ -9,16 +9,26 @@
       {{ module.style.spacing_mobile.css }};
     }
   }
+  {% if module.attribution_gradient_enabled and module.attribution_gradient %}
+  .quote-banner.quote-banner--attribution-gradient .quote-banner__attribution,
+  .quote-banner.quote-banner--attribution-gradient .quote-banner__attribution * {
+    background: {{ module.attribution_gradient|escape }};
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  {% endif %}
   {% end_scope_css %}
 </style>
 {% end_require_css %}
 {% if module.show_module %}
-<section class="quote-banner"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+<section class="quote-banner{% if module.quote_variant == 'pull' or module.quote_variant == 'pull_with_role' %} quote-banner--pull{% endif %}{% if module.quote_variant == 'pull_with_role' %} quote-banner--pull-with-role{% endif %}{% if module.attribution_gradient_enabled and module.attribution_gradient %} quote-banner--attribution-gradient{% endif %}"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
   <div class="content-wrapper quote-banner__inner">
     <blockquote class="quote-banner__quote">
       <div class="quote-banner__text">{{ module.quote_text }}</div>
       {% if module.attribution_name %}
-      <div class="quote-banner__attribution">{{ module.attribution_name }}{% if module.attribution_role %} · <span class="quote-banner__role">{{ module.attribution_role }}</span>{% endif %}</div>
+      <div class="quote-banner__attribution">{{ module.attribution_name }}{% if module.attribution_role and module.quote_variant != 'pull' %} · <span class="quote-banner__role">{{ module.attribution_role }}</span>{% endif %}</div>
       {% endif %}
     </blockquote>
   </div>

@@ -1,5 +1,55 @@
 [
   {
+    "id": "468b618b-becb-4251-b915-02ba5d629711",
+    "name": "quote_variant",
+    "label": "Layout variant",
+    "help_text": "Default keeps the existing look. Pull quote shows large upright text with the name only. Pull quote + role keeps that layout and displays the attribution role in body case.",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "default",
+        "Default (italic quote, pink bar)"
+      ],
+      [
+        "pull",
+        "Pull quote (large upright text, gradient bar)"
+      ],
+      [
+        "pull_with_role",
+        "Pull quote + role"
+      ]
+    ],
+    "type": "choice",
+    "tab": "STYLE",
+    "default": "default"
+  },
+  {
+    "id": "b1f97a1b-50c7-4e85-aac6-f94dfb0ecf33",
+    "name": "attribution_gradient_enabled",
+    "label": "Use Gradient Attribution",
+    "help_text": "Off by default. Turn on to apply the CSS gradient below to the attribution only.",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "tab": "STYLE",
+    "default": false
+  },
+  {
+    "id": "0f21e086-96e7-4f35-85c4-951199fae44b",
+    "name": "attribution_gradient",
+    "label": "Attribution Gradient (CSS)",
+    "help_text": "CSS background gradient used only when Use Gradient Attribution is on.",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "tab": "STYLE",
+    "default": "linear-gradient(90deg, #f72585 0%, #3a0ca3 45%, #7209b7 100%)"
+  },
+  {
     "id": "6b49976f-d726-4e16-b2b4-54d0121362a0",
     "name": "section_id",
     "label": "Id Section (menu anchor)",
