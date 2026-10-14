@@ -41,7 +41,7 @@
 }
 
 .ff-people-checklist li strong {
-  color: var(--ff-text);
+  color: #3A0CA3;
 }
 
 @media (max-width: 820px) {

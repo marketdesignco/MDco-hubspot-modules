@@ -7,6 +7,12 @@
     {{ module.style.spacing_desktop.css }}
   }
   @media (max-width: 768px) { .ff-people { {{ module.style.spacing_mobile.css }} } }
+  {% if module.style.bullet_color.color and module.style.bullet_color.color|lower != "#f72585" %}
+  .ff-people-checklist li::before { color: {{ module.style.bullet_color.color }}; }
+  {% endif %}
+  {% if module.style.checklist_emphasis_color.color and module.style.checklist_emphasis_color.color|lower != "#3a0ca3" %}
+  .ff-people-checklist li strong { color: {{ module.style.checklist_emphasis_color.color }}; }
+  {% endif %}
   {% end_scope_css %}
 </style>
 {% end_require_css %}

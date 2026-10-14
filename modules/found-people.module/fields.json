@@ -103,6 +103,32 @@
       "opacity" : 100
     }
   }, {
+    "id" : "eebd054d-87f6-47ec-9d8c-54aeb758f1d5",
+    "name" : "bullet_color",
+    "label" : "Checklist Bullet Color",
+    "help_text" : "Optional. Default pink (#F72585) keeps the original look; existing pages are unaffected.",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#F72585",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.checklist_emphasis_color",
+    "name" : "checklist_emphasis_color",
+    "label" : "Checklist Emphasis Color",
+    "help_text" : "Optional. Changes the bold checklist phrases; the default keeps the existing text color.",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#3A0CA3",
+      "opacity" : 100
+    }
+  }, {
     "id" : "style.spacing_desktop",
     "name" : "spacing_desktop",
     "label" : "Spacing - Desktop",
