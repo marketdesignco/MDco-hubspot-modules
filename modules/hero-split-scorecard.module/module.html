@@ -1,0 +1,103 @@
+{# Hero Split Scorecard — split hero with a scorecard card (labelled progress bars) on the right #}
+{% require_css %}
+<style>
+  {% scope_css %}
+  .hero-split-scorecard {
+    background: {{ module.style.background_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 768px) {
+    .hero-split-scorecard { {{ module.style.spacing_mobile.css }} }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+{% set level_labels = { "low": "Low score", "mid": "Medium score", "good": "Good score" } %}
+
+<header class="hero-split-scorecard"{% if module.section_id %} id="{{ module.section_id|escape_attr }}"{% endif %}>
+  <div class="hero-split-scorecard__inner">
+    <div class="hero-split-scorecard__grid{% if not module.show_scorecard %} hero-split-scorecard__grid--single{% endif %}">
+
+      <div class="hero-split-scorecard__content">
+        {% if module.show_badge and module.badge_text %}
+          <div class="hero-split-scorecard__badge">{{ module.badge_text }}</div>
+        {% endif %}
+
+        {% if module.heading %}
+          <div class="hero-split-scorecard__title">{{ module.heading }}</div>
+        {% endif %}
+
+        {% if module.lede %}
+          <div class="hero-split-scorecard__lede">{{ module.lede }}</div>
+        {% endif %}
+
+        {% if module.ctas %}
+          <div class="hero-split-scorecard__actions">
+            {% for item in module.ctas %}
+              {% if item.link_field.url.href or item.cta %}
+              <div class="custom-cta {{ item.style_cta }}">
+                {% if item.link_field.url.href %}
+                  {% set href = item.link_field.url.href %}
+                  {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                    {% set href = "mailto:" + href %}
+                  {% elif item.link_field.url.type is equalto "PHONE_NUMBER" %}
+                    {% set href = "tel:" + href %}
+                  {% endif %}
+                  <a
+                    {% if item.link_field.url.type is equalto "CALL_TO_ACTION" %}
+                      href="{{ href }}" {# Not escaped: non-editable JavaScript call to the associated CTA #}
+                    {% else %}
+                      href="{{ href|escape_url }}"
+                    {% endif %}
+                    {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                    {% if item.link_field.rel %}rel="{{ item.link_field.rel|escape_attr }}"{% endif %}>
+                    {{ item.text_field }}
+                  </a>
+                {% elif item.cta %}
+                  {% cta guid="{{ item.cta }}" %}
+                {% endif %}
+              </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if module.show_note and module.note %}
+          <p class="hero-split-scorecard__note">{{ module.note }}</p>
+        {% endif %}
+      </div>
+
+      {% if module.show_scorecard %}
+        {% set card = module.scorecard %}
+        <div class="hero-split-scorecard__card" role="group"{% if card.scorecard_aria_label %} aria-label="{{ card.scorecard_aria_label|escape_attr }}"{% endif %}>
+          {% if card.scorecard_title or card.scorecard_subtitle %}
+            <div class="hero-split-scorecard__card-head">
+              {% if card.scorecard_title %}<span class="hero-split-scorecard__card-title">{{ card.scorecard_title }}</span>{% endif %}
+              {% if card.scorecard_subtitle %}<span class="hero-split-scorecard__card-sub">{{ card.scorecard_subtitle }}</span>{% endif %}
+            </div>
+          {% endif %}
+
+          {% if card.scorecard_rows %}
+            <ul class="hero-split-scorecard__rows">
+              {% for row in card.scorecard_rows %}
+                <li class="hero-split-scorecard__row">
+                  <div class="hero-split-scorecard__row-label">
+                    {{ row.row_title }}
+                    {% if row.row_subtitle %}<small>{{ row.row_subtitle }}</small>{% endif %}
+                  </div>
+                  <span class="hero-split-scorecard__bar hero-split-scorecard__bar--{{ row.row_level or 'low' }}" role="img" aria-label="{{ level_labels[row.row_level or 'low'] }}"><i></i></span>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+
+          {% if card.scorecard_footer %}
+            <div class="hero-split-scorecard__card-foot">{{ card.scorecard_footer }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+</header>

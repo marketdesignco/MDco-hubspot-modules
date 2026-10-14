@@ -1,0 +1,13 @@
+{
+  "global": false,
+  "content_types": [
+    "LANDING_PAGE",
+    "SITE_PAGE"
+  ],
+  "host_template_types": [
+    "PAGE"
+  ],
+  "label": "Hero Split Scorecard",
+  "help_text": "Split hero: badge, H1 with gradient highlight, intro, CTAs and note on the left; a scorecard card with labelled progress bars on the right.",
+  "is_available_for_new_content": true
+}

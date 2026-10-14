@@ -1,0 +1,433 @@
+[
+  {
+    "id": "8ffc31ca-9578-4c84-9297-d2c743617ea0",
+    "name": "section_id",
+    "label": "Id Section (menu anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "7931da1b-a7ca-4eed-8c21-a766892bf13e",
+    "name": "show_badge",
+    "label": "Show badge",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "9017b4ed-7296-4dde-aa3f-ee59f984741b",
+    "name": "badge_text",
+    "label": "Badge text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "visibility": {
+      "controlling_field": "show_badge",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    },
+    "default": "HubSpot Managed Services · Platinum Partner"
+  },
+  {
+    "id": "f3b3b856-c6f0-47fb-8917-9bd5cd481330",
+    "name": "heading",
+    "label": "Heading",
+    "help_text": "Use an H1. Bold text (strong) renders as the italic gradient highlight.",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<h1>Optimization Engine for <strong>HubSpot Users</strong></h1>"
+  },
+  {
+    "id": "072a7fb2-b52f-4b7e-9508-79609799b4cf",
+    "name": "lede",
+    "label": "Intro text",
+    "help_text": "Italic text renders bold in deep purple.",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<p>Move from a stand-alone marketing tool and data dumping ground to a Customer Relationship Management engine that unifies your marketing, sales, service, and operations — <em>with data you can use.</em></p>"
+  },
+  {
+    "id": "bdf55229-5010-40bf-a45b-02c5ceabd8ba",
+    "name": "ctas",
+    "label": "CTAs",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": 3,
+      "sorting_label_field": null,
+      "default": 2
+    },
+    "children": [
+      {
+        "id": "ae9f5964-da38-46f4-bac9-ded6cfd9d5fe",
+        "name": "style_cta",
+        "label": "Style",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [ "cta-purple-v2", "Primary (purple)" ],
+          [ "cta-primary-outline", "Outline (purple)" ],
+          [ "cta-pink-v2", "Primary (pink)" ],
+          [ "cta-white-v2", "White" ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "display_width": null,
+        "default": "cta-purple-v2"
+      },
+      {
+        "id": "29369ea4-4301-419a-97d2-871cd27332c2",
+        "name": "cta",
+        "label": "HubSpot CTA",
+        "required": false,
+        "locked": false,
+        "type": "cta",
+        "display_width": null
+      },
+      {
+        "id": "d504f7f4-6c76-4fe3-8e30-e031bd50f893",
+        "name": "link_field",
+        "label": "Link (optional — overrides the HubSpot CTA above if set)",
+        "help_text": "Optional. If set, renders a plain link button using this URL and the text below instead of the HubSpot CTA above.",
+        "required": false,
+        "locked": false,
+        "supported_types": [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "id": "11832674-d41b-43eb-8274-b440daac205f",
+        "name": "text_field",
+        "label": "Text (used with the link override above)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Book Your HubSpot Audit"
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "style_cta": "cta-purple-v2",
+        "link_field": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "https://www.marketdesignco.com/meetings/krudy/hubspot-as-a-service"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "text_field": "Book Your HubSpot Audit"
+      },
+      {
+        "style_cta": "cta-primary-outline",
+        "link_field": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": "#packages"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "text_field": "See Packages + Pricing"
+      }
+    ]
+  },
+  {
+    "id": "28aa1090-32bd-4960-bf1d-3952775f5aeb",
+    "name": "show_note",
+    "label": "Show note below the buttons",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "68962e5d-d010-43ac-94a9-c2515da515e9",
+    "name": "note",
+    "label": "Note",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "visibility": {
+      "controlling_field": "show_note",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    },
+    "default": "Audit included in every package. Plans from $2,500 per month."
+  },
+  {
+    "id": "3f11c031-18b1-4459-a4f0-bae9e2faa5ed",
+    "name": "show_scorecard",
+    "label": "Show scorecard card",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "ccf73c8b-7db2-403e-a0bf-b083a370be5a",
+    "name": "scorecard",
+    "label": "Scorecard card",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "46b1305d-dd46-4519-b065-944e582318bb",
+        "name": "scorecard_aria_label",
+        "label": "Accessible name (screen readers)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Sample HubSpot audit scorecard"
+      },
+      {
+        "id": "55dc1f66-5f8b-4916-96f8-b957caca4381",
+        "name": "scorecard_title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "HubSpot Audit · Sample Readout"
+      },
+      {
+        "id": "ef287771-9022-43ba-9a7d-6fb351b57776",
+        "name": "scorecard_subtitle",
+        "label": "Subtitle",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "MarketDesign Metrics"
+      },
+      {
+        "id": "10c2eb0f-8ced-4247-bc4a-aee65b5e12c7",
+        "name": "scorecard_rows",
+        "label": "Rows",
+        "required": false,
+        "locked": false,
+        "occurrence": {
+          "min": 1,
+          "max": null,
+          "sorting_label_field": null,
+          "default": 5
+        },
+        "children": [
+          {
+            "id": "08b4aed1-0cad-4ce1-900b-86b7f34eadf1",
+            "name": "row_title",
+            "label": "Row title",
+            "required": false,
+            "locked": false,
+            "allow_new_line": false,
+            "type": "text",
+            "display_width": null,
+            "default": "Contact Data Quality"
+          },
+          {
+            "id": "40949d31-e577-4f07-9242-fc62f8f341ce",
+            "name": "row_subtitle",
+            "label": "Row subtitle",
+            "required": false,
+            "locked": false,
+            "allow_new_line": false,
+            "type": "text",
+            "display_width": null,
+            "default": "Valid, current, deduplicated records"
+          },
+          {
+            "id": "2dbc993b-ce80-435f-b849-59e538cf783f",
+            "name": "row_level",
+            "label": "Score level",
+            "help_text": "Low = 23% pink bar, Medium = 54% purple bar, Good = 82% lime bar.",
+            "required": false,
+            "locked": false,
+            "display": "select",
+            "choices": [
+              [ "low", "Low" ],
+              [ "mid", "Medium" ],
+              [ "good", "Good" ]
+            ],
+            "multiple": false,
+            "reordering_enabled": true,
+            "preset": null,
+            "type": "choice",
+            "display_width": null,
+            "default": "low"
+          }
+        ],
+        "type": "group",
+        "display_width": null,
+        "default": [
+          { "row_title": "Contact Data Quality", "row_subtitle": "Valid, current, deduplicated records", "row_level": "low" },
+          { "row_title": "Email Health", "row_subtitle": "Deliverability, bounces, unsubscribes", "row_level": "mid" },
+          { "row_title": "Workflows + Automation", "row_subtitle": "Active, documented, non-conflicting", "row_level": "low" },
+          { "row_title": "Reporting Dashboards", "row_subtitle": "Trusted by leadership", "row_level": "mid" },
+          { "row_title": "Hub Alignment", "row_subtitle": "Data flows, fields, process", "row_level": "good" }
+        ]
+      },
+      {
+        "id": "5ec755cf-4490-4744-a169-7165138c8fb9",
+        "name": "scorecard_footer",
+        "label": "Footer text",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "display_width": null,
+        "default": "<p><strong>Where does your portal stand?</strong> The audit scores every hub you own and sets the baseline the work is measured against.</p>"
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "visibility": {
+      "controlling_field": "show_scorecard",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    },
+    "default": {
+      "scorecard_aria_label": "Sample HubSpot audit scorecard",
+      "scorecard_title": "HubSpot Audit · Sample Readout",
+      "scorecard_subtitle": "MarketDesign Metrics",
+      "scorecard_rows": [
+        { "row_title": "Contact Data Quality", "row_subtitle": "Valid, current, deduplicated records", "row_level": "low" },
+        { "row_title": "Email Health", "row_subtitle": "Deliverability, bounces, unsubscribes", "row_level": "mid" },
+        { "row_title": "Workflows + Automation", "row_subtitle": "Active, documented, non-conflicting", "row_level": "low" },
+        { "row_title": "Reporting Dashboards", "row_subtitle": "Trusted by leadership", "row_level": "mid" },
+        { "row_title": "Hub Alignment", "row_subtitle": "Data flows, fields, process", "row_level": "good" }
+      ],
+      "scorecard_footer": "<p><strong>Where does your portal stand?</strong> The audit scores every hub you own and sets the baseline the work is measured against.</p>"
+    }
+  },
+  {
+    "id": "6e45813f-694a-4875-b075-f894f7e37481",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "271a58cf-5e8f-456e-a33e-d4ef7fd9662c",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": { "value": 96, "units": "px" },
+            "bottom": { "value": 96, "units": "px" },
+            "left": { "value": null, "units": null },
+            "right": { "value": null, "units": null }
+          }
+        }
+      },
+      {
+        "id": "dfd98b92-8150-461e-b83d-f967f52334d7",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": { "value": 120, "units": "px" },
+            "bottom": { "value": 56, "units": "px" },
+            "left": { "value": null, "units": null },
+            "right": { "value": null, "units": null }
+          }
+        }
+      },
+      {
+        "id": "beb4fd3a-d10e-42ac-9527-1813a0105fd2",
+        "name": "background_color",
+        "label": "Background color",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "display_width": null,
+        "default": {
+          "color": "#F8F6FC",
+          "opacity": 100
+        }
+      }
+    ],
+    "tab": "STYLE",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": {
+      "spacing_desktop": {
+        "padding": {
+          "top": { "value": 96, "units": "px" },
+          "bottom": { "value": 96, "units": "px" },
+          "left": { "value": null, "units": null },
+          "right": { "value": null, "units": null }
+        }
+      },
+      "spacing_mobile": {
+        "padding": {
+          "top": { "value": 120, "units": "px" },
+          "bottom": { "value": 56, "units": "px" },
+          "left": { "value": null, "units": null },
+          "right": { "value": null, "units": null }
+        }
+      },
+      "background_color": {
+        "color": "#F8F6FC",
+        "opacity": 100
+      }
+    }
+  }
+]
