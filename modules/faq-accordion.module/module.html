@@ -12,13 +12,19 @@
 </style>
 {% end_require_css %}
 
-<section class="faq-accordion"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+<section class="faq-accordion{% if module.faq_layout == 'expanded' %} faq-accordion--expanded{% endif %}"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
   <div class="content-wrapper">
     {% if module.eyebrow %}<div class="faq-accordion__eyebrow">{{ module.eyebrow }}</div>{% endif %}
     {{ module.heading }}
 
     <div class="faq-accordion__list">
       {% for item in module.items %}
+      {% if module.faq_layout == 'expanded' %}
+      <div class="faq-accordion__item faq-accordion__item--static">
+        <div class="faq-accordion__q">{{ item.question }}</div>
+        <div class="faq-accordion__a">{{ item.answer }}</div>
+      </div>
+      {% else %}
       <div class="faq-accordion__item">
         <button type="button"
                 class="faq-accordion__question"
@@ -35,6 +41,7 @@
           {{ item.answer }}
         </div>
       </div>
+      {% endif %}
       {% endfor %}
     </div>
   </div>

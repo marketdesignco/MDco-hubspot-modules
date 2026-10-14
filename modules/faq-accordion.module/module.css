@@ -96,3 +96,52 @@
 .faq-accordion__item.is-open .faq-accordion__answer {
   display: block;
 }
+
+/* Variant: all answers open (opt-in via faq_layout = "expanded"; accordion unchanged).
+   Static markup: no <button>, so module.js never touches these items. */
+.faq-accordion--expanded .faq-accordion__eyebrow {
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 0.16em;
+}
+.faq-accordion--expanded .content-wrapper {
+  max-width: 1120px;
+  box-sizing: content-box;
+}
+.faq-accordion--expanded h2 {
+  margin: 0 0 24px;
+  text-transform: none;
+  font-weight: 900;
+  font-size: clamp(30px, 3.6vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.faq-accordion--expanded .faq-accordion__list {
+  max-width: 860px;
+  border-top: 0;
+}
+.faq-accordion__item--static {
+  padding: 24px 0;
+}
+.faq-accordion__item--static:last-child {
+  border-bottom: 0;
+}
+.faq-accordion__q {
+  margin-bottom: 10px;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.4;
+  color: #3A0CA3;
+}
+.faq-accordion__a {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #7C7392;
+}
+.faq-accordion__a p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}

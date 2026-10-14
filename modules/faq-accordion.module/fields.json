@@ -1,4 +1,26 @@
-[ {
+[
+  {
+    "id": "f63ab35b-6993-4bc4-b938-b3600c2e261a",
+    "name": "faq_layout",
+    "label": "Layout variant",
+    "help_text": "Default keeps the collapsible accordion. \"All answers open\" renders a static list with every answer visible (used on the Found First landing).",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "accordion",
+        "Accordion (answers collapsed)"
+      ],
+      [
+        "expanded",
+        "All answers open (static list)"
+      ]
+    ],
+    "type": "choice",
+    "tab": "STYLE",
+    "default": "accordion"
+  }, {
   "id" : "section_id",
   "name" : "section_id",
   "label" : "Id Section (menu anchor)",
