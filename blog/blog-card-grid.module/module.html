@@ -1,0 +1,104 @@
+{# Blog Card Grid — most recent posts as cards #}
+{% require_css %}
+<style>
+  {% scope_css %}
+  .blog-card-grid{
+    background:{{ module.style.background_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:767px){
+    .blog-card-grid{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+{% if module.tag_filter %}
+  {% set posts = blog_recent_tag_posts(module.blog, module.tag_filter, module.post_count) %}
+{% else %}
+  {% set posts = blog_recent_posts(module.blog, module.post_count) %}
+{% endif %}
+{# Default target is the active tag listing when filtered, else the selected blog listing. #}
+{% set cta_href = module.cta.link_field.url.href if module.cta.link_field.url.href else (blog_tag_url(module.blog, module.tag_filter) if module.tag_filter else blog_all_posts_url(module.blog)) %}
+{% set cta_text = module.cta.text_field if module.cta.text_field else 'View All Insights →' %}
+{% set is_tag_word = module.header_style == "tag_word" %}
+{% set show_eyebrow = module.show_eyebrow and module.eyebrow %}
+{% set show_heading = module.show_heading and module.heading %}
+{% set grads = [
+  'linear-gradient(135deg, #3A0CA3 0%, #7209B7 100%)',
+  'linear-gradient(135deg, #7209B7 0%, #3A0CA3 100%)',
+  'linear-gradient(160deg, #1A0A2E 0%, #3A0CA3 70%, #7209B7 100%)',
+  'linear-gradient(135deg, #3A0CA3 0%, #7209B7 100%)',
+  'linear-gradient(160deg, #7209B7 0%, #3A0CA3 100%)',
+  'linear-gradient(135deg, #3A0CA3 0%, #1A0A2E 100%)'
+] %}
+
+{% if posts or module.show_cta != false %}
+<section class="blog-card-grid{% if is_tag_word %} blog-card-grid--tag-word{% endif %}" {% if module.section_id %}id="{{ module.section_id }}"{% endif %}>
+  <div class="blog-card-grid__inner">
+    {% if show_eyebrow or show_heading %}
+    <div class="blog-card-grid__header">
+      {% if show_eyebrow %}<div class="blog-card-grid__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      {% if show_heading %}<div class="blog-card-grid__heading">{{ module.heading }}</div>{% endif %}
+    </div>
+    {% endif %}
+
+    {% if posts %}
+    <div class="blog-card-grid__grid">
+      {% for post in posts %}
+        {# post_list_content is the body text prepared for listing contexts (what blog_recent_posts
+   returns); post_body is a fallback in case that field is empty, and post_summary is the last
+   resort so a post with no body text still gets a non-zero estimate. #}
+        {% set body_text = post.post_list_content if post.post_list_content else (post.post_body if post.post_body else post.post_summary) %}
+        {% set mins = ((body_text|striptags|wordcount) / 225)|round(0, 'ceil')|int %}
+        {% if is_tag_word %}
+        <a class="blog-card-grid__card" href="{{ post.absolute_url }}">
+          <div class="blog-card-grid__thumb">
+            {% if post.tag_list %}<span class="blog-card-grid__thumb-word">{{ post.tag_list[0].name }}</span>{% endif %}
+          </div>
+          <div class="blog-card-grid__body">
+            {% if post.tag_list|length > 1 or module.show_read_time %}
+            <div class="blog-card-grid__pills">
+              {% for tag in post.tag_list %}{% if not loop.first %}<span class="blog-card-grid__pill">{{ tag.name }}</span>{% endif %}{% endfor %}
+              {% if module.show_read_time %}<span class="blog-card-grid__readtime">{% if mins < 1 %}1{% else %}{{ mins }}{% endif %} min read</span>{% endif %}
+            </div>
+            {% endif %}
+            <h3 class="blog-card-grid__title">{{ post.name }}</h3>
+            {% if module.card_link_text %}<span class="blog-card-grid__readmore">{{ module.card_link_text }}</span>{% endif %}
+          </div>
+        </a>
+        {% else %}
+        <a class="blog-card-grid__card" href="{{ post.absolute_url }}">
+          <div class="blog-card-grid__bar"></div>
+          <div class="blog-card-grid__img">
+            {% if post.featured_image %}
+              <img src="{{ post.featured_image }}" alt="{{ post.featured_image_alt_text|escape_attr }}" loading="lazy">
+            {% else %}
+              <div class="blog-card-grid__ph" style="background: {{ grads[(loop.index0 + 5) % 6] }};"></div>
+            {% endif %}
+          </div>
+          <div class="blog-card-grid__body">
+            <div class="blog-card-grid__meta">
+              {% if post.tag_list %}<span class="blog-card-grid__tag">{{ post.tag_list[0].name }}</span>{% endif %}
+              {% if module.show_read_time %}<span class="blog-card-grid__readtime">{% if mins < 1 %}1{% else %}{{ mins }}{% endif %} min read</span>{% endif %}
+            </div>
+            <div class="blog-card-grid__title">{{ post.name }}</div>
+            {% if module.card_link_text %}<span class="blog-card-grid__readmore">{{ module.card_link_text }}</span>{% endif %}
+          </div>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if module.show_cta != false %}
+      <div class="blog-card-grid__cta custom-cta {{ module.cta.style_cta }}">
+        <a href="{{ cta_href|escape_url }}"{% if module.cta.link_field.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ cta_text|escape_html }}</a>
+      </div>
+    {% endif %}
+
+  </div>
+</section>
+{% endif %}

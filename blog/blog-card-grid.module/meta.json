@@ -1,0 +1,17 @@
+{
+  "global": false,
+  "content_types": [
+    "LANDING_PAGE",
+    "SITE_PAGE",
+    "BLOG_LISTING",
+    "BLOG_POST"
+  ],
+  "host_template_types": [
+    "PAGE",
+    "BLOG_LISTING",
+    "BLOG_POST"
+  ],
+  "label": "Blog Card Grid",
+  "help_text": "Grid of the most recent posts as cards (3 columns on desktop). Posts load from the selected blog.",
+  "is_available_for_new_content": true
+}

@@ -1,0 +1,389 @@
+[
+  {
+    "id": "81766de8-3668-4c2f-b761-5157c626b099",
+    "name": "section_id",
+    "label": "Id Section (menu anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "ca9dafa6-9baf-4d4d-b7c9-f19390ea22d3",
+    "name": "show_eyebrow",
+    "label": "Show eyebrow",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "92ab1466-abd3-47c1-9716-c5a4526ec1de",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "visibility": {
+      "controlling_field": "show_eyebrow",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    },
+    "default": "Your Tech View Point"
+  },
+  {
+    "id": "73b4dd7b-2f79-4fb8-960d-228c45bd4bdb",
+    "name": "show_heading",
+    "label": "Show heading",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "6b13fbf6-1903-4b21-a1eb-7ef07c2cb277",
+    "name": "heading",
+    "label": "Heading (rich text)",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "visibility": {
+      "controlling_field": "show_heading",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    },
+    "default": "<h2>Perspective from the MDCo Blog</h2>"
+  },
+  {
+    "id": "e9a9fd2c-52d4-4ec2-98ff-4a16212a205b",
+    "name": "blog",
+    "label": "Blog to pull posts from",
+    "required": true,
+    "locked": false,
+    "help_text": "Posts are loaded automatically (most recent first) from the selected blog.",
+    "type": "blog",
+    "display_width": null,
+    "default": "default"
+  },
+  {
+    "id": "585438ec-4a92-4d8a-b0f6-90b145409262",
+    "name": "tag_filter",
+    "label": "Only posts with this tag (optional)",
+    "required": false,
+    "locked": false,
+    "help_text": "Tag slug, e.g. hubspot. Leave empty to show the most recent posts of the selected blog.",
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "a73652f6-817f-46a4-b21d-4761cbb0967b",
+    "name": "post_count",
+    "label": "Number of posts",
+    "required": false,
+    "locked": false,
+    "help_text": "Cards render three per row on desktop.",
+    "type": "number",
+    "min": 3,
+    "max": 12,
+    "step": 1,
+    "display_width": null,
+    "default": 6
+  },
+  {
+    "id": "45c6e2e7-8311-4a43-8b5d-d53e074bb66e",
+    "name": "card_link_text",
+    "label": "Card link text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Read →"
+  },
+  {
+    "id": "f0993f0d-eabb-4d39-a35d-259b69f9cb96",
+    "name": "header_style",
+    "label": "Card header",
+    "required": false,
+    "locked": false,
+    "help_text": "Featured image keeps the original look. Tag word: solid purple header with the post's first tag; the remaining tags show as pills and the title renders as an H3.",
+    "display": "select",
+    "choices": [
+      [
+        "image",
+        "Featured image"
+      ],
+      [
+        "tag_word",
+        "Tag word (purple block)"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "image"
+  },
+  {
+    "id": "0c37b6b2-f04a-48bc-9c4b-d6605de9ff19",
+    "name": "show_read_time",
+    "label": "Show read time",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "0394241d-1664-4fd1-8c64-244516e58fc6",
+    "name": "show_cta",
+    "label": "Show CTA button",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "72eb112e-4a49-4c7d-9de6-64dec59d6f3e",
+    "name": "cta",
+    "label": "CTA button",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "fa8f80bd-2d0c-4654-bc37-d929b004fedc",
+        "name": "style_cta",
+        "label": "Style",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "cta-purple-v2",
+            "Primary (purple)"
+          ],
+          [
+            "cta-pink-v2",
+            "Primary (pink)"
+          ],
+          [
+            "cta-white-v2",
+            "White"
+          ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "display_width": null,
+        "default": "cta-purple-v2"
+      },
+      {
+        "id": "e6cadec6-e5ee-4e80-b4be-487311009b22",
+        "name": "link_field",
+        "label": "Link",
+        "required": false,
+        "locked": false,
+        "help_text": "Leave empty to link to the active tag's listing (or the blog's listing, if no tag filter is set) automatically. Set a link here to override it.",
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "BLOG"
+        ],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "id": "88163f35-96d5-43fa-913a-58ec06587e6d",
+        "name": "text_field",
+        "label": "Text",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "View All Insights →"
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "visibility": {
+      "controlling_field": "show_cta",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    },
+    "default": {
+      "style_cta": "cta-purple-v2",
+      "link_field": {
+        "url": {
+          "content_id": null,
+          "type": "EXTERNAL",
+          "href": ""
+        },
+        "open_in_new_tab": false,
+        "no_follow": false
+      },
+      "text_field": "View All Insights →"
+    }
+  },
+  {
+    "id": "54f3d09a-b35f-42fe-9566-8dcd7a0fd55c",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "d6f511bb-4522-49cd-96a9-c53ac102f7f2",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 72,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 72,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      },
+      {
+        "id": "ada5bf2c-6370-4111-9109-1cd6e85d944a",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 40,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 40,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      },
+      {
+        "id": "1ff11dfd-1dec-42a5-a0a1-ba563d51f397",
+        "name": "background_color",
+        "label": "Background color",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "display_width": null,
+        "default": {
+          "color": "#F8F6FC",
+          "opacity": 100
+        }
+      }
+    ],
+    "tab": "STYLE",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": {
+      "spacing_desktop": {
+        "padding": {
+          "top": {
+            "value": 72,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 72,
+            "units": "px"
+          },
+          "left": {
+            "value": null,
+            "units": null
+          },
+          "right": {
+            "value": null,
+            "units": null
+          }
+        }
+      },
+      "spacing_mobile": {
+        "padding": {
+          "top": {
+            "value": 40,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 40,
+            "units": "px"
+          },
+          "left": {
+            "value": null,
+            "units": null
+          },
+          "right": {
+            "value": null,
+            "units": null
+          }
+        }
+      },
+      "background_color": {
+        "color": "#F8F6FC",
+        "opacity": 100
+      }
+    }
+  }
+]
