@@ -1,0 +1,96 @@
+{# comparison-table — package comparison grouped by category, with optional column toggles (reference: HaaS "What's Included") #}
+{% require_css %}
+<style>
+  {% scope_css %}
+  .comparison-table {
+    background: {{ module.style.background_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 768px) {
+    .comparison-table { {{ module.style.spacing_mobile.css }} }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+{% set pkg_count = module.packages|length %}
+
+<section class="comparison-table js-comparison-table"{% if module.section_id %} id="{{ module.section_id|escape_attr }}"{% endif %}>
+  <div class="comparison-table__inner">
+
+    {% if module.show_eyebrow and module.eyebrow %}
+      <div class="comparison-table__eyebrow"><span>{{ module.eyebrow }}</span></div>
+    {% endif %}
+
+    {% if module.heading %}
+      <div class="comparison-table__heading">{{ module.heading }}</div>
+    {% endif %}
+
+    {% if module.show_intro and module.intro %}
+      <div class="comparison-table__intro">{{ module.intro }}</div>
+    {% endif %}
+
+    {% if module.show_toggles and pkg_count > 1 %}
+      <div class="comparison-table__toggles" role="group" aria-label="{{ module.toggles_label|escape_attr }}">
+        {% if module.toggles_label %}
+          <span class="comparison-table__toggles-label" aria-hidden="true">{{ module.toggles_label }}</span>
+        {% endif %}
+        {% for pkg in module.packages %}
+          <button type="button" class="comparison-table__toggle is-on js-comparison-toggle" data-col="{{ loop.index }}" aria-pressed="true">{{ pkg.package_name }}</button>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="comparison-table__scroll" role="region" tabindex="0"{% if module.table_caption %} aria-label="{{ module.table_caption|escape_attr }}"{% endif %}>
+      <table class="comparison-table__table js-comparison-table-grid">
+        {% if module.table_caption %}
+          <caption class="comparison-table__sr-only">{{ module.table_caption }}</caption>
+        {% endif %}
+        <thead>
+          <tr>
+            <th scope="col" class="comparison-table__feat-head">{{ module.first_column_title }}</th>
+            {% for pkg in module.packages %}
+              <th scope="col" class="comparison-table__tier" data-col="{{ loop.index }}">{{ pkg.package_name }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        {% for cat in module.categories %}
+          <tbody>
+            {% if cat.category_title %}
+              <tr class="comparison-table__cat">
+                <th scope="colgroup" colspan="{{ pkg_count + 1 }}">{{ cat.category_title }}</th>
+              </tr>
+            {% endif %}
+            {% for row in cat.rows %}
+              <tr class="comparison-table__row">
+                <th scope="row" class="comparison-table__feat">
+                  {{ row.row_title }}
+                  {% if row.row_description %}<small>{{ row.row_description }}</small>{% endif %}
+                </th>
+                {% for pkg in module.packages %}
+                  {% set val = row.row_values[loop.index0] %}
+                  <td class="comparison-table__cell" data-col="{{ loop.index }}">
+                    {% if val and val.value_type == "optional" %}
+                      <span class="comparison-table__opt">{% if val.optional_text %}{{ val.optional_text }}{% else %}Optional{% endif %}</span>
+                    {% elif val and val.value_type == "included" %}
+                      <span class="comparison-table__yes" aria-hidden="true">&#10003;</span>
+                      <span class="comparison-table__sr-only">{{ module.screen_reader_text.included_text }}</span>
+                    {% else %}
+                      <span class="comparison-table__no" aria-hidden="true">&mdash;</span>
+                      <span class="comparison-table__sr-only">{{ module.screen_reader_text.not_included_text }}</span>
+                    {% endif %}
+                  </td>
+                {% endfor %}
+              </tr>
+            {% endfor %}
+          </tbody>
+        {% endfor %}
+      </table>
+    </div>
+
+    {% if module.show_callout and module.callout %}
+      <div class="comparison-table__callout">{{ module.callout }}</div>
+    {% endif %}
+
+  </div>
+</section>

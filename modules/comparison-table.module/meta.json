@@ -1,0 +1,13 @@
+{
+  "global": false,
+  "content_types": [
+    "LANDING_PAGE",
+    "SITE_PAGE"
+  ],
+  "host_template_types": [
+    "PAGE"
+  ],
+  "label": "Comparison Table",
+  "help_text": "Package/feature comparison table grouped by category, with optional toggles to show or hide each package column. Supports up to 4 package columns.",
+  "is_available_for_new_content": true
+}
