@@ -3,6 +3,7 @@
   {% scope_css %}
   .content-list-split {
     {{ module.style.spacing_desktop.css }}
+    {% if module.section_background %}background: {{ module.section_background }};{% endif %}
   }
   @media (max-width: 768px) {
     .content-list-split { {{ module.style.spacing_mobile.css }} }
@@ -11,17 +12,39 @@
 </style>
 {% end_require_css %}
 
-<section class="content-list-split"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+{% set has_features = module.features and module.features|length > 0 %}
+<section class="content-list-split{% if has_features %} content-list-split--features{% endif %}"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
   <div class="content-wrapper">
+    {% if has_features %}
+    <div class="content-list-split__header">
+      {% if module.eyebrow %}<div class="content-list-split__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      {{ module.heading }}
+      {% if module.body_text %}<div class="content-list-split__body">{{ module.body_text }}</div>{% endif %}
+    </div>
+    {% endif %}
     <div class="content-list-split__grid">
+      {% if has_features %}
+      <div class="content-list-split__features">
+        {% for feature in module.features %}
+        <div class="content-list-split__feature">
+          {% if feature.badge_text %}<div class="content-list-split__feature-badge" aria-hidden="true">{{ feature.badge_text }}</div>{% endif %}
+          <div class="content-list-split__feature-body">
+            {% if feature.feature_title %}<h4 class="content-list-split__feature-title">{{ feature.feature_title }}</h4>{% endif %}
+            {% if feature.feature_text %}<p class="content-list-split__feature-text">{{ feature.feature_text }}</p>{% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
       <div class="content-list-split__content">
         {% if module.eyebrow %}<div class="content-list-split__eyebrow">{{ module.eyebrow }}</div>{% endif %}
         {{ module.heading }}
         {% if module.body_text %}<div class="content-list-split__body">{{ module.body_text }}</div>{% endif %}
       </div>
+      {% endif %}
 
       <div class="content-list-split__card">
-        {% if module.card_title %}<h6 class="content-list-split__card-title">{{ module.card_title }}</h6>{% endif %}
+        {% if module.card_title %}{% if module.card_title_level == "h3" %}<h3 class="content-list-split__card-title">{{ module.card_title }}</h3>{% else %}<h6 class="content-list-split__card-title">{{ module.card_title }}</h6>{% endif %}{% endif %}
 
         {% if module.list_items %}
         <ul class="content-list-split__list">
@@ -34,5 +57,11 @@
         {% if module.card_note %}<div class="content-list-split__card-note">{{ module.card_note }}</div>{% endif %}
       </div>
     </div>
+    {% if module.statement %}
+    <div class="content-list-split__statement">
+      <blockquote class="content-list-split__statement-text">{{ module.statement }}</blockquote>
+      {% if module.statement_cite %}<cite class="content-list-split__statement-cite">{{ module.statement_cite }}</cite>{% endif %}
+    </div>
+    {% endif %}
   </div>
 </section>

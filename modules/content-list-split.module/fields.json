@@ -47,6 +47,21 @@
   "display_width" : null,
   "default" : "Who we work with here"
 }, {
+  "id" : "5e20b722-b432-4da5-bc04-2f275e8fe64d",
+  "name" : "card_title_level",
+  "label" : "Card Title — heading level",
+  "required" : false,
+  "locked" : false,
+  "help_text" : "Default H6 keeps the original markup. Use H3 when the card sits under the section H2.",
+  "display" : "select",
+  "choices" : [ [ "h6", "H6" ], [ "h3", "H3" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "display_width" : null,
+  "default" : "h6"
+}, {
   "id" : "list_items",
   "name" : "list_items",
   "label" : "List Items",
@@ -109,6 +124,86 @@
   "type" : "richtext",
   "display_width" : null,
   "default" : "<p>Owner-operators carrying marketing themselves, and revenue leaders accountable for pipeline they didn't build. Both start the same way: a conversation, no invoice.</p>"
+}, {
+  "id" : "c459ed40-4d14-4ba2-829d-8d669729b89f",
+  "name" : "features",
+  "label" : "Feature list (optional)",
+  "required" : false,
+  "locked" : false,
+  "help_text" : "When at least one item is added, the eyebrow, heading and Body move above the grid (full width) and these cards fill the left column. Leave Body empty if the section has no intro.",
+  "occurrence" : {
+    "min" : null,
+    "max" : 8,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "d21f721d-6e94-4e18-a135-e7be8b624a56",
+    "name" : "badge_text",
+    "label" : "Badge (1–2 letters)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "P"
+  }, {
+    "id" : "08b5a368-b71b-45e9-8d08-1a733b492fc7",
+    "name" : "feature_title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Feature title"
+  }, {
+    "id" : "c93ad48e-f32b-4c7d-a606-300d0c8d3c79",
+    "name" : "feature_text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Feature description."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ ]
+}, {
+  "id" : "96f960f2-fe21-4d6e-a677-cc41178b6de4",
+  "name" : "statement",
+  "label" : "Statement below the grid (rich text, optional — use em for the highlighted words)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : ""
+}, {
+  "id" : "cff4e144-189c-4269-9452-76004058704c",
+  "name" : "statement_cite",
+  "label" : "Statement attribution (optional)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : ""
+}, {
+  "id" : "063a6b84-e9ba-4758-9110-5d74b1ed77dc",
+  "name" : "section_background",
+  "label" : "Section background (optional CSS color or gradient)",
+  "required" : false,
+  "locked" : false,
+  "help_text" : "Leave empty to keep the page background. Example: linear-gradient(180deg,#FAF8FC,#F2ECFB)",
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : ""
 }, {
   "id" : "style",
   "name" : "style",
