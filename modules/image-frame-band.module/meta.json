@@ -1,0 +1,13 @@
+{
+  "global": false,
+  "content_types": [
+    "LANDING_PAGE",
+    "SITE_PAGE"
+  ],
+  "host_template_types": [
+    "PAGE"
+  ],
+  "label": "Image Frame Band",
+  "help_text": "One wide photo (21:9) or a row of up to three photos in rounded frames with a gradient top strip, optional purple duotone, dark overlay and caption.",
+  "is_available_for_new_content": true
+}

@@ -1,0 +1,40 @@
+{# Image Frame Band — one wide 21:9 photo or a row of up to three framed photos with optional duotone, overlay and caption #}
+{% require_css %}
+<style>
+  {% scope_css %}
+  .image-frame-band {
+    background: {{ module.style.background_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 768px) {
+    .image-frame-band { {{ module.style.spacing_mobile.css }} }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+{% set layout = module.layout or "single" %}
+
+<div class="image-frame-band"{% if module.section_id %} id="{{ module.section_id|escape_attr }}"{% endif %}>
+  <div class="image-frame-band__inner">
+    <div class="image-frame-band__grid image-frame-band__grid--{{ layout }} image-frame-band__grid--count-{{ module.frames|length }}">
+      {% for frame in module.frames %}
+        <figure class="image-frame-band__frame{% if frame.duotone %} image-frame-band__frame--duo{% endif %}">
+          {% if frame.image.src %}
+            <img class="image-frame-band__img" src="{{ frame.image.src }}" alt="{{ frame.image.alt|escape_attr }}" loading="lazy"{% if frame.image.width %} width="{{ frame.image.width }}"{% endif %}{% if frame.image.height %} height="{{ frame.image.height }}"{% endif %}>
+          {% else %}
+            <div class="image-frame-band__placeholder" aria-hidden="true"></div>
+          {% endif %}
+          {% if frame.duotone %}<div class="image-frame-band__tone" aria-hidden="true"></div>{% endif %}
+          {% if frame.scrim %}<div class="image-frame-band__scrim" aria-hidden="true"></div>{% endif %}
+          {% if frame.caption_eyebrow or frame.caption_title %}
+            <figcaption class="image-frame-band__cap">
+              {% if frame.caption_eyebrow %}<span class="image-frame-band__cap-eyebrow">{{ frame.caption_eyebrow }}</span>{% endif %}
+              {% if frame.caption_title %}<span class="image-frame-band__cap-title">{{ frame.caption_title }}</span>{% endif %}
+            </figcaption>
+          {% endif %}
+        </figure>
+      {% endfor %}
+    </div>
+  </div>
+</div>

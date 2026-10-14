@@ -1,0 +1,213 @@
+[
+  {
+    "id": "6741c564-bcfc-45be-a95e-b58dc37aa1c2",
+    "name": "section_id",
+    "label": "Id Section (menu anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "afe541fd-bb1d-4941-813f-fb0d70e935eb",
+    "name": "layout",
+    "label": "Layout",
+    "help_text": "Single = one wide 21:9 frame. Row = up to three frames side by side (1.4 / 1 / 1), stacked at 16:9 on mobile.",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [ "single", "Single (21:9)" ],
+      [ "row", "Row (up to 3 frames)" ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "single"
+  },
+  {
+    "id": "7cd31fbd-2ca6-40b1-833b-a2bb62d2cd97",
+    "name": "frames",
+    "label": "Frames",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 3,
+      "sorting_label_field": null,
+      "default": 1
+    },
+    "children": [
+      {
+        "id": "52ea8011-9aed-40a1-94bb-0e6ad87a6025",
+        "name": "image",
+        "label": "Image",
+        "required": false,
+        "locked": false,
+        "responsive": true,
+        "resizable": false,
+        "show_loading": false,
+        "type": "image",
+        "display_width": null,
+        "default": {
+          "src": "",
+          "alt": "The MDCo team working together at the table",
+          "loading": "lazy"
+        }
+      },
+      {
+        "id": "6e43159b-f3b6-45fb-8fcb-8e75f96a16a5",
+        "name": "duotone",
+        "label": "Purple duotone",
+        "help_text": "Turns the photo grayscale and tints it purple.",
+        "required": false,
+        "locked": false,
+        "display": "toggle",
+        "type": "boolean",
+        "display_width": null,
+        "default": false
+      },
+      {
+        "id": "16b012b4-f99e-4e7a-a335-8de26201dbce",
+        "name": "scrim",
+        "label": "Dark bottom overlay",
+        "help_text": "Darkens the bottom of the photo so the caption stays readable.",
+        "required": false,
+        "locked": false,
+        "display": "toggle",
+        "type": "boolean",
+        "display_width": null,
+        "default": true
+      },
+      {
+        "id": "0d9027bd-dea6-42b8-8155-c3936be2e26e",
+        "name": "caption_eyebrow",
+        "label": "Caption eyebrow",
+        "help_text": "Optional. Leave empty to hide.",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "The Team Behind the Portal"
+      },
+      {
+        "id": "bedb1e42-9f85-4afb-a61e-2c9c982fefe8",
+        "name": "caption_title",
+        "label": "Caption title",
+        "help_text": "Optional. Leave empty to hide.",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "HubSpot-certified MarketDesigners who have run marketing and sales inside technology companies."
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "image": {
+          "src": "",
+          "alt": "The MDCo team working together at the table",
+          "loading": "lazy"
+        },
+        "duotone": false,
+        "scrim": true,
+        "caption_eyebrow": "The Team Behind the Portal",
+        "caption_title": "HubSpot-certified MarketDesigners who have run marketing and sales inside technology companies."
+      }
+    ]
+  },
+  {
+    "id": "1576bfa1-2088-4e10-b14a-6ee6f225ad4a",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "ccf717ee-82e6-4ea8-b141-fd8f296c1a35",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": { "value": 36, "units": "px" },
+            "bottom": { "value": 72, "units": "px" },
+            "left": { "value": null, "units": null },
+            "right": { "value": null, "units": null }
+          }
+        }
+      },
+      {
+        "id": "151ae2a8-959a-47e5-a137-febe86344458",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": { "value": 24, "units": "px" },
+            "bottom": { "value": 48, "units": "px" },
+            "left": { "value": null, "units": null },
+            "right": { "value": null, "units": null }
+          }
+        }
+      },
+      {
+        "id": "8b69bb2c-3137-494f-99a4-b505b032a150",
+        "name": "background_color",
+        "label": "Background color",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "display_width": null,
+        "default": {
+          "color": "#FAF8FC",
+          "opacity": 100
+        }
+      }
+    ],
+    "tab": "STYLE",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": {
+      "spacing_desktop": {
+        "padding": {
+          "top": { "value": 36, "units": "px" },
+          "bottom": { "value": 72, "units": "px" },
+          "left": { "value": null, "units": null },
+          "right": { "value": null, "units": null }
+        }
+      },
+      "spacing_mobile": {
+        "padding": {
+          "top": { "value": 24, "units": "px" },
+          "bottom": { "value": 48, "units": "px" },
+          "left": { "value": null, "units": null },
+          "right": { "value": null, "units": null }
+        }
+      },
+      "background_color": {
+        "color": "#FAF8FC",
+        "opacity": 100
+      }
+    }
+  }
+]
