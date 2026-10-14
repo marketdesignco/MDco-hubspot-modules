@@ -42,6 +42,31 @@
     "display_width": null
   },
   {
+    "id": "7a72f423-cc7f-43ac-bcdf-e182f0499562",
+    "name": "card_variant",
+    "label": "Card variant",
+    "required": false,
+    "locked": false,
+    "help_text": "Default keeps the original look. Story: light lavender cards with a 5px gradient strip, purple eyebrow and a white section background (use with the per-card pill, quote marks, fix block and fit line).",
+    "display": "select",
+    "choices": [
+      [
+        "default",
+        "Default"
+      ],
+      [
+        "story",
+        "Story cards"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "default": "default",
+    "display_width": null
+  },
+  {
     "id": "9d580594-76c8-4dda-a74e-b338e3d8aa32",
     "name": "cards",
     "label": "Cards",
@@ -93,6 +118,61 @@
         "locked": false,
         "type": "richtext",
         "default": "<p>Description</p>",
+        "display_width": null
+      },
+      {
+        "id": "842362ca-3505-4110-b12f-e6bd830639f8",
+        "name": "tag_pill",
+        "label": "Show tag as pill",
+        "required": false,
+        "locked": false,
+        "display": "toggle",
+        "type": "boolean",
+        "default": false,
+        "display_width": null
+      },
+      {
+        "id": "ead3ac0e-3931-4356-b10a-9c4135973b50",
+        "name": "quote_marks",
+        "label": "Wrap title in quote marks",
+        "required": false,
+        "locked": false,
+        "display": "toggle",
+        "type": "boolean",
+        "default": false,
+        "display_width": null
+      },
+      {
+        "id": "db452668-bead-4e10-b91c-bed1398c2780",
+        "name": "fix_label",
+        "label": "Bottom block — Label (optional)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "default": "",
+        "display_width": null
+      },
+      {
+        "id": "572d216f-9559-43f2-8cca-d27351be19f0",
+        "name": "fix_text",
+        "label": "Bottom block — Text (optional)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "default": "",
+        "display_width": null
+      },
+      {
+        "id": "a3a536f7-bc8b-428f-8125-76547c8540dc",
+        "name": "fit_text",
+        "label": "Fit line (optional, e.g. \"Start with: …\")",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "default": "",
         "display_width": null
       }
     ],
