@@ -1,4 +1,37 @@
-[ {
+[
+  {
+    "id": "bcbbe8af-acae-47a3-a979-7e6179f9ca40",
+    "name": "cta_variant",
+    "label": "Layout variant",
+    "help_text": "Default keeps the existing band. \"Found First\" uses the pink-to-purple gradient, no glows and a narrower text column, and hides the caption and footnotes. Used on the Found First landing.",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "default",
+        "Default"
+      ],
+      [
+        "found-first",
+        "Found First (pink → purple gradient, compact)"
+      ]
+    ],
+    "type": "choice",
+    "tab": "STYLE",
+    "default": "default"
+  }, {
+    "id": "69a6c8e2-58c0-4e5c-bbae-8ab3a2af5dde",
+    "name": "background_gradient_override",
+    "label": "Background Gradient Override (CSS)",
+    "help_text": "Optional CSS linear-gradient. When set, it overrides this instance's solid color or variant background. Leave blank to keep the existing background behavior.",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "tab": "STYLE",
+    "default": ""
+  }, {
   "id" : "f77aa767-a09e-3364-9998-0c72a3cd6746",
   "name" : "style",
   "label" : "Style",
@@ -64,7 +97,7 @@
     "id" : "d4e5f6a7-b8c9-4012-9def-0123456789ab",
     "name" : "background_override",
     "label" : "Background Override (leave empty to keep the default gradient)",
-    "help_text" : "Leave empty to use the theme's default gradient background. Set a color here to override it with a solid color for this instance.",
+    "help_text" : "Sets a solid color for this instance. A CSS background gradient override takes precedence when provided.",
     "required" : false,
     "locked" : false,
     "type" : "color",

@@ -159,3 +159,31 @@
     display: none;
   }
 }
+
+/* Variant: Found First (opt-in via cta_variant = "found-first"; default band unchanged) */
+.cta-section--found-first .cta-glow-top,
+.cta-section--found-first .cta-glow-bottom {
+  display: none;
+}
+.cta-section--found-first .cta-inner {
+  max-width: 760px;
+}
+.cta-section--found-first .cta-heading,
+.cta-section--found-first .cta-heading h2,
+.cta-section--found-first .cta-heading div {
+  margin: 0 0 16px;
+  font-weight: 900;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.cta-section--found-first .cta-text,
+.cta-section--found-first .cta-text p {
+  margin: 0 0 34px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+}
+.cta-section--found-first .cta-buttons {
+  margin-bottom: 0;
+}

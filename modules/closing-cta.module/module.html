@@ -2,7 +2,7 @@
 <style>
 	{% scope_css %}
   .cta-section{
-   background: {% if module.style.background_override.color %}{{ module.style.background_override.color }}{% else %}linear-gradient(270deg, #7EDB00 0%, #7209B7 36.26%, #3A0CA3 70.47%, #F72585 100%){% endif %};
+   background: {% if module.background_gradient_override %}{{ module.background_gradient_override|escape }}{% elif module.style.background_override.color %}{{ module.style.background_override.color }}{% elif module.cta_variant == 'found-first' %}linear-gradient(90deg, #F72585 0%, #3A0CA3 45%, #7209B7 100%){% else %}linear-gradient(270deg, #7EDB00 0%, #7209B7 36.26%, #3A0CA3 70.47%, #F72585 100%){% endif %};
 {{ module.style.spacing_desktop.css }};
   }
   @media (max-width:768px){
@@ -14,7 +14,7 @@
 	{% end_scope_css %}
 </style>
 {% end_require_css %}
-<section class="cta-section" {% if module.section_id %}id="{{ module.section_id }}"{% endif %}>
+<section class="cta-section{% if module.cta_variant == 'found-first' %} cta-section--found-first{% endif %}" {% if module.section_id %}id="{{ module.section_id }}"{% endif %}>
   <div class="cta-glow-top" aria-hidden="true"></div>
   <div class="cta-glow-bottom" aria-hidden="true"></div>
   {% if module.show_watermark and module.watermark_text %}
@@ -24,9 +24,11 @@
   <div class="content-wrapper">
     <div class="cta-inner">
 
+      {% if module.cta_variant != 'found-first' %}
       <div class="cta-caption">
         {{ module.caption }}
       </div>
+      {% endif %}
 
       <div class="cta-heading">
         {{ module.heading }}
@@ -75,7 +77,7 @@
           {% endfor %}
 
         </div>
-      {% if module.footnotes %}
+      {% if module.footnotes and module.cta_variant != 'found-first' %}
         <div class="cta-footnote">
           {% for note in module.footnotes %}
             <span class="cta-footnote-item">{{ note.text }}</span>
