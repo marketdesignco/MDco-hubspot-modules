@@ -14,3 +14,34 @@
   margin: 0 auto 32px;
   max-width: 560px;
 }
+
+/* Opt-in: additional_ctas — this wrapper only renders when extra CTAs exist. */
+.ff-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Opt-in: footnote — only renders when filled. */
+.ff-cta .ff-cta-footnote {
+  margin: 28px auto 0;
+  max-width: 600px;
+}
+
+.ff-cta .ff-cta-footnote p {
+  margin: 0 auto;
+  max-width: none;
+}
+
+.ff-cta .ff-cta-footnote a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ff-cta .ff-cta-footnote a:hover,
+.ff-cta .ff-cta-footnote a:focus-visible {
+  text-decoration: underline;
+}

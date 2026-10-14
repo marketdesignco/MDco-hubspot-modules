@@ -43,7 +43,7 @@
   "required" : false,
   "locked" : false,
   "display" : "select",
-  "choices" : [ [ "cta-white", "White" ], [ "cta-white-outline", "White Outline" ] ],
+  "choices" : [ [ "cta-white", "White" ], [ "cta-white-outline", "White Outline" ], [ "cta-white-v2", "White (deep purple text)" ] ],
   "multiple" : false,
   "reordering_enabled" : true,
   "preset" : null,
@@ -97,6 +97,87 @@
   "type" : "text",
   "display_width" : null,
   "default" : "linear-gradient(90deg, #F72585 0%, #7209B7 35%, #3A0CA3 65%, #7EDB00 100%)"
+}, {
+  "id" : "f712bbfa-9bb6-4ed0-8b84-03aaae974223",
+  "name" : "additional_ctas",
+  "label" : "Additional CTAs",
+  "help_text" : "Optional. Extra buttons shown in a centered row next to the main CTA. Leave empty to keep the original single-button layout.",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : 4,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "f0ccc3af-5a2b-4e4e-9f39-af913689a0ac",
+    "name" : "style_cta",
+    "label" : "CTA Style",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "cta-white", "White" ], [ "cta-white-outline", "White Outline" ], [ "cta-white-v2", "White (deep purple text)" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "cta-white-outline"
+  }, {
+    "id" : "582bc189-14c0-437c-bc22-3a2ca373ab8d",
+    "name" : "cta",
+    "label" : "HubSpot CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "display_width" : null
+  }, {
+    "id" : "fca47faa-7bc2-4221-8dc3-093f70e1e8af",
+    "name" : "text_field",
+    "label" : "Text (used with the link override below)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Learn More"
+  }, {
+    "id" : "463d8e14-75fe-40c6-a436-c761e4f38a08",
+    "name" : "link_field",
+    "label" : "Link (optional — overrides the HubSpot CTA above if set)",
+    "help_text" : "Optional. If set, renders a plain link button using this URL and the text above instead of the HubSpot CTA above.",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "CALL_TO_ACTION", "PHONE_NUMBER" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ ]
+}, {
+  "id" : "13419e7a-5cf3-473a-a3c0-cc87fd7bf9ab",
+  "name" : "footnote",
+  "label" : "Footnote (rich text, below the buttons)",
+  "help_text" : "Optional. Small line under the buttons; supports bold and links. Leave empty to hide.",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : ""
 }, {
   "id" : "style",
   "name" : "style",

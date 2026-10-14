@@ -16,6 +16,7 @@
   <div class="ff-wrap">
     {{ module.heading }}
     {{ module.description }}
+    {% if module.additional_ctas %}<div class="ff-cta-actions">{% endif %}
     {% if module.show_cta %}
       <div class="custom-cta {{ module.style_cta }}">
         {% if module.button_link.url.href %}
@@ -32,5 +33,32 @@
         {% endif %}
       </div>
     {% endif %}
+    {% if module.additional_ctas %}
+      {% for item in module.additional_ctas %}
+        {% if item.link_field.url.href or item.cta %}
+        <div class="custom-cta {{ item.style_cta }}">
+          {% if item.link_field.url.href %}
+            {% set href = item.link_field.url.href %}
+            {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}{% set href = "mailto:" + href %}
+            {% elif item.link_field.url.type is equalto "PHONE_NUMBER" %}{% set href = "tel:" + href %}{% endif %}
+            <a
+              {% if item.link_field.url.type is equalto "CALL_TO_ACTION" %}
+                href="{{ href }}" {# Not escaped: non-editable JS call to the associated CTA #}
+              {% else %}
+                href="{{ href|escape_url }}"
+              {% endif %}
+              {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %}
+              {% if item.link_field.rel %}rel="{{ item.link_field.rel|escape_attr }}"{% endif %}>
+              {{ item.text_field }}
+            </a>
+          {% elif item.cta %}
+            {% cta guid="{{ item.cta }}" %}
+          {% endif %}
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if module.footnote %}<div class="ff-cta-footnote">{{ module.footnote }}</div>{% endif %}
   </div>
 </section>
