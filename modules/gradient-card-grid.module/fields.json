@@ -1,0 +1,531 @@
+[
+  {
+    "id": "90f8db60-3405-424d-870d-a5d6126143b2",
+    "name": "section_id",
+    "label": "Section ID (anchor)",
+    "required": false,
+    "locked": false,
+    "help_text": "Optional. Rendered as the section id so it can be targeted by in-page links (no # needed).",
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "426f9f15-ad43-4d37-8fba-f82904c0513c",
+    "name": "show_eyebrow",
+    "label": "Show eyebrow",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "d2b4c85a-b733-425b-92f6-4ce6daa56d1d",
+    "name": "grid_eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Why an audit, why now"
+  },
+  {
+    "id": "1e325f71-d483-492f-bb1e-04b7d187938b",
+    "name": "grid_heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "help_text": "Use bold (<strong>) for the gradient-highlighted words.",
+    "type": "richtext",
+    "display_width": null,
+    "default": "<h2>SEO gets you found. AEO gets you cited.<br><strong>GEO gets you known.</strong></h2>"
+  },
+  {
+    "id": "06b3d6c6-72c1-43d5-8eac-e96b0bb15096",
+    "name": "show_intro",
+    "label": "Show intro",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "1d5e46bc-1db6-495f-b279-74aa3077638f",
+    "name": "grid_intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<p>AI answer engines now sit between your buyer and the click — summarizing, comparing, and recommending companies before a single site gets visited. The audit measures all three machine layers, because a gap in any one of them keeps you out of the answer.</p>"
+  },
+  {
+    "id": "863ecc86-f235-45ce-ac0b-758c04566bb6",
+    "name": "grid_columns",
+    "label": "Columns (desktop)",
+    "required": false,
+    "locked": false,
+    "help_text": "3 columns stack to 1 column below 992px. 4 columns become 2 columns below 992px and 1 column below 768px.",
+    "display": "select",
+    "choices": [
+      [
+        "3",
+        "3 columns"
+      ],
+      [
+        "4",
+        "4 columns"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "3"
+  },
+  {
+    "id": "6b38f0bb-a0ba-43c3-a74b-3107c595df62",
+    "name": "grid_cards",
+    "label": "Cards",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 8,
+      "sorting_label_field": null,
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "6a9fa8f2-ddb0-4e75-9501-6bc69d277bec",
+        "name": "card_number",
+        "label": "Step number",
+        "required": false,
+        "locked": false,
+        "help_text": "Optional. Shows a numbered circle, e.g. 1",
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "162a0f24-02eb-46f9-bf91-5d178b61d127",
+        "name": "card_tag_text",
+        "label": "Tag text",
+        "required": false,
+        "locked": false,
+        "help_text": "Optional pill, e.g. FREE",
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "d7c96035-3197-48c8-aebb-c28d361ca5e9",
+        "name": "card_tag_tone",
+        "label": "Tag color",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "green",
+            "Green (included)"
+          ],
+          [
+            "purple",
+            "Purple (paid / optional)"
+          ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "display_width": null,
+        "default": "green"
+      },
+      {
+        "id": "92f06578-d7aa-454c-9a7c-2464b716e930",
+        "name": "card_acronym",
+        "label": "Acronym",
+        "required": false,
+        "locked": false,
+        "help_text": "Optional large colored label, e.g. SEO",
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "5b92c48f-7a8f-472c-8ac8-281fafec5eaf",
+        "name": "card_acronym_color",
+        "label": "Acronym color",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "purple",
+            "Purple"
+          ],
+          [
+            "pink",
+            "Pink"
+          ],
+          [
+            "deep",
+            "Deep purple"
+          ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "display_width": null,
+        "default": "purple"
+      },
+      {
+        "id": "e7d842bb-f516-4401-ba8b-439d70f68d05",
+        "name": "card_kicker",
+        "label": "Kicker",
+        "required": false,
+        "locked": false,
+        "help_text": "Optional small uppercase subtitle, e.g. Search Engine Optimization",
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "f4adca95-b1d8-43e9-9b04-6b8957eb5daf",
+        "name": "card_title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "help_text": "Optional. Renders as an H3.",
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": ""
+      },
+      {
+        "id": "ff196791-37cf-4b4d-a8c7-169da40b895d",
+        "name": "card_text",
+        "label": "Text",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "display_width": null,
+        "default": ""
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "card_number": "",
+        "card_tag_text": "",
+        "card_tag_tone": "green",
+        "card_acronym": "SEO",
+        "card_acronym_color": "purple",
+        "card_kicker": "Search Engine Optimization",
+        "card_title": "",
+        "card_text": "<p><strong>Can a crawler reach, read, and trust your site?</strong> The technical foundation — AI engines still rely on crawlable, well-structured sites as a primary source.</p>"
+      },
+      {
+        "card_number": "",
+        "card_tag_text": "",
+        "card_tag_tone": "green",
+        "card_acronym": "AEO",
+        "card_acronym_color": "pink",
+        "card_kicker": "Answer Engine Optimization",
+        "card_title": "",
+        "card_text": "<p><strong>Can an AI extract a direct, citable answer from your page?</strong> Engines cite the cleanest, most direct answer — not the longest or most creative one.</p>"
+      },
+      {
+        "card_number": "",
+        "card_tag_text": "",
+        "card_tag_tone": "green",
+        "card_acronym": "GEO",
+        "card_acronym_color": "deep",
+        "card_kicker": "Generative Engine Optimization",
+        "card_title": "",
+        "card_text": "<p><strong>Does the AI already know and trust your brand?</strong> The entity + authority signals built outside your own site — shaped before the AI ever loads your page.</p>"
+      }
+    ]
+  },
+  {
+    "id": "8e6d8964-8bbd-4eca-b786-95146eae2ba9",
+    "name": "show_callout",
+    "label": "Show callout",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "32e6c3f7-5793-401c-b587-07c489cb4c09",
+    "name": "callout_text",
+    "label": "Callout text",
+    "required": false,
+    "locked": false,
+    "help_text": "Use bold (<strong>) for the purple-highlighted words.",
+    "type": "richtext",
+    "display_width": null,
+    "default": "<p>And after all three: a person still has to say yes. Every audit finding is written for the decision-maker reading it — <strong>legible to the machine, persuasive to the human.</strong></p>"
+  },
+  {
+    "id": "6506c21b-40cf-4917-a95d-ee85cc856a83",
+    "name": "show_note",
+    "label": "Show note",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "35f34664-f4b2-445d-b1c6-fe2c55c12a1d",
+    "name": "note_text",
+    "label": "Note",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<p>Want the full story? Read the <a href=\"https://www.marketdesignco.com/found-first\"><strong>Found First service page</strong></a>.</p>"
+  },
+  {
+    "id": "1f195c1e-061f-41e2-bbe3-3a5d7e297776",
+    "name": "show_cta",
+    "label": "Show CTA button",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "5545573a-e94f-4865-9d8e-2363a2768be4",
+    "name": "style_cta",
+    "label": "CTA style",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "cta-pink-v2",
+        "Primary (pink)"
+      ],
+      [
+        "cta-purple-v2",
+        "Primary (purple)"
+      ],
+      [
+        "cta-pink",
+        "Pink (classic)"
+      ],
+      [
+        "cta-primary",
+        "Theme primary"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "default": "cta-pink-v2"
+  },
+  {
+    "id": "9858516c-b768-46a0-9f60-c21e73ff1eb1",
+    "name": "hubspot_cta",
+    "label": "HubSpot CTA",
+    "required": false,
+    "locked": false,
+    "type": "cta",
+    "display_width": null
+  },
+  {
+    "id": "4b16ae54-54fa-4ff9-8a4c-1110e48dffc9",
+    "name": "cta_link",
+    "label": "Link (optional — overrides the HubSpot CTA if set)",
+    "required": false,
+    "locked": false,
+    "help_text": "Optional. If set, renders a plain link button using this URL and the CTA text below instead of the HubSpot CTA above. Clear it to use the HubSpot CTA.",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "CALL_TO_ACTION",
+      "PHONE_NUMBER"
+    ],
+    "show_advanced_rel_options": false,
+    "type": "link",
+    "display_width": null,
+    "default": {
+      "url": {
+        "type": "EXTERNAL",
+        "href": "#request"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "id": "d39d17fd-c341-47db-b56a-95458fb490a0",
+    "name": "cta_text",
+    "label": "CTA text (used with the link override)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Request My Free Snapshot"
+  },
+  {
+    "id": "d5a80aab-c17c-480c-aef3-9975110635e8",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "f08d4315-4adf-4041-958c-f1b8c5759385",
+        "name": "background_color",
+        "label": "Background color",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "display_width": null,
+        "default": {
+          "color": "#F8F6FC",
+          "opacity": 100
+        }
+      },
+      {
+        "id": "4c4dcb7c-5edd-455c-a321-d876dfed0fa4",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 96,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 96,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      },
+      {
+        "id": "b724affe-578b-47d8-80dd-161b1c22dd81",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 64,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 64,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      }
+    ],
+    "tab": "STYLE",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": {
+      "background_color": {
+        "color": "#F8F6FC",
+        "opacity": 100
+      },
+      "spacing_desktop": {
+        "padding": {
+          "top": {
+            "value": 96,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 96,
+            "units": "px"
+          },
+          "left": {
+            "value": null,
+            "units": null
+          },
+          "right": {
+            "value": null,
+            "units": null
+          }
+        }
+      },
+      "spacing_mobile": {
+        "padding": {
+          "top": {
+            "value": 64,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 64,
+            "units": "px"
+          },
+          "left": {
+            "value": null,
+            "units": null
+          },
+          "right": {
+            "value": null,
+            "units": null
+          }
+        }
+      }
+    }
+  }
+]

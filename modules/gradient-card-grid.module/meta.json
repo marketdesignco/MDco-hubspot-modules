@@ -1,0 +1,13 @@
+{
+  "global": false,
+  "content_types": [
+    "LANDING_PAGE",
+    "SITE_PAGE"
+  ],
+  "host_template_types": [
+    "PAGE"
+  ],
+  "label": "Gradient Card Grid",
+  "help_text": "Section header plus 3 or 4 cards with a gradient top bar (acronym cards or numbered steps), with optional callout, note and CTA.",
+  "is_available_for_new_content": true
+}

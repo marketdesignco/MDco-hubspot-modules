@@ -1,0 +1,102 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .gradient-card-grid {
+    {% if module.style.background_color.color %}background: {{ module.style.background_color.color }};{% endif %}
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 767px) {
+    .gradient-card-grid { {{ module.style.spacing_mobile.css }} }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="gradient-card-grid gradient-card-grid--cols-{{ module.grid_columns }}"{% if module.section_id %} id="{{ module.section_id|escape_attr }}"{% endif %}>
+  <div class="content-wrapper">
+    <div class="gradient-card-grid__inner">
+
+      {% if module.show_eyebrow and module.grid_eyebrow %}
+        <div class="gradient-card-grid__eyebrow">{{ module.grid_eyebrow }}</div>
+      {% endif %}
+
+      {% if module.grid_heading %}
+        <div class="gradient-card-grid__heading">{{ module.grid_heading }}</div>
+      {% endif %}
+
+      {% if module.show_intro and module.grid_intro %}
+        <div class="gradient-card-grid__intro">{{ module.grid_intro }}</div>
+      {% endif %}
+
+      <div class="gradient-card-grid__grid gradient-card-grid__grid--cols-{{ module.grid_columns }}">
+        {% for card in module.grid_cards %}
+        <div class="gradient-card-grid__card">
+          <span class="gradient-card-grid__card-bar" aria-hidden="true"></span>
+          {% if card.card_number %}
+            <div class="gradient-card-grid__number">{{ card.card_number }}</div>
+          {% endif %}
+          {% if card.card_tag_text %}
+            <div class="gradient-card-grid__tag-row"><span class="gradient-card-grid__tag gradient-card-grid__tag--{{ card.card_tag_tone }}">{{ card.card_tag_text }}</span></div>
+          {% endif %}
+          {% if card.card_acronym %}
+            <p class="gradient-card-grid__acronym gradient-card-grid__acronym--{{ card.card_acronym_color }}">{{ card.card_acronym }}</p>
+          {% endif %}
+          {% if card.card_kicker %}
+            <p class="gradient-card-grid__kicker">{{ card.card_kicker }}</p>
+          {% endif %}
+          {% if card.card_title %}
+            <h3 class="gradient-card-grid__title">{{ card.card_title }}</h3>
+          {% endif %}
+          {% if card.card_text|striptags|trim %}
+            <div class="gradient-card-grid__text">{{ card.card_text }}</div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+
+      {% if module.show_callout and module.callout_text %}
+        <div class="gradient-card-grid__callout">
+          <span class="gradient-card-grid__callout-bar" aria-hidden="true"></span>
+          {{ module.callout_text }}
+        </div>
+      {% endif %}
+
+      {% if module.show_note and module.note_text %}
+        <div class="gradient-card-grid__note">{{ module.note_text }}</div>
+      {% endif %}
+
+      {% if module.show_cta and (module.cta_link.url.href or module.hubspot_cta) %}
+        <div class="gradient-card-grid__cta">
+          <div class="custom-cta {{ module.style_cta }}">
+            {% if module.cta_link.url.href %}
+              {% set href = module.cta_link.url.href %}
+              {% if module.cta_link.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+              {% elif module.cta_link.url.type is equalto "PHONE_NUMBER" %}
+                {% set href = "tel:" + href %}
+              {% endif %}
+              <a
+                {% if module.cta_link.url.type is equalto "CALL_TO_ACTION" %}
+                  href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+                {% else %}
+                  href="{{ href|escape_url }}"
+                {% endif %}
+                {% if module.cta_link.open_in_new_tab %}
+                  target="_blank"
+                {% endif %}
+                {% if module.cta_link.rel %}
+                  rel="{{ module.cta_link.rel|escape_attr }}"
+                {% endif %}
+                >
+                {{ module.cta_text }}
+              </a>
+            {% elif module.hubspot_cta %}
+              {% cta guid="{{ module.hubspot_cta }}" %}
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
