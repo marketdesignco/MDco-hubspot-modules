@@ -1,0 +1,8 @@
+{
+  "global": false,
+  "content_types": ["LANDING_PAGE", "SITE_PAGE"],
+  "host_template_types": ["PAGE"],
+  "label": "Pricing Tier Cards",
+  "help_text": "Light pricing section: eyebrow, heading and intro, a repeater of pricing tier cards (tier eyebrow, name, price, feature list, CTA; any tier can be marked as featured/dark), plus optional fine print and a callout.",
+  "is_available_for_new_content": true
+}

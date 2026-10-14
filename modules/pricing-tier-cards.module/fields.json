@@ -1,0 +1,579 @@
+[
+  {
+    "id": "a45208d1-138c-4e07-8d9c-7404dc4041fa",
+    "name": "section_id",
+    "label": "Id Section (menu anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "packages"
+  },
+  {
+    "id": "7b17d228-6c39-4369-8cc4-7621363e1b38",
+    "name": "show_eyebrow",
+    "label": "Show Eyebrow",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "91447276-83ee-4818-bb1b-a2e7b95a3977",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "HubSpot Optimization Services",
+    "visibility": {
+      "controlling_field": "7b17d228-6c39-4369-8cc4-7621363e1b38",
+      "controlling_field_path": "show_eyebrow",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "d21e9e84-6b83-4cd7-9ad5-b0d01978e0ec",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<h2>Execute. Elevate. Grow.</h2>"
+  },
+  {
+    "id": "285bc1c7-ad19-49b0-b0a4-fe0685287ce2",
+    "name": "show_intro",
+    "label": "Show Intro",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "ac32b24a-4ca3-41f9-ac0d-9c44c57f4590",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<p>Three levels of support, one certified team. Every package includes a HubSpot Audit with MarketDesign Metrics, and every plan flexes as your portal and your business grow.</p>",
+    "visibility": {
+      "controlling_field": "285bc1c7-ad19-49b0-b0a4-fe0685287ce2",
+      "controlling_field_path": "show_intro",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "21b07ce8-b0e1-4dbb-9133-dea0a94d9228",
+    "name": "tiers",
+    "label": "Pricing Tiers",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 4,
+      "sorting_label_field": null,
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "d2070d19-5f5e-4ee7-ad81-43884c549d7c",
+        "name": "tier_eyebrow",
+        "label": "Tier Eyebrow",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Execute"
+      },
+      {
+        "id": "f5b40bad-14ff-4899-8913-7275836b7a35",
+        "name": "tier_name",
+        "label": "Tier Name (H3)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "HubSpot Assistant"
+      },
+      {
+        "id": "db2626d6-9556-4c7b-8a68-c53f6e8f2a18",
+        "name": "price",
+        "label": "Price",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "$2,500"
+      },
+      {
+        "id": "ca4e1134-5373-4c90-89a9-c9522e26dc41",
+        "name": "price_suffix",
+        "label": "Price Suffix",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "/ month"
+      },
+      {
+        "id": "c2715cf3-f1ea-4ee3-ba5c-daa18eed6fbd",
+        "name": "tier_features",
+        "label": "Features",
+        "required": false,
+        "locked": false,
+        "occurrence": {
+          "min": null,
+          "max": null,
+          "sorting_label_field": null,
+          "default": 5
+        },
+        "children": [
+          {
+            "id": "64e3c401-49f3-4d84-80ea-b1a013581136",
+            "name": "feature_text",
+            "label": "Feature",
+            "required": false,
+            "locked": false,
+            "allow_new_line": false,
+            "type": "text",
+            "display_width": null,
+            "default": "Up to 10 execution hours per month"
+          }
+        ],
+        "tab": "CONTENT",
+        "expanded": false,
+        "group_occurrence_meta": null,
+        "type": "group",
+        "display_width": null,
+        "default": [
+          {
+            "feature_text": "Up to 10 execution hours per month"
+          },
+          {
+            "feature_text": "Quarterly reporting"
+          },
+          {
+            "feature_text": "Portal maintenance + data quality"
+          },
+          {
+            "feature_text": "Basic website + campaign support"
+          },
+          {
+            "feature_text": "HubSpot Audit included"
+          }
+        ]
+      },
+      {
+        "id": "a2eb4668-9627-448c-8b97-a41edd6e5d63",
+        "name": "featured",
+        "label": "Featured (dark card)",
+        "required": false,
+        "locked": false,
+        "display": "toggle",
+        "type": "boolean",
+        "display_width": null,
+        "default": false
+      },
+      {
+        "id": "66342206-d65a-4884-822b-a4bc595f771d",
+        "name": "show_cta",
+        "label": "Show CTA",
+        "required": false,
+        "locked": false,
+        "display": "toggle",
+        "type": "boolean",
+        "display_width": null,
+        "default": true
+      },
+      {
+        "id": "9cf87bd5-9d90-41eb-b897-d8454038a0a8",
+        "name": "tier_cta",
+        "label": "CTA",
+        "required": false,
+        "locked": false,
+        "children": [
+          {
+            "id": "a20c7476-52e9-4666-9d9c-6a0660462f7b",
+            "name": "style_cta",
+            "label": "Style",
+            "required": false,
+            "locked": false,
+            "display": "select",
+            "choices": [
+              [
+                "cta-purple-v2",
+                "Primary (purple)"
+              ],
+              [
+                "cta-pink-v2",
+                "Primary (pink)"
+              ],
+              [
+                "cta-white-v2",
+                "White (v2)"
+              ]
+            ],
+            "multiple": false,
+            "reordering_enabled": true,
+            "preset": null,
+            "type": "choice",
+            "display_width": null,
+            "default": "cta-purple-v2"
+          },
+          {
+            "id": "f8d30146-6095-4208-922a-876bdb0c6094",
+            "name": "cta",
+            "label": "HubSpot CTA",
+            "required": false,
+            "locked": false,
+            "type": "cta",
+            "display_width": null
+          },
+          {
+            "id": "04eca3bc-f944-4836-94bf-2e9b341fc90f",
+            "name": "link_field",
+            "label": "Link (optional — overrides the HubSpot CTA above if set)",
+            "help_text": "Optional. If set, renders a plain link button using this URL and the text below instead of the HubSpot CTA above. Leave empty to keep using the HubSpot CTA.",
+            "required": false,
+            "locked": false,
+            "supported_types": [
+              "EXTERNAL",
+              "CONTENT",
+              "FILE",
+              "EMAIL_ADDRESS",
+              "BLOG",
+              "CALL_TO_ACTION",
+              "PHONE_NUMBER",
+              "WHATSAPP_NUMBER",
+              "PAYMENT"
+            ],
+            "show_advanced_rel_options": false,
+            "type": "link",
+            "display_width": null,
+            "default": {
+              "url": {
+                "content_id": null,
+                "type": "EXTERNAL",
+                "href": "https://www.marketdesignco.com/meetings/krudy/hubspot-as-a-service"
+              },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          },
+          {
+            "id": "8b0e9699-b477-4466-b8b5-0c42a3ca2829",
+            "name": "text_field",
+            "label": "Text (used with the link override above)",
+            "required": false,
+            "locked": false,
+            "allow_new_line": false,
+            "type": "text",
+            "display_width": null,
+            "default": "Get Started"
+          }
+        ],
+        "tab": "CONTENT",
+        "expanded": false,
+        "group_occurrence_meta": null,
+        "type": "group",
+        "display_width": null,
+        "default": {
+          "style_cta": "cta-purple-v2",
+          "link_field": {
+            "url": {
+              "content_id": null,
+              "type": "EXTERNAL",
+              "href": "https://www.marketdesignco.com/meetings/krudy/hubspot-as-a-service"
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+          },
+          "text_field": "Get Started"
+        },
+        "visibility": {
+          "controlling_field": "66342206-d65a-4884-822b-a4bc595f771d",
+          "controlling_field_path": "tiers.show_cta",
+          "controlling_value_regex": "true",
+          "operator": "EQUAL"
+        }
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "tier_eyebrow": "Execute",
+        "tier_name": "HubSpot Assistant",
+        "price": "$2,500",
+        "price_suffix": "/ month",
+        "featured": false,
+        "tier_features": [
+          {
+            "feature_text": "Up to 10 execution hours per month"
+          },
+          {
+            "feature_text": "Quarterly reporting"
+          },
+          {
+            "feature_text": "Portal maintenance + data quality"
+          },
+          {
+            "feature_text": "Basic website + campaign support"
+          },
+          {
+            "feature_text": "HubSpot Audit included"
+          }
+        ],
+        "show_cta": true,
+        "tier_cta": {
+          "style_cta": "cta-purple-v2",
+          "link_field": {
+            "url": {
+              "content_id": null,
+              "type": "EXTERNAL",
+              "href": "https://www.marketdesignco.com/meetings/krudy/hubspot-as-a-service"
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+          },
+          "text_field": "Get Started"
+        }
+      },
+      {
+        "tier_eyebrow": "Elevate",
+        "tier_name": "Platform Specialist",
+        "price": "$5,000",
+        "price_suffix": "/ month",
+        "featured": true,
+        "tier_features": [
+          {
+            "feature_text": "Up to 20 execution hours per month"
+          },
+          {
+            "feature_text": "Monthly reporting"
+          },
+          {
+            "feature_text": "Everything in HubSpot Assistant"
+          },
+          {
+            "feature_text": "SEO audits, advanced edits + workflows"
+          },
+          {
+            "feature_text": "Sales + service optimization"
+          }
+        ],
+        "show_cta": true,
+        "tier_cta": {
+          "style_cta": "cta-pink-v2",
+          "link_field": {
+            "url": {
+              "content_id": null,
+              "type": "EXTERNAL",
+              "href": "https://www.marketdesignco.com/meetings/krudy/hubspot-as-a-service"
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+          },
+          "text_field": "Get Started"
+        }
+      },
+      {
+        "tier_eyebrow": "Grow",
+        "tier_name": "Business + Platform Strategist",
+        "price": "$9,500",
+        "price_suffix": "/ month",
+        "featured": false,
+        "tier_features": [
+          {
+            "feature_text": "Up to 30 execution hours per month"
+          },
+          {
+            "feature_text": "Bi-monthly reporting"
+          },
+          {
+            "feature_text": "Everything in Platform Specialist"
+          },
+          {
+            "feature_text": "New campaigns, pages + custom reporting"
+          },
+          {
+            "feature_text": "Priority support + enhanced customization"
+          }
+        ],
+        "show_cta": true,
+        "tier_cta": {
+          "style_cta": "cta-purple-v2",
+          "link_field": {
+            "url": {
+              "content_id": null,
+              "type": "EXTERNAL",
+              "href": "https://www.marketdesignco.com/meetings/krudy/hubspot-as-a-service"
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+          },
+          "text_field": "Get Started"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c4265fc2-8858-470d-906b-408fbceff91b",
+    "name": "show_fine_print",
+    "label": "Show Fine Print",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "e9c9c7db-dcca-494d-b521-f08610842d5d",
+    "name": "fine_print",
+    "label": "Fine Print",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<p>* Pricing + packages provide sample deliverables that are subject to change. HubSpot Audits included in each package. Add-on training available.</p>",
+    "visibility": {
+      "controlling_field": "c4265fc2-8858-470d-906b-408fbceff91b",
+      "controlling_field_path": "show_fine_print",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "9db0a4a2-e577-480c-9e4b-f6d975593bbf",
+    "name": "show_callout",
+    "label": "Show Callout",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "3e26a0ba-1c91-4770-8910-a60623ec3af2",
+    "name": "callout",
+    "label": "Callout",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<p><strong>Every package includes a HubSpot Audit with MarketDesign Metrics:</strong> a scored, real-time readout across all your hubs — data, workflows, automations, content, and governance — so the work is scoped against your real portal, not a guess. The baseline is yours to keep.</p>",
+    "visibility": {
+      "controlling_field": "9db0a4a2-e577-480c-9e4b-f6d975593bbf",
+      "controlling_field_path": "show_callout",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "ee241110-19cb-4241-bfa5-352582fb11f3",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "21d76f77-0f16-46df-9aa0-2d5aa26a378e",
+        "name": "background_color",
+        "label": "Background Color",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "display_width": null,
+        "default": {
+          "color": "#FAF8FC",
+          "opacity": 100
+        }
+      },
+      {
+        "id": "51315540-341f-49cd-a1c2-0b8b15cedc03",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 96,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 96,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      },
+      {
+        "id": "7b0962f6-88ef-4662-bfb1-6bab257f3774",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 56,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 56,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      }
+    ],
+    "tab": "STYLE",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null
+  }
+]

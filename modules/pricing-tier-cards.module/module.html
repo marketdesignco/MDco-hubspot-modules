@@ -1,0 +1,84 @@
+{# Pricing Tier Cards — light pricing grid with an optional featured (dark) tier, fine print and callout.
+   reference: HubSpot Managed Services.dc.html — #packages #}
+{% require_css %}
+<style>
+  {% scope_css %}
+  .pricing-tier-cards {
+    {% if module.style.background_color.color %}background: {{ module.style.background_color.color }};{% endif %}
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 768px) { .pricing-tier-cards { {{ module.style.spacing_mobile.css }} } }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="pricing-tier-cards"{% if module.section_id %} id="{{ module.section_id|escape_attr }}"{% endif %}>
+  <div class="pricing-tier-cards__inner">
+
+    {% if module.show_eyebrow and module.eyebrow %}
+      <div class="pricing-tier-cards__eyebrow"><span>{{ module.eyebrow }}</span></div>
+    {% endif %}
+
+    {% if module.heading %}
+      <div class="pricing-tier-cards__heading">{{ module.heading }}</div>
+    {% endif %}
+
+    {% if module.show_intro and module.intro %}
+      <div class="pricing-tier-cards__intro">{{ module.intro }}</div>
+    {% endif %}
+
+    {% if module.tiers %}
+      <div class="pricing-tier-cards__grid" style="--ptc-cols: {{ module.tiers|length }};">
+        {% for tier in module.tiers %}
+          <div class="pricing-tier-cards__card{% if tier.featured %} pricing-tier-cards__card--featured{% endif %}">
+            {% if tier.tier_eyebrow %}<div class="pricing-tier-cards__tier">{{ tier.tier_eyebrow }}</div>{% endif %}
+            {% if tier.tier_name %}<h3 class="pricing-tier-cards__name">{{ tier.tier_name }}</h3>{% endif %}
+            {% if tier.price %}
+              <div class="pricing-tier-cards__price">{{ tier.price }}{% if tier.price_suffix %} <span>{{ tier.price_suffix }}</span>{% endif %}</div>
+            {% endif %}
+
+            <ul class="pricing-tier-cards__features">
+              {% for feature in tier.tier_features %}
+                {% if feature.feature_text %}<li>{{ feature.feature_text }}</li>{% endif %}
+              {% endfor %}
+            </ul>
+
+            {% set tier_cta = tier.tier_cta %}
+            {% if tier.show_cta and (tier_cta.link_field.url.href or tier_cta.cta) %}
+              <div class="pricing-tier-cards__cta custom-cta {{ tier_cta.style_cta }}">
+                {% if tier_cta.link_field.url.href %}
+                  {% set href = tier_cta.link_field.url.href %}
+                  {% if tier_cta.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                    {% set href = "mailto:" + href %}
+                  {% elif tier_cta.link_field.url.type is equalto "PHONE_NUMBER" %}
+                    {% set href = "tel:" + href %}
+                  {% endif %}
+                  <a
+                    {% if tier_cta.link_field.url.type is equalto "CALL_TO_ACTION" %}
+                      href="{{ href }}" {# Not escaped: not editable, functions as a JavaScript call to the associated CTA #}
+                    {% else %}
+                      href="{{ href|escape_url }}"
+                    {% endif %}
+                    {% if tier_cta.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                    {% if tier_cta.link_field.rel %}rel="{{ tier_cta.link_field.rel|escape_attr }}"{% endif %}
+                  >{{ tier_cta.text_field }}</a>
+                {% elif tier_cta.cta %}
+                  {% cta guid="{{ tier_cta.cta }}" %}
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if module.show_fine_print and module.fine_print %}
+      <div class="pricing-tier-cards__fine-print">{{ module.fine_print }}</div>
+    {% endif %}
+
+    {% if module.show_callout and module.callout %}
+      <div class="pricing-tier-cards__callout">{{ module.callout }}</div>
+    {% endif %}
+
+  </div>
+</section>
