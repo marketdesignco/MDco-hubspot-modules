@@ -73,12 +73,35 @@
     "anchor" : "faq"
   } ]
 }, {
+  "id" : "791891ed-2af4-4343-8f18-cd6ccde5f97e",
+  "name" : "mobile_select",
+  "label" : "Mobile: show links as a dropdown",
+  "help_text" : "Optional. When on, at 700px and below the pill links are replaced by the label plus a dropdown (select) that jumps to the chosen section and follows the scroll position. Off keeps the original horizontally scrolling pills.",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : false
+}, {
   "id" : "style",
   "name" : "style",
   "label" : "Style",
   "required" : false,
   "locked" : false,
   "children" : [ {
+    "id" : "1d12fd64-1cbe-4cd2-bcdb-6236a8345b35",
+    "name" : "links_align",
+    "label" : "Links Alignment (desktop)",
+    "help_text" : "Left (default) keeps the original alignment. Center centers the label + pill row inside the bar.",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "left", "Left (default)" ], [ "center", "Center" ] ],
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "left"
+  }, {
     "id" : "style.background_color",
     "name" : "background_color",
     "label" : "Background Color",

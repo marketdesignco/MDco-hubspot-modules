@@ -9,20 +9,27 @@
 </style>
 {% end_require_css %}
 
-<div class="ff-subnav-wrap" data-ff-subnav-wrap
+<div class="ff-subnav-wrap{% if module.mobile_select %} ff-subnav-wrap--select{% endif %}" data-ff-subnav-wrap
      style="--ff-subnav-bg: {{ module.style.background_color.color }};
             --ff-subnav-text: {{ module.style.text_color.color }};
             --ff-subnav-active-bg: {{ module.style.active_bg_color.color }};
             --ff-subnav-active-text: {{ module.style.active_text_color.color }};">
   <nav class="ff-subnav"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
     <div class="ff-wrap">
-      <div class="ff-subnav-inner">
+      <div class="ff-subnav-inner{% if module.style.links_align == "center" %} ff-subnav-inner--center{% endif %}">
         {% if module.label_text %}<span class="ff-subnav-label">{{ module.label_text }}</span>{% endif %}
         <div class="ff-subnav-links">
           {% for l in module.links %}
             <a href="#{{ l.anchor }}"{% if loop.first %} class="active"{% endif %}>{{ l.text }}</a>
           {% endfor %}
         </div>
+        {% if module.mobile_select %}
+        <select class="ff-subnav-select" aria-label="{% if module.label_text %}{{ module.label_text|escape_attr }}{% else %}Jump to section{% endif %}">
+          {% for l in module.links %}
+            <option value="#{{ l.anchor|escape_attr }}"{% if loop.first %} selected{% endif %}>{{ l.text }}</option>
+          {% endfor %}
+        </select>
+        {% endif %}
       </div>
     </div>
   </nav>
@@ -74,3 +81,29 @@
     onScroll();
   })();
 </script>
+{% if module.mobile_select %}
+<script>
+  /* Opt-in mobile dropdown: reuses the pill links (same anchor jump) and mirrors their active state. */
+  (function(){
+    var wrap = document.querySelector('[data-ff-subnav-wrap]');
+    if (!wrap) return;
+    var select = wrap.querySelector('.ff-subnav-select');
+    if (!select) return;
+    var links = wrap.querySelectorAll('.ff-subnav-links a');
+
+    select.addEventListener('change', function(){
+      for (var i=0; i<links.length; i++){
+        if (links[i].getAttribute('href') === select.value) { links[i].click(); break; }
+      }
+    });
+
+    function syncSelect(){
+      var active = wrap.querySelector('.ff-subnav-links a.active');
+      if (active && select.value !== active.getAttribute('href')) select.value = active.getAttribute('href');
+    }
+
+    window.addEventListener('scroll', syncSelect, { passive: true });
+    syncSelect();
+  })();
+</script>
+{% endif %}
