@@ -1,0 +1,64 @@
+{# Hero — Form Split: dark hero, copy column (badge, heading, lede, bullets) + white card with a native HubSpot form #}
+{% require_css %}
+<style>
+  {% scope_css %}
+  .hero-form-split {
+    {% if module.style.background_color.color %}background-color: rgba({{ module.style.background_color.color|convert_rgb }}, {{ (module.style.background_color.opacity|default(100)) / 100 }});{% endif %}
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 767px) {
+    .hero-form-split {
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="hero-form-split"{% if module.section_id %} id="{{ module.section_id|escape_attr }}"{% endif %}>
+  {% if module.style.show_mesh %}<div class="hero-form-split__mesh" aria-hidden="true"></div>{% endif %}
+  <div class="content-wrapper">
+    <div class="hero-form-split__inner hero-form-split__grid{% if not module.show_form_card %} hero-form-split__grid--single{% endif %}">
+
+      <div class="hero-form-split__copy">
+        {% if module.show_badge and module.badge_text %}
+          <div class="hero-form-split__badge"><span class="hero-form-split__badge-dot" aria-hidden="true"></span>{{ module.badge_text }}</div>
+        {% endif %}
+        {% if module.hero_heading %}<div class="hero-form-split__heading">{{ module.hero_heading }}</div>{% endif %}
+        {% if module.hero_lede %}<div class="hero-form-split__lede">{{ module.hero_lede }}</div>{% endif %}
+        {% if module.hero_bullets|length %}
+          <ul class="hero-form-split__bullets">
+            {% for item in module.hero_bullets %}
+              {% if item.bullet_text %}
+                <li class="hero-form-split__bullet"><span class="hero-form-split__dot" aria-hidden="true"></span><div class="hero-form-split__bullet-text">{{ item.bullet_text }}</div></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+
+      {% if module.show_form_card %}
+        <div class="hero-form-split__card"{% if module.form_anchor_id %} id="{{ module.form_anchor_id|escape_attr }}"{% endif %}>
+          <div class="hero-form-split__card-bar" aria-hidden="true"></div>
+          {% if module.form_eyebrow %}<div class="hero-form-split__form-eyebrow">{{ module.form_eyebrow }}</div>{% endif %}
+          {% if module.form_heading %}<div class="hero-form-split__form-heading">{{ module.form_heading }}</div>{% endif %}
+          <div class="hero-form-split__form-embed">
+            {% if module.hero_form.form_id %}
+              {% form
+                form_to_use="{{ module.hero_form.form_id }}"
+                response_response_type="{{ module.hero_form.response_type }}"
+                response_message="{{ module.hero_form.message }}"
+                response_redirect_id="{{ module.hero_form.redirect_id }}"
+                response_redirect_url="{{ module.hero_form.redirect_url }}"
+              %}
+            {% elif is_in_editor %}
+              <p class="hero-form-split__form-placeholder">Select a HubSpot form in this module's settings.</p>
+            {% endif %}
+          </div>
+          {% if module.form_disclaimer %}<div class="hero-form-split__disclaimer">{{ module.form_disclaimer }}</div>{% endif %}
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+{
+  "global": false,
+  "content_types": [
+    "LANDING_PAGE",
+    "SITE_PAGE"
+  ],
+  "host_template_types": [
+    "PAGE"
+  ],
+  "label": "Hero — Form Split",
+  "help_text": "Dark hero with a badge, heading, lede and bullet list on the left and a white card holding a native HubSpot form on the right.",
+  "is_available_for_new_content": true
+}

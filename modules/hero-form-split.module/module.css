@@ -1,0 +1,432 @@
+/* ==========================================================================
+   Hero — Form Split
+   Dark hero: copy column (badge, heading, lede, bullets) + white form card.
+   Background color and section spacing are field-driven (scope_css in
+   module.html); everything here is static.
+   ========================================================================== */
+
+.hero-form-split {
+  position: relative;
+  overflow: hidden;
+  background-color: #3A0CA3; /* fallback; overridden by style.background_color */
+  font-family: var(--font-primary, 'Lato', sans-serif);
+}
+
+/* Background mesh glow — CSS recreation of the reference mesh-hero.svg */
+.hero-form-split__mesh {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .55;
+  background:
+    radial-gradient(circle at 18% 30%, rgba(58, 12, 163, .55) 0%, rgba(58, 12, 163, 0) 60%),
+    radial-gradient(circle at 62% 24%, rgba(114, 9, 183, .55) 0%, rgba(114, 9, 183, 0) 55%),
+    radial-gradient(circle at 88% 78%, rgba(126, 219, 0, .42) 0%, rgba(126, 219, 0, 0) 55%),
+    radial-gradient(circle at 6% 90%, rgba(247, 37, 133, .30) 0%, rgba(247, 37, 133, 0) 30%),
+    #12042b;
+}
+
+.hero-form-split .content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-form-split__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* minmax(0, …) keeps the 1.15fr / 1fr ratio but lets columns shrink
+   below their content's min-width (prevents horizontal overflow). */
+.hero-form-split__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+}
+.hero-form-split__grid--single {
+  grid-template-columns: minmax(0, 1fr);
+}
+.hero-form-split__copy,
+.hero-form-split__card {
+  min-width: 0;
+}
+
+/* ---------- Badge ---------- */
+.hero-form-split__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 26px;
+  padding: 8px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7EDB00;
+}
+.hero-form-split__badge-dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7EDB00;
+}
+
+/* ---------- Heading (every level looks the same) ---------- */
+.hero-form-split__heading h1,
+.hero-form-split__heading h2,
+.hero-form-split__heading h3,
+.hero-form-split__heading h4,
+.hero-form-split__heading h5,
+.hero-form-split__heading h6,
+.hero-form-split__heading p {
+  margin: 0 0 22px;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 900;
+  font-size: clamp(36px, 4.8vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  color: #fff;
+  overflow-wrap: break-word;
+}
+.hero-form-split__heading strong {
+  color: #7EDB00;
+  font-weight: inherit;
+}
+
+/* ---------- Lede ---------- */
+.hero-form-split__lede {
+  margin: 0 0 30px;
+  max-width: 540px;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
+}
+.hero-form-split__lede p {
+  margin: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+/* ---------- Bullets ---------- */
+.hero-form-split__bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 520px;
+}
+.hero-form-split__bullet {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+}
+.hero-form-split__dot {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #7EDB00;
+  transform: translateY(1px);
+}
+.hero-form-split__bullet-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 400;
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.85);
+}
+.hero-form-split__bullet-text p {
+  margin: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+.hero-form-split__bullet-text strong {
+  color: #fff;
+}
+
+/* ---------- Form card ---------- */
+.hero-form-split__card {
+  position: relative;
+  overflow: hidden;
+  padding: 34px 32px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 24px 60px rgba(26, 10, 46, 0.45);
+  scroll-margin-top: 100px;
+}
+.hero-form-split__card-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #F72585 0%, #3A0CA3 45%, #7209B7 100%);
+}
+.hero-form-split__form-eyebrow {
+  margin-bottom: 10px;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #F72585;
+}
+.hero-form-split__form-heading h1,
+.hero-form-split__form-heading h2,
+.hero-form-split__form-heading h3,
+.hero-form-split__form-heading h4,
+.hero-form-split__form-heading h5,
+.hero-form-split__form-heading h6,
+.hero-form-split__form-heading p {
+  margin: 0 0 20px;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 900;
+  font-size: 23px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: #3A0CA3;
+}
+.hero-form-split__form-heading strong {
+  font-weight: inherit;
+}
+
+/* Editor-only hint, shown when no form is selected */
+.hero-form-split__form-placeholder {
+  margin: 0;
+  padding: 16px;
+  border: 1.5px dashed #E4DCEF;
+  border-radius: 10px;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: #7C7392;
+}
+
+/* ---------- Native HubSpot form ----------
+   These overrides target v2 (HTML) embeds: form.hs-form, .hs-form-field,
+   .hs-input, fieldset.form-columns-*, .hs-error-msgs, .hs_submit .hs-button,
+   .submitted-message. v4 embeds take their style from the HubSpot form editor.
+   Selectors are prefixed with the module root to outrank the theme's global
+   form rules (e.g. "form input[type=text]", "form .hs-button:hover") and
+   HubSpot's default form CSS without resorting to !important. */
+.hero-form-split .hero-form-split__form-embed form,
+.hero-form-split .hero-form-split__form-embed .submitted-message {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.hero-form-split .hero-form-split__form-embed .form-title {
+  display: none;
+}
+.hero-form-split .hero-form-split__form-embed fieldset {
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/* Two-column rows: column gap only, so stacked fields on mobile keep the
+   same 14px rhythm as single-column rows (via .hs-form-field margin). */
+.hero-form-split .hero-form-split__form-embed fieldset.form-columns-2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0 14px;
+}
+.hero-form-split .hero-form-split__form-embed fieldset.form-columns-2 .hs-form-field {
+  float: none;
+  width: auto;
+  padding: 0;
+}
+.hero-form-split .hero-form-split__form-embed fieldset.form-columns-2 .input {
+  margin-right: 0;
+}
+.hero-form-split .hero-form-split__form-embed .hs-form-field {
+  margin-bottom: 14px;
+}
+.hero-form-split .hero-form-split__form-embed .hs-form-field > label {
+  display: block;
+  margin-bottom: 6px;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #7C7392;
+}
+
+/* Text inputs, selects, textareas (checkbox/radio keep their native look) */
+.hero-form-split .hero-form-split__form-embed input.hs-input:not([type=checkbox]):not([type=radio]),
+.hero-form-split .hero-form-split__form-embed select.hs-input,
+.hero-form-split .hero-form-split__form-embed textarea.hs-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 14px;
+  border: 1.5px solid #E4DCEF;
+  border-radius: 10px;
+  background: #fff;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #1A0A2E;
+  outline: none;
+  box-shadow: none;
+}
+.hero-form-split .hero-form-split__form-embed select.hs-input {
+  padding: 11px 12px;
+}
+.hero-form-split .hero-form-split__form-embed input.hs-input:not([type=checkbox]):not([type=radio]):focus,
+.hero-form-split .hero-form-split__form-embed select.hs-input:focus,
+.hero-form-split .hero-form-split__form-embed textarea.hs-input:focus {
+  border-color: #F72585;
+  box-shadow: 0 0 0 3px rgba(247, 37, 133, 0.35);
+}
+/* Keep a visible invalid state (the input rule above replaces the theme's).
+   .hs-form-field raises specificity to (0,6,0) so it beats the (0,5,1) input rule. */
+.hero-form-split .hero-form-split__form-embed .hs-form-field .hs-input.invalid.error {
+  border-color: #F72585;
+}
+
+/* Validation messages */
+.hero-form-split .hero-form-split__form-embed .hs-error-msgs {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+}
+.hero-form-split .hero-form-split__form-embed .hs-error-msgs li {
+  margin: 0;
+}
+.hero-form-split .hero-form-split__form-embed .hs-error-msgs label {
+  display: block;
+  margin: 0;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 400;
+  font-size: 13.5px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #F72585;
+}
+
+/* Submit — keeps the theme's native button radius (not a pill).
+   Padding/size are set here (reference: 16px 32px, 15.5px) so the button does
+   not depend on the portal's form-button spacing setting (theme default is 0). */
+.hero-form-split .hero-form-split__form-embed .hs-button,
+.hero-form-split .hero-form-split__form-embed input[type=submit] {
+  width: 100%;
+  margin-top: 6px;
+  padding: 16px 32px;
+  font-size: 15.5px;
+  line-height: 1;
+  background-color: #F72585;
+  border-color: #F72585;
+  border-radius: var(--button-radius);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  box-shadow: 0 10px 28px rgba(247, 37, 133, 0.30);
+  cursor: pointer;
+  transition: background-color .2s ease, transform .2s ease;
+}
+.hero-form-split .hero-form-split__form-embed .hs-button:hover,
+.hero-form-split .hero-form-split__form-embed .hs-button:focus,
+.hero-form-split .hero-form-split__form-embed input[type=submit]:hover,
+.hero-form-split .hero-form-split__form-embed input[type=submit]:focus {
+  background-color: #DE1873;
+  border-color: #DE1873;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Inline thank-you message */
+.hero-form-split .hero-form-split__form-embed .submitted-message {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #1A0A2E;
+}
+.hero-form-split .hero-form-split__form-embed .submitted-message p {
+  margin: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+/* ---------- Disclaimer ---------- */
+.hero-form-split__disclaimer {
+  margin: 14px 0 0;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 400;
+  font-size: 12.5px;
+  line-height: 1.55;
+  text-align: center;
+  color: #7C7392;
+}
+.hero-form-split__disclaimer p {
+  margin: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+/* ---------- Motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .hero-form-split .hero-form-split__form-embed .hs-button,
+  .hero-form-split .hero-form-split__form-embed input[type=submit] {
+    transition: none;
+  }
+  .hero-form-split .hero-form-split__form-embed .hs-button:hover,
+  .hero-form-split .hero-form-split__form-embed .hs-button:focus,
+  .hero-form-split .hero-form-split__form-embed input[type=submit]:hover,
+  .hero-form-split .hero-form-split__form-embed input[type=submit]:focus {
+    transform: none;
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991px) {
+  .hero-form-split__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+  .hero-form-split__lede,
+  .hero-form-split__bullets {
+    max-width: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-form-split__card {
+    padding: 28px 20px;
+  }
+  .hero-form-split .hero-form-split__form-embed fieldset.form-columns-2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
