@@ -1,0 +1,568 @@
+[
+  {
+    "id": "ced4ad02-32a7-4f31-97ac-467be55f5ae5",
+    "name": "section_id",
+    "label": "Section ID (anchor)",
+    "required": false,
+    "locked": false,
+    "help_text": "Optional. Adds an id to the section so it can be targeted by anchor links (no # symbol).",
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
+  },
+  {
+    "id": "1802765d-c345-4f99-ba32-9da70c277187",
+    "name": "show_eyebrow",
+    "label": "Show eyebrow",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "02187323-3a58-47c9-ad12-0da6c87fc60a",
+    "name": "split_eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "What you'll receive",
+    "visibility": {
+      "controlling_field": "show_eyebrow",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "79416ef8-8ecc-479b-aecb-accad52b31a4",
+    "name": "split_heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "help_text": "Bold (strong) text renders with the brand gradient.",
+    "type": "richtext",
+    "display_width": null,
+    "default": "<h2>A scored baseline,<br><strong>not a sales pitch.</strong></h2>"
+  },
+  {
+    "id": "f66ccec2-0106-4b4e-8319-714e35857203",
+    "name": "split_intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<p>Your snapshot mirrors the full Found First audit report: real queries, real citations, and a plain-language read on why you show up — or don't.</p>"
+  },
+  {
+    "id": "931fffee-7708-4fbd-9f61-51c815a1a4c3",
+    "name": "split_bullets",
+    "label": "Bullets",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 0,
+      "max": 8,
+      "sorting_label_field": null,
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "ba20eeb1-7e04-41ad-a9f8-4f97807013fb",
+        "name": "bullet_text",
+        "label": "Bullet text",
+        "required": false,
+        "locked": false,
+        "help_text": "Bold (strong) text renders in deep purple.",
+        "type": "richtext",
+        "display_width": null,
+        "default": "<strong>Visibility Score</strong> — 0–10 rating with gap diagnosis"
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "bullet_text": "<strong>Visibility Score</strong> — 0–10 rating with gap diagnosis"
+      },
+      {
+        "bullet_text": "<strong>AI Citation Check</strong> — which engines mention you, which cite competitors"
+      },
+      {
+        "bullet_text": "<strong>Competitor Scan</strong> — who's winning your queries and why"
+      },
+      {
+        "bullet_text": "<strong>Next-step recommendation</strong> — whether a full audit is worth it, honestly"
+      }
+    ]
+  },
+  {
+    "id": "1a6e7dcd-6f7b-4889-842b-b895417e4ff6",
+    "name": "show_cta",
+    "label": "Show CTA button",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "483979f6-0e91-4a90-a38e-f89183efb2f0",
+    "name": "style_cta",
+    "label": "CTA style",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "cta-pink-v2",
+        "Primary (pink)"
+      ],
+      [
+        "cta-purple-v2",
+        "Primary (purple)"
+      ],
+      [
+        "cta-pink",
+        "Pink (classic)"
+      ],
+      [
+        "cta-primary",
+        "Theme primary"
+      ]
+    ],
+    "multiple": false,
+    "reordering_enabled": true,
+    "preset": null,
+    "type": "choice",
+    "display_width": null,
+    "visibility": {
+      "controlling_field": "show_cta",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    },
+    "default": "cta-pink-v2"
+  },
+  {
+    "id": "50f26abb-4685-4d45-97b8-30df983d412c",
+    "name": "hubspot_cta",
+    "label": "HubSpot CTA",
+    "required": false,
+    "locked": false,
+    "help_text": "Used only when the link below is empty.",
+    "type": "cta",
+    "display_width": null,
+    "visibility": {
+      "controlling_field": "show_cta",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "d3056f40-d5d6-4ac3-a11a-c765d34f8fc6",
+    "name": "cta_link",
+    "label": "Link (optional — overrides the HubSpot CTA if set)",
+    "required": false,
+    "locked": false,
+    "help_text": "Optional. If set, renders a plain link button using this URL and the CTA text below instead of the HubSpot CTA above. Clear it to use the HubSpot CTA.",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG",
+      "CALL_TO_ACTION",
+      "PHONE_NUMBER",
+      "WHATSAPP_NUMBER",
+      "PAYMENT"
+    ],
+    "show_advanced_rel_options": false,
+    "type": "link",
+    "display_width": null,
+    "visibility": {
+      "controlling_field": "show_cta",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    },
+    "default": {
+      "url": {
+        "content_id": null,
+        "type": "EXTERNAL",
+        "href": "#request"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "id": "61b2cac0-eb5e-4caa-9b45-77b91b6845d9",
+    "name": "cta_text",
+    "label": "CTA text (used with the link override above)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Get My Snapshot",
+    "visibility": {
+      "controlling_field": "show_cta",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "257f2f0d-2f39-47a2-bb4a-b0b1fff3b48f",
+    "name": "show_scorecard",
+    "label": "Show score card",
+    "required": false,
+    "locked": false,
+    "help_text": "Turn off to render the text column alone, full width.",
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "1365770e-5f81-4c19-8396-17bc0c96ed15",
+    "name": "scorecard_eyebrow",
+    "label": "Card — Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Found First · Visibility Snapshot",
+    "visibility": {
+      "controlling_field": "show_scorecard",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "b0689c04-4fb5-4902-8a5f-6349046d444d",
+    "name": "show_scorecard_badge",
+    "label": "Card — Show badge",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "57b8432e-ac33-472a-97f0-20d06fd603f6",
+    "name": "scorecard_badge",
+    "label": "Card — Badge text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Sample",
+    "visibility": {
+      "controlling_field": "show_scorecard_badge",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "bb9285cd-7de8-4c5a-b193-402158cea677",
+    "name": "score_value",
+    "label": "Card — Score value",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "3.2",
+    "visibility": {
+      "controlling_field": "show_scorecard",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "a239158a-1960-440f-bfb3-b8daad1ad3a3",
+    "name": "score_caption",
+    "label": "Card — Score caption",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "/ 10 Visibility Score",
+    "visibility": {
+      "controlling_field": "show_scorecard",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "2078e740-0d47-458f-8a4e-10ce90a56152",
+    "name": "score_percent",
+    "label": "Card — Progress bar fill",
+    "required": false,
+    "locked": false,
+    "help_text": "Width of the green progress bar",
+    "type": "number",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "suffix": "%",
+    "display_width": null,
+    "visibility": {
+      "controlling_field": "show_scorecard",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    },
+    "default": 32
+  },
+  {
+    "id": "656b132a-bbfd-4c63-93b1-d6760757b116",
+    "name": "scorecard_rows",
+    "label": "Card — Query rows",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 0,
+      "max": 8,
+      "sorting_label_field": null,
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "47fac48d-98d6-4488-982f-eed6e1d23a40",
+        "name": "row_query",
+        "label": "Query",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "\"best MSP for mid-market healthcare\""
+      },
+      {
+        "id": "a58a9975-c21a-4865-a935-a477c4b21a00",
+        "name": "row_status",
+        "label": "Status",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Not cited"
+      },
+      {
+        "id": "03dab0f9-c9f9-4a1b-a60b-2d6cf04b6473",
+        "name": "row_tone",
+        "label": "Status color",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "miss",
+            "Miss (pink)"
+          ],
+          [
+            "hit",
+            "Hit (green)"
+          ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "display_width": null,
+        "default": "miss"
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "visibility": {
+      "controlling_field": "show_scorecard",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    },
+    "default": [
+      {
+        "row_query": "\"best MSP for mid-market healthcare\"",
+        "row_status": "Not cited",
+        "row_tone": "miss"
+      },
+      {
+        "row_query": "\"co-managed IT provider near Chicago\"",
+        "row_status": "Competitor cited",
+        "row_tone": "miss"
+      },
+      {
+        "row_query": "\"[your company] reviews\"",
+        "row_status": "Cited · page 1",
+        "row_tone": "hit"
+      },
+      {
+        "row_query": "\"Microsoft 365 migration partner\"",
+        "row_status": "Not cited",
+        "row_tone": "miss"
+      }
+    ]
+  },
+  {
+    "id": "8abb6c0e-1c26-499b-874b-911c967dd1bb",
+    "name": "scorecard_footnote",
+    "label": "Card — Footnote",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<p>Illustrative sample. Your snapshot tests queries built from your actual services and markets.</p>",
+    "visibility": {
+      "controlling_field": "show_scorecard",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "id": "56f4aca1-b2cf-4c00-9c79-16d85d5fd5c0",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "1490d59d-4f60-4a60-b675-279ef410fecb",
+        "name": "background_color",
+        "label": "Background color",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "display_width": null,
+        "default": {
+          "color": "#FFFFFF",
+          "opacity": 100
+        }
+      },
+      {
+        "id": "07cec468-e45e-45e6-b54c-2edd88113681",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 96,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 96,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      },
+      {
+        "id": "763bd7a0-5533-4386-aaba-e74fb886a536",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 64,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 64,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      }
+    ],
+    "tab": "STYLE",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": {
+      "background_color": {
+        "color": "#FFFFFF",
+        "opacity": 100
+      },
+      "spacing_desktop": {
+        "padding": {
+          "top": {
+            "value": 96,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 96,
+            "units": "px"
+          },
+          "left": {
+            "value": null,
+            "units": null
+          },
+          "right": {
+            "value": null,
+            "units": null
+          }
+        }
+      },
+      "spacing_mobile": {
+        "padding": {
+          "top": {
+            "value": 64,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 64,
+            "units": "px"
+          },
+          "left": {
+            "value": null,
+            "units": null
+          },
+          "right": {
+            "value": null,
+            "units": null
+          }
+        }
+      }
+    }
+  }
+]

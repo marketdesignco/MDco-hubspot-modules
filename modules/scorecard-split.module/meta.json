@@ -1,0 +1,13 @@
+{
+  "global": false,
+  "content_types": [
+    "LANDING_PAGE",
+    "SITE_PAGE"
+  ],
+  "host_template_types": [
+    "PAGE"
+  ],
+  "label": "Scorecard Split",
+  "help_text": "Two-column section: eyebrow, heading, intro, bullets and CTA on the left; a sample score card with a progress bar and query rows on the right.",
+  "is_available_for_new_content": true
+}

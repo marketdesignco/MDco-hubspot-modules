@@ -1,0 +1,298 @@
+/* Scorecard Split — static styles (field-driven background + spacing live in module.html) */
+
+.scorecard-split {
+  position: relative;
+}
+
+.scorecard-split__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.scorecard-split__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.scorecard-split__grid--single {
+  grid-template-columns: 1fr;
+}
+
+.scorecard-split__copy,
+.scorecard-split__card {
+  min-width: 0;
+}
+
+/* ── Eyebrow ── */
+.scorecard-split__eyebrow {
+  font: 700 13px/1 var(--font-primary, 'Lato', sans-serif);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #F72585;
+  margin-bottom: 14px;
+}
+
+/* ── Heading (richtext: every heading level + p styled identically) ── */
+.scorecard-split__heading h1,
+.scorecard-split__heading h2,
+.scorecard-split__heading h3,
+.scorecard-split__heading h4,
+.scorecard-split__heading h5,
+.scorecard-split__heading h6,
+.scorecard-split__heading p {
+  margin: 0 0 18px;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 900;
+  font-size: clamp(30px, 3.6vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  color: #3A0CA3;
+}
+
+.scorecard-split__heading strong {
+  font-weight: inherit;
+  background: linear-gradient(90deg, #F72585 0%, #3A0CA3 45%, #7209B7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* ── Intro ── */
+.scorecard-split__intro {
+  margin: 0 0 26px;
+  max-width: 480px;
+  font: 400 17px/1.7 var(--font-primary, 'Lato', sans-serif);
+  color: #7C7392;
+}
+
+.scorecard-split__intro p {
+  margin: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+.scorecard-split__intro p + p {
+  margin-top: 12px;
+}
+
+/* ── Bullets ── */
+.scorecard-split__bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.scorecard-split__bullets li {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+.scorecard-split__dot {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #7EDB00;
+  transform: translateY(1px);
+}
+
+.scorecard-split__bullet-text {
+  min-width: 0;
+  font: 400 15px/1.55 var(--font-primary, 'Lato', sans-serif);
+  color: #1A0A2E;
+}
+
+.scorecard-split__bullet-text p {
+  margin: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+.scorecard-split__bullet-text strong {
+  font-weight: 700;
+  color: #3A0CA3;
+}
+
+/* ── CTA (button look comes from the theme's .custom-cta classes) ── */
+.scorecard-split__cta {
+  margin-top: 32px;
+}
+
+/* ── Score card ── */
+.scorecard-split__card {
+  position: relative;
+  overflow: hidden;
+  background: #3A0CA3;
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: 0 20px 48px rgba(58, 12, 163, 0.14);
+}
+
+/* Recreates the reference pattern-dots.svg texture */
+.scorecard-split__card-dots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.2;
+  background-image: radial-gradient(circle at 2px 2px, rgba(58, 12, 163, 0.16) 1.7px, transparent 1.8px);
+  background-size: 26px 26px;
+}
+
+.scorecard-split__card-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.scorecard-split__card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.scorecard-split__card-eyebrow {
+  min-width: 0;
+  font: 700 11px/1.3 var(--font-primary, 'Lato', sans-serif);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.scorecard-split__badge {
+  flex: none;
+  margin-left: auto;
+  font: 700 11px/1 var(--font-primary, 'Lato', sans-serif);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(126, 219, 0, 0.15);
+  border: 1px solid rgba(126, 219, 0, 0.4);
+  color: #7EDB00;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.scorecard-split__score {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.scorecard-split__score-value {
+  font: 900 72px/1 var(--font-primary, 'Lato', sans-serif);
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.scorecard-split__score-caption {
+  font: 700 15px/1.3 var(--font-primary, 'Lato', sans-serif);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.scorecard-split__bar {
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+
+.scorecard-split__bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: #7EDB00;
+}
+
+/* ── Query rows ── */
+.scorecard-split__rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.scorecard-split__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.scorecard-split__row:last-child {
+  border-bottom: 0;
+}
+
+.scorecard-split__query {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font: 700 14px/1.3 var(--font-primary, 'Lato', sans-serif);
+  color: #fff;
+}
+
+.scorecard-split__status {
+  flex: none;
+  font: 700 12px/1 var(--font-primary, 'Lato', sans-serif);
+  text-align: right;
+}
+
+.scorecard-split__status--miss {
+  color: #F72585;
+}
+
+.scorecard-split__status--hit {
+  color: #7EDB00;
+}
+
+/* ── Footnote ── */
+.scorecard-split__footnote {
+  margin-top: 24px;
+  font: 400 13px/1.6 var(--font-primary, 'Lato', sans-serif);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.scorecard-split__footnote p {
+  margin: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+/* ── Responsive ── */
+@media (max-width: 991px) {
+  .scorecard-split__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .scorecard-split__intro {
+    max-width: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .scorecard-split__card {
+    padding: 28px;
+  }
+
+  .scorecard-split__score-value {
+    font-size: 56px;
+  }
+}

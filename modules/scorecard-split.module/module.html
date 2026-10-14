@@ -1,0 +1,140 @@
+{# Scorecard Split — text + bullets + CTA on the left, sample score card on the right #}
+{% require_css %}
+<style>
+  {% scope_css %}
+  .scorecard-split {
+    {% if module.style.background_color.color %}background: {{ module.style.background_color.color }};{% endif %}
+    {{ module.style.spacing_desktop.css }};
+  }
+  @media (max-width: 767px) {
+    .scorecard-split {
+      {{ module.style.spacing_mobile.css }};
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+{# Clamp the progress bar width to 0–100 #}
+{% set score_pct = module.score_percent|int %}
+{% if score_pct < 0 %}
+  {% set score_pct = 0 %}
+{% elif score_pct > 100 %}
+  {% set score_pct = 100 %}
+{% endif %}
+
+<section class="scorecard-split"{% if module.section_id %} id="{{ module.section_id|escape_attr }}"{% endif %}>
+  <div class="content-wrapper">
+    <div class="scorecard-split__inner scorecard-split__grid{% if not module.show_scorecard %} scorecard-split__grid--single{% endif %}">
+
+      <div class="scorecard-split__copy">
+        {% if module.show_eyebrow and module.split_eyebrow %}
+          <div class="scorecard-split__eyebrow">{{ module.split_eyebrow }}</div>
+        {% endif %}
+
+        {% if module.split_heading %}
+          <div class="scorecard-split__heading">{{ module.split_heading }}</div>
+        {% endif %}
+
+        {% if module.split_intro %}
+          <div class="scorecard-split__intro">{{ module.split_intro }}</div>
+        {% endif %}
+
+        {% if module.split_bullets %}
+          <ul class="scorecard-split__bullets">
+            {% for item in module.split_bullets %}
+              {% if item.bullet_text %}
+                <li>
+                  <span class="scorecard-split__dot" aria-hidden="true"></span>
+                  <div class="scorecard-split__bullet-text">{{ item.bullet_text }}</div>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if module.show_cta and (module.cta_link.url.href or module.hubspot_cta) %}
+          <div class="scorecard-split__cta">
+            <div class="custom-cta {{ module.style_cta }}">
+              {% if module.cta_link.url.href %}
+                {% set href = module.cta_link.url.href %}
+                {% if module.cta_link.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                {% elif module.cta_link.url.type is equalto "PHONE_NUMBER" %}
+                  {% set href = "tel:" + href %}
+                {% endif %}
+                <a
+                  {% if module.cta_link.url.type is equalto "CALL_TO_ACTION" %}
+                    href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+                  {% else %}
+                    href="{{ href|escape_url }}"
+                  {% endif %}
+                  {% if module.cta_link.open_in_new_tab %}
+                    target="_blank"
+                  {% endif %}
+                  {% if module.cta_link.rel %}
+                    rel="{{ module.cta_link.rel|escape_attr }}"
+                  {% endif %}
+                  >
+                  {{ module.cta_text }}
+                </a>
+              {% elif module.hubspot_cta %}
+                {% cta guid="{{ module.hubspot_cta }}" %}
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+      {% if module.show_scorecard %}
+        <div class="scorecard-split__card">
+          <div class="scorecard-split__card-dots" aria-hidden="true"></div>
+          <div class="scorecard-split__card-inner">
+
+            {% if module.scorecard_eyebrow or (module.show_scorecard_badge and module.scorecard_badge) %}
+              <div class="scorecard-split__card-head">
+                {% if module.scorecard_eyebrow %}
+                  <span class="scorecard-split__card-eyebrow">{{ module.scorecard_eyebrow }}</span>
+                {% endif %}
+                {% if module.show_scorecard_badge and module.scorecard_badge %}
+                  <span class="scorecard-split__badge">{{ module.scorecard_badge }}</span>
+                {% endif %}
+              </div>
+            {% endif %}
+
+            {% if module.score_value or module.score_caption %}
+              <div class="scorecard-split__score">
+                {% if module.score_value %}<span class="scorecard-split__score-value">{{ module.score_value }}</span>{% endif %}
+                {% if module.score_caption %}<span class="scorecard-split__score-caption">{{ module.score_caption }}</span>{% endif %}
+              </div>
+            {% endif %}
+
+            <div class="scorecard-split__bar" role="img" aria-label="{{ module.score_value|escape_attr }} {{ module.score_caption|escape_attr }}">
+              <span class="scorecard-split__bar-fill" style="width: {{ score_pct }}%"></span>
+            </div>
+
+            {% if module.scorecard_rows %}
+              <ul class="scorecard-split__rows">
+                {% for row in module.scorecard_rows %}
+                  {% if row.row_tone == "hit" %}{% set row_tone = "hit" %}{% else %}{% set row_tone = "miss" %}{% endif %}
+                  <li class="scorecard-split__row">
+                    <span class="scorecard-split__query">{{ row.row_query }}</span>
+                    {% if row.row_status %}
+                      <span class="scorecard-split__status scorecard-split__status--{{ row_tone }}">{{ row.row_status }}</span>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+
+            {% if module.scorecard_footnote %}
+              <div class="scorecard-split__footnote">{{ module.scorecard_footnote }}</div>
+            {% endif %}
+
+          </div>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
