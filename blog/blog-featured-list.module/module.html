@@ -1,0 +1,96 @@
+{# Blog Featured + List — first post featured, the rest as a list #}
+{% require_css %}
+<style>
+  {% scope_css %}
+  .blog-featured-list{
+    background:{{ module.style.background_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width:767px){
+    .blog-featured-list{
+      {{ module.style.spacing_mobile.css }}
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+{% set posts = blog_recent_posts(module.blog, module.post_count) %}
+{# Default target is the selected blog's listing page; an editor link takes precedence. #}
+{% set cta_href = module.cta.link_field.url.href if module.cta.link_field.url.href else blog_all_posts_url(module.blog) %}
+{% set cta_text = module.cta.text_field if module.cta.text_field else 'View All Insights →' %}
+{% set grads = [
+  'linear-gradient(135deg, #3A0CA3 0%, #7209B7 100%)',
+  'linear-gradient(135deg, #7209B7 0%, #3A0CA3 100%)',
+  'linear-gradient(160deg, #1A0A2E 0%, #3A0CA3 70%, #7209B7 100%)',
+  'linear-gradient(135deg, #3A0CA3 0%, #7209B7 100%)',
+  'linear-gradient(160deg, #7209B7 0%, #3A0CA3 100%)',
+  'linear-gradient(135deg, #3A0CA3 0%, #1A0A2E 100%)'
+] %}
+
+{% if posts or module.show_cta != false %}
+<section class="blog-featured-list" {% if module.section_id %}id="{{ module.section_id }}"{% endif %}>
+  <div class="blog-featured-list__inner">
+    {% if posts %}
+    <div class="blog-featured-list__grid">
+
+      {% for post in posts %}
+        {# post_list_content is the body text prepared for listing contexts (what blog_recent_posts
+   returns); post_body is a fallback in case that field is empty, and post_summary is the last
+   resort so a post with no body text still gets a non-zero estimate. #}
+        {% set body_text = post.post_list_content if post.post_list_content else (post.post_body if post.post_body else post.post_summary) %}
+        {% set mins = ((body_text|striptags|wordcount) / 225)|round(0, 'ceil')|int %}
+        {% if loop.first %}
+          <a class="blog-featured-list__featured" href="{{ post.absolute_url }}">
+            <div class="blog-featured-list__bar"></div>
+            <div class="blog-featured-list__featured-img">
+              {% if post.featured_image %}
+                <img src="{{ post.featured_image }}" alt="{{ post.featured_image_alt_text|escape_attr }}" loading="lazy">
+              {% else %}
+                <div class="blog-featured-list__ph" style="background: {{ grads[0] }};"></div>
+              {% endif %}
+            </div>
+            <div class="blog-featured-list__featured-body">
+              <div class="blog-featured-list__meta">
+                {% if post.tag_list %}<span class="blog-featured-list__tag">{{ post.tag_list[0].name }}</span>{% endif %}
+                {% if module.show_read_time %}<span class="blog-featured-list__readtime">{% if mins < 1 %}1{% else %}{{ mins }}{% endif %} min read</span>{% endif %}
+              </div>
+              <h3 class="blog-featured-list__featured-title">{{ post.name }}</h3>
+              {% if module.featured_link_text %}<span class="blog-featured-list__readmore">{{ module.featured_link_text }}</span>{% endif %}
+            </div>
+          </a>
+          <div class="blog-featured-list__list">
+        {% else %}
+            <a class="blog-featured-list__row" href="{{ post.absolute_url }}">
+              <div class="blog-featured-list__row-img">
+                {% if post.featured_image %}
+                  <img src="{{ post.featured_image }}" alt="{{ post.featured_image_alt_text|escape_attr }}" loading="lazy">
+                {% else %}
+                  <div class="blog-featured-list__ph" style="background: {{ grads[(loop.index0 - 1) % 6] }};"></div>
+                {% endif %}
+              </div>
+              <div>
+                <div class="blog-featured-list__meta">
+                  {% if post.tag_list %}<span class="blog-featured-list__tag">{{ post.tag_list[0].name }}</span>{% endif %}
+                  {% if module.show_read_time %}<span class="blog-featured-list__readtime">{% if mins < 1 %}1{% else %}{{ mins }}{% endif %} min read</span>{% endif %}
+                </div>
+                <div class="blog-featured-list__row-title">{{ post.name }}</div>
+              </div>
+            </a>
+        {% endif %}
+        {% if loop.last %}
+          </div>
+        {% endif %}
+      {% endfor %}
+
+    </div>
+    {% endif %}
+
+    {% if module.show_cta != false %}
+      <div class="blog-featured-list__cta custom-cta {{ module.cta.style_cta }}">
+        <a href="{{ cta_href|escape_url }}"{% if module.cta.link_field.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ cta_text|escape_html }}</a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}

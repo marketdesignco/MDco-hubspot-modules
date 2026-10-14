@@ -1,0 +1,17 @@
+{
+  "global": false,
+  "content_types": [
+    "LANDING_PAGE",
+    "SITE_PAGE",
+    "BLOG_LISTING",
+    "BLOG_POST"
+  ],
+  "host_template_types": [
+    "PAGE",
+    "BLOG_LISTING",
+    "BLOG_POST"
+  ],
+  "label": "Blog Featured + List",
+  "help_text": "Latest post as a large featured card with the next posts as a list. Posts load from the selected blog.",
+  "is_available_for_new_content": true
+}
