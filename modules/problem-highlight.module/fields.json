@@ -134,6 +134,17 @@
     "display_width": null
   },
   {
+    "id": "5e1c8f37-a2d4-4b69-9f03-d6b7e24a18c5",
+    "name": "show_bullets",
+    "label": "Card — Show bullet dots",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "default": true,
+    "display_width": null
+  },
+  {
     "id": "a3815cd9-f7ba-4f50-87e4-2486213fe577",
     "name": "style",
     "label": "Style",
@@ -142,6 +153,31 @@
     "type": "group",
     "tab": "STYLE",
     "children": [
+      {
+        "id": "b8d4e2a6-07f1-4c3e-a95b-1e6c39f7d042",
+        "name": "card_style",
+        "label": "Card style",
+        "required": false,
+        "locked": false,
+        "help_text": "Style 2: white card with border, 4px gradient top bar and dividers between items.",
+        "display": "select",
+        "choices": [
+          [
+            "style-1",
+            "Style 1 — Dark purple"
+          ],
+          [
+            "style-2",
+            "Style 2 — White with gradient top bar"
+          ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "default": "style-1",
+        "display_width": null
+      },
       {
         "id": "dd903abb-d00f-49af-b3e5-f5f4c3f2d606",
         "name": "spacing_desktop",

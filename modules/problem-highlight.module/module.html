@@ -24,12 +24,12 @@
         {% if module.closing_line %}<div class="problem-highlight__closing">{{ module.closing_line }}</div>{% endif %}
       </div>
       <div class="problem-highlight__col">
-        <div class="problem-highlight__card">
+        <div class="problem-highlight__card{% if module.style.card_style is equalto "style-2" %} problem-highlight__card--style-2{% endif %}">
           {% if module.card_eyebrow %}<div class="problem-highlight__card-eyebrow">{{ module.card_eyebrow }}</div>{% endif %}
           <div class="problem-highlight__card-heading">{{ module.card_heading }}</div>
           <ul class="problem-highlight__card-list">
             {% for item in module.card_items %}
-              <li><span class="problem-highlight__dot"></span><span>{{ item.text }}</span></li>
+              <li>{% if module.show_bullets %}<span class="problem-highlight__dot"></span>{% endif %}<span>{{ item.text }}</span></li>
             {% endfor %}
           </ul>
         </div>
