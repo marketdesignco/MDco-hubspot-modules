@@ -90,6 +90,18 @@
         "display_width": null
       },
       {
+        "id": "4f7a2c91-e3b8-4d56-a0c4-8b1e6d2f9a37",
+        "name": "number",
+        "label": "Number (optional, e.g. 01)",
+        "required": false,
+        "locked": false,
+        "help_text": "Large gradient number at the top of the card (white on featured cards). When set, the tag sits to its right.",
+        "allow_new_line": false,
+        "type": "text",
+        "default": "",
+        "display_width": null
+      },
+      {
         "id": "2e2db714-0a1d-4842-ba74-7db49ff0a264",
         "name": "tag",
         "label": "Tag",
@@ -250,6 +262,69 @@
     "display_width": null
   },
   {
+    "id": "c62e9d14-7b3a-4f80-9e25-d1a48b6f03c7",
+    "name": "banner_columns",
+    "label": "Banner — Columns (optional)",
+    "required": false,
+    "locked": false,
+    "help_text": "Optional columns below the banner text: a top line, title and description (no card).",
+    "occurrence": {
+      "min": null,
+      "max": 6,
+      "default": 0
+    },
+    "children": [
+      {
+        "id": "8a3f5b27-c1d6-4e94-b708-2f9e4c61da85",
+        "name": "title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "default": "Column title",
+        "display_width": null
+      },
+      {
+        "id": "e17c4d93-5a2b-4f68-81e0-6b9d3a7c2f54",
+        "name": "description",
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "<p>Description</p>",
+        "display_width": null
+      },
+      {
+        "id": "b95e0a6c-2d47-4c1f-a3b8-7f6e1d9c4a20",
+        "name": "line_style",
+        "label": "Top line color",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "light",
+            "Light"
+          ],
+          [
+            "accent",
+            "Accent (green)"
+          ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "default": "light",
+        "display_width": null
+      }
+    ],
+    "default": [],
+    "type": "group",
+    "display_width": null
+  },
+  {
     "id": "ade9e409-1df6-4b24-9b97-2625d054d816",
     "name": "style",
     "label": "Style",
@@ -258,6 +333,79 @@
     "type": "group",
     "tab": "STYLE",
     "children": [
+      {
+        "id": "d3a8f61b-92c4-4e7d-b05a-6c1e9f27a4d8",
+        "name": "featured_color",
+        "label": "Featured card color",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "deep",
+            "Style 1 — Deep purple #3A0CA3 (current)"
+          ],
+          [
+            "violet",
+            "Style 2 — Violet #7209B7"
+          ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "default": "deep",
+        "display_width": null
+      },
+      {
+        "id": "71e4c0b9-3d8a-4a52-9f16-e2b7d5c38f0a",
+        "name": "featured_pill",
+        "label": "Featured card tag pill",
+        "required": false,
+        "locked": false,
+        "help_text": "Only applies to featured cards with \"Show tag as pill\" on.",
+        "display": "select",
+        "choices": [
+          [
+            "outline",
+            "Style 1 — Green text (current)"
+          ],
+          [
+            "solid",
+            "Style 2 — Solid green pill, dark text"
+          ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "default": "outline",
+        "display_width": null
+      },
+      {
+        "id": "a5c9e2f4-60b1-4d38-8e7a-1f4d3b9c62e5",
+        "name": "fix_style",
+        "label": "Bottom block style",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "stacked",
+            "Style 1 — Green uppercase label above the text (current)"
+          ],
+          [
+            "inline",
+            "Style 2 — Bold purple label inline, e.g. \"You get: …\""
+          ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "default": "stacked",
+        "display_width": null
+      },
       {
         "id": "e6eb797b-f93a-43ef-8039-b52927daa9a7",
         "name": "spacing_desktop",

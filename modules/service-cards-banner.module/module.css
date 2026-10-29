@@ -159,6 +159,71 @@
   color: #7EDB00;
 }
 
+/* ═══ Opt-in card number (only when Number is set) — gradient text like process-steps-gradient ═══ */
+.service-cards-banner__card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.service-cards-banner .service-cards-banner__card-head .service-cards-banner__tag {
+  align-self: center;
+  margin-bottom: 0;
+}
+.service-cards-banner--story .service-cards-banner__card-head {
+  margin-bottom: 18px;
+}
+.service-cards-banner__number {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 900;
+  font-size: var(--font-size-h4, 38px);
+  line-height: 1.1;
+  letter-spacing: var(--letter-spacing-h4, -0.76px);
+  background: linear-gradient(90deg, #F72585 0%, #3A0CA3 50%, #7209B7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #3A0CA3;
+}
+.service-cards-banner__card--featured .service-cards-banner__number {
+  background: none;
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+}
+
+/* ═══ Opt-in banner columns (only when Banner — Columns has items) ═══ */
+.service-cards-banner__banner-columns {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px 32px;
+}
+.service-cards-banner__banner-col {
+  padding-top: 14px;
+  border-top: 2px solid rgba(255, 255, 255, 0.85);
+}
+.service-cards-banner__banner-col--accent {
+  border-top-color: #7EDB00;
+}
+.service-cards-banner__banner-col-title {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.service-cards-banner__banner-col-desc,
+.service-cards-banner__banner-col-desc p {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #EDE9F7;
+}
+.service-cards-banner__banner-col-desc p {
+  margin: 0;
+}
+
 /* ═══ Story variant (card_variant = story) — reference: HaaS "Sound Familiar?" ═══ */
 .service-cards-banner.service-cards-banner--story {
   background: #FFFFFF;
@@ -278,4 +343,33 @@
   .service-cards-banner--story .service-cards-banner__card:hover {
     transform: none;
   }
+}
+
+/* ═══ Opt-in style variants (Style tab) — Style 1 of each keeps the original look ═══ */
+
+/* Featured card color: Style 2 — Violet */
+.service-cards-banner--featured-violet .service-cards-banner__card--featured,
+.service-cards-banner--featured-violet.service-cards-banner--story .service-cards-banner__card--featured {
+  background: #7209B7;
+  border-color: #7209B7;
+}
+
+/* Featured card tag pill: Style 2 — Solid green pill, dark text */
+.service-cards-banner--pill-solid .service-cards-banner__card--featured .service-cards-banner__tag.service-cards-banner__tag--pill {
+  color: #1A1A2E;
+  background: #7EDB00;
+}
+
+/* Bottom block: Style 2 — bold purple label inline ("You get: …") */
+.service-cards-banner--fix-inline .service-cards-banner__fix .service-cards-banner__fix-label {
+  display: inline;
+  margin: 0;
+  font-size: inherit;
+  font-weight: 900;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #7209B7;
+}
+.service-cards-banner--fix-inline .service-cards-banner__card--featured .service-cards-banner__fix .service-cards-banner__fix-label {
+  color: #fff;
 }

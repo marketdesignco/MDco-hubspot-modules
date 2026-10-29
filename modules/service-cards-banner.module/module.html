@@ -12,7 +12,7 @@
   {% end_scope_css %}
 </style>
 {% end_require_css %}
-<section class="service-cards-banner{% if module.card_variant == "story" %} service-cards-banner--story{% endif %}"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+<section class="service-cards-banner{% if module.card_variant == "story" %} service-cards-banner--story{% endif %}{% if module.style.featured_color == "violet" %} service-cards-banner--featured-violet{% endif %}{% if module.style.featured_pill == "solid" %} service-cards-banner--pill-solid{% endif %}{% if module.style.fix_style == "inline" %} service-cards-banner--fix-inline{% endif %}"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
   <div class="content-wrapper">
     <div class="service-cards-banner__intro">
       {% if module.eyebrow %}<div class="service-cards-banner__eyebrow">{{ module.eyebrow }}</div>{% endif %}
@@ -24,7 +24,12 @@
       <article class="service-cards-banner__card{% if card.featured %} service-cards-banner__card--featured{% endif %}">
         <div class="service-cards-banner__card-bar"></div>
         <div class="service-cards-banner__card-body">
-          {% if card.tag %}<span class="service-cards-banner__tag{% if card.tag_pill %} service-cards-banner__tag--pill{% endif %}">{{ card.tag }}</span>{% endif %}
+          {% if card.number %}
+          <div class="service-cards-banner__card-head">
+            <span class="service-cards-banner__number">{{ card.number }}</span>
+            {% if card.tag %}<span class="service-cards-banner__tag{% if card.tag_pill %} service-cards-banner__tag--pill{% endif %}">{{ card.tag }}</span>{% endif %}
+          </div>
+          {% elif card.tag %}<span class="service-cards-banner__tag{% if card.tag_pill %} service-cards-banner__tag--pill{% endif %}">{{ card.tag }}</span>{% endif %}
           <div class="service-cards-banner__card-title{% if card.quote_marks %} service-cards-banner__card-title--quoted{% endif %}">{{ card.title }}</div>
           <div class="service-cards-banner__card-desc">{{ card.description }}</div>
           {% if card.fix_label or card.fix_text %}
@@ -42,6 +47,16 @@
     <div class="service-cards-banner__banner">
       {% if module.banner_eyebrow %}<div class="service-cards-banner__banner-eyebrow">{{ module.banner_eyebrow }}</div>{% endif %}
       <div class="service-cards-banner__banner-text">{{ module.banner_text }}</div>
+      {% if module.banner_columns %}
+      <div class="service-cards-banner__banner-columns">
+        {% for col in module.banner_columns %}
+        <div class="service-cards-banner__banner-col service-cards-banner__banner-col--{{ col.line_style }}">
+          {% if col.title %}<div class="service-cards-banner__banner-col-title">{{ col.title }}</div>{% endif %}
+          <div class="service-cards-banner__banner-col-desc">{{ col.description }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
     </div>
     {% endif %}
   </div>
