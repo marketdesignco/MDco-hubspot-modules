@@ -1,0 +1,359 @@
+[
+  {
+    "id": "a9490d1e-0e55-4381-9d94-35611a18f90f",
+    "name": "section_id",
+    "label": "Section ID (anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "",
+    "help_text": "Optional. Rendered as the section id so it can be targeted by in-page links (no # needed)."
+  },
+  {
+    "id": "47a5bb3a-427f-48be-81d9-b1b72edf9a8f",
+    "name": "show_eyebrow",
+    "label": "Show eyebrow",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "551d0e27-d038-4cff-83b1-8fe45bb801e7",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "STEP 2 - THE DIAGNOSTIC"
+  },
+  {
+    "id": "ae2dfd0b-7852-44e7-ac9a-c18eebc351d5",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<h2>The 6 Ps of Progress</h2>"
+  },
+  {
+    "id": "f02786cd-6255-47ac-9402-982143a3d74f",
+    "name": "description",
+    "label": "Description",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<p>Six things have to be aligned for an IT company to grow. Most get four right and bleed revenue on the other two. The 6 Ps show which two.</p>"
+  },
+  {
+    "id": "fe816f53-4230-4225-aa7d-813ceabd3f27",
+    "name": "show_video",
+    "label": "Show video",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "fe8f2a39-852f-4c3c-88d5-4197014341d8",
+    "name": "video_embed",
+    "label": "Video",
+    "required": false,
+    "locked": false,
+    "help_text": "Paste a YouTube/Vimeo URL (oEmbed) or an embed code. The frame keeps the 1321 x 700 Figma ratio; the video fills it at every breakpoint.",
+    "supported_source_types": [
+      "oembed",
+      "html"
+    ],
+    "supported_oembed_types": [
+      "video"
+    ],
+    "resizable": false,
+    "show_preview": true,
+    "supported_media_bridge_providers": [],
+    "type": "embed",
+    "display_width": null,
+    "default": {
+      "source_type": "oembed"
+    }
+  },
+  {
+    "id": "7702c3db-5fb1-409f-b45c-099a8a503d17",
+    "name": "cards",
+    "label": "Cards",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": null,
+      "sorting_label_field": "cards.card_heading",
+      "default": 2
+    },
+    "children": [
+      {
+        "id": "54232591-eebc-4bc7-88cc-64895436e078",
+        "name": "card_eyebrow",
+        "label": "Card eyebrow",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "The What"
+      },
+      {
+        "id": "85bd4f07-52ee-4ef3-b0e6-d33a915ddc95",
+        "name": "card_heading",
+        "label": "Card heading",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "What You Need"
+      },
+      {
+        "id": "d29ab7cc-a01a-4eb4-8491-fd305249748f",
+        "name": "card_items",
+        "label": "Items",
+        "required": false,
+        "locked": false,
+        "occurrence": {
+          "min": 1,
+          "max": null,
+          "sorting_label_field": null,
+          "default": 3
+        },
+        "children": [
+          {
+            "id": "7faa9fbc-5dae-4e30-a538-c75f6b9e66c1",
+            "name": "item_number",
+            "label": "Number",
+            "required": false,
+            "locked": false,
+            "allow_new_line": false,
+            "type": "text",
+            "display_width": null,
+            "default": "1"
+          },
+          {
+            "id": "ac5c1487-03df-4f4c-b155-44a589ed92be",
+            "name": "item_title",
+            "label": "Title",
+            "required": false,
+            "locked": false,
+            "allow_new_line": false,
+            "type": "text",
+            "display_width": null,
+            "default": "People"
+          },
+          {
+            "id": "b6740260-6803-4c20-b7d2-1edba0edd59b",
+            "name": "item_description",
+            "label": "Description",
+            "required": false,
+            "locked": false,
+            "allow_new_line": false,
+            "type": "text",
+            "display_width": null,
+            "default": "The right humans in the right seats, leading the right numbers."
+          }
+        ],
+        "expanded": false,
+        "group_occurrence_meta": null,
+        "type": "group",
+        "display_width": null,
+        "default": [
+          {
+            "item_number": "1",
+            "item_title": "People",
+            "item_description": "The right humans in the right seats, leading the right numbers."
+          },
+          {
+            "item_number": "2",
+            "item_title": "Process",
+            "item_description": "A marketing-to-sales handoff that doesn't leak."
+          },
+          {
+            "item_number": "3",
+            "item_title": "Platform",
+            "item_description": "One source of truth, surfaced to everyone."
+          }
+        ]
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "card_eyebrow": "The What",
+        "card_heading": "What You Need",
+        "card_items": [
+          {
+            "item_number": "1",
+            "item_title": "People",
+            "item_description": "The right humans in the right seats, leading the right numbers."
+          },
+          {
+            "item_number": "2",
+            "item_title": "Process",
+            "item_description": "A marketing-to-sales handoff that doesn't leak."
+          },
+          {
+            "item_number": "3",
+            "item_title": "Platform",
+            "item_description": "One source of truth, surfaced to everyone."
+          }
+        ]
+      },
+      {
+        "card_eyebrow": "The How",
+        "card_heading": "How You Win",
+        "card_items": [
+          {
+            "item_number": "4",
+            "item_title": "Purpose",
+            "item_description": "A reason for buyers to choose you: differentiation and go-to-market credibility."
+          },
+          {
+            "item_number": "5",
+            "item_title": "Plan",
+            "item_description": "Top, middle, and bottom of funnel run as one revenue office."
+          },
+          {
+            "item_number": "6",
+            "item_title": "Pipeline",
+            "item_description": "Prospecting that fills it, pricing that protects profit."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "290129c6-15f7-404f-9ab9-e05888595345",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "fd46a00b-baa3-430d-845b-479c8dc7bd1c",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 120,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 120,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      },
+      {
+        "id": "d2d19bb9-0065-4c66-a9f7-d2d79c4546a1",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 48,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 48,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      }
+    ],
+    "tab": "STYLE",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": {
+      "spacing_desktop": {
+        "padding": {
+          "top": {
+            "value": 120,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 120,
+            "units": "px"
+          },
+          "left": {
+            "value": null,
+            "units": null
+          },
+          "right": {
+            "value": null,
+            "units": null
+          }
+        }
+      },
+      "spacing_mobile": {
+        "padding": {
+          "top": {
+            "value": 48,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 48,
+            "units": "px"
+          },
+          "left": {
+            "value": null,
+            "units": null
+          },
+          "right": {
+            "value": null,
+            "units": null
+          }
+        }
+      }
+    }
+  }
+]

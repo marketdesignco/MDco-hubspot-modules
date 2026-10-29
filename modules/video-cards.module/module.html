@@ -1,0 +1,79 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .video-cards {
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 991px) {
+    .video-cards { {{ module.style.spacing_mobile.css }} }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="video-cards"{% if module.section_id %} id="{{ module.section_id|escape_attr }}"{% endif %}>
+  <div class="content-wrapper">
+
+    <div class="video-cards__intro">
+      {% if module.show_eyebrow and module.eyebrow %}
+        <div class="video-cards__eyebrow">{{ module.eyebrow }}</div>
+      {% endif %}
+      {% if module.heading %}
+        <div class="video-cards__heading">{{ module.heading }}</div>
+      {% endif %}
+      {% if module.description %}
+        <div class="video-cards__description">{{ module.description }}</div>
+      {% endif %}
+    </div>
+
+    {% if module.show_video %}
+      <div class="video-cards__video">
+        {# oEmbed: fetched client-side (module.js) so the embed is never stale, per HubSpot's oEmbed guide; the cached response is the fallback #}
+        {% if module.video_embed.source_type == "oembed" and module.video_embed.oembed_url %}
+          <div class="video-cards__player" data-embed-url="{{ module.video_embed.oembed_url|escape_attr }}">
+            {% if module.video_embed.oembed_response.html %}
+              <template class="video-cards__fallback">{{ module.video_embed.oembed_response.html }}</template>
+            {% endif %}
+          </div>
+        {% elif module.video_embed.source_type == "html" and module.video_embed.embed_html %}
+          <div class="video-cards__player">{{ module.video_embed.embed_html }}</div>
+        {% else %}
+          <div class="video-cards__player"></div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if module.cards %}
+      <div class="video-cards__cards">
+        {% for card in module.cards %}
+          <article class="video-cards__card">
+            {% if card.card_eyebrow %}
+              <div class="video-cards__card-eyebrow">{{ card.card_eyebrow }}</div>
+            {% endif %}
+            {% if card.card_heading %}
+              <h3 class="video-cards__card-heading">{{ card.card_heading }}</h3>
+            {% endif %}
+            {% if card.card_items %}
+              <ul class="video-cards__items">
+                {% for item in card.card_items %}
+                  <li class="video-cards__item">
+                    {% if item.item_number %}
+                      <span class="video-cards__item-number">{{ item.item_number }}</span>
+                    {% endif %}
+                    {% if item.item_title %}
+                      <h4 class="video-cards__item-title">{{ item.item_title }}</h4>
+                    {% endif %}
+                    {% if item.item_description %}
+                      <p class="video-cards__item-description">{{ item.item_description }}</p>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+  </div>
+</section>

@@ -1,0 +1,230 @@
+/* ═══ SECTION ═══ */
+.video-cards {
+  position: relative;
+  background: #3A0CA3;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+}
+
+/* ═══ INTRO ═══ */
+.video-cards__eyebrow,
+.video-cards__card-eyebrow {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #7EDB00;
+}
+
+.video-cards__eyebrow {
+  margin-bottom: 20px; /* estimated from screenshot — confirm in Figma */
+}
+
+.video-cards__heading * {
+  color: #FFFFFF;
+}
+
+.video-cards__heading h1,
+.video-cards__heading h2,
+.video-cards__heading h3,
+.video-cards__heading p {
+  margin: 0;
+}
+
+.video-cards__description {
+  max-width: 780px; /* estimated from screenshot — confirm in Figma */
+  margin-top: 28px; /* estimated from screenshot — confirm in Figma */
+}
+
+.video-cards__description,
+.video-cards__description p {
+  color: rgba(255, 255, 255, 0.9); /* estimated from screenshot — confirm in Figma */
+}
+
+.video-cards__description p:last-child {
+  margin-bottom: 0;
+}
+
+/* ═══ VIDEO ═══ */
+.video-cards__video {
+  position: relative;
+  margin-top: 56px; /* estimated from screenshot — confirm in Figma */
+  border-radius: 16px; /* estimated: matches card radius — confirm in Figma */
+  overflow: hidden;
+  background: #1A0A2E; /* sampled from screenshot — confirm in Figma */
+  box-shadow: 0 20px 60px rgba(13, 5, 40, 0.55); /* estimated from screenshot — confirm in Figma */
+}
+
+/* 5px gradient bar on the top edge only */
+.video-cards__video::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #F72585 0%, #3A0CA3 50%, #7209B7 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Figma frame: 1321 x 700 desktop, 282 x 150 mobile (same ratio) */
+.video-cards__player {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1321 / 700;
+}
+
+/* oEmbed/embed code comes with fixed width/height attributes: make it fill the frame */
+.video-cards__player iframe,
+.video-cards__player video,
+.video-cards__player object,
+.video-cards__player embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  border: 0;
+}
+
+/* ═══ CARDS ═══ */
+.video-cards__cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 72px; /* estimated from screenshot — confirm in Figma */
+}
+
+/* when the video is hidden, keep the intro-to-cards distance */
+.video-cards__intro + .video-cards__cards {
+  margin-top: 56px; /* estimated — confirm in Figma */
+}
+
+.video-cards__card {
+  background: #FFFFFF12;
+  border: 1px solid #FFFFFF24;
+  border-radius: 16px;
+  padding: 64px 48px; /* estimated from screenshot — confirm in Figma */
+}
+
+.video-cards__card-heading {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700; /* estimated — confirm in Figma */
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
+  letter-spacing: var(--letter-spacing-h5);
+  color: #FFFFFF;
+  margin: 12px 0 0; /* estimated from screenshot — confirm in Figma */
+}
+
+.video-cards__items {
+  list-style: none;
+  margin: 32px 0 0; /* estimated from screenshot — confirm in Figma */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* estimated from screenshot — confirm in Figma */
+}
+
+/* number column on the left, vertically centered on title + description */
+.video-cards__item {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr); /* estimated from screenshot — confirm in Figma */
+  grid-template-areas:
+    "number title"
+    "number description";
+  grid-template-rows: auto auto;
+  column-gap: 24px; /* estimated from screenshot — confirm in Figma */
+  align-items: start;
+  margin: 0;
+  padding: 0;
+}
+
+.video-cards__item-number {
+  grid-area: number;
+  align-self: center;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 900; /* estimated — confirm in Figma */
+  font-size: var(--font-size-h5); /* estimated from screenshot — confirm in Figma */
+  line-height: 1;
+  color: #7EDB00;
+}
+
+.video-cards__item-title {
+  grid-area: title;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  letter-spacing: 0;
+  color: #FFFFFF;
+  margin: 0 0 4px; /* estimated — confirm in Figma */
+}
+
+.video-cards__item-description {
+  grid-area: description;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: #DCD5F5; /* estimated (Lavender token) — confirm in Figma */
+  margin: 0;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 991px) {
+  .video-cards__video {
+    margin-top: 40px; /* estimated — confirm in Figma */
+  }
+
+  .video-cards__cards {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    margin-top: 40px; /* measured ~40px in mobile screenshot */
+  }
+
+  .video-cards__intro + .video-cards__cards {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-cards__description {
+    margin-top: 16px; /* estimated — confirm in Figma */
+  }
+
+  /* mobile Figma: number sits in a narrow gutter, eyebrow/heading align with the item text */
+  .video-cards__card {
+    padding: 28px 14px 24px; /* estimated from screenshot — confirm in Figma */
+  }
+
+  .video-cards__card-eyebrow,
+  .video-cards__card-heading {
+    padding-left: 24px; /* = number column + gap */
+  }
+
+  .video-cards__card-heading {
+    font-size: var(--font-size-h5-mobile);
+    letter-spacing: var(--letter-spacing-h5-mobile);
+  }
+
+  .video-cards__items {
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  .video-cards__item {
+    grid-template-columns: 16px minmax(0, 1fr);
+    column-gap: 8px;
+  }
+
+  .video-cards__item-number {
+    font-size: var(--font-size-h5-mobile);
+  }
+
+  .video-cards__item-title,
+  .video-cards__item-description {
+    font-size: var(--font-size-body-mobile);
+  }
+}

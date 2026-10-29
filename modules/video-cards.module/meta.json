@@ -1,0 +1,13 @@
+{
+  "global": false,
+  "content_types": [
+    "LANDING_PAGE",
+    "SITE_PAGE"
+  ],
+  "host_template_types": [
+    "PAGE"
+  ],
+  "label": "Video + Cards",
+  "help_text": "Dark section: eyebrow, heading and intro, a video with a gradient top bar (1321 x 700 ratio), and translucent cards with numbered items.",
+  "is_available_for_new_content": true
+}
