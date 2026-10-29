@@ -3,6 +3,7 @@
   {% scope_css %}
   .how-section{
     background: #3A0CA3;
+    {% if module.style.border_radius %}border-radius: {{ module.style.border_radius }}px;{% endif %}
     {{ module.style.spacing_desktop.css }}
   }
   @media (max-width:768px){
@@ -13,7 +14,7 @@
   {% end_scope_css %}
 </style>
 {% end_require_css %}
-<section class="how-section" {% if module.section_id %}id="{{ module.section_id }}"{% endif %}>
+<section class="how-section{% if module.style.header_align == "left" %} how-section--left{% endif %}{% if module.style.title_style == "label" %} how-section--label-titles{% endif %}{% if module.style.columns == "4" %} how-section--cols-4{% endif %}{% if module.style.mobile_layout == "stack" %} how-section--stack{% endif %}" {% if module.section_id %}id="{{ module.section_id }}"{% endif %}>
   <div class="how-glow" aria-hidden="true"></div>
 
   <div class="content-wrapper">
@@ -32,13 +33,21 @@
       </div>
     </div>
 
-    <div class="how-grid js-how-slider">
+    {# Stacked mobile layout: leave out the slider hook so module.js never initialises Slick #}
+    <div class="how-grid{% if module.style.mobile_layout != "stack" %} js-how-slider{% endif %}">
       {% for step in module.steps %}
-        <div class="how-card{% if loop.last %} how-card--last{% endif %}">
+        {% if module.style.featured_mode == "manual" %}
+          {% set is_featured = step.featured %}
+        {% else %}
+          {% set is_featured = loop.last %}
+        {% endif %}
+        <div class="how-card{% if is_featured %} how-card--last{% endif %}">
           <div class="how-card-top">
+            {% if module.style.number_display != "hide" %}
             <span class="how-num" aria-hidden="true">
               {% if loop.index < 10 %}0{% endif %}{{ loop.index }}
             </span>
+            {% endif %}
 
             <h6 class="how-card-heading">
               {{ step.title }}
@@ -51,6 +60,38 @@
         </div>
       {% endfor %}
     </div>
+
+    {% if module.ctas %}
+    <div class="how-ctas">
+      {% for item in module.ctas %}
+        {% if item.link_field.url.href or item.cta %}
+        <div class="custom-cta {{ item.style_cta }}">
+          {% if item.link_field.url.href %}
+            {% set href = item.link_field.url.href %}
+            {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+            {% elif item.link_field.url.type is equalto "PHONE_NUMBER" %}
+              {% set href = "tel:" + href %}
+            {% endif %}
+            <a
+              {% if item.link_field.url.type is equalto "CALL_TO_ACTION" %}
+                href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+              {% else %}
+                href="{{ href|escape_url }}"
+              {% endif %}
+              {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %}
+              {% if item.link_field.rel %}rel="{{ item.link_field.rel|escape_attr }}"{% endif %}
+              >
+              {{ item.text_field }}
+            </a>
+          {% elif item.cta %}
+            {% cta guid="{{ item.cta }}" %}
+          {% endif %}
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
 
   </div>
 </section>

@@ -205,3 +205,65 @@
         padding: 24px 20px;
       }
     }
+    /* ═══ OPT-IN: LEFT-ALIGNED HEADER (style.header_align = left) ═══ */
+    .how-section--left .how-header {
+      text-align: left;
+      max-width: 820px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    /* ═══ OPT-IN: CTA BUTTONS (only when CTAs has items) ═══ */
+    .how-ctas {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .how-section--left .how-ctas {
+      justify-content: flex-start;
+    }
+
+    @media (max-width: 767px) {
+      .how-ctas {
+        margin-top: 32px;
+      }
+    }
+
+    /* ═══ OPT-IN: CARD TITLE AS SMALL GREEN LABEL (style.title_style = label) ═══ */
+    .how-section--label-titles .how-card-heading,
+    .how-section--label-titles .how-card-heading p {
+      font-family: var(--font-primary, 'Lato', sans-serif);
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 17.6px;
+      letter-spacing: 1.76px;
+      text-transform: uppercase;
+      color: #7EDB00;
+    }
+
+    .how-section--label-titles .how-card-top {
+      margin-bottom: 8px;
+    }
+
+    .how-section--label-titles .how-card-text,
+    .how-section--label-titles .how-card-text p {
+      color: #fff;
+    }
+
+    .how-section--label-titles .how-card {
+      padding: 20px;
+    }
+
+    /* ═══ OPT-IN: 4 COLUMNS ON DESKTOP (style.columns = 4) ═══ */
+    @media (min-width: 1025px) {
+      .how-section--cols-4 .how-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+    }
+
+    /* ═══ OPT-IN: STACKED CARDS ON MOBILE (style.mobile_layout = stack) ═══
+       The grid's own 1-column rule below 768px already stacks them; no Slick is initialised. */

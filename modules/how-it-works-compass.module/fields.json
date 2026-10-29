@@ -70,6 +70,108 @@
         }
       }
     }
+  }, {
+    "id" : "8e2f4a61-c7d3-4b95-a1e0-5d9c3b7f2a48",
+    "name" : "header_align",
+    "label" : "Caption + heading alignment",
+    "required" : false,
+    "locked" : false,
+    "help_text" : "Also aligns the CTA buttons.",
+    "display" : "select",
+    "choices" : [ [ "center", "Center (current)" ], [ "left", "Left" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "center"
+  }, {
+    "id" : "3a7d9c25-e18f-4b60-96c2-f4b0e8d1a573",
+    "name" : "border_radius",
+    "label" : "Section border radius",
+    "required" : false,
+    "locked" : false,
+    "help_text" : "Rounds the corners of the purple section, e.g. 16. 0 keeps square corners.",
+    "display" : "text",
+    "min" : 0,
+    "max" : 64,
+    "step" : 1,
+    "suffix" : "px",
+    "type" : "number",
+    "display_width" : null,
+    "default" : 0
+  }, {
+    "id" : "5c9e2b84-7a1f-4d36-b0e8-3f6a1d9c4e72",
+    "name" : "number_display",
+    "label" : "Step numbers",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "show", "Show (current)" ], [ "hide", "Hide" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "show"
+  }, {
+    "id" : "a1d7f3e6-4b28-4c90-8e5a-c2b9f0d63a17",
+    "name" : "featured_mode",
+    "label" : "Featured (highlighted) card",
+    "required" : false,
+    "locked" : false,
+    "help_text" : "Choose per card: turn on \"Featured\" in the steps you want highlighted.",
+    "display" : "select",
+    "choices" : [ [ "last", "Last card (current)" ], [ "manual", "Choose per card" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "last"
+  }, {
+    "id" : "f6b3c8a2-9d14-4e57-a3f0-7e1c5b2d8f96",
+    "name" : "title_style",
+    "label" : "Card title style",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "heading", "Style 1 — White heading (current)" ], [ "label", "Style 2 — Small green uppercase label, white text" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "heading"
+  }, {
+    "id" : "0e4a9d7c-2f61-4b83-95c7-d8e3a1f6b250",
+    "name" : "columns",
+    "label" : "Columns (desktop)",
+    "required" : false,
+    "locked" : false,
+    "help_text" : "Below 1025px the grid shows 2 columns, below 768px 1 column.",
+    "display" : "select",
+    "choices" : [ [ "3", "3 columns (current)" ], [ "4", "4 columns" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "3"
+  }, {
+    "id" : "b8f2e5d1-6c37-4a94-a1b6-4d9f0c7e3a85",
+    "name" : "mobile_layout",
+    "label" : "Mobile layout",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "slider", "Slider (current)" ], [ "stack", "Stacked cards" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "slider"
   } ],
   "tab" : "STYLE",
   "expanded" : false,
@@ -187,6 +289,17 @@
     "type" : "richtext",
     "display_width" : null,
     "default" : "<p>We begin by creating conditions for honest conversation. Confidential one-on-one interviews remove the social pressure to align before thinking. Each leader is asked the same structured questions, in the same way, so the data is comparable.</p>"
+  }, {
+    "id" : "7d3b1f9e-c5a2-4e68-b4d0-2a8e6c1f7b39",
+    "name" : "featured",
+    "label" : "Featured (highlighted)",
+    "required" : false,
+    "locked" : false,
+    "help_text" : "Only used when Style > Featured card is \"Choose per card\".",
+    "display" : "toggle",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -212,6 +325,78 @@
     "title" : "Listen",
     "text" : "<p>We begin by creating conditions for honest conversation. Confidential one-on-one interviews remove the social pressure to align before thinking. Each leader is asked the same structured questions, in the same way, so the data is comparable.</p>"
   } ]
+}, {
+  "id" : "c4b8e1d6-2f93-4a07-b5e2-9d1a6f3c8e70",
+  "name" : "ctas",
+  "label" : "CTAs (optional)",
+  "required" : false,
+  "locked" : false,
+  "help_text" : "Buttons below the steps. Use a HubSpot CTA, or set a link + text for a plain link button.",
+  "occurrence" : {
+    "min" : null,
+    "max" : 4,
+    "sorting_label_field" : null,
+    "default" : 0
+  },
+  "children" : [ {
+    "id" : "6f1a3d8c-b4e2-4c59-8a07-e2d5b9c1f364",
+    "name" : "style_cta",
+    "label" : "Style",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "cta-white", "White" ], [ "cta-white-outline", "White Outline" ], [ "cta-purple-v2", "Primary (purple)" ], [ "cta-pink-v2", "Primary (pink)" ], [ "cta-white-v2", "White (v2)" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "cta-white"
+  }, {
+    "id" : "d9e2b7a4-1c58-4f3e-a6b0-7c4f2e8d5a19",
+    "name" : "cta",
+    "label" : "HubSpot CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "display_width" : null
+  }, {
+    "id" : "2b5c8f17-a3e9-4d64-9f0b-6e1d4a7c3b82",
+    "name" : "link_field",
+    "label" : "Link (optional — overrides the HubSpot CTA above if set)",
+    "help_text" : "Optional. If set, renders a plain link button using this URL and the text below instead of the HubSpot CTA above. Leave empty to keep using the HubSpot CTA.",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "e7a4c2f9-5b16-4e83-b2d8-0f9c6a1e4d57",
+    "name" : "text_field",
+    "label" : "Text (used with the link override above)",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Find Your P.A.T.H."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ ]
 }, {
   "id" : "406f888f-97ef-b332-9a95-59b650a615ee",
   "name" : "section_id",
