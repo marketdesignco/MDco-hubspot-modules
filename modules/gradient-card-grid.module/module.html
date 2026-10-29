@@ -12,7 +12,7 @@
 </style>
 {% end_require_css %}
 
-<section class="gradient-card-grid gradient-card-grid--cols-{{ module.grid_columns }}"{% if module.section_id %} id="{{ module.section_id|escape_attr }}"{% endif %}>
+<section class="gradient-card-grid gradient-card-grid--cols-{{ module.grid_columns }}{% if module.style.show_top_border %} gradient-card-grid--top-border{% endif %}"{% if module.section_id %} id="{{ module.section_id|escape_attr }}"{% endif %}>
   <div class="content-wrapper">
     <div class="gradient-card-grid__inner">
 
@@ -30,10 +30,14 @@
 
       <div class="gradient-card-grid__grid gradient-card-grid__grid--cols-{{ module.grid_columns }}">
         {% for card in module.grid_cards %}
-        <div class="gradient-card-grid__card">
+        {% set has_card_link = card.card_link_text and card.card_link.url.href %}
+        <div class="gradient-card-grid__card{% if has_card_link %} gradient-card-grid__card--has-link{% endif %}">
           <span class="gradient-card-grid__card-bar" aria-hidden="true"></span>
           {% if card.card_number %}
             <div class="gradient-card-grid__number">{{ card.card_number }}</div>
+          {% endif %}
+          {% if card.card_eyebrow %}
+            <div class="gradient-card-grid__card-eyebrow">{{ card.card_eyebrow }}</div>
           {% endif %}
           {% if card.card_tag_text %}
             <div class="gradient-card-grid__tag-row"><span class="gradient-card-grid__tag gradient-card-grid__tag--{{ card.card_tag_tone }}">{{ card.card_tag_text }}</span></div>
@@ -50,6 +54,16 @@
           {% if card.card_text|striptags|trim %}
             <div class="gradient-card-grid__text">{{ card.card_text }}</div>
           {% endif %}
+          {% if has_card_link %}
+            {% set card_href = card.card_link.url.href %}
+            {% if card.card_link.url.type is equalto "EMAIL_ADDRESS" %}{% set card_href = "mailto:" + card_href %}
+            {% elif card.card_link.url.type is equalto "PHONE_NUMBER" %}{% set card_href = "tel:" + card_href %}{% endif %}
+            <div class="gradient-card-grid__card-footer">
+              <a class="gradient-card-grid__card-link" href="{{ card_href|escape_url }}"
+                 {% if card.card_link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if card.card_link.rel %}rel="{{ card.card_link.rel|escape_attr }}"{% endif %}>{{ card.card_link_text }} <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          {% endif %}
         </div>
         {% endfor %}
       </div>
@@ -61,11 +75,16 @@
         </div>
       {% endif %}
 
-      {% if module.show_note and module.note_text %}
+      {% set has_note = module.show_note and module.note_text %}
+      {% set has_cta = module.show_cta and (module.cta_link.url.href or module.hubspot_cta) %}
+      {% set note_beside = has_cta and module.note_position is equalto "beside" %}
+
+      {% if has_note and not note_beside %}
         <div class="gradient-card-grid__note">{{ module.note_text }}</div>
       {% endif %}
 
-      {% if module.show_cta and (module.cta_link.url.href or module.hubspot_cta) %}
+      {% if has_cta %}
+        {% if note_beside %}<div class="gradient-card-grid__actions">{% endif %}
         <div class="gradient-card-grid__cta">
           <div class="custom-cta {{ module.style_cta }}">
             {% if module.cta_link.url.href %}
@@ -95,6 +114,10 @@
             {% endif %}
           </div>
         </div>
+        {% if note_beside %}
+          {% if has_note %}<div class="gradient-card-grid__note">{{ module.note_text }}</div>{% endif %}
+        </div>
+        {% endif %}
       {% endif %}
 
     </div>

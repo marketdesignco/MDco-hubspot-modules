@@ -5,6 +5,21 @@
   margin: 0 auto;
 }
 
+/* Optional gradient top border (style.show_top_border) */
+.gradient-card-grid--top-border {
+  position: relative;
+}
+
+.gradient-card-grid--top-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(270deg, #7209B7 28.37%, #F72585 69.23%);
+}
+
 /* ── Header ─────────────────────────────────────────── */
 
 .gradient-card-grid__eyebrow {
@@ -90,6 +105,13 @@
   border: 1px solid #E4DCEF;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(58, 12, 163, 0.08);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gradient-card-grid__card:hover,
+.gradient-card-grid__card:focus-within {
+  border-color: #3A0CA3;
+  box-shadow: 0px 18px 44px 0px #3A0CA32E;
 }
 
 .gradient-card-grid__card-bar {
@@ -116,6 +138,17 @@
   font-size: 15px;
   line-height: 1;
   color: #fff;
+}
+
+.gradient-card-grid__card-eyebrow {
+  margin-bottom: 10px;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1.3;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #F72585;
 }
 
 .gradient-card-grid__tag {
@@ -206,6 +239,34 @@
   color: #3A0CA3;
 }
 
+/* Optional card link: divider + arrow link pinned to the card bottom */
+.gradient-card-grid__card--has-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.gradient-card-grid__card-footer {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.gradient-card-grid__card-link {
+  display: block;
+  padding-top: 14px;
+  border-top: 1px solid #E4DCEF;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.3;
+  color: #7209B7;
+  text-decoration: none;
+}
+
+.gradient-card-grid__card-link:hover,
+.gradient-card-grid__card-link:focus {
+  color: #F72585;
+}
+
 /* ── Callout ────────────────────────────────────────── */
 
 .gradient-card-grid__callout {
@@ -281,6 +342,23 @@
   margin-top: 40px;
 }
 
+/* Note beside the CTA (note_position: beside) */
+.gradient-card-grid__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px 28px;
+  margin-top: 40px;
+}
+
+.gradient-card-grid__actions .gradient-card-grid__cta,
+.gradient-card-grid__actions .gradient-card-grid__note {
+  margin-top: 0;
+}
+
+.gradient-card-grid__actions .gradient-card-grid__cta {
+  flex-shrink: 0;
+}
+
 /* ── Responsive ─────────────────────────────────────── */
 
 @media (max-width: 991px) {
@@ -304,6 +382,11 @@
 
   .gradient-card-grid__callout {
     padding: 22px 22px 22px 26px;
+  }
+
+  .gradient-card-grid__actions {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
