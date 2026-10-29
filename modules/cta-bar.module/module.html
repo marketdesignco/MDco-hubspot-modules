@@ -2,7 +2,13 @@
 <style>
 	{% scope_css %}
   .cta-bar{
+  {% if module.style.background_style == "gradient_2" %}
+  background: linear-gradient(90deg, #F72585 0%, #3A0CA3 45%, #7209B7 100%);
+  {% elif module.style.background_style == "custom" and module.custom_gradient %}
+  background: {{ module.custom_gradient|striptags|replace(";", "")|replace("{", "")|replace("}", "") }};
+  {% else %}
   background: linear-gradient(270deg, #7EDB00 0%, #7209B7 36.26%, #3A0CA3 70.47%, #F72585 100%);
+  {% endif %}
 {{ module.style.spacing_desktop.css }};
   }
   @media (max-width:768px){

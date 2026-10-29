@@ -5,6 +5,17 @@
   "required" : false,
   "locked" : false,
   "children" : [ {
+    "id" : "style.background_style",
+    "name" : "background_style",
+    "label" : "Background Gradient",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "gradient_1", "Style 1 — Green → Violet → Deep → Pink (current)" ], [ "gradient_2", "Style 2 — Pink → Deep → Violet" ], [ "custom", "Custom gradient" ] ],
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "gradient_1"
+  }, {
     "id" : "3b0a672b-00f2-4ed1-d3e9-26c1b8dcb2ec",
     "name" : "spacing_desktop",
     "label" : "Spacing - Desktop",
@@ -127,6 +138,17 @@
   "type" : "richtext",
   "display_width" : null,
   "default" : "<h6>Three ways to start. Pick the one that matches where you are.</h6>"
+}, {
+  "id" : "custom_gradient",
+  "name" : "custom_gradient",
+  "label" : "Custom Gradient (CSS value, used when Style > Background Gradient = Custom)",
+  "help_text" : "Example: linear-gradient(90deg, #F72585 0%, #3A0CA3 45%, #7209B7 100%)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : ""
 }, {
   "id" : "f459a86b-ea1c-4662-dfe4-1ee0d51ff088",
   "name" : "ctas",
