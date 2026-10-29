@@ -145,3 +145,79 @@
   line-height: inherit;
   color: inherit;
 }
+
+/* Variant: two columns (opt-in via faq_layout = "split"; accordion behaviour unchanged).
+   Left: eyebrow, heading and optional side card. Right: the accordion list. */
+.faq-accordion__split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+.faq-accordion--split h2 {
+  margin: 0 0 32px;
+}
+.faq-accordion--split .faq-accordion__list {
+  border-top: 0;
+}
+.faq-accordion--split .faq-accordion__item:first-child .faq-accordion__question {
+  padding-top: 0;
+}
+
+/* Side card ("At a glance") */
+.faq-accordion__card {
+  position: relative;
+  overflow: hidden;
+  padding: 32px 28px 28px;
+  background: #fff;
+  border: 1px solid #E4DCEF;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(58, 12, 163, 0.06);
+}
+.faq-accordion__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #F72585 0%, #3A0CA3 50%, #7209B7 100%);
+}
+.faq-accordion__card-eyebrow {
+  margin-bottom: 20px;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #7209B7;
+}
+.faq-accordion__card-item + .faq-accordion__card-item {
+  margin-top: 18px;
+}
+.faq-accordion__card-title {
+  margin-bottom: 4px;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #3A0CA3;
+}
+.faq-accordion__card-text,
+.faq-accordion__card-text p {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4A4A63;
+}
+.faq-accordion__card-text p {
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .faq-accordion__split {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+}

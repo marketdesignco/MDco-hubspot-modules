@@ -3,7 +3,7 @@
     "id": "f63ab35b-6993-4bc4-b938-b3600c2e261a",
     "name": "faq_layout",
     "label": "Layout variant",
-    "help_text": "Default keeps the collapsible accordion. \"All answers open\" renders a static list with every answer visible (used on the Found First landing).",
+    "help_text": "Default keeps the collapsible accordion. \"All answers open\" renders a static list with every answer visible (used on the Found First landing). \"Two columns\" puts the eyebrow, heading and optional side card on the left and the accordion on the right.",
     "required": false,
     "locked": false,
     "display": "select",
@@ -15,6 +15,10 @@
       [
         "expanded",
         "All answers open (static list)"
+      ],
+      [
+        "split",
+        "Two columns (heading + side card left, accordion right)"
       ]
     ],
     "type": "choice",
@@ -108,6 +112,55 @@
     "question" : "Do you work in HubSpot?",
     "answer" : "<p>Yes. MDCo is a multi-certified HubSpot Platinum Partner, with integration experience across Salesforce, Microsoft Dynamics, ConnectWise, Quoteworks, and Autotask.</p>"
   } ]
+}, {
+  "id" : "7c3e1a9d-4f62-4b85-a0d7-e95b2c8f1346",
+  "name" : "side_card_eyebrow",
+  "label" : "Side card — Eyebrow (Two columns layout only)",
+  "required" : false,
+  "locked" : false,
+  "help_text" : "Optional, e.g. MDCO AT A GLANCE. The side card shows when this or the side card items are filled.",
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : ""
+}, {
+  "id" : "b1f6d82e-9a34-4c07-8e5b-3d7a0c4f92e8",
+  "name" : "side_card_items",
+  "label" : "Side card — Items (Two columns layout only)",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : 10,
+    "sorting_label_field" : null,
+    "default" : 0
+  },
+  "children" : [ {
+    "id" : "5e8a2c47-d1b9-4f63-97a0-6c4e3b8d1f25",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Title"
+  }, {
+    "id" : "a2d9f5b8-3c71-4e46-b8f0-1e7c6a9d4b53",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Text</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ ]
 }, {
   "id" : "style",
   "name" : "style",

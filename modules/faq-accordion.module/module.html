@@ -12,10 +12,25 @@
 </style>
 {% end_require_css %}
 
-<section class="faq-accordion{% if module.faq_layout == 'expanded' %} faq-accordion--expanded{% endif %}"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+{% set is_split = module.faq_layout == 'split' %}
+<section class="faq-accordion{% if module.faq_layout == 'expanded' %} faq-accordion--expanded{% endif %}{% if is_split %} faq-accordion--split{% endif %}"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
   <div class="content-wrapper">
+    {% if is_split %}<div class="faq-accordion__split"><div class="faq-accordion__aside">{% endif %}
     {% if module.eyebrow %}<div class="faq-accordion__eyebrow">{{ module.eyebrow }}</div>{% endif %}
     {{ module.heading }}
+
+    {% if is_split and (module.side_card_eyebrow or module.side_card_items) %}
+    <div class="faq-accordion__card">
+      {% if module.side_card_eyebrow %}<div class="faq-accordion__card-eyebrow">{{ module.side_card_eyebrow }}</div>{% endif %}
+      {% for entry in module.side_card_items %}
+      <div class="faq-accordion__card-item">
+        {% if entry.title %}<div class="faq-accordion__card-title">{{ entry.title }}</div>{% endif %}
+        <div class="faq-accordion__card-text">{{ entry.text }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if is_split %}</div>{% endif %}
 
     <div class="faq-accordion__list">
       {% for item in module.items %}
@@ -44,5 +59,6 @@
       {% endif %}
       {% endfor %}
     </div>
+    {% if is_split %}</div>{% endif %}
   </div>
 </section>
