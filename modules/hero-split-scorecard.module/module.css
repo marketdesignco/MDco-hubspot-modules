@@ -281,7 +281,189 @@
   color: #3A0CA3;
 }
 
+/* ═══ OPT-IN: GRADIENT TOP BORDER (style.show_top_border) ═══ */
+.hero-split-scorecard--top-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(270deg, #7209B7 28.37%, #F72585 69.23%);
+}
+
+/* ═══ OPT-IN: TOP BAR — back link + page navigation pills ═══ */
+.hero-split-scorecard__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+  margin-bottom: 72px; /* estimated from screenshot — confirm in Figma */
+}
+
+.hero-split-scorecard .hero-split-scorecard__back {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 15px; /* estimated from screenshot — confirm in Figma */
+  font-weight: 400;
+  line-height: 1.6;
+  color: #9A93B4;
+  text-decoration: none;
+}
+
+.hero-split-scorecard .hero-split-scorecard__back:hover {
+  color: #3A0CA3;
+}
+
+.hero-split-scorecard__pagenav {
+  margin-left: auto;
+  min-width: 0;
+}
+
+.hero-split-scorecard .hero-split-scorecard__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* estimated from screenshot — confirm in Figma */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-split-scorecard .hero-split-scorecard__pills li {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-split-scorecard .hero-split-scorecard__pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 50px; /* estimated from screenshot — confirm in Figma */
+  padding: 10px 24px; /* estimated from screenshot — confirm in Figma */
+  border: 2px solid #DCD5F5;
+  border-radius: 999px;
+  background: #FFFFFF;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 15px; /* estimated from screenshot — confirm in Figma */
+  font-weight: 700;
+  line-height: 1.2;
+  color: #3A0CA3;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero-split-scorecard .hero-split-scorecard__pill--active {
+  background: #3A0CA3;
+  border-color: #3A0CA3;
+  color: #FFFFFF;
+}
+
+.hero-split-scorecard .hero-split-scorecard__back:focus-visible,
+.hero-split-scorecard .hero-split-scorecard__pill:focus-visible {
+  outline: 2px solid #7209B7;
+  outline-offset: 3px;
+}
+
+/* ═══ NOTE LABEL (only when note_label is filled) ═══ */
+.hero-split-scorecard .hero-split-scorecard__note-label {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+/* ═══ OPT-IN: STYLE 2 — audience hero (style.hero_style = style-2) ═══ */
+.hero-split-scorecard--style-2 .hero-split-scorecard__badge {
+  color: #F72585;
+}
+
+.hero-split-scorecard.hero-split-scorecard--style-2 .hero-split-scorecard__title h1 {
+  max-width: 820px; /* estimated from screenshot line breaks — confirm in Figma */
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+  letter-spacing: var(--letter-spacing-h1);
+}
+
+/* bold/italic words become a plain green accent, e.g. the final period */
+.hero-split-scorecard.hero-split-scorecard--style-2 .hero-split-scorecard__title h1 strong,
+.hero-split-scorecard.hero-split-scorecard--style-2 .hero-split-scorecard__title h1 em {
+  font-style: normal;
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: #7EDB00;
+}
+
+.hero-split-scorecard--style-2 .hero-split-scorecard__lede {
+  max-width: 760px; /* estimated from screenshot — confirm in Figma */
+}
+
+.hero-split-scorecard.hero-split-scorecard--style-2 .hero-split-scorecard__lede p {
+  color: #1A1A2E;
+}
+
+/* note as a highlighted box ("Your key objective") */
+.hero-split-scorecard.hero-split-scorecard--style-2 .hero-split-scorecard__note {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 20px;
+  margin-top: 32px; /* estimated from screenshot — confirm in Figma */
+  padding: 20px 24px; /* estimated from screenshot — confirm in Figma */
+  border-radius: 12px; /* estimated from screenshot — confirm in Figma */
+  background: #F8F6FC;
+  font-size: 17px; /* estimated from screenshot — confirm in Figma */
+  font-weight: 900;
+  color: #3A0CA3;
+}
+
+.hero-split-scorecard.hero-split-scorecard--style-2 .hero-split-scorecard__note-label {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  color: #3A0CA3;
+}
+
 /* ═══ RESPONSIVE ═══ */
+@media (max-width: 768px) {
+  .hero-split-scorecard.hero-split-scorecard--style-2 .hero-split-scorecard__title h1 {
+    font-size: var(--font-size-h1-mobile);
+    letter-spacing: var(--letter-spacing-h1-mobile);
+  }
+
+  /* no mobile design provided: back link above, pills scroll horizontally */
+  .hero-split-scorecard__topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .hero-split-scorecard__pagenav {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .hero-split-scorecard .hero-split-scorecard__pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 4px;
+  }
+
+  .hero-split-scorecard .hero-split-scorecard__pills li {
+    flex: 0 0 auto;
+  }
+
+  .hero-split-scorecard .hero-split-scorecard__pill {
+    min-height: 42px;
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  .hero-split-scorecard.hero-split-scorecard--style-2 .hero-split-scorecard__note {
+    font-size: 15px;
+    padding: 16px 20px;
+  }
+}
+
 @media (max-width: 920px) {
   .hero-split-scorecard__grid {
     grid-template-columns: 1fr;
@@ -306,4 +488,85 @@
   .hero-split-scorecard__bar {
     width: 96px;
   }
+}
+
+/* ═══ OPT-IN: NOTE AS A HIGHLIGHT BOX (style.note_style = box) — works with either Hero Style ═══
+   The box hugs the text instead of spanning the full column. */
+.hero-split-scorecard.hero-split-scorecard--note-box .hero-split-scorecard__note {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 20px;
+  width: auto;
+  max-width: 100%;
+  margin-top: 32px;
+  padding: 14px 20px; /* estimated from screenshot — confirm in Figma */
+  border-radius: 12px; /* estimated from screenshot — confirm in Figma */
+  background: #F8F6FC;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-size: 17px; /* estimated from screenshot — confirm in Figma */
+  font-weight: 900;
+  line-height: 1.4;
+  color: #3A0CA3;
+}
+
+.hero-split-scorecard.hero-split-scorecard--note-box .hero-split-scorecard__note-text {
+  font-weight: 900;
+  color: inherit;
+}
+
+.hero-split-scorecard.hero-split-scorecard--note-box .hero-split-scorecard__note-label {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  color: #3A0CA3;
+}
+
+@media (max-width: 768px) {
+  .hero-split-scorecard.hero-split-scorecard--note-box .hero-split-scorecard__note {
+    font-size: 15px;
+  }
+}
+
+/* ═══ OPT-IN: COLOR OVERRIDES (style.*_color; "default" keeps the Hero Style colors) ═══
+   Variables are set in module.html from the theme brand palette; these rules sit last so they win ties. */
+.hero-split-scorecard.hero-split-scorecard--c-badge .hero-split-scorecard__badge {
+  color: var(--hss-badge);
+}
+
+.hero-split-scorecard.hero-split-scorecard--c-heading .hero-split-scorecard__title h1 {
+  color: var(--hss-heading);
+}
+
+.hero-split-scorecard.hero-split-scorecard--c-accent .hero-split-scorecard__title h1 strong,
+.hero-split-scorecard.hero-split-scorecard--c-accent .hero-split-scorecard__title h1 em {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: var(--hss-accent);
+}
+
+.hero-split-scorecard.hero-split-scorecard--c-lede .hero-split-scorecard__lede p {
+  color: var(--hss-lede);
+}
+
+.hero-split-scorecard.hero-split-scorecard--c-outline-cta .hero-split-scorecard__actions .cta-primary-outline a,
+.hero-split-scorecard.hero-split-scorecard--c-outline-cta .hero-split-scorecard__actions .cta-primary-outline a:hover,
+.hero-split-scorecard.hero-split-scorecard--c-outline-cta .hero-split-scorecard__actions .cta-primary-outline a:focus {
+  border-color: var(--hss-outline-cta);
+  color: var(--hss-outline-cta);
+}
+
+.hero-split-scorecard.hero-split-scorecard--c-note-bg .hero-split-scorecard__note {
+  background: var(--hss-note-bg);
+}
+
+.hero-split-scorecard.hero-split-scorecard--c-note-label .hero-split-scorecard__note-label {
+  color: var(--hss-note-label);
+}
+
+.hero-split-scorecard.hero-split-scorecard--c-note-text .hero-split-scorecard__note,
+.hero-split-scorecard.hero-split-scorecard--c-note-text .hero-split-scorecard__note-text {
+  color: var(--hss-note-text);
 }

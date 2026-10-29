@@ -1,8 +1,32 @@
 {# Hero Split Scorecard — split hero with a scorecard card (labelled progress bars) on the right #}
+{# Optional color overrides (Style tab): "default" keeps the colors of the selected Hero Style #}
+{% set hss_palette = {
+  "pink": "var(--color-magenta-pink, #F72585)",
+  "violet": "var(--color-medium-purple, #7209B7)",
+  "deep": "var(--color-deep-purple, #3A0CA3)",
+  "green": "var(--color-bright-green, #7EDB00)",
+  "navy": "var(--color-dark-navy, #1A1A2E)",
+  "slate": "var(--color-slate-gray, #4A4A63)",
+  "light_purple_gray": "var(--color-light-purple-gray, #F8F6FC)",
+  "purple_tag": "var(--color-purple-tag, #F3ECFB)",
+  "light_purple_border": "var(--color-light-purple-border, #E4DCEF)",
+  "white": "#FFFFFF"
+} %}
+{% set hss_colors = [
+  ["badge", module.style.badge_color],
+  ["heading", module.style.heading_color],
+  ["accent", module.style.heading_accent_color],
+  ["lede", module.style.lede_color],
+  ["outline-cta", module.style.outline_cta_color],
+  ["note-bg", module.style.note_background],
+  ["note-label", module.style.note_label_color],
+  ["note-text", module.style.note_text_color]
+] %}
 {% require_css %}
 <style>
   {% scope_css %}
   .hero-split-scorecard {
+    {% for pair in hss_colors %}{% if pair[1] and pair[1] != "default" and hss_palette[pair[1]] %}--hss-{{ pair[0] }}: {{ hss_palette[pair[1]] }};{% endif %}{% endfor %}
     background: {{ module.style.background_color.color }};
     {{ module.style.spacing_desktop.css }}
   }
@@ -15,8 +39,42 @@
 
 {% set level_labels = { "low": "Low score", "mid": "Medium score", "good": "Good score" } %}
 
-<header class="hero-split-scorecard"{% if module.section_id %} id="{{ module.section_id|escape_attr }}"{% endif %}>
+{% set has_back_link = module.show_back_link and module.back_link_text and module.back_link.url.href %}
+{% set has_page_nav = module.show_page_nav and module.page_nav_items %}
+
+<header class="hero-split-scorecard{% if module.style.hero_style == 'style-2' %} hero-split-scorecard--style-2{% endif %}{% if module.style.show_top_border %} hero-split-scorecard--top-border{% endif %}{% if module.style.note_style == "box" %} hero-split-scorecard--note-box{% endif %}{% for pair in hss_colors %}{% if pair[1] and pair[1] != "default" and hss_palette[pair[1]] %} hero-split-scorecard--c-{{ pair[0] }}{% endif %}{% endfor %}"{% if module.section_id %} id="{{ module.section_id|escape_attr }}"{% endif %}>
   <div class="hero-split-scorecard__inner">
+    {% if has_back_link or has_page_nav %}
+      <div class="hero-split-scorecard__topbar">
+        {% if has_back_link %}
+          <a class="hero-split-scorecard__back" href="{{ module.back_link.url.href|escape_url }}"
+            {% if module.back_link.open_in_new_tab %}target="_blank"{% endif %}
+            {% if module.back_link.rel %}rel="{{ module.back_link.rel|escape_attr }}"{% endif %}>
+            <span aria-hidden="true">&larr;</span> {{ module.back_link_text }}
+          </a>
+        {% endif %}
+        {% if has_page_nav %}
+          <nav class="hero-split-scorecard__pagenav"{% if module.page_nav_label %} aria-label="{{ module.page_nav_label|escape_attr }}"{% endif %}>
+            <ul class="hero-split-scorecard__pills">
+              {% for item in module.page_nav_items %}
+                {% if item.nav_item_text %}
+                  <li>
+                    {% if item.nav_item_active %}
+                      <a class="hero-split-scorecard__pill hero-split-scorecard__pill--active" aria-current="page"{% if item.nav_item_link.url.href %} href="{{ item.nav_item_link.url.href|escape_url }}"{% endif %}>{{ item.nav_item_text }}</a>
+                    {% else %}
+                      <a class="hero-split-scorecard__pill" href="{{ item.nav_item_link.url.href|escape_url }}"
+                        {% if item.nav_item_link.open_in_new_tab %}target="_blank"{% endif %}
+                        {% if item.nav_item_link.rel %}rel="{{ item.nav_item_link.rel|escape_attr }}"{% endif %}>{{ item.nav_item_text }}</a>
+                    {% endif %}
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </nav>
+        {% endif %}
+      </div>
+    {% endif %}
+
     <div class="hero-split-scorecard__grid{% if not module.show_scorecard %} hero-split-scorecard__grid--single{% endif %}">
 
       <div class="hero-split-scorecard__content">
@@ -64,7 +122,11 @@
         {% endif %}
 
         {% if module.show_note and module.note %}
-          <p class="hero-split-scorecard__note">{{ module.note }}</p>
+          {% if module.note_label %}
+            <p class="hero-split-scorecard__note hero-split-scorecard__note--labelled"><span class="hero-split-scorecard__note-label">{{ module.note_label }}</span> <span class="hero-split-scorecard__note-text">{{ module.note }}</span></p>
+          {% else %}
+            <p class="hero-split-scorecard__note">{{ module.note }}</p>
+          {% endif %}
         {% endif %}
       </div>
 

@@ -11,6 +11,176 @@
     "default": ""
   },
   {
+    "id": "a2fdb10d-a74b-4432-a35f-e37554b343dd",
+    "name": "show_back_link",
+    "label": "Show back link",
+    "required": false,
+    "locked": false,
+    "help_text": "Optional. Small \"← Home\" link at the top left of the hero.",
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "16188f2e-4e0e-47f7-8d72-9e56f569632b",
+    "name": "back_link_text",
+    "label": "Back link text",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Home"
+  },
+  {
+    "id": "d017c274-a715-4aea-b783-3585b199442e",
+    "name": "back_link",
+    "label": "Back link URL",
+    "required": false,
+    "locked": false,
+    "supported_types": [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options": false,
+    "type": "link",
+    "display_width": null,
+    "default": {
+      "url": {
+        "content_id": null,
+        "type": "EXTERNAL",
+        "href": "/"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "id": "258ee804-4a8f-4fde-b5cf-a4438c7c32ab",
+    "name": "show_page_nav",
+    "label": "Show page navigation pills",
+    "required": false,
+    "locked": false,
+    "help_text": "Optional. Row of pill links at the top right of the hero (e.g. one per audience page). Mark the current page as active.",
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": false
+  },
+  {
+    "id": "25e52937-0434-4b40-9884-eca81da20762",
+    "name": "page_nav_label",
+    "label": "Page navigation accessible name",
+    "required": false,
+    "locked": false,
+    "help_text": "Read by screen readers only.",
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "Choose your role"
+  },
+  {
+    "id": "44babc37-33aa-4e50-ad1b-bbf38ad6bbdf",
+    "name": "page_nav_items",
+    "label": "Page navigation pills",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "sorting_label_field": "page_nav_items.nav_item_text",
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "d178fb50-00c9-40ac-bae7-f4ee7dd09b1b",
+        "name": "nav_item_text",
+        "label": "Text",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Owners + CEOs"
+      },
+      {
+        "id": "8019998e-ace8-4b62-8a49-253c4da57baa",
+        "name": "nav_item_link",
+        "label": "Link",
+        "required": false,
+        "locked": false,
+        "supported_types": [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "display_width": null,
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "id": "acf37089-6af0-46bc-bbd4-1580f4148f90",
+        "name": "nav_item_active",
+        "label": "Current page (active pill)",
+        "required": false,
+        "locked": false,
+        "display": "toggle",
+        "type": "boolean",
+        "display_width": null,
+        "default": false
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "nav_item_text": "Owners + CEOs",
+        "nav_item_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "nav_item_active": false
+      },
+      {
+        "nav_item_text": "Sales + Revenue Leaders",
+        "nav_item_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "nav_item_active": false
+      },
+      {
+        "nav_item_text": "Marketing Leaders",
+        "nav_item_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        },
+        "nav_item_active": true
+      }
+    ]
+  },
+  {
     "id": "7931da1b-a7ca-4eed-8c21-a766892bf13e",
     "name": "show_badge",
     "label": "Show badge",
@@ -194,6 +364,18 @@
       "operator": "EQUAL"
     },
     "default": "Audit included in every package. Plans from $2,500 per month."
+  },
+  {
+    "id": "d70e428a-6037-4fbe-a17f-fdced8eaf76c",
+    "name": "note_label",
+    "label": "Note label (optional)",
+    "required": false,
+    "locked": false,
+    "help_text": "Optional small label before the note, e.g. \"Your key objective\". With Style 2 the note renders as a highlighted box.",
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": ""
   },
   {
     "id": "3f11c031-18b1-4459-a4f0-bae9e2faa5ed",
@@ -400,6 +582,302 @@
           "color": "#F8F6FC",
           "opacity": 100
         }
+      },
+      {
+        "id": "44125956-55b3-4e31-b0e0-53b98ec421de",
+        "name": "hero_style",
+        "label": "Hero style",
+        "required": false,
+        "locked": false,
+        "help_text": "Style 2 is the audience hero: pink eyebrow, H1 at the theme H1 size, bold/italic words in the H1 shown as a plain green accent (e.g. a final period), wider intro and the note as a highlighted box.",
+        "display": "select",
+        "choices": [
+          [ "style-1", "Style 1 — HaaS hero (current)" ],
+          [ "style-2", "Style 2 — Audience hero" ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "display_width": null,
+        "default": "style-1"
+      },
+      {
+        "id": "1bca6712-2952-490e-aef8-c8969ca12f28",
+        "name": "show_top_border",
+        "label": "Show gradient top border",
+        "required": false,
+        "locked": false,
+        "help_text": "Adds an 8px purple-to-pink gradient bar across the top of the section.",
+        "display": "toggle",
+        "type": "boolean",
+        "display_width": null,
+        "default": false
+      },
+      {
+        "id": "style.badge_color",
+        "name": "badge_color",
+        "label": "Color — Eyebrow / badge",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "default",
+            "Default — follows Hero Style (current)"
+          ],
+          [
+            "pink",
+            "Pink — theme Magenta Pink (#F72585)"
+          ],
+          [
+            "violet",
+            "Violet — theme Medium Purple (#7209B7)"
+          ],
+          [
+            "deep",
+            "Deep purple — theme Deep Purple (#3A0CA3)"
+          ],
+          [
+            "green",
+            "Green — theme Bright Green (#7EDB00)"
+          ]
+        ],
+        "type": "choice",
+        "display_width": null,
+        "default": "default"
+      },
+      {
+        "id": "style.heading_color",
+        "name": "heading_color",
+        "label": "Color — Heading",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "default",
+            "Default — follows Hero Style (current)"
+          ],
+          [
+            "deep",
+            "Deep purple — theme Deep Purple (#3A0CA3)"
+          ],
+          [
+            "violet",
+            "Violet — theme Medium Purple (#7209B7)"
+          ],
+          [
+            "navy",
+            "Dark navy — theme Dark Navy (#1A1A2E)"
+          ]
+        ],
+        "type": "choice",
+        "display_width": null,
+        "default": "default"
+      },
+      {
+        "id": "style.heading_accent_color",
+        "name": "heading_accent_color",
+        "label": "Color — Heading accent (bold/italic words)",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "default",
+            "Default — follows Hero Style (current)"
+          ],
+          [
+            "green",
+            "Green — theme Bright Green (#7EDB00)"
+          ],
+          [
+            "pink",
+            "Pink — theme Magenta Pink (#F72585)"
+          ],
+          [
+            "violet",
+            "Violet — theme Medium Purple (#7209B7)"
+          ],
+          [
+            "deep",
+            "Deep purple — theme Deep Purple (#3A0CA3)"
+          ]
+        ],
+        "type": "choice",
+        "display_width": null,
+        "default": "default"
+      },
+      {
+        "id": "style.lede_color",
+        "name": "lede_color",
+        "label": "Color — Lede",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "default",
+            "Default — follows Hero Style (current)"
+          ],
+          [
+            "navy",
+            "Dark navy — theme Dark Navy (#1A1A2E)"
+          ],
+          [
+            "slate",
+            "Slate — theme Slate Gray (#4A4A63)"
+          ],
+          [
+            "deep",
+            "Deep purple — theme Deep Purple (#3A0CA3)"
+          ]
+        ],
+        "type": "choice",
+        "display_width": null,
+        "default": "default"
+      },
+      {
+        "id": "style.outline_cta_color",
+        "name": "outline_cta_color",
+        "label": "Color — Outline CTA (border + text)",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "default",
+            "Default — follows Hero Style (current)"
+          ],
+          [
+            "violet",
+            "Violet — theme Medium Purple (#7209B7)"
+          ],
+          [
+            "deep",
+            "Deep purple — theme Deep Purple (#3A0CA3)"
+          ]
+        ],
+        "type": "choice",
+        "display_width": null,
+        "default": "default"
+      },
+      {
+        "id": "style.note_background",
+        "name": "note_background",
+        "label": "Color — Note background",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "default",
+            "Default — follows Hero Style (current)"
+          ],
+          [
+            "light_purple_gray",
+            "Light purple gray — theme (#F8F6FC)"
+          ],
+          [
+            "purple_tag",
+            "Purple tag — theme (#F3ECFB)"
+          ],
+          [
+            "light_purple_border",
+            "Light purple border — theme (#E4DCEF)"
+          ],
+          [
+            "white",
+            "White"
+          ]
+        ],
+        "type": "choice",
+        "display_width": null,
+        "default": "default"
+      },
+      {
+        "id": "style.note_label_color",
+        "name": "note_label_color",
+        "label": "Color — Note label",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "default",
+            "Default — follows Hero Style (current)"
+          ],
+          [
+            "deep",
+            "Deep purple — theme Deep Purple (#3A0CA3)"
+          ],
+          [
+            "violet",
+            "Violet — theme Medium Purple (#7209B7)"
+          ],
+          [
+            "pink",
+            "Pink — theme Magenta Pink (#F72585)"
+          ],
+          [
+            "green",
+            "Green — theme Bright Green (#7EDB00)"
+          ]
+        ],
+        "type": "choice",
+        "display_width": null,
+        "default": "default"
+      },
+      {
+        "id": "style.note_text_color",
+        "name": "note_text_color",
+        "label": "Color — Note text",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "default",
+            "Default — follows Hero Style (current)"
+          ],
+          [
+            "deep",
+            "Deep purple — theme Deep Purple (#3A0CA3)"
+          ],
+          [
+            "violet",
+            "Violet — theme Medium Purple (#7209B7)"
+          ],
+          [
+            "navy",
+            "Dark navy — theme Dark Navy (#1A1A2E)"
+          ]
+        ],
+        "type": "choice",
+        "display_width": null,
+        "default": "default"
+      },
+      {
+        "id": "style.note_style",
+        "name": "note_style",
+        "label": "Note style",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "default",
+            "Default — follows Hero Style (current)"
+          ],
+          [
+            "box",
+            "Highlight box — fits the text, bold purple text"
+          ]
+        ],
+        "type": "choice",
+        "display_width": null,
+        "default": "default"
       }
     ],
     "tab": "STYLE",
@@ -427,7 +905,9 @@
       "background_color": {
         "color": "#F8F6FC",
         "opacity": 100
-      }
+      },
+      "hero_style": "style-1",
+      "show_top_border": false
     }
   }
 ]
