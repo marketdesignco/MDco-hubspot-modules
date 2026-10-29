@@ -1,0 +1,267 @@
+/* recommended-path-rows — static styles (field-driven background + spacing live in module.html) */
+
+/* ── Header ─────────────────────────────────────────── */
+
+.recommended-path-rows__intro {
+  max-width: 780px;
+  margin-bottom: 56px;
+}
+
+.recommended-path-rows__eyebrow {
+  margin-bottom: 18px;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #7EDB00;
+}
+
+.recommended-path-rows__heading h1,
+.recommended-path-rows__heading h2,
+.recommended-path-rows__heading h3,
+.recommended-path-rows__heading p {
+  margin: 0 0 28px;
+  color: #fff;
+}
+
+.recommended-path-rows__lede,
+.recommended-path-rows__lede p {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.recommended-path-rows__lede p {
+  margin: 0;
+}
+
+/* ── Rows ───────────────────────────────────────────── */
+
+.recommended-path-rows__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.recommended-path-rows__row {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 0.9fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: "num head body side";
+  align-items: center;
+  column-gap: 48px;
+  padding: 46px 48px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+}
+
+.recommended-path-rows__number {
+  grid-area: num;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #7EDB00;
+}
+
+.recommended-path-rows__head {
+  grid-area: head;
+}
+
+.recommended-path-rows__label {
+  margin-bottom: 10px;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.3;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #7EDB00;
+}
+
+.recommended-path-rows__title {
+  margin: 0;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: #fff;
+}
+
+.recommended-path-rows__body {
+  grid-area: body;
+}
+
+.recommended-path-rows__body,
+.recommended-path-rows__body p {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #fff;
+}
+
+.recommended-path-rows__body p {
+  margin: 0;
+}
+
+.recommended-path-rows__body p + p {
+  margin-top: 10px;
+}
+
+.recommended-path-rows__side {
+  grid-area: side;
+}
+
+/* Service pills */
+.recommended-path-rows__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.recommended-path-rows__tags li {
+  margin: 0;
+  padding: 11px 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Arrow link with green underline */
+.recommended-path-rows__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #7EDB00;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.recommended-path-rows__link:hover,
+.recommended-path-rows__link:focus {
+  color: #7EDB00;
+}
+
+.recommended-path-rows__link svg {
+  flex-shrink: 0;
+}
+
+/* ── Footer note ────────────────────────────────────── */
+
+.recommended-path-rows__note {
+  margin-top: 48px;
+  max-width: 900px;
+}
+
+.recommended-path-rows__note,
+.recommended-path-rows__note p {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.recommended-path-rows__note p {
+  margin: 0;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+
+@media (max-width: 1199px) {
+  .recommended-path-rows__row {
+    grid-template-columns: 72px minmax(0, 0.9fr) minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 32px;
+    padding: 40px 36px;
+  }
+
+  .recommended-path-rows__number {
+    font-size: 46px;
+  }
+
+  .recommended-path-rows__title {
+    font-size: 24px;
+  }
+}
+
+/* Stacked card: number + title on top, description, pills and link below */
+@media (max-width: 991px) {
+  .recommended-path-rows__intro {
+    margin-bottom: 40px;
+  }
+
+  .recommended-path-rows__lede,
+  .recommended-path-rows__lede p {
+    font-size: 16px;
+  }
+
+  .recommended-path-rows__list {
+    gap: 28px;
+  }
+
+  .recommended-path-rows__row {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+      "num head"
+      "body body"
+      "side side";
+    align-items: center;
+    column-gap: 28px;
+    row-gap: 20px;
+    padding: 32px 16px;
+  }
+
+  .recommended-path-rows__number {
+    font-size: 20px;
+  }
+
+  .recommended-path-rows__label {
+    font-size: 12px;
+  }
+
+  .recommended-path-rows__title {
+    font-size: 16px;
+  }
+
+  .recommended-path-rows__body,
+  .recommended-path-rows__body p {
+    font-size: 15px;
+  }
+
+  .recommended-path-rows__tags {
+    gap: 12px;
+  }
+
+  .recommended-path-rows__tags li {
+    font-size: 14px;
+  }
+
+  .recommended-path-rows__link {
+    font-size: 16px;
+  }
+
+  .recommended-path-rows__note {
+    margin-top: 40px;
+  }
+}

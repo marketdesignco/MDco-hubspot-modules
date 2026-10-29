@@ -1,0 +1,373 @@
+[
+  {
+    "id": "section_id",
+    "name": "section_id",
+    "label": "Id Section (menu anchor)",
+    "required": false,
+    "locked": false,
+    "display_width": null,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "recommended-path"
+  },
+  {
+    "id": "eyebrow",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "display_width": null,
+    "allow_new_line": false,
+    "type": "text",
+    "default": "YOUR RECOMMENDED PATH"
+  },
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading (rich text)",
+    "required": false,
+    "locked": false,
+    "display_width": null,
+    "type": "richtext",
+    "default": "<h2>Where We Usually Start for Marketing Leaders</h2>"
+  },
+  {
+    "id": "intro",
+    "name": "intro",
+    "label": "Intro",
+    "required": false,
+    "locked": false,
+    "display_width": null,
+    "type": "richtext",
+    "default": "<p>These are the 6 Ps of Progress that most often hold marketing leaders back, in the order we usually work them. The Diagnostic confirms which ones apply to you before we recommend anything.</p>"
+  },
+  {
+    "id": "rows",
+    "name": "rows",
+    "label": "Rows",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": 12,
+      "sorting_label_field": "rows.title",
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "rows.number",
+        "name": "number",
+        "label": "Number (e.g. 01, leave empty to hide)",
+        "required": false,
+        "locked": false,
+        "display_width": null,
+        "allow_new_line": false,
+        "type": "text",
+        "default": "01"
+      },
+      {
+        "id": "rows.row_label",
+        "name": "row_label",
+        "label": "Label (green, above the title)",
+        "required": false,
+        "locked": false,
+        "display_width": null,
+        "allow_new_line": false,
+        "type": "text",
+        "default": "PURPOSE"
+      },
+      {
+        "id": "rows.title",
+        "name": "title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "display_width": null,
+        "allow_new_line": false,
+        "type": "text",
+        "default": "Title"
+      },
+      {
+        "id": "rows.description",
+        "name": "description",
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "display_width": null,
+        "type": "richtext",
+        "default": "<p>Description</p>"
+      },
+      {
+        "id": "rows.tags",
+        "name": "tags",
+        "label": "Tags (pills, optional)",
+        "required": false,
+        "locked": false,
+        "occurrence": {
+          "min": null,
+          "max": null,
+          "sorting_label_field": null,
+          "default": 3
+        },
+        "children": [
+          {
+            "id": "rows.tags.text",
+            "name": "text",
+            "label": "Text",
+            "required": false,
+            "locked": false,
+            "display_width": null,
+            "allow_new_line": false,
+            "type": "text",
+            "default": "Tag"
+          }
+        ],
+        "tab": "CONTENT",
+        "expanded": false,
+        "group_occurrence_meta": null,
+        "type": "group",
+        "display_width": null,
+        "default": [
+          {
+            "text": "Tag"
+          }
+        ]
+      },
+      {
+        "id": "rows.link_text",
+        "name": "link_text",
+        "label": "Link Text (leave empty to hide the link)",
+        "required": false,
+        "locked": false,
+        "display_width": null,
+        "allow_new_line": false,
+        "type": "text",
+        "default": ""
+      },
+      {
+        "id": "rows.link",
+        "name": "link",
+        "label": "Link",
+        "required": false,
+        "locked": false,
+        "display_width": null,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG",
+          "CALL_TO_ACTION",
+          "PHONE_NUMBER",
+          "WHATSAPP_NUMBER",
+          "PAYMENT"
+        ],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "number": "01",
+        "row_label": "PURPOSE",
+        "title": "Sharpen the Story",
+        "description": "<p>Positioning and messaging that give buyers, and your sellers, a reason to choose you.</p>",
+        "tags": [
+          {
+            "text": "Positioning + messaging"
+          },
+          {
+            "text": "Persona + ICP work"
+          },
+          {
+            "text": "Sales narrative"
+          }
+        ],
+        "link_text": "Explore Purpose services",
+        "link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "number": "02",
+        "row_label": "PLAN",
+        "title": "Build One Plan Sales Believes In",
+        "description": "<p>A campaign plan and calendar tied to pipeline, built with sales so both teams aim at one number.</p>",
+        "tags": [
+          {
+            "text": "Annual + quarterly plan"
+          },
+          {
+            "text": "Campaign calendar"
+          },
+          {
+            "text": "Sales alignment"
+          }
+        ],
+        "link_text": "Explore Plan services",
+        "link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "number": "03",
+        "row_label": "PIPELINE",
+        "title": "Add the Hands to Run It",
+        "description": "<p>Tech growth consultants who execute alongside your team: content, campaigns, and the search and AI visibility that fill the top of the funnel.</p>",
+        "tags": [
+          {
+            "text": "Campaign execution"
+          },
+          {
+            "text": "Content"
+          },
+          {
+            "text": "SEO + AI search visibility"
+          }
+        ],
+        "link_text": "Explore Pipeline services",
+        "link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "number": "04",
+        "row_label": "PLATFORM",
+        "title": "Prove Marketing's Number",
+        "description": "<p>HubSpot reporting that shows what marketing produced in pipeline and revenue, so budget conversations start from facts.</p>",
+        "tags": [
+          {
+            "text": "HubSpot reporting"
+          },
+          {
+            "text": "Attribution"
+          },
+          {
+            "text": "Marketing dashboards"
+          }
+        ],
+        "link_text": "Explore Platform services",
+        "link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "footer_note",
+    "name": "footer_note",
+    "label": "Footer Note (optional)",
+    "required": false,
+    "locked": false,
+    "display_width": null,
+    "type": "richtext",
+    "default": "<p>P.A.T.H. is the lens we consult through, the 6 Ps find what's standing in the way, and the growth engine keeps it running.</p>"
+  },
+  {
+    "id": "style",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "style.background_color",
+        "name": "background_color",
+        "label": "Background Color",
+        "required": false,
+        "locked": false,
+        "display_width": null,
+        "type": "color",
+        "default": {
+          "color": "#3A0CA3",
+          "opacity": 100
+        }
+      },
+      {
+        "id": "style.spacing_desktop",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "display_width": null,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 120,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 120,
+              "units": "px"
+            }
+          }
+        }
+      },
+      {
+        "id": "style.spacing_mobile",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "display_width": null,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 56,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 56,
+              "units": "px"
+            }
+          }
+        }
+      }
+    ],
+    "tab": "STYLE",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null
+  }
+]

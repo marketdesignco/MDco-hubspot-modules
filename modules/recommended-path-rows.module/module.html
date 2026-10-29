@@ -1,0 +1,68 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .recommended-path-rows {
+    background: {{ module.style.background_color.color }};
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 991px) {
+    .recommended-path-rows { {{ module.style.spacing_mobile.css }} }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="recommended-path-rows"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+  <div class="content-wrapper">
+    <div class="recommended-path-rows__intro">
+      {% if module.eyebrow %}<div class="recommended-path-rows__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+      <div class="recommended-path-rows__heading">{{ module.heading }}</div>
+      {% if module.intro %}<div class="recommended-path-rows__lede">{{ module.intro }}</div>{% endif %}
+    </div>
+
+    <div class="recommended-path-rows__list">
+      {% for row in module.rows %}
+      <article class="recommended-path-rows__row">
+        {% if row.number %}<span class="recommended-path-rows__number" aria-hidden="true">{{ row.number }}</span>{% endif %}
+
+        <div class="recommended-path-rows__head">
+          {% if row.row_label %}<div class="recommended-path-rows__label">{{ row.row_label }}</div>{% endif %}
+          <h3 class="recommended-path-rows__title">{{ row.title }}</h3>
+        </div>
+
+        <div class="recommended-path-rows__body">{{ row.description }}</div>
+
+        <div class="recommended-path-rows__side">
+          {% if row.tags %}
+          <ul class="recommended-path-rows__tags">
+            {% for tag in row.tags %}{% if tag.text %}<li>{{ tag.text }}</li>{% endif %}{% endfor %}
+          </ul>
+          {% endif %}
+
+          {% if row.link_text and row.link.url.href %}
+            {% set href = row.link.url.href %}
+            {% if row.link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+            {% elif row.link.url.type is equalto "PHONE_NUMBER" %}
+              {% set href = "tel:" + href %}
+            {% endif %}
+            <a class="recommended-path-rows__link"
+              {% if row.link.url.type is equalto "CALL_TO_ACTION" %}
+                href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+              {% else %}
+                href="{{ href|escape_url }}"
+              {% endif %}
+              {% if row.link.open_in_new_tab %}target="_blank"{% endif %}
+              {% if row.link.rel %}rel="{{ row.link.rel|escape_attr }}"{% endif %}
+              >
+              {{ row.link_text }}
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true"><path d="M9.40332 7.62598L9.40332 4.8125L-1.22981e-07 4.8125L-2.10404e-07 2.8125L9.40332 2.8125L9.40332 -4.11032e-07L14 3.91797L9.40332 7.62598Z" fill="currentColor"/></svg>
+            </a>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    {% if module.footer_note %}<div class="recommended-path-rows__note">{{ module.footer_note }}</div>{% endif %}
+  </div>
+</section>
