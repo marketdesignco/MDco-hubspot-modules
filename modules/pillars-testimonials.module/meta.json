@@ -1,0 +1,13 @@
+{
+  "global": false,
+  "content_types": [
+    "LANDING_PAGE",
+    "SITE_PAGE"
+  ],
+  "host_template_types": [
+    "PAGE"
+  ],
+  "label": "Pillars + Testimonials",
+  "help_text": "Eyebrow and heading, a row of pillars (title + text with a vertical gradient bar), and a row of testimonial cards (quote, author, company).",
+  "is_available_for_new_content": true
+}

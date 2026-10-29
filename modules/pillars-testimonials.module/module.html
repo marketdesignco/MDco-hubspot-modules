@@ -1,0 +1,67 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+  .pillars-testimonials {
+    {% if module.style.background_color.color %}background: {{ module.style.background_color.color }};{% endif %}
+    {{ module.style.spacing_desktop.css }}
+  }
+  @media (max-width: 991px) {
+    .pillars-testimonials { {{ module.style.spacing_mobile.css }} }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+<section class="pillars-testimonials"{% if module.section_id %} id="{{ module.section_id|escape_attr }}"{% endif %}>
+  <div class="content-wrapper">
+
+    <div class="pillars-testimonials__intro">
+      {% if module.show_eyebrow and module.eyebrow %}
+        <div class="pillars-testimonials__eyebrow">{{ module.eyebrow }}</div>
+      {% endif %}
+      {% if module.heading %}
+        <div class="pillars-testimonials__heading">{{ module.heading }}</div>
+      {% endif %}
+    </div>
+
+    {% if module.pillars %}
+      <div class="pillars-testimonials__pillars">
+        {% for pillar in module.pillars %}
+          <div class="pillars-testimonials__pillar">
+            {% if pillar.pillar_title %}
+              <h3 class="pillars-testimonials__pillar-title">{{ pillar.pillar_title }}</h3>
+            {% endif %}
+            {% if pillar.pillar_text %}
+              <p class="pillars-testimonials__pillar-text">{{ pillar.pillar_text }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if module.show_testimonials and module.testimonials %}
+      <div class="pillars-testimonials__testimonials">
+        {% for testimonial in module.testimonials %}
+          <figure class="pillars-testimonials__testimonial">
+            {% if testimonial.testimonial_quote %}
+              <blockquote class="pillars-testimonials__quote">
+                <p>{{ testimonial.testimonial_quote }}</p>
+              </blockquote>
+            {% endif %}
+            {% if testimonial.testimonial_author or testimonial.testimonial_company %}
+              <figcaption class="pillars-testimonials__attribution">
+                {% if testimonial.testimonial_author %}
+                  <span class="pillars-testimonials__author">{{ testimonial.testimonial_author }}</span>
+                {% endif %}
+                {% if testimonial.testimonial_company %}
+                  <span class="pillars-testimonials__company">{{ testimonial.testimonial_company }}</span>
+                {% endif %}
+              </figcaption>
+            {% endif %}
+          </figure>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+  </div>
+</section>

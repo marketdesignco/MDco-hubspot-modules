@@ -1,0 +1,161 @@
+/* ═══ SECTION ═══ */
+.pillars-testimonials {
+  position: relative;
+  font-family: var(--font-primary, 'Lato', sans-serif);
+}
+
+/* ═══ INTRO ═══ */
+.pillars-testimonials__eyebrow {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #F72585;
+  margin-bottom: 20px; /* estimated from screenshot — confirm in Figma */
+}
+
+.pillars-testimonials__heading * {
+  color: #3A0CA3;
+}
+
+.pillars-testimonials__heading h1,
+.pillars-testimonials__heading h2,
+.pillars-testimonials__heading h3,
+.pillars-testimonials__heading p {
+  margin: 0;
+}
+
+/* ═══ PILLARS ═══ */
+.pillars-testimonials__pillars {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 64px; /* estimated from screenshot — confirm in Figma */
+}
+
+/* vertical gradient bar on the left, full column height */
+.pillars-testimonials__pillar {
+  position: relative;
+  padding-left: 20px; /* estimated: 4px bar + 16px gap — confirm in Figma */
+}
+
+.pillars-testimonials__pillar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px; /* estimated from screenshot — confirm in Figma */
+  background: linear-gradient(180deg, #F72585 0%, #3A0CA3 50%, #7209B7 100%);
+  pointer-events: none;
+}
+
+.pillars-testimonials__pillar-title {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 900; /* estimated — confirm in Figma */
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-h6);
+  letter-spacing: var(--letter-spacing-h6);
+  color: #3A0CA3;
+  margin: 0 0 16px; /* estimated from screenshot — confirm in Figma */
+}
+
+.pillars-testimonials__pillar-text {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: #1A1A2E; /* estimated from screenshot — confirm in Figma */
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* ═══ TESTIMONIALS ═══ */
+.pillars-testimonials__testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 64px; /* estimated from screenshot — confirm in Figma */
+}
+
+.pillars-testimonials__testimonial {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background: #F8F6FC; /* sampled from screenshot (Light Purple Gray token) */
+  border-radius: 12px; /* estimated from screenshot — confirm in Figma */
+  padding: 32px 24px; /* estimated from screenshot (bottom of card cut off) — confirm in Figma */
+}
+
+.pillars-testimonials__quote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.pillars-testimonials__quote p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  font-style: normal;
+  color: #1A1A2E; /* estimated from screenshot — confirm in Figma */
+  margin: 0;
+  white-space: pre-line;
+}
+
+.pillars-testimonials__attribution {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 24px; /* estimated from screenshot — confirm in Figma */
+}
+
+.pillars-testimonials__author {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 15px; /* estimated from screenshot — confirm in Figma */
+  line-height: 1.5;
+  color: #3A0CA3;
+}
+
+.pillars-testimonials__company {
+  font-size: 15px; /* estimated from screenshot — confirm in Figma */
+  line-height: 1.5;
+  color: #9A93B4; /* Muted Lavender token, estimated from screenshot — confirm in Figma */
+}
+
+/* ═══ RESPONSIVE (no mobile design provided: columns stack) ═══ */
+@media (max-width: 991px) {
+  .pillars-testimonials__pillars {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    margin-top: 40px;
+  }
+
+  .pillars-testimonials__testimonials {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pillars-testimonials__pillar-title {
+    font-size: var(--font-size-h6-mobile);
+    letter-spacing: var(--letter-spacing-h6-mobile);
+    margin-bottom: 8px;
+  }
+
+  .pillars-testimonials__pillar-text,
+  .pillars-testimonials__quote p {
+    font-size: var(--font-size-body-mobile);
+  }
+
+  .pillars-testimonials__testimonial {
+    padding: 24px 20px;
+  }
+
+  .pillars-testimonials__author,
+  .pillars-testimonials__company {
+    font-size: 14px;
+  }
+}

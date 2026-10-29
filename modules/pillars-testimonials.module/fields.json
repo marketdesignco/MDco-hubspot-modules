@@ -1,0 +1,314 @@
+[
+  {
+    "id": "f60d66b6-d5e6-460b-96de-e70b0f93f7f2",
+    "name": "section_id",
+    "label": "Section ID (anchor)",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "",
+    "help_text": "Optional. Rendered as the section id so it can be targeted by in-page links (no # needed)."
+  },
+  {
+    "id": "a4849cf5-85c0-4227-a04a-f3ade8ff1f07",
+    "name": "show_eyebrow",
+    "label": "Show eyebrow",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "e75471b0-6f1c-4e5d-80ac-75bd2a87432e",
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "required": false,
+    "locked": false,
+    "allow_new_line": false,
+    "type": "text",
+    "display_width": null,
+    "default": "WHY MARKETDESIGN"
+  },
+  {
+    "id": "a7aae910-bc1c-4fbc-885b-02433ef7c911",
+    "name": "heading",
+    "label": "Heading",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "display_width": null,
+    "default": "<h2>Where Perspective Meets Proof</h2>"
+  },
+  {
+    "id": "045189ad-0da8-4fa1-ae5b-6e3119042e8e",
+    "name": "pillars",
+    "label": "Pillars",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": null,
+      "sorting_label_field": "pillars.pillar_title",
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "2a3c2726-5a00-40cb-b140-f207a9de218b",
+        "name": "pillar_title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "We've Carried the Number"
+      },
+      {
+        "id": "00f5964c-8a0b-4316-8293-38d9fb65dc47",
+        "name": "pillar_text",
+        "label": "Text",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": "Our consultants have run marketing and sales inside MSPs, VARs, and solution providers, from the revenue office to the C- suite."
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "pillar_title": "We've Carried the Number",
+        "pillar_text": "Our consultants have run marketing and sales inside MSPs, VARs, and solution providers, from the revenue office to the C- suite."
+      },
+      {
+        "pillar_title": "Your CRM Tells the Truth",
+        "pillar_text": "As a HubSpot Platinum Partner, we make one platform the source of truth, so marketing and sales see the same numbers."
+      },
+      {
+        "pillar_title": "Buyers Find You First",
+        "pillar_text": "We make sure the right buyers, and the AI tools they now search with, find you before they find a competitor."
+      }
+    ]
+  },
+  {
+    "id": "477ecce0-8b3a-4617-997a-722698806c07",
+    "name": "show_testimonials",
+    "label": "Show testimonials",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "type": "boolean",
+    "display_width": null,
+    "default": true
+  },
+  {
+    "id": "8d431fbb-5e53-469c-9dd2-f8e65a0f7713",
+    "name": "testimonials",
+    "label": "Testimonials",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 1,
+      "max": null,
+      "sorting_label_field": "testimonials.testimonial_author",
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "cecd8152-9fa6-490d-a668-d658426a53de",
+        "name": "testimonial_quote",
+        "label": "Quote",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "type": "text",
+        "display_width": null,
+        "default": "\"They will actually get the work done and deliver an output or outcome that you can touch, you can feel, you can visualize.\""
+      },
+      {
+        "id": "323f48f3-baae-4c70-b144-27e38c7ff27d",
+        "name": "testimonial_author",
+        "label": "Author (name + role)",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Harry Zarek, Founder + CEO"
+      },
+      {
+        "id": "d2aefa7b-42be-4b78-b3ea-3060a15a2e85",
+        "name": "testimonial_company",
+        "label": "Company",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "type": "text",
+        "display_width": null,
+        "default": "Compugen Inc."
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": [
+      {
+        "testimonial_quote": "\"They will actually get the work done and deliver an output or outcome that you can touch, you can feel, you can visualize.\"",
+        "testimonial_author": "Harry Zarek, Founder + CEO",
+        "testimonial_company": "Compugen Inc."
+      },
+      {
+        "testimonial_quote": "\"MarketDesign is trustworthy and responsive. They deliver an impressive quality of work.\"",
+        "testimonial_author": "Chaz Hager, Owner + CEO",
+        "testimonial_company": "Northriver IT"
+      },
+      {
+        "testimonial_quote": "\"They really understand the current market. They adapt well to emerging trends. They are professional and reliable.\"",
+        "testimonial_author": "Brent Smiley, Vice President, ITAD Program",
+        "testimonial_company": "Green4Good IT Lifecycle Solutions"
+      }
+    ]
+  },
+  {
+    "id": "38881c14-70c1-4f82-9f97-7350d15c3532",
+    "name": "style",
+    "label": "Style",
+    "required": false,
+    "locked": false,
+    "children": [
+      {
+        "id": "21a1dd36-82b2-4f50-9403-7dfafa872405",
+        "name": "background_color",
+        "label": "Background color",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "display_width": null,
+        "default": {
+          "color": "#FFFFFF",
+          "opacity": 100
+        }
+      },
+      {
+        "id": "4ce82341-13bf-4b19-a6b6-e4608abf1f59",
+        "name": "spacing_desktop",
+        "label": "Spacing - Desktop",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 96,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 96,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      },
+      {
+        "id": "b43211b8-02f5-43eb-9ecd-92e9526e8539",
+        "name": "spacing_mobile",
+        "label": "Spacing - Mobile",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "display_width": null,
+        "default": {
+          "padding": {
+            "top": {
+              "value": 48,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 48,
+              "units": "px"
+            },
+            "left": {
+              "value": null,
+              "units": null
+            },
+            "right": {
+              "value": null,
+              "units": null
+            }
+          }
+        }
+      }
+    ],
+    "tab": "STYLE",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "display_width": null,
+    "default": {
+      "background_color": {
+        "color": "#FFFFFF",
+        "opacity": 100
+      },
+      "spacing_desktop": {
+        "padding": {
+          "top": {
+            "value": 96,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 96,
+            "units": "px"
+          },
+          "left": {
+            "value": null,
+            "units": null
+          },
+          "right": {
+            "value": null,
+            "units": null
+          }
+        }
+      },
+      "spacing_mobile": {
+        "padding": {
+          "top": {
+            "value": 48,
+            "units": "px"
+          },
+          "bottom": {
+            "value": 48,
+            "units": "px"
+          },
+          "left": {
+            "value": null,
+            "units": null
+          },
+          "right": {
+            "value": null,
+            "units": null
+          }
+        }
+      }
+    }
+  }
+]
