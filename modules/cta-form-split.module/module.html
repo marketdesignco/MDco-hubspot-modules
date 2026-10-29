@@ -1,7 +1,15 @@
+{# Left side background: the section in Style 1, the left half of the card in Style 2 #}
+{% if module.style.left_background == "deep_violet" %}
+  {% set left_bg = "linear-gradient(104.12deg, #3A0CA3 1.52%, #7209B7 95.79%)" %}
+{% elif module.style.left_background == "custom" and module.style.left_background_color.color %}
+  {% set left_bg = module.style.left_background_color.color %}
+{% endif %}
+{% set is_card = module.style.layout == "style-2" %}
 {% require_css %}
 <style>
   {% scope_css %}
   .cta-form-split {
+    {% if left_bg %}--cfs-left-bg: {{ left_bg }};{% endif %}
     {{ module.style.spacing_desktop.css }};
   }
   @media (max-width: 991px) {
@@ -12,20 +20,23 @@
   {% end_scope_css %}
 </style>
 {% end_require_css %}
-<section class="cta-form-split"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+<section class="cta-form-split{% if is_card %} cta-form-split--card{% endif %}{% if module.style.text_valign and module.style.text_valign != "center" %} cta-form-split--valign-{{ module.style.text_valign }}{% endif %}{% if module.style.text_align and module.style.text_align != "left" %} cta-form-split--text-{{ module.style.text_align }}{% endif %}"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
   <div class="content-wrapper">
     <div class="cta-form-split__grid">
-      <div class="cta-form-split__col">
+      <div class="cta-form-split__col cta-form-split__col--copy">
+        {% if module.eyebrow %}<div class="cta-form-split__eyebrow">{{ module.eyebrow }}</div>{% endif %}
         <div class="cta-form-split__heading">{{ module.heading }}</div>
         {% if module.lede %}<div class="cta-form-split__lede">{{ module.lede }}</div>{% endif %}
+        {% if module.bullets or not is_card %}
         <ul class="cta-form-split__list">
           {% for item in module.bullets %}
             <li><span class="cta-form-split__dot"></span><span>{{ item.text }}</span></li>
           {% endfor %}
         </ul>
+        {% endif %}
       </div>
-      <div class="cta-form-split__col">
-        <div class="cta-form-split__form-card">
+      <div class="cta-form-split__col cta-form-split__col--form">
+        <div class="cta-form-split__form-card{% if module.style.show_form_bar %} cta-form-split__form-card--bar{% endif %}">
           {% if module.form_eyebrow %}<div class="cta-form-split__form-eyebrow">{{ module.form_eyebrow }}</div>{% endif %}
           <div class="cta-form-split__form-heading">{{ module.form_heading }}</div>
           <div class="cta-form-split__form-embed">

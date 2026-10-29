@@ -1,7 +1,7 @@
 .cta-form-split {
   position: relative;
   overflow: hidden;
-  background: var(--gradient-1, linear-gradient(270deg, #7EDB00 0%, #7209B7 36.26%, #3A0CA3 70.47%, #F72585 100%));
+  background: var(--cfs-left-bg, var(--gradient-1, linear-gradient(270deg, #7EDB00 0%, #7209B7 36.26%, #3A0CA3 70.47%, #F72585 100%)));
 }
 .cta-form-split .content-wrapper {
   position: relative;
@@ -98,5 +98,96 @@
   .cta-form-split__grid {
     grid-template-columns: 1fr;
     gap: 36px;
+  }
+}
+
+/* ═══ Opt-in: left eyebrow (only when Eyebrow is set) ═══ */
+.cta-form-split__eyebrow {
+  font-family: var(--font-primary, 'Lato', sans-serif);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 17.6px;
+  letter-spacing: 1.76px;
+  text-transform: uppercase;
+  color: #7EDB00;
+  margin-bottom: 14px;
+}
+
+/* ═══ Opt-in: gradient top line on the form card (style.show_form_bar) ═══ */
+.cta-form-split__form-card--bar {
+  position: relative;
+  overflow: hidden;
+}
+.cta-form-split__form-card--bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(104.12deg, #3A0CA3 1.52%, #7209B7 95.79%);
+}
+
+/* ═══ Opt-in: left text position (style.text_valign / style.text_align) ═══ */
+.cta-form-split--valign-top .cta-form-split__col--copy {
+  align-self: start;
+}
+.cta-form-split--valign-bottom .cta-form-split__col--copy {
+  align-self: end;
+}
+.cta-form-split--text-center .cta-form-split__col--copy {
+  text-align: center;
+}
+.cta-form-split--text-right .cta-form-split__col--copy {
+  text-align: right;
+}
+.cta-form-split--text-center .cta-form-split__list li {
+  justify-content: center;
+}
+.cta-form-split--text-right .cta-form-split__list li {
+  justify-content: flex-end;
+}
+
+/* ═══ Layout Style 2 (style.layout = style-2): contained card split 50/50 ═══ */
+.cta-form-split.cta-form-split--card {
+  background: transparent;
+}
+.cta-form-split--card .cta-form-split__grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 18px 44px rgba(58, 12, 163, 0.12);
+}
+.cta-form-split--card .cta-form-split__col--copy {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px;
+  background: var(--cfs-left-bg, var(--gradient-1, linear-gradient(270deg, #7EDB00 0%, #7209B7 36.26%, #3A0CA3 70.47%, #F72585 100%)));
+}
+.cta-form-split--card.cta-form-split--valign-top .cta-form-split__col--copy {
+  justify-content: flex-start;
+}
+.cta-form-split--card.cta-form-split--valign-bottom .cta-form-split__col--copy {
+  justify-content: flex-end;
+}
+.cta-form-split--card .cta-form-split__form-card {
+  height: 100%;
+  padding: 48px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@media (max-width: 991px) {
+  .cta-form-split--card .cta-form-split__grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-form-split--card .cta-form-split__col--copy,
+  .cta-form-split--card .cta-form-split__form-card {
+    padding: 32px 24px;
   }
 }

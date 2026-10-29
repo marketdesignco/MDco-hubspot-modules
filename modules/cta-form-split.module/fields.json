@@ -11,6 +11,18 @@
     "display_width": null
   },
   {
+    "id": "6b2e9f40-8c1d-4a73-b5e6-0d3f7a1c94e2",
+    "name": "eyebrow",
+    "label": "Eyebrow (optional)",
+    "required": false,
+    "locked": false,
+    "help_text": "Small green uppercase line above the heading, e.g. FREE INDUSTRY REPORT",
+    "allow_new_line": false,
+    "type": "text",
+    "default": "",
+    "display_width": null
+  },
+  {
     "id": "1c075b83-fd8f-4f18-b0e8-b0e227693009",
     "name": "heading",
     "label": "Heading",
@@ -126,6 +138,140 @@
     "type": "group",
     "tab": "STYLE",
     "children": [
+      {
+        "id": "f2c7a9e3-41b8-4d06-9e5a-7b3d18c6e0f4",
+        "name": "layout",
+        "label": "Layout",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "style-1",
+            "Style 1 — Full-width background, floating form card (current)"
+          ],
+          [
+            "style-2",
+            "Style 2 — Contained card split 50/50"
+          ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "default": "style-1",
+        "display_width": null
+      },
+      {
+        "id": "0d8e5b6a-93f2-4c71-a4e8-c5b1f7d2309e",
+        "name": "left_background",
+        "label": "Left side background",
+        "required": false,
+        "locked": false,
+        "help_text": "Style 1: background of the whole section. Style 2: background of the left half of the card.",
+        "display": "select",
+        "choices": [
+          [
+            "gradient_1",
+            "Theme gradient (current)"
+          ],
+          [
+            "deep_violet",
+            "Deep purple to violet (104°)"
+          ],
+          [
+            "custom",
+            "Custom color"
+          ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "default": "gradient_1",
+        "display_width": null
+      },
+      {
+        "id": "9a4c1e7f-25d3-4b8a-8f60-e3b7d9a2c51d",
+        "name": "left_background_color",
+        "label": "Left side custom color",
+        "required": false,
+        "locked": false,
+        "help_text": "Only used when Left side background is Custom color.",
+        "type": "color",
+        "default": {
+          "color": "#3A0CA3",
+          "opacity": 100
+        },
+        "display_width": null
+      },
+      {
+        "id": "c3f8d2a1-6e4b-4f97-b0c5-82a9e1d74f36",
+        "name": "text_valign",
+        "label": "Left text — vertical position",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "top",
+            "Top"
+          ],
+          [
+            "center",
+            "Center (current)"
+          ],
+          [
+            "bottom",
+            "Bottom"
+          ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "default": "center",
+        "display_width": null
+      },
+      {
+        "id": "e8b1d5c7-3a92-4e6f-9d04-1f6c2b8a7e53",
+        "name": "text_align",
+        "label": "Left text — alignment",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "left",
+            "Left (current)"
+          ],
+          [
+            "center",
+            "Center"
+          ],
+          [
+            "right",
+            "Right"
+          ]
+        ],
+        "multiple": false,
+        "reordering_enabled": true,
+        "preset": null,
+        "type": "choice",
+        "default": "left",
+        "display_width": null
+      },
+      {
+        "id": "4d7a0e2c-b5f1-4c38-a6e9-9c2f5d8b1a70",
+        "name": "show_form_bar",
+        "label": "Show gradient top line on the form",
+        "required": false,
+        "locked": false,
+        "display": "toggle",
+        "type": "boolean",
+        "default": false,
+        "display_width": null
+      },
       {
         "id": "b50f003f-197d-44fb-a584-85b3dde5978d",
         "name": "spacing_desktop",
