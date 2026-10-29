@@ -2,7 +2,7 @@
 <style>
   {% scope_css %}
   .process-steps-cards {
-    background: #F8F6FC;
+    background: {% if module.style.background_color.color %}{{ module.style.background_color.color }}{% else %}#F8F6FC{% endif %};
     {{ module.style.spacing_desktop.css }}
   }
   @media (max-width: 991px) {
@@ -12,22 +12,32 @@
 </style>
 {% end_require_css %}
 
-<section class="process-steps-cards"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+<section class="process-steps-cards{% if module.style.layout == "style-2" %} process-steps-cards--split{% endif %}"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
   <div class="content-wrapper">
-    <div class="process-steps-cards__intro">
-      {% if module.eyebrow %}<div class="process-steps-cards__eyebrow">{{ module.eyebrow }}</div>{% endif %}
-      {{ module.heading }}
-      {% if module.lede %}<div class="process-steps-cards__lede">{{ module.lede }}</div>{% endif %}
-    </div>
-
-    <div class="process-steps-cards__grid">
-      {% for step in module.steps %}
-      <div class="process-steps-cards__card">
-        <div class="process-steps-cards__num">{{ step.number }}</div>
-        <h6 class="process-steps-cards__title">{{ step.title }}</h6>
-        <div class="process-steps-cards__body">{{ step.description }}</div>
+    <div class="process-steps-cards__layout">
+      <div class="process-steps-cards__intro">
+        {% if module.eyebrow %}<div class="process-steps-cards__eyebrow">{{ module.eyebrow }}</div>{% endif %}
+        {{ module.heading }}
+        {% if module.lede %}<div class="process-steps-cards__lede">{{ module.lede }}</div>{% endif %}
+        {% if module.highlight_title or module.highlight_text %}
+        <div class="process-steps-cards__highlight">
+          {% if module.highlight_title %}<div class="process-steps-cards__highlight-title">{{ module.highlight_title }}</div>{% endif %}
+          {% if module.highlight_text %}<div class="process-steps-cards__highlight-text">{{ module.highlight_text }}</div>{% endif %}
+        </div>
+        {% endif %}
       </div>
-      {% endfor %}
+
+      <div class="process-steps-cards__grid">
+        {% for step in module.steps %}
+        <div class="process-steps-cards__card{% if step.featured %} process-steps-cards__card--featured{% endif %}">
+          <div class="process-steps-cards__num">{{ step.number }}</div>
+          <div class="process-steps-cards__copy">
+            <h6 class="process-steps-cards__title">{{ step.title }}</h6>
+            <div class="process-steps-cards__body">{{ step.description }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>

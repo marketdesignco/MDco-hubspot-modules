@@ -37,6 +37,25 @@
   "display_width" : null,
   "default" : "<p>No pitch deck ambush, no six-week procurement cycle. A conversation, a diagnostic, and a plan you can say no to.</p>"
 }, {
+  "id" : "highlight_title",
+  "name" : "highlight_title",
+  "label" : "Highlight Title (optional, block with purple left border)",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : ""
+}, {
+  "id" : "highlight_text",
+  "name" : "highlight_text",
+  "label" : "Highlight Text (optional)",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : ""
+}, {
   "id" : "steps",
   "name" : "steps",
   "label" : "Steps",
@@ -77,6 +96,16 @@
     "type" : "richtext",
     "display_width" : null,
     "default" : "<p>Description</p>"
+  }, {
+    "id" : "steps.featured",
+    "name" : "featured",
+    "label" : "Featured (purple card)",
+    "required" : false,
+    "locked" : false,
+    "type" : "boolean",
+    "display" : "toggle",
+    "display_width" : null,
+    "default" : false
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -103,6 +132,29 @@
   "required" : false,
   "locked" : false,
   "children" : [ {
+    "id" : "style.layout",
+    "name" : "layout",
+    "label" : "Layout",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "style-1", "Style 1 — 3-column grid (current)" ], [ "style-2", "Style 2 — Split: intro left, stacked steps right" ] ],
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "style-1"
+  }, {
+    "id" : "style.background_color",
+    "name" : "background_color",
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : "#F8F6FC",
+      "opacity" : 100
+    }
+  }, {
     "id" : "style.spacing_desktop",
     "name" : "spacing_desktop",
     "label" : "Spacing - Desktop",
