@@ -75,7 +75,11 @@
           {% endfor %}
 
         </div>
-        
+
+        {% if module.show_closing_quote and module.closing_quote %}
+        <p class="closing-quote">{{ module.closing_quote }}</p>
+        {% endif %}
+
       </div>
       
     </div>

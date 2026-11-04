@@ -373,3 +373,9 @@
 .service-cards-banner--fix-inline .service-cards-banner__card--featured .service-cards-banner__fix .service-cards-banner__fix-label {
   color: #fff;
 }
+
+/* Card top bar: Style 2 — pink → deep purple → violet (style.bar_gradient = style-2) */
+.service-cards-banner--bar-v2 .service-cards-banner__card-bar,
+.service-cards-banner--bar-v2.service-cards-banner--story .service-cards-banner__card-bar {
+  background: linear-gradient(90deg, #F72585 0%, #3A0CA3 45%, #7209B7 100%);
+}

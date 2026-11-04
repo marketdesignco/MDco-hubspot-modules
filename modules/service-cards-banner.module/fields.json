@@ -407,6 +407,28 @@
         "display_width": null
       },
       {
+        "id": "b7d2f0a1-4c6e-4b9a-8e35-2a9c7f1d0e64",
+        "name": "bar_gradient",
+        "label": "Card top bar gradient",
+        "required": false,
+        "locked": false,
+        "display": "select",
+        "choices": [
+          [
+            "style-1",
+            "Style 1 — Current (default cards: pink → violet → green)"
+          ],
+          [
+            "style-2",
+            "Style 2 — Pink → deep purple → violet"
+          ]
+        ],
+        "multiple": false,
+        "type": "choice",
+        "display_width": null,
+        "default": "style-1"
+      },
+      {
         "id": "e6eb797b-f93a-43ef-8039-b52927daa9a7",
         "name": "spacing_desktop",
         "label": "Spacing - Desktop",

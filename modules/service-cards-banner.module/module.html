@@ -12,7 +12,7 @@
   {% end_scope_css %}
 </style>
 {% end_require_css %}
-<section class="service-cards-banner{% if module.card_variant == "story" %} service-cards-banner--story{% endif %}{% if module.style.featured_color == "violet" %} service-cards-banner--featured-violet{% endif %}{% if module.style.featured_pill == "solid" %} service-cards-banner--pill-solid{% endif %}{% if module.style.fix_style == "inline" %} service-cards-banner--fix-inline{% endif %}"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
+<section class="service-cards-banner{% if module.card_variant == "story" %} service-cards-banner--story{% endif %}{% if module.style.featured_color == "violet" %} service-cards-banner--featured-violet{% endif %}{% if module.style.featured_pill == "solid" %} service-cards-banner--pill-solid{% endif %}{% if module.style.fix_style == "inline" %} service-cards-banner--fix-inline{% endif %}{% if module.style.bar_gradient == "style-2" %} service-cards-banner--bar-v2{% endif %}"{% if module.section_id %} id="{{ module.section_id }}"{% endif %}>
   <div class="content-wrapper">
     <div class="service-cards-banner__intro">
       {% if module.eyebrow %}<div class="service-cards-banner__eyebrow">{{ module.eyebrow }}</div>{% endif %}

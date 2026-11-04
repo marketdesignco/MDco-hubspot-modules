@@ -298,4 +298,30 @@
     },
     "style_cta" : "cta-white"
   } ]
+}, {
+  "id" : "show_closing_quote",
+  "name" : "show_closing_quote",
+  "label" : "Show Closing Quote",
+  "help_text" : "Optional line shown under the CTAs. On by default.",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : true
+}, {
+  "id" : "closing_quote",
+  "name" : "closing_quote",
+  "label" : "Closing Quote",
+  "required" : false,
+  "locked" : false,
+  "allow_new_line" : false,
+  "visibility" : {
+    "controlling_field_path" : "show_closing_quote",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL"
+  },
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Growth on Purpose."
 } ]

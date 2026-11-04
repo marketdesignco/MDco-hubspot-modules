@@ -13,8 +13,25 @@
   gap:16px;
   margin-top:16px;
 }
+/* keep CTAs on the same center axis as the heading/description */
+.cta-bar .custom-cta {
+  display:flex;
+  justify-content:center;
+  text-align:center;
+}
+.cta-bar .custom-cta .hs-cta-wrapper,
+.cta-bar .custom-cta .hs-cta-embed {
+  margin-left:auto;
+  margin-right:auto;
+}
 .cta-bar .container-cta a {
   transition: transform 0.25s ease;
+}
+.cta-bar .closing-quote {
+  color:#fff;
+  font-weight:700;
+  text-align:center;
+  margin:24px 0 0;
 }
 
 .cta-bar .container-cta a:hover {
